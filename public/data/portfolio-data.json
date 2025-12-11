@@ -1,0 +1,293 @@
+{
+  "personalInfo": {
+    "name": "Ha Hoang Trong",
+    "title": "Senior Full Stack Developer",
+    "email": "ha9a1ltt@gmail.com",
+    "phone": "0838584663",
+    "linkedin": "linkedin.com/in/ha-hoang-trong",
+    "github": "github.com/HoangTrongHa",
+    "location": "Vietnam",
+    "avatar": "/images/avatar.jpg"
+  },
+  "summary": "Over 5 years of experience in professional full-stack development specializing in Vue.js, modern web architecture, and 3D interactions. Strong software engineering skills with a focus on UI domain, proficient in analyzing and designing UI components with an emphasis on reusable components and subsystems.",
+  "stats": [
+    { "value": "5+", "label": "Years Experience" },
+    { "value": "30+", "label": "Projects Completed" },
+    { "value": "15+", "label": "Technologies" },
+    { "value": "10+", "label": "Happy Clients" }
+  ],
+  "skills": [
+    {
+      "category": "Programming Languages",
+      "items": [
+        { "name": "JavaScript (ES6+)", "years": 5 },
+        { "name": "JavaScript (ES5)", "years": 5 },
+        { "name": "TypeScript", "years": 4 },
+        { "name": "PHP", "years": 5 },
+        { "name": "C#", "years": 5 }
+      ]
+    },
+    {
+      "category": "Frontend Frameworks & Libraries",
+      "items": [
+        { "name": "Vue.js 2.0", "years": 6 },
+        { "name": "Vue.js 3.0", "years": 5 },
+        { "name": "Nuxt 2", "years": 4 },
+        { "name": "Nuxt 3", "years": 3 },
+        { "name": "React", "years": 5 },
+        { "name": "React Native", "years": 4 },
+        { "name": "HTML/CSS", "years": 7 }
+      ]
+    },
+    {
+      "category": "Backend & Database",
+      "items": [
+        { "name": "Laravel", "years": 5 },
+        { "name": "ASP.NET", "years": 4 },
+        { "name": "Node.js", "years": 4 },
+        { "name": "GraphQL", "years": 5 },
+        { "name": "MySQL", "years": 4 },
+        { "name": "MongoDB", "years": 3 }
+      ]
+    },
+    {
+      "category": "Tools & Technologies",
+      "items": [
+        { "name": "Git/GitHub", "years": 6 },
+        { "name": "Visual Studio Code", "years": 6 },
+        { "name": "Postman", "years": 5 },
+        { "name": "Figma", "years": 5 },
+        { "name": "npm/Webpack", "years": 6 },
+        { "name": "Axios/HTTP", "years": 5 },
+        { "name": "Storybook", "years": 6 },
+        { "name": "Jest", "years": 5 }
+      ]
+    },
+    {
+      "category": "Testing & DevOps",
+      "items": [
+        { "name": "Ranorex", "years": 1 },
+        { "name": "Test Cafe + Cucumber", "years": 3 },
+        { "name": "Docker", "years": 3 },
+        { "name": "Scrum/Agile", "years": 5 }
+      ]
+    },
+    {
+      "category": "Operating Systems",
+      "items": [
+        { "name": "Windows", "years": 7 },
+        { "name": "MacOS", "years": 3 }
+      ]
+    },
+    {
+      "category": "Additional Skills",
+      "items": [
+        { "name": "Three.js", "years": 4 },
+        { "name": "D3.js", "years": 6 },
+        { "name": "DevExpress Components", "years": 6 },
+        { "name": "Software Analysis & Design", "years": 6 },
+        { "name": "Micro Frontend Architecture", "years": 4 }
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "FPT Software",
+      "images": "https://fptsoftware.com/-/media/project/fpt-software/fso/uplift/home/logo_fpt_text_black.png",
+      "position": "Senior Frontend Developer",
+      "period": "May 2022 - Present",
+      "description": "Leading frontend development for multiple international projects, specializing in Vue.js and React ecosystems.",
+      "highlights": [
+        "Developed KMI WEB UI for Konicaminolta with advanced printing features",
+        "Built INZENT DB_MGMT_V2 using Vue3, Vuetify, and Pinia",
+        "Implemented testing automation with Ranorex for HAL Baralogix",
+        "Maintained DELL CED 2023 with C#, ASP.NET, and Bootstrap"
+      ]
+    },
+    {
+      "company": "Newwave Solutions",
+      "images": "https://newwave.vn/wp-content/themes/nwstheme/assets/images/logo-nws.png",
+      "position": "Full Stack Developer",
+      "period": "Apr 2020 - Apr 2022",
+      "description": "Developed full-stack web applications for Japanese and international clients using Vue.js and Laravel.",
+      "highlights": [
+        "Built IHOUZZ real estate platform with livestream integration",
+        "Developed Health Survey system for Kowa with video rehabilitation",
+        "Created DATAGUSTO recipe management with AI integration",
+        "Implemented Flippa event management with QR code ticketing"
+      ]
+    }, 
+    {
+      "company": "GI Soft",
+      "images": "#",
+      "position": "Full Stack Developer",
+      "period": "Apr 2019 - Apr 2020",
+      "description": "Developed full-stack web applications for Japanese and international clients using Vue.js and Laravel.",
+      "highlights": [
+        "Create forward auctions, reverse auctions",
+        "Developed Loans with interest calculation system for AIFUL",
+        "Created DATAGUSTO recipe management with AI integration",
+        "Implemented Flippa event management with QR code ticketing"
+      ]
+    }, 
+    {
+      "company": "Freelance Projects",
+      "images": "#",
+      "position": "Full Stack Developer",
+      "period": "2019 - Present",
+      "description": "Working on various freelance projects for international clients.",
+      "highlights": [
+        "Migrated Unilever UI from Next.js to Nuxt 3",
+        "Built PARI photostock platform with Nuxt 3",
+        "Developed SAT project management system with React",
+        "Created RENTCODE.IO SIM management service"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Software Engineering",
+      "school": "FPT University",
+      "period": "2019 - 2023",
+      "description": "Focused on software development, web technologies, and UI/UX design."
+    }
+  ],
+  "projects": [
+    {
+      "title": "KMI WEB UI",
+      "description": "Advanced printing features system for Konicaminolta with support for various paper sizes, resolutions, and finishing options.",
+      "image": "/images/projects/kmi.jpg",
+      "tags": ["JavaScript ES5", "C++"],
+      "link": "https://www.konicaminolta.vn/vn-vi/business-solutions/printers-and-mfp",
+      "period": "Jun 2024 - Present"
+    },
+    {
+      "title": "INZENT DB Management V2",
+      "description": "Integrated management tool for PostgreSQL with data encryption, backup, recovery, and security operations.",
+      "image": "/images/projects/inzent.jpg",
+      "tags": ["Vue3", "Vuetify", "Pinia"],
+      "link": "https://www.inzent.com/en/",
+      "period": "Jan 2024 - Jun 2024"
+    },
+    {
+      "title": "HAL_Baralogix Testing Automation",
+      "description": "Unit testing and system test automation for Baroid system using Ranorex framework.",
+      "image": "/images/projects/datagusto.jpg",
+      "tags": ["Ranorex", "C#"],
+      "link": "https://www.halliburton.com/",
+      "period": "Dec 2023 - Feb 2024"
+    },
+    {
+      "title": "DELL CED 2023",
+      "description": "Production support system for Dell applications including VAST, TestVault, SIR, SDMS, REEF, and WoX. Handles monitoring of integration activities, Azure resources, system performance, bug fixes, deployment, and API integration between systems.",
+      "image": "/images/projects/dell.jpg",
+      "tags": ["C#", "ASP.NET", "Bootstrap", "SQL Server"],
+      "link": "https://www.dell.com/",
+      "period": "Aug 2023 - Nov 2023"
+    },
+    {
+      "title": "Unilever Russia - Production Support",
+      "description": "Production support system for Unilever Russia applications including VAST, TestVault, SIR, SDMS, REEF, and WoX. Handles monitoring of integration activities, Azure resources, system performance, bug fixes, deployment, and API integration between systems.",
+      "image": "/images/projects/dell.jpg",
+      "tags": ["NuxtJs", "Pinia", "Bootstrap"],
+      "link": "https://www.unirusgroup.ru/",
+      "period": "Aug 2023 - Nov 2023"
+    },
+    {
+      "title": "PARI Photostock Platform",
+      "description": "Photography marketplace allowing photographers to register, upload high quality photos, and sell to buyers. Built with modern frontend stack for Russian market.",
+      "image": "/images/projects/pari.jpg",
+      "tags": ["Nuxt 3", "Pinia"],
+      "link": "https://photostock.thisfil.ru/",
+      "period": "May 2023 - Sep 2023"
+    },
+    {
+      "title": "Chat Box Lương Sơn",
+      "description": "Real-time chat application similar to Telegram with video call and voice chat using LiveKit.",
+      "image": "/images/projects/chatbox.jpg",
+      "tags": ["React Native", "LiveKit", "Tailwind", "Firebase"],
+      "link": "https://github.com/HoangTrongHa/Chat-Box",
+      "period": "Jun 2023 - Sep 2023"
+    },
+    {
+      "title": "HOFURI M - Bond Investment Platform",
+      "description": "Financial platform with chart display, bond investment capabilities, and investor decentralization features.",
+      "image": "/images/projects/hofuri.jpg",
+      "tags": ["Vue 3"],
+      "link": "#",
+      "period": "Feb 2022 - Aug 2023"
+    },
+    {
+      "title": "UP2PART CAM UI",
+      "description": "Material management system with tool selection and 3D product visualization using Three.js. Micro-frontend architecture for handling raw materials processing.",
+      "image": "/images/projects/up2part.jpg",
+      "tags": ["Vue 2", "Three.js", "GraphQL", "Micro Frontend"],
+      "link": "https://up2parts.com/en/",
+      "period": "May 2021 - Jan 2022"
+    },
+    {
+      "title": "IHOUZZ - Đất Xanh Group",
+      "description": "Real estate platform with map integration, broker finding, and livestream event support.",
+      "image": "/images/projects/ihouzz.jpg",
+      "tags": ["jQuery", "PHP", "MySQL"],
+      "link": "https://ihouzz.com/",
+      "period": "May 2021 - Mar 2022"
+    },
+    {
+      "title": "DATAGUSTO",
+      "description": "Recipe management platform using AI to provide personalized recipes to users.",
+      "image": "/images/projects/datagusto.jpg",
+      "tags": ["Vue.js", "PWA"],
+      "link": "https://www.datagusto.jp/",
+      "period": "Jan 2021 - Sep 2021"
+    },
+    {
+      "title": "Flippa Event Management",
+      "description": "Event ticketing platform allowing users to create paid or free events with QR code generation for ticket purchasing.",
+      "image": "/images/projects/flippa.jpg",
+      "tags": ["CodeIgniter", "jQuery"],
+      "link": "https://flippa.jp/",
+      "period": "Jan 2018 - Dec 2020"
+    },
+    {
+      "title": "Enzo Loan Management",
+      "description": "Loan management system with interest calculation for Japanese financial services.",
+      "image": "/images/projects/enzo.jpg",
+      "tags": ["Laravel", "WordPress"],
+      "link": "#",
+      "period": "Nov 2019 - May 2020"
+    },
+    {
+      "title": "RENTCODE.IO - SIM Management",
+      "description": "SIM management service allowing users to rent SIM numbers for 2FA verification on services like Facebook and Google. Includes payment integration via Momo and bank transfer.",
+      "image": "/images/projects/rentcode.jpg",
+      "tags": ["Laravel", "ReactJS", "Node.js"],
+      "link": "#",
+      "period": "May 2019 - Jun 2020"
+    },
+    {
+      "title": "SAT Product & Lawsuit Management",
+      "description": "Enterprise system for managing products and lawsuits for Korean client.",
+      "image": "/images/projects/sat.jpg",
+      "tags": ["ReactJS"],
+      "link": "#",
+      "period": "Mar 2022 - Nov 2022"
+    },
+    {
+      "title": "CSI English Center Website",
+      "description": "Corporate website for CSI English Center to introduce services and programs.",
+      "image": "/images/projects/csi.jpg",
+      "tags": ["ReactJS", "WordPress"],
+      "link": "https://csi.edu.vn/",
+      "period": "May 2022 - Dec 2022"
+    }
+  ],
+  "languages": {
+    "english": {
+      "listening": "Limited",
+      "speaking": "Limited",
+      "reading": "Advanced",
+      "writing": "Advanced"
+    }
+  }
+}
