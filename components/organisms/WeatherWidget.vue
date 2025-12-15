@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed top-20 right-4 z-40">
+  <div class="fixed bottom-6 md:top-20 left-4 md:right-4 md:left-auto z-40">
     <!-- Weather Widget -->
     <Transition name="slide-down">
       <div
