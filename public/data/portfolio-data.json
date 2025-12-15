@@ -1,7 +1,7 @@
 {
   "personalInfo": {
     "name": "Ha Hoang Trong",
-    "title": "Senior Full Stack Developer",
+    "title": "Developer",
     "email": "ha9a1ltt@gmail.com",
     "phone": "0838584663",
     "linkedin": "linkedin.com/in/ha-hoang-trong",
@@ -12,7 +12,7 @@
   "summary": "Over 5 years of experience in professional full-stack development specializing in Vue.js, modern web architecture, and 3D interactions. Strong software engineering skills with a focus on UI domain, proficient in analyzing and designing UI components with an emphasis on reusable components and subsystems.",
   "stats": [
     { "value": "5+", "label": "Years Experience" },
-    { "value": "30+", "label": "Projects Completed" },
+    { "value": "10+", "label": "Projects Completed" },
     { "value": "15+", "label": "Technologies" },
     { "value": "10+", "label": "Happy Clients" }
   ],
@@ -20,47 +20,52 @@
     {
       "category": "Programming Languages",
       "items": [
-        { "name": "JavaScript (ES6+)", "years": 5 },
-        { "name": "JavaScript (ES5)", "years": 5 },
-        { "name": "TypeScript", "years": 4 },
-        { "name": "PHP", "years": 5 },
-        { "name": "C#", "years": 5 }
+        { "name": "JavaScript", "years": 5 },
+        { "name": "TypeScript", "years": 2 },
+        { "name": "PHP", "years": 2 },
+        { "name": "C#", "years": 1 }
       ]
     },
     {
       "category": "Frontend Frameworks & Libraries",
       "items": [
-        { "name": "Vue.js 2.0", "years": 6 },
-        { "name": "Vue.js 3.0", "years": 5 },
-        { "name": "Nuxt 2", "years": 4 },
-        { "name": "Nuxt 3", "years": 3 },
-        { "name": "React", "years": 5 },
-        { "name": "React Native", "years": 4 },
-        { "name": "HTML/CSS", "years": 7 }
+        { "name": "Vue.js 2.0", "years": 3 },
+        { "name": "Vue.js 3.0", "years": 2 },
+        { "name": "Nuxt 2", "years": 1 },
+        { "name": "Nuxt 3", "years": 2 },
+        { "name": "React", "years": 2 },
+        { "name": "React Native", "years": 1 },
+        { "name": "HTML/CSS", "years": 5 },
+        { "name": "HTML/CSS", "years": 5 },
+        { "name": "jQuery", "years": 3 },
+        { "name": "Bootstrap", "years": 4 },
+        { "name": "Tailwind CSS", "years": 4  }
       ]
     },
     {
       "category": "Backend & Database",
       "items": [
-        { "name": "Laravel", "years": 5 },
-        { "name": "ASP.NET", "years": 4 },
-        { "name": "Node.js", "years": 4 },
-        { "name": "GraphQL", "years": 5 },
-        { "name": "MySQL", "years": 4 },
-        { "name": "MongoDB", "years": 3 }
+        { "name": "Laravel", "years": 2 },
+        { "name": "ASP.NET", "years": 1 },
+        { "name": "Node.js", "years": 1 },
+        { "name": "GraphQL", "years": 1 },
+        { "name": "MySQL", "years": 2 },
+        { "name": "PostgreSQL", "years": 2 },
+        { "name": "SQL Server", "years": 1 },
+        { "name": "MongoDB", "years": 2 }
       ]
     },
     {
       "category": "Tools & Technologies",
       "items": [
-        { "name": "Git/GitHub", "years": 6 },
-        { "name": "Visual Studio Code", "years": 6 },
+        { "name": "Git/GitHub", "years": 5 },
+        { "name": "Visual Studio Code", "years": 5 },
         { "name": "Postman", "years": 5 },
         { "name": "Figma", "years": 5 },
-        { "name": "npm/Webpack", "years": 6 },
+        { "name": "npm/Webpack", "years": 5 },
         { "name": "Axios/HTTP", "years": 5 },
-        { "name": "Storybook", "years": 6 },
-        { "name": "Jest", "years": 5 }
+        { "name": "Storybook", "years": 3 },
+        { "name": "Jest", "years": 3 }
       ]
     },
     {
@@ -68,14 +73,14 @@
       "items": [
         { "name": "Ranorex", "years": 1 },
         { "name": "Test Cafe + Cucumber", "years": 3 },
-        { "name": "Docker", "years": 3 },
+        { "name": "Docker", "years": 1 },
         { "name": "Scrum/Agile", "years": 5 }
       ]
     },
     {
       "category": "Operating Systems",
       "items": [
-        { "name": "Windows", "years": 7 },
+        { "name": "Windows", "years": 5 },
         { "name": "MacOS", "years": 3 }
       ]
     },
@@ -84,8 +89,7 @@
       "items": [
         { "name": "Three.js", "years": 4 },
         { "name": "D3.js", "years": 6 },
-        { "name": "DevExpress Components", "years": 6 },
-        { "name": "Software Analysis & Design", "years": 6 },
+        { "name": "Software Analysis & Design", "years": 4 },
         { "name": "Micro Frontend Architecture", "years": 4 }
       ]
     }

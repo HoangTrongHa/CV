@@ -28,6 +28,5 @@ const currentYear = new Date().getFullYear()
 
 const handleContact = () => {
   // Handle contact action
-  console.log('Contact button clicked')
 }
 </script>

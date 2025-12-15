@@ -7,11 +7,11 @@
         </AppBadge>
         
         <h1 class="text-4xl md:text-6xl font-black tracking-tighter text-slate-900 dark:text-white leading-tight">
-          Passionate <span class="text-primary">Full Stack</span><br/> Developer
+          Passionate <span class="text-primary">Front end</span><br/> Developer
         </h1>
         
         <h2 class="mt-4 text-xl text-slate-600 dark:text-gray-400 font-normal leading-relaxed max-w-2xl">
-          {{ personalInfo.title || 'Senior Full Stack Developer specializing in Vue.js, modern web architecture, and 3D interactions.' }}
+          {{ personalInfo.title || 'Developer specializing in Vue.js, modern web architecture, and 3D interactions.' }}
         </h2>
       </div>
       
