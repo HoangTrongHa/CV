@@ -11,7 +11,9 @@
         :key="project.title"
         :title="project.title"
         :description="project.description"
+        :image="project.image"
         :link="project.link"
+        :slug="createSlug(project.title)"
       />
     </div>
   </section>
@@ -19,4 +21,12 @@
 
 <script setup lang="ts">
 const { projects } = usePortfolioData()
+
+// Create slug from title
+const createSlug = (title: string) => {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '')
+}
 </script>

@@ -155,128 +155,128 @@
   "projects": [
     {
       "title": "KMI WEB UI",
-      "description": "Advanced printing features system for Konicaminolta with support for various paper sizes, resolutions, and finishing options.",
-      "image": "/images/projects/kmi.jpg",
+      "description": "Developed a sophisticated web-based user interface for Konicaminolta's advanced printing system. Implemented interactive UI components for controlling printer settings including paper size selection, resolution adjustment, color management, and finishing options. Built dynamic form validation and real-time preview functionality. Optimized the interface for cross-browser compatibility and ensured responsive design for various screen sizes. Created reusable UI components and maintained consistent design patterns throughout the application. Collaborated with backend team to integrate REST APIs for printer configuration and status monitoring.",
+      "image": "/images/products/webUI.svg",
       "tags": ["JavaScript ES5", "C++"],
       "link": "https://www.konicaminolta.vn/vn-vi/business-solutions/printers-and-mfp",
       "period": "Jun 2024 - Present"
     },
     {
       "title": "INZENT DB Management V2",
-      "description": "Integrated management tool for PostgreSQL with data encryption, backup, recovery, and security operations.",
-      "image": "/images/projects/inzent.jpg",
+      "description": "Built a comprehensive database management interface using Vue 3 Composition API with Vuetify Material Design components. Developed complex data tables with sorting, filtering, and pagination for managing PostgreSQL databases. Implemented state management using Pinia for handling database connections, query results, and user sessions. Created interactive forms for data encryption configuration, automated backup scheduling, and recovery operations. Built real-time monitoring dashboards displaying database performance metrics and connection status. Designed and implemented role-based access control UI for security management. Optimized application performance through lazy loading and code splitting.",
+      "image": "/images/products/inzent.png",
       "tags": ["Vue3", "Vuetify", "Pinia"],
       "link": "https://www.inzent.com/en/",
       "period": "Jan 2024 - Jun 2024"
     },
     {
       "title": "HAL_Baralogix Testing Automation",
-      "description": "Unit testing and system test automation for Baroid system using Ranorex framework.",
-      "image": "/images/projects/datagusto.jpg",
+      "description": "Developed automated testing suites for the Baroid drilling fluids management system using Ranorex Studio. Created comprehensive UI test scenarios covering user workflows, data entry validation, and system integration points. Implemented automated regression testing to ensure UI consistency across application updates. Built test reporting dashboards to visualize test results and track bug patterns. Designed reusable test modules and maintained test data sets. Collaborated with QA team to identify critical UI test cases and optimize test execution time. Integrated automated tests into CI/CD pipeline for continuous quality assurance.",
+      "image": "/images/products/haliburton.svg",
       "tags": ["Ranorex", "C#"],
       "link": "https://www.halliburton.com/",
       "period": "Dec 2023 - Feb 2024"
     },
     {
       "title": "DELL CED 2023",
-      "description": "Production support system for Dell applications including VAST, TestVault, SIR, SDMS, REEF, and WoX. Handles monitoring of integration activities, Azure resources, system performance, bug fixes, deployment, and API integration between systems.",
-      "image": "/images/projects/dell.jpg",
+      "description": "Maintained and enhanced multiple production support dashboards for Dell's enterprise applications using ASP.NET MVC and Bootstrap. Developed real-time monitoring interfaces displaying Azure resource utilization, system performance metrics, and integration status. Built responsive data tables and charts for visualizing application health and deployment histories. Implemented bug tracking interfaces with filtering, search, and status management capabilities. Created API integration monitoring tools showing request/response logs and error analytics. Designed admin panels for configuration management and user access control. Optimized frontend performance by implementing caching strategies and minimizing API calls. Ensured cross-browser compatibility and mobile responsiveness across all dashboards.",
+      "image": "/images/products/dell.svg",
       "tags": ["C#", "ASP.NET", "Bootstrap", "SQL Server"],
       "link": "https://www.dell.com/",
       "period": "Aug 2023 - Nov 2023"
     },
     {
       "title": "Unilever Russia - Production Support",
-      "description": "Production support system for Unilever Russia applications including VAST, TestVault, SIR, SDMS, REEF, and WoX. Handles monitoring of integration activities, Azure resources, system performance, bug fixes, deployment, and API integration between systems.",
-      "image": "/images/projects/dell.jpg",
+      "description": "Migrated and rebuilt production monitoring dashboards from Next.js to Nuxt 3 framework for improved performance and developer experience. Implemented server-side rendering (SSR) for faster initial page loads and better SEO. Developed interactive monitoring interfaces using Nuxt composables and Pinia store for state management. Built real-time notification system for critical alerts and system anomalies. Created responsive layouts with Bootstrap 5 ensuring mobile-first design approach. Implemented role-based dashboard views for different user types. Optimized bundle size through tree-shaking and dynamic imports. Integrated Azure monitoring APIs for resource tracking and performance analytics.",
+      "image": "/images/products/uniliver.svg",
       "tags": ["NuxtJs", "Pinia", "Bootstrap"],
       "link": "https://www.unirusgroup.ru/",
       "period": "Aug 2023 - Nov 2023"
     },
     {
       "title": "PARI Photostock Platform",
-      "description": "Photography marketplace allowing photographers to register, upload high quality photos, and sell to buyers. Built with modern frontend stack for Russian market.",
-      "image": "/images/projects/pari.jpg",
+      "description": "Developed a full-featured photography marketplace using Nuxt 3 with server-side rendering for optimal SEO performance. Built image gallery interfaces with lazy loading, infinite scroll, and lightbox viewing capabilities. Implemented advanced search and filtering system with category navigation, tag-based search, and price range filters. Created photographer registration and profile management interfaces with portfolio showcase. Developed secure image upload system with drag-and-drop functionality, progress tracking, and client-side image optimization. Built shopping cart and checkout flow with payment gateway integration. Implemented responsive image grids using CSS Grid and Flexbox. Utilized Pinia for managing application state including user authentication, cart items, and search filters. Optimized image delivery through lazy loading and progressive image loading techniques.",
+      "image": "",
       "tags": ["Nuxt 3", "Pinia"],
       "link": "https://photostock.thisfil.ru/",
       "period": "May 2023 - Sep 2023"
     },
     {
       "title": "Chat Box Lương Sơn",
-      "description": "Real-time chat application similar to Telegram with video call and voice chat using LiveKit.",
-      "image": "/images/projects/chatbox.jpg",
+      "description": "Built a cross-platform mobile messaging application using React Native with real-time communication features. Implemented chat interface with message bubbles, typing indicators, read receipts, and timestamp display. Integrated LiveKit SDK for video calling and voice chat functionality with screen sharing capabilities. Developed user authentication flow using Firebase Authentication with phone number verification. Built contact list management, group chat creation, and user profile interfaces. Implemented push notifications for incoming messages and calls using Firebase Cloud Messaging. Created media sharing features supporting images, videos, and documents with preview functionality. Styled UI components using Tailwind CSS for consistent design across iOS and Android platforms. Optimized app performance through efficient state management and image caching strategies.",
+      "image": "",
       "tags": ["React Native", "LiveKit", "Tailwind", "Firebase"],
       "link": "https://github.com/HoangTrongHa/Chat-Box",
       "period": "Jun 2023 - Sep 2023"
     },
     {
       "title": "HOFURI M - Bond Investment Platform",
-      "description": "Financial platform with chart display, bond investment capabilities, and investor decentralization features.",
-      "image": "/images/projects/hofuri.jpg",
+      "description": "Developed a sophisticated financial trading platform using Vue 3 Composition API for managing bond investments. Built interactive financial charts using Chart.js and D3.js displaying real-time price movements, historical trends, and market analytics. Implemented investment portfolio dashboard showing asset allocation, returns, and risk metrics. Created bond marketplace interface with advanced filtering by maturity date, yield rate, and credit rating. Developed user authentication and KYC verification workflows. Built transaction history interfaces with export functionality. Implemented responsive layouts ensuring optimal viewing on desktop and mobile devices. Integrated WebSocket connections for real-time price updates and market notifications. Designed intuitive buy/sell order forms with validation and confirmation flows.",
+      "image": "",
       "tags": ["Vue 3"],
       "link": "#",
       "period": "Feb 2022 - Aug 2023"
     },
     {
       "title": "UP2PART CAM UI",
-      "description": "Material management system with tool selection and 3D product visualization using Three.js. Micro-frontend architecture for handling raw materials processing.",
-      "image": "/images/projects/up2part.jpg",
+      "description": "Built a cutting-edge 3D product visualization platform using Vue 2 and Three.js for manufacturing industry. Implemented interactive 3D model viewer allowing users to rotate, zoom, and inspect products from all angles. Developed material selection interface with real-time texture and color preview on 3D models. Created tool configuration panels for selecting machining tools and processing parameters. Integrated GraphQL API for efficient data fetching and caching of material properties and product specifications. Implemented micro-frontend architecture using Module Federation for independent deployment of feature modules. Built responsive UI components ensuring smooth 3D rendering performance across devices. Optimized 3D model loading through progressive loading and level-of-detail (LOD) techniques. Developed custom shaders for realistic material rendering including metal, plastic, and composite materials.",
+      "image": "/images/products/u2p_logo_web_4c_neg.png",
       "tags": ["Vue 2", "Three.js", "GraphQL", "Micro Frontend"],
       "link": "https://up2parts.com/en/",
       "period": "May 2021 - Jan 2022"
     },
     {
       "title": "IHOUZZ - Đất Xanh Group",
-      "description": "Real estate platform with map integration, broker finding, and livestream event support.",
-      "image": "/images/projects/ihouzz.jpg",
+      "description": "Developed a comprehensive real estate marketplace platform using jQuery and PHP Laravel backend. Integrated Google Maps API for property location visualization with custom markers and cluster management. Built advanced property search interface with filters for location, price range, property type, and amenities. Implemented broker profile pages with ratings, reviews, and contact forms. Developed livestream functionality for virtual property tours and real estate events using WebRTC technology. Created property listing pages with image galleries, virtual tours, and detailed specifications. Built responsive layouts ensuring mobile-friendly experience for property browsing. Implemented user authentication system with social login integration. Developed notification system for new listings and price updates. Optimized page load times through image lazy loading and AJAX-based content loading.",
+      "image": "/images/products/ihouzz.png",
       "tags": ["jQuery", "PHP", "MySQL"],
       "link": "https://ihouzz.com/",
       "period": "May 2021 - Mar 2022"
     },
     {
       "title": "DATAGUSTO",
-      "description": "Recipe management platform using AI to provide personalized recipes to users.",
-      "image": "/images/projects/datagusto.jpg",
+      "description": "Built a Progressive Web Application (PWA) for recipe management and meal planning using Vue.js. Implemented offline-first architecture allowing users to access recipes without internet connection. Developed AI-powered recipe recommendation system based on user preferences, dietary restrictions, and available ingredients. Created interactive recipe cards with step-by-step cooking instructions, ingredient lists, and nutritional information. Built recipe search and filtering interface with category navigation, cuisine types, and difficulty levels. Implemented user recipe collection feature with favorites and custom meal plans. Developed shopping list generator that automatically compiles ingredients from selected recipes. Created responsive layouts optimized for mobile cooking experience. Implemented image optimization and lazy loading for fast recipe browsing. Added push notifications for meal reminders and new recipe suggestions.",
+      "image": "",
       "tags": ["Vue.js", "PWA"],
       "link": "https://www.datagusto.jp/",
       "period": "Jan 2021 - Sep 2021"
     },
     {
       "title": "Flippa Event Management",
-      "description": "Event ticketing platform allowing users to create paid or free events with QR code generation for ticket purchasing.",
-      "image": "/images/projects/flippa.jpg",
+      "description": "Developed a full-featured event management and ticketing platform using CodeIgniter framework with jQuery frontend. Built event creation interface allowing organizers to set up paid or free events with customizable ticket tiers. Implemented QR code generation system for ticket validation and entry management. Created event discovery pages with search, filtering by date, location, and category. Developed ticket purchasing flow with seat selection, shopping cart, and secure payment gateway integration. Built event organizer dashboard for managing attendees, tracking sales, and generating reports. Implemented ticket scanner interface for mobile devices using device camera for QR code validation. Created responsive event detail pages with image galleries, schedules, and speaker information. Developed email notification system for ticket confirmations and event reminders. Optimized database queries for handling high-traffic event launches.",
+      "image": "/images/products/flippa.png",
       "tags": ["CodeIgniter", "jQuery"],
       "link": "https://flippa.jp/",
       "period": "Jan 2018 - Dec 2020"
     },
     {
       "title": "Enzo Loan Management",
-      "description": "Loan management system with interest calculation for Japanese financial services.",
-      "image": "/images/projects/enzo.jpg",
+      "description": "Built a comprehensive loan management system using Laravel framework with integrated WordPress CMS for content pages. Developed loan application forms with multi-step validation and document upload capabilities. Implemented complex interest calculation engine with real-time preview of repayment schedules. Created customer dashboard displaying loan status, payment history, and upcoming due dates. Built admin panel for loan approval workflow, risk assessment, and borrower management. Developed payment gateway integration for online loan repayments with automatic receipt generation. Implemented notification system for payment reminders and loan status updates. Created responsive UI components ensuring mobile accessibility for loan applications. Built reporting interfaces with charts displaying loan portfolio performance and default rates. Integrated WordPress for managing informational content about loan products and terms.",
+      "image": "",
       "tags": ["Laravel", "WordPress"],
       "link": "#",
       "period": "Nov 2019 - May 2020"
     },
     {
       "title": "RENTCODE.IO - SIM Management",
-      "description": "SIM management service allowing users to rent SIM numbers for 2FA verification on services like Facebook and Google. Includes payment integration via Momo and bank transfer.",
-      "image": "/images/projects/rentcode.jpg",
+      "description": "Developed a SIM rental platform using React.js frontend with Laravel and Node.js backend services. Built user interface for browsing available SIM numbers with filtering by country and carrier. Implemented real-time SMS reception dashboard displaying incoming verification codes. Created automated 2FA verification workflow for popular services like Facebook, Google, and WhatsApp. Developed credit-based payment system with Momo wallet and bank transfer integration. Built user account management interface tracking rental history and credit balance. Implemented WebSocket connections for real-time SMS notifications and automatic code forwarding. Created admin panel for managing SIM inventory, monitoring usage, and handling customer support. Developed responsive layouts optimized for quick access on mobile devices. Implemented rate limiting and security measures to prevent abuse. Built API documentation interface for developers wanting to integrate the service.",
+      "image": "",
       "tags": ["Laravel", "ReactJS", "Node.js"],
       "link": "#",
       "period": "May 2019 - Jun 2020"
     },
     {
       "title": "SAT Product & Lawsuit Management",
-      "description": "Enterprise system for managing products and lawsuits for Korean client.",
-      "image": "/images/projects/sat.jpg",
+      "description": "Built an enterprise-grade management system using React.js for a Korean legal and product management firm. Developed product catalog interface with advanced search, categorization, and bulk editing capabilities. Implemented lawsuit tracking system with case timeline visualization, document management, and deadline notifications. Created dashboard displaying key metrics including case status, product inventory, and financial summaries. Built complex form interfaces for case filing with multi-step wizards and document attachment. Developed role-based access control ensuring proper data security and user permissions. Implemented data tables with sorting, filtering, pagination, and export to Excel functionality. Created responsive layouts following Korean UI/UX conventions and localization requirements. Built notification system for case updates, court dates, and important deadlines. Integrated calendar views for scheduling hearings and product launch events. Optimized performance for handling large datasets through virtualization and efficient state management.",
+      "image": "",
       "tags": ["ReactJS"],
       "link": "#",
       "period": "Mar 2022 - Nov 2022"
     },
     {
       "title": "CSI English Center Website",
-      "description": "Corporate website for CSI English Center to introduce services and programs.",
-      "image": "/images/projects/csi.jpg",
+      "description": "Developed a modern corporate website for CSI English Center using React.js with headless WordPress CMS. Built responsive homepage with hero sections, course highlights, and testimonial carousels. Implemented course catalog pages with detailed program information, schedules, and pricing. Created interactive course registration forms with validation and confirmation emails. Developed teacher profile pages showcasing qualifications and teaching approaches. Built blog section for educational content and English learning tips managed through WordPress. Implemented SEO optimization ensuring high search engine rankings for educational keywords. Created student portal interface for accessing learning materials and tracking progress. Developed mobile-first responsive design ensuring optimal viewing on all devices. Integrated Google Analytics for tracking user engagement and conversion rates. Built contact forms and location maps for multiple campus branches. Optimized page loading performance through code splitting and image optimization.",
+      "image": "",
       "tags": ["ReactJS", "WordPress"],
       "link": "https://csi.edu.vn/",
       "period": "May 2022 - Dec 2022"

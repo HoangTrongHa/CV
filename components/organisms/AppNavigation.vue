@@ -19,7 +19,7 @@
         
         <div>
           <AppButton href="#contact" size="sm" @click.prevent="scrollToContact">
-            Hire Me
+            Get My CV File
           </AppButton>
         </div>
       </div>
