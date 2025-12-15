@@ -1,4 +1,5 @@
 export const usePortfolioData = () => {
+  const { locale } = useI18n()
   const data = ref(null)
   const loading = ref(true)
   const error = ref(null)
@@ -6,7 +7,9 @@ export const usePortfolioData = () => {
   const fetchData = async () => {
     try {
       loading.value = true
-      const response = await fetch('/data/portfolio-data.json')
+      const lang = locale.value
+      const fileName = lang === 'en' ? 'portfolio-data.json' : `portfolio-data-${lang}.json`
+      const response = await fetch(`/data/${fileName}`)
       if (!response.ok) throw new Error('Failed to load portfolio data')
       data.value = await response.json()
     } catch (e) {
@@ -18,6 +21,11 @@ export const usePortfolioData = () => {
   }
 
   onMounted(() => {
+    fetchData()
+  })
+
+  // Watch for locale changes and reload data
+  watch(locale, () => {
     fetchData()
   })
 

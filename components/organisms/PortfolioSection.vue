@@ -2,7 +2,7 @@
   <section id="portfolio" class="my-10">
     <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-8 flex items-center gap-2">
       <AppIcon name="grid_view" class="text-primary" />
-      Portfolio
+      {{ $t('sections.portfolio') }}
     </h3>
     
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

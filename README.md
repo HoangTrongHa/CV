@@ -1,7 +1,6 @@
 # Professional CV Layout - Nuxt App
 
-Dự án Nuxt.js được xây dựng theo mô hình Atomic Design, chuyển đổi từ HTML tĩnh sang ứng dụng Vue component-based.
-
+Dự án Nuxt.js được xây dựng theo mô hình Atomic Design
 ## 🏗️ Cấu trúc Atomic Design
 
 ```

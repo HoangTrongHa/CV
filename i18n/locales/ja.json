@@ -1,0 +1,89 @@
+{
+  "nav": {
+    "skills": "スキル",
+    "experience": "経験",
+    "education": "学歴",
+    "portfolio": "ポートフォリオ",
+    "getCVFile": "履歴書をダウンロード"
+  },
+  "hero": {
+    "availableForWork": "仕事可能",
+    "passionate": "情熱的な",
+    "frontEnd": "フロントエンド",
+    "developer": "開発者"
+  },
+  "footer": {
+    "readyToWork": "一緒に働く準備はできていますか？",
+    "description": "現在、フリーランスプロジェクトおよびフルタイムの機会を受け付けています。素晴らしいものを一緒に作りましょう。",
+    "contactMe": "お問い合わせ",
+    "getInTouch": "連絡先",
+    "phone": "電話",
+    "email": "メール",
+    "facebook": "Facebook",
+    "linkedin": "LinkedIn",
+    "copied": "コピーしました！",
+    "copyright": "著作権所有"
+  },
+  "sections": {
+    "about": "自己紹介",
+    "skills": "スキルと技術",
+    "experience": "職務経験",
+    "education": "学歴と資格",
+    "portfolio": "ポートフォリオプロジェクト"
+  },
+  "stats": {
+    "yearsExperience": "年の経験",
+    "projectsCompleted": "完了プロジェクト",
+    "technologies": "技術",
+    "happyClients": "満足顧客"
+  },
+  "weather": {
+    "refresh": "更新",
+    "humidity": "湿度",
+    "wind": "風",
+    "aqi": "空気質指数",
+    "good": "良好",
+    "fair": "普通",
+    "moderate": "中程度",
+    "poor": "悪い",
+    "veryPoor": "非常に悪い"
+  },
+  "weatherControl": {
+    "auto": "自動",
+    "sun": "晴れ",
+    "rain": "雨",
+    "snow": "雪",
+    "dust": "塵",
+    "none": "なし"
+  },
+  "pdf": {
+    "aboutMe": "自己紹介",
+    "skills": "スキル",
+    "experience": "経験",
+    "workExperience": "職務経験",
+    "education": "学歴",
+    "portfolioProjects": "ポートフォリオプロジェクト",
+    "degree": "学位",
+    "institution": "教育機関",
+    "year": "年",
+    "details": "詳細",
+    "project": "プロジェクト",
+    "description": "説明",
+    "technologies": "技術",
+    "link": "リンク",
+    "years": "年"
+  },
+  "project": {
+    "viewProject": "プロジェクトを表示",
+    "backToPortfolio": "ポートフォリオに戻る",
+    "projectNotFound": "プロジェクトが見つかりません",
+    "projectNotFoundDesc": "お探しのプロジェクトは存在しません。",
+    "goHome": "ホームに戻る",
+    "loadingProject": "プロジェクトを読み込み中...",
+    "projectDescription": "プロジェクト説明",
+    "projectLink": "プロジェクトリンク",
+    "visitWebsite": "プロジェクトウェブサイトを訪問",
+    "technologiesUsed": "使用技術",
+    "relatedProjects": "関連プロジェクト"
+  }
+}

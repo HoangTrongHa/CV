@@ -1,0 +1,89 @@
+{
+  "nav": {
+    "skills": "Kỹ năng",
+    "experience": "Kinh nghiệm",
+    "education": "Học vấn",
+    "portfolio": "Dự án",
+    "getCVFile": "Tải CV"
+  },
+  "hero": {
+    "availableForWork": "Sẵn sàng làm việc",
+    "passionate": "Đam mê",
+    "frontEnd": "Front end",
+    "developer": "Developer"
+  },
+  "footer": {
+    "readyToWork": "Sẵn sàng làm việc cùng nhau?",
+    "description": "Tôi hiện đang sẵn sàng cho các dự án freelance và cơ hội làm việc toàn thời gian. Hãy cùng tạo ra điều gì đó tuyệt vời.",
+    "contactMe": "Liên hệ",
+    "getInTouch": "Thông tin liên hệ",
+    "phone": "Điện thoại",
+    "email": "Email",
+    "facebook": "Facebook",
+    "linkedin": "LinkedIn",
+    "copied": "Đã sao chép!",
+    "copyright": "Bản quyền thuộc về"
+  },
+  "sections": {
+    "about": "Giới thiệu",
+    "skills": "Kỹ năng & Công nghệ",
+    "experience": "Kinh nghiệm làm việc",
+    "education": "Học vấn & Chứng chỉ",
+    "portfolio": "Dự án đã thực hiện"
+  },
+  "stats": {
+    "yearsExperience": "Năm kinh nghiệm",
+    "projectsCompleted": "Dự án hoàn thành",
+    "technologies": "Công nghệ",
+    "happyClients": "Khách hàng hài lòng"
+  },
+  "weather": {
+    "refresh": "Làm mới",
+    "humidity": "Độ ẩm",
+    "wind": "Gió",
+    "aqi": "Chất lượng không khí",
+    "good": "Tốt",
+    "fair": "Khá",
+    "moderate": "Trung bình",
+    "poor": "Kém",
+    "veryPoor": "Rất kém"
+  },
+  "weatherControl": {
+    "auto": "Tự động",
+    "sun": "Nắng",
+    "rain": "Mưa",
+    "snow": "Tuyết",
+    "dust": "Bụi",
+    "none": "Không"
+  },
+  "pdf": {
+    "aboutMe": "GIỚI THIỆU",
+    "skills": "KỸ NĂNG",
+    "experience": "Kinh nghiệm",
+    "workExperience": "KINH NGHIỆM LÀM VIỆC",
+    "education": "HỌC VẤN",
+    "portfolioProjects": "DỰ ÁN PORTFOLIO",
+    "degree": "Bằng cấp",
+    "institution": "Trường",
+    "year": "Năm",
+    "details": "Chi tiết",
+    "project": "Dự án",
+    "description": "Mô tả",
+    "technologies": "Công nghệ",
+    "link": "Liên kết",
+    "years": "năm"
+  },
+  "project": {
+    "viewProject": "Xem dự án",
+    "backToPortfolio": "Quay lại Portfolio",
+    "projectNotFound": "Không tìm thấy dự án",
+    "projectNotFoundDesc": "Dự án bạn đang tìm kiếm không tồn tại.",
+    "goHome": "Về trang chủ",
+    "loadingProject": "Đang tải dự án...",
+    "projectDescription": "Mô tả dự án",
+    "projectLink": "Liên kết dự án",
+    "visitWebsite": "Truy cập trang web dự án",
+    "technologiesUsed": "Công nghệ sử dụng",
+    "relatedProjects": "Dự án liên quan"
+  }
+}

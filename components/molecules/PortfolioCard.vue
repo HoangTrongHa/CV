@@ -14,7 +14,7 @@
         :to="`/projects/${slug}`"
         class="inline-flex items-center text-primary font-bold text-sm hover:underline"
       >
-        View Project 
+        {{ $t('project.viewProject') }}
         <AppIcon name="arrow_outward" size="16px" class="ml-1" />
       </NuxtLink>
     </div>

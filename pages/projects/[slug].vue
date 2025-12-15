@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Loading Screen -->
-    <AppLoading :is-loading="isLoading" loading-text="Loading Project..." />
+    <AppLoading :is-loading="isLoading" :loading-text="$t('project.loadingProject')" />
     
     <!-- Main Content with Fade Transition -->
     <Transition name="page-fade">
@@ -13,18 +13,18 @@
         class="inline-flex items-center gap-2 text-primary hover:underline mb-8"
       >
         <AppIcon name="arrow_back" size="20px" />
-        Back to Portfolio
+        {{ $t('project.backToPortfolio') }}
       </NuxtLink>
 
       <!-- Project Not Found -->
       <div v-if="!project" class="text-center py-20">
-        <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">Project Not Found</h2>
-        <p class="text-slate-600 dark:text-gray-400 mb-8">The project you're looking for doesn't exist.</p>
+        <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">{{ $t('project.projectNotFound') }}</h2>
+        <p class="text-slate-600 dark:text-gray-400 mb-8">{{ $t('project.projectNotFoundDesc') }}</p>
         <NuxtLink 
           to="/"
           class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition"
         >
-          Go Home
+          {{ $t('project.goHome') }}
         </NuxtLink>
       </div>
 
@@ -63,7 +63,7 @@
           <div class="mb-8">
             <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
               <AppIcon name="description" class="text-primary" />
-              Project Description
+              {{ $t('project.projectDescription') }}
             </h3>
             <p class="text-base text-slate-600 dark:text-gray-400 leading-relaxed">
               {{ project.description }}
@@ -74,7 +74,7 @@
           <div v-if="project.link && project.link !== '#'" class="mb-8">
             <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
               <AppIcon name="link" class="text-primary" />
-              Project Link
+              {{ $t('project.projectLink') }}
             </h3>
             <a 
               :href="project.link"
@@ -82,7 +82,7 @@
               rel="noopener noreferrer"
               class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition font-semibold"
             >
-              Visit Project Website
+              {{ $t('project.visitWebsite') }}
               <AppIcon name="open_in_new" size="20px" />
             </a>
           </div>
@@ -91,7 +91,7 @@
           <div class="border-t border-gray-200 dark:border-gray-700 pt-8">
             <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
               <AppIcon name="code" class="text-primary" />
-              Technologies Used
+              {{ $t('project.technologiesUsed') }}
             </h3>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div 
@@ -111,7 +111,7 @@
       <div v-if="project && relatedProjects.length > 0" class="mt-12">
         <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
           <AppIcon name="apps" class="text-primary" />
-          Related Projects
+          {{ $t('project.relatedProjects') }}
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <PortfolioCard 

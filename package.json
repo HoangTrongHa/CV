@@ -10,9 +10,11 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxtjs/i18n": "^10.2.1",
     "@types/three": "^0.182.0",
     "jspdf": "^3.0.4",
     "jspdf-autotable": "^5.0.2",
+    "jspdf-font": "^1.0.7",
     "mammoth": "^1.11.0",
     "nuxt": "^4.2.2",
     "three": "^0.182.0",

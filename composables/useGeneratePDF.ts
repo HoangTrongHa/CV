@@ -4,6 +4,7 @@ import autoTable from 'jspdf-autotable'
 export const useGeneratePDF = () => {
   const portfolioData = usePortfolioData()
   const { personalInfo, summary, skills, experience, education, projects } = portfolioData
+  const { t, locale } = useI18n()
 
   const generateCV = async () => {
     if (!personalInfo?.value) {
@@ -11,7 +12,19 @@ export const useGeneratePDF = () => {
       return
     }
 
-    const doc = new jsPDF()
+    const doc = new jsPDF({
+      orientation: 'portrait',
+      unit: 'mm',
+      format: 'a4',
+      putOnlyUsedFonts: true,
+      compress: true
+    })
+    
+    // Configure for better Unicode support
+    // Times has better support for Vietnamese and Japanese characters than Helvetica
+    const isUnicodeLang = locale.value === 'vi' || locale.value === 'ja'
+    const defaultFont = isUnicodeLang ? 'times' : 'helvetica'
+    const boldFont = isUnicodeLang ? 'times' : 'helvetica'
     
     // Define colors
     const primaryColor: [number, number, number] = [40, 167, 69]
@@ -47,13 +60,13 @@ export const useGeneratePDF = () => {
 
     // Header - Personal Info
     doc.setFontSize(26)
-    doc.setFont('helvetica', 'bold')
+    doc.setFont(boldFont, 'bold')
     doc.setTextColor(...primaryColor)
     doc.text(personalInfo.value.name || 'N/A', 20, yPosition)
     
     yPosition += 8
     doc.setFontSize(14)
-    doc.setFont('helvetica', 'normal')
+    doc.setFont(defaultFont, 'normal')
     doc.setTextColor(...textColor)
     doc.text(personalInfo.value.title || '', 20, yPosition)
     
@@ -86,18 +99,20 @@ export const useGeneratePDF = () => {
 
     // About Section
     doc.setFontSize(14)
-    doc.setFont('helvetica', 'bold')
+    doc.setFont(boldFont, 'bold')
     doc.setTextColor(...primaryColor)
-    doc.text('ABOUT ME', 20, yPosition)
+    const aboutMeText = t('pdf.aboutMe')
+    doc.text(aboutMeText, 20, yPosition)
     
     // Underline
     doc.setDrawColor(...primaryColor)
     doc.setLineWidth(0.5)
-    doc.line(20, yPosition + 1, 60, yPosition + 1)
+    const aboutMeWidth = doc.getTextWidth(aboutMeText)
+    doc.line(20, yPosition + 1, 20 + aboutMeWidth, yPosition + 1)
     
     yPosition += 8
     doc.setFontSize(9)
-    doc.setFont('helvetica', 'normal')
+    doc.setFont(defaultFont, 'normal')
     doc.setTextColor(...textColor)
     const aboutText = summary?.value || personalInfo.value.about || 'N/A'
     const splitAbout = doc.splitTextToSize(aboutText, 170)
@@ -112,12 +127,14 @@ export const useGeneratePDF = () => {
       }
 
       doc.setFontSize(14)
-      doc.setFont('helvetica', 'bold')
+      doc.setFont(boldFont, 'bold')
       doc.setTextColor(...primaryColor)
-      doc.text('SKILLS', 20, yPosition)
+      const skillsText = t('pdf.skills')
+      doc.text(skillsText, 20, yPosition)
       doc.setDrawColor(...primaryColor)
       doc.setLineWidth(0.5)
-      doc.line(20, yPosition + 1, 45, yPosition + 1)
+      const skillsWidth = doc.getTextWidth(skillsText)
+      doc.line(20, yPosition + 1, 20 + skillsWidth, yPosition + 1)
       yPosition += 8
 
       skills.value.forEach((category) => {
@@ -128,12 +145,12 @@ export const useGeneratePDF = () => {
 
         const skillsData = category.items.map(skill => [
           skill.name,
-          `${skill.years} year${skill.years > 1 ? 's' : ''}`
+          `${skill.years} ${t('pdf.years')}`
         ])
 
         autoTable(doc, {
           startY: yPosition,
-          head: [[category.category, 'Experience']],
+          head: [[category.category, t('pdf.experience')]],
           body: skillsData,
           theme: 'striped',
           headStyles: {
@@ -145,7 +162,7 @@ export const useGeneratePDF = () => {
           styles: {
             fontSize: 9,
             cellPadding: 3,
-            font: 'helvetica'
+            font: defaultFont
           },
           columnStyles: {
             0: { cellWidth: 120 },
@@ -166,12 +183,14 @@ export const useGeneratePDF = () => {
       }
 
       doc.setFontSize(14)
-      doc.setFont('helvetica', 'bold')
+      doc.setFont(boldFont, 'bold')
       doc.setTextColor(...primaryColor)
-      doc.text('WORK EXPERIENCE', 20, yPosition)
+      const workExpText = t('pdf.workExperience')
+      doc.text(workExpText, 20, yPosition)
       doc.setDrawColor(...primaryColor)
       doc.setLineWidth(0.5)
-      doc.line(20, yPosition + 1, 75, yPosition + 1)
+      const workExpWidth = doc.getTextWidth(workExpText)
+      doc.line(20, yPosition + 1, 20 + workExpWidth, yPosition + 1)
       yPosition += 10
 
       experience.value.forEach((exp, index) => {
@@ -195,20 +214,20 @@ export const useGeneratePDF = () => {
         doc.roundedRect(20, yPosition - 3, 170, blockHeight, 2, 2, 'F')
 
         doc.setFontSize(11)
-        doc.setFont('helvetica', 'bold')
+        doc.setFont(boldFont, 'bold')
         doc.setTextColor(...primaryColor)
         doc.text(exp.title || '', 25, yPosition + 3)
         yPosition += 7
 
         doc.setFontSize(9)
-        doc.setFont('helvetica', 'italic')
+        doc.setFont(defaultFont, 'italic')
         doc.setTextColor(100, 100, 100)
         doc.text(`${exp.company || ''} | ${exp.period || ''}`, 25, yPosition)
         yPosition += 6
 
         if (exp.description) {
           doc.setFontSize(9)
-          doc.setFont('helvetica', 'normal')
+          doc.setFont(defaultFont, 'normal')
           doc.setTextColor(...textColor)
           const splitDescription = doc.splitTextToSize(exp.description, 160)
           doc.text(splitDescription, 25, yPosition)
@@ -227,12 +246,14 @@ export const useGeneratePDF = () => {
       }
 
       doc.setFontSize(14)
-      doc.setFont('helvetica', 'bold')
+      doc.setFont(boldFont, 'bold')
       doc.setTextColor(...primaryColor)
-      doc.text('EDUCATION', 20, yPosition)
+      const educationText = t('pdf.education')
+      doc.text(educationText, 20, yPosition)
       doc.setDrawColor(...primaryColor)
       doc.setLineWidth(0.5)
-      doc.line(20, yPosition + 1, 55, yPosition + 1)
+      const educationWidth = doc.getTextWidth(educationText)
+      doc.line(20, yPosition + 1, 20 + educationWidth, yPosition + 1)
       yPosition += 8
 
       const eduData = education.value.map(edu => [
@@ -244,7 +265,7 @@ export const useGeneratePDF = () => {
 
       autoTable(doc, {
         startY: yPosition,
-        head: [['Degree', 'Institution', 'Year', 'Details']],
+        head: [[t('pdf.degree'), t('pdf.institution'), t('pdf.year'), t('pdf.details')]],
         body: eduData,
         theme: 'grid',
         headStyles: {
@@ -276,12 +297,14 @@ export const useGeneratePDF = () => {
       }
 
       doc.setFontSize(14)
-      doc.setFont('helvetica', 'bold')
+      doc.setFont(boldFont, 'bold')
       doc.setTextColor(...primaryColor)
-      doc.text('PORTFOLIO PROJECTS', 20, yPosition)
+      const portfolioText = t('pdf.portfolioProjects')
+      doc.text(portfolioText, 20, yPosition)
       doc.setDrawColor(...primaryColor)
       doc.setLineWidth(0.5)
-      doc.line(20, yPosition + 1, 85, yPosition + 1)
+      const portfolioWidth = doc.getTextWidth(portfolioText)
+      doc.line(20, yPosition + 1, 20 + portfolioWidth, yPosition + 1)
       yPosition += 8
 
       const projectsData = projects.value.map(project => [
@@ -293,7 +316,7 @@ export const useGeneratePDF = () => {
 
       autoTable(doc, {
         startY: yPosition,
-        head: [['Project', 'Description', 'Technologies', 'Link']],
+        head: [[t('pdf.project'), t('pdf.description'), t('pdf.technologies'), t('pdf.link')]],
         body: projectsData,
         theme: 'striped',
         headStyles: {

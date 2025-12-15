@@ -58,7 +58,7 @@
         class="mt-3 w-full flex items-center justify-center gap-2 px-3 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-lg text-xs font-medium transition disabled:opacity-50 disabled:cursor-not-allowed"
       >
         <AppIcon name="refresh" size="16px" :class="{ 'animate-spin': loading }" />
-        {{ loading ? 'Updating...' : 'Refresh' }}
+        {{ $t('weather.refresh') }}
       </button>
       </div>
     </Transition>
@@ -89,9 +89,16 @@
 
 <script setup lang="ts">
 const { weatherData, loading, error, fetchWeather } = useWeather()
+const { t } = useI18n()
 
 const getAQILabel = (aqi: number) => {
-  const labels = ['Good', 'Fair', 'Moderate', 'Poor', 'Very Poor']
+  const labels = [
+    t('weather.good'),
+    t('weather.fair'),
+    t('weather.moderate'),
+    t('weather.poor'),
+    t('weather.veryPoor')
+  ]
   return labels[aqi - 1] || 'Unknown'
 }
 

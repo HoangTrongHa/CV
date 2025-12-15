@@ -3,11 +3,11 @@
     <div class="flex-1 flex flex-col gap-6 text-center md:text-left">
       <div>
         <AppBadge variant="primary" class="mb-4">
-          Available for work
+          {{ $t('hero.availableForWork') }}
         </AppBadge>
         
         <h1 class="text-4xl md:text-6xl font-black tracking-tighter text-slate-900 dark:text-white leading-tight">
-          Passionate <span class="text-primary">Front end</span><br/> Developer
+          {{ $t('hero.passionate') }} <span class="text-primary">{{ $t('hero.frontEnd') }}</span><br/> {{ $t('hero.developer') }}
         </h1>
         
         <h2 class="mt-4 text-xl text-slate-600 dark:text-gray-400 font-normal leading-relaxed max-w-2xl">

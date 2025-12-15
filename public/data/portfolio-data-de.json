@@ -1,0 +1,297 @@
+{
+  "personalInfo": {
+    "name": "Ha Hoang Trong",
+    "title": "Entwickler",
+    "email": "ha9a1ltt@gmail.com",
+    "phone": "0838584663",
+    "linkedin": "linkedin.com/in/ha-hoang-trong",
+    "github": "github.com/HoangTrongHa",
+    "facebook": "https://www.facebook.com/HoangTrongHa2001/",
+    "location": "Vietnam",
+    "avatar": "/images/avatar.jpg"
+  },
+  "summary": "Über 5 Jahre professionelle Full-Stack-Entwicklungserfahrung mit Spezialisierung auf Vue.js, moderne Web-Architektur und 3D-Interaktionen. Solide technische Software-Engineering-Fähigkeiten mit Schwerpunkt auf UI-Bereichen, versiert in der Analyse und dem Design von UI-Komponenten mit Fokus auf wiederverwendbare Komponenten und Subsysteme.",
+  "stats": [
+    { "value": "5+", "label": "Jahre Erfahrung" },
+    { "value": "10+", "label": "Abgeschlossene Projekte" },
+    { "value": "15+", "label": "Technologien" },
+    { "value": "10+", "label": "Zufriedene Kunden" }
+  ],
+  "skills": [
+    {
+      "category": "Programmiersprachen",
+      "items": [
+        { "name": "JavaScript", "years": 5 },
+        { "name": "TypeScript", "years": 2 },
+        { "name": "PHP", "years": 2 },
+        { "name": "C#", "years": 1 }
+      ]
+    },
+    {
+      "category": "Frontend-Frameworks & Bibliotheken",
+      "items": [
+        { "name": "Vue.js 2.0", "years": 3 },
+        { "name": "Vue.js 3.0", "years": 3 },
+        { "name": "Nuxt 2", "years": 1 },
+        { "name": "Nuxt 3", "years": 2 },
+        { "name": "React", "years": 2 },
+        { "name": "React Native", "years": 1 },
+        { "name": "HTML/CSS", "years": 5 },
+        { "name": "jQuery", "years": 3 },
+        { "name": "Bootstrap", "years": 4 },
+        { "name": "Tailwind CSS", "years": 4 }
+      ]
+    },
+    {
+      "category": "Backend & Datenbanken",
+      "items": [
+        { "name": "Laravel", "years": 2 },
+        { "name": "ASP.NET", "years": 1 },
+        { "name": "Node.js", "years": 1 },
+        { "name": "GraphQL", "years": 1 },
+        { "name": "MySQL", "years": 2 },
+        { "name": "PostgreSQL", "years": 2 },
+        { "name": "SQL Server", "years": 1 },
+        { "name": "MongoDB", "years": 2 }
+      ]
+    },
+    {
+      "category": "Werkzeuge & Technologien",
+      "items": [
+        { "name": "Git/GitHub", "years": 5 },
+        { "name": "Visual Studio Code", "years": 5 },
+        { "name": "Postman", "years": 5 },
+        { "name": "Figma", "years": 5 },
+        { "name": "npm/Webpack", "years": 5 },
+        { "name": "Axios/HTTP", "years": 5 },
+        { "name": "Storybook", "years": 3 },
+        { "name": "Jest", "years": 3 }
+      ]
+    },
+    {
+      "category": "Testing & DevOps",
+      "items": [
+        { "name": "Ranorex", "years": 1 },
+        { "name": "Test Cafe + Cucumber", "years": 3 },
+        { "name": "Docker", "years": 1 },
+        { "name": "Scrum/Agile", "years": 5 }
+      ]
+    },
+    {
+      "category": "Betriebssysteme",
+      "items": [
+        { "name": "Windows", "years": 5 },
+        { "name": "MacOS", "years": 3 }
+      ]
+    },
+    {
+      "category": "Zusätzliche Fähigkeiten",
+      "items": [
+        { "name": "Three.js", "years": 1 },
+        { "name": "D3.js", "years": 1 },
+        { "name": "Software-Analyse & Design", "years": 4 },
+        { "name": "Micro-Frontend-Architektur", "years": 4 }
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "FPT Software",
+      "images": "https://fptsoftware.com/-/media/project/fpt-software/fso/uplift/home/logo_fpt_text_black.png",
+      "position": "Senior Frontend-Entwickler",
+      "period": "Mai 2022 - Heute",
+      "description": "Leitung der Frontend-Entwicklung für mehrere internationale Projekte mit Spezialisierung auf Vue.js- und React-Ökosysteme.",
+      "highlights": [
+        "Entwicklung von KMI WEB UI für Konicaminolta mit erweiterten Druckfunktionen",
+        "Aufbau von INZENT DB_MGMT_V2 mit Vue3, Vuetify und Pinia",
+        "Implementierung von Testautomatisierung mit Ranorex für HAL Baralogix",
+        "Wartung von DELL CED 2023 mit C#, ASP.NET und Bootstrap"
+      ]
+    },
+    {
+      "company": "Newwave Solutions",
+      "images": "https://newwave.vn/wp-content/themes/nwstheme/assets/images/logo-nws.png",
+      "position": "Full-Stack-Entwickler",
+      "period": "April 2020 - April 2022",
+      "description": "Entwicklung von Full-Stack-Webanwendungen für japanische und internationale Kunden mit Vue.js und Laravel.",
+      "highlights": [
+        "Aufbau der Immobilienplattform IHOUZZ mit Livestream-Integration",
+        "Entwicklung eines Gesundheitsumfragesystems für Kowa mit Video-Rehabilitation",
+        "Erstellung des Rezeptverwaltungssystems DATAGUSTO mit KI-Integration",
+        "Implementierung des Event-Management-Systems Flippa mit QR-Code-Tickets"
+      ]
+    },
+    {
+      "company": "GI Soft",
+      "images": "#",
+      "position": "Full-Stack-Entwickler",
+      "period": "April 2019 - April 2020",
+      "description": "Entwicklung von Full-Stack-Webanwendungen für japanische und internationale Kunden mit Vue.js und Laravel.",
+      "highlights": [
+        "Erstellung von Vorwärts- und Rückwärtsauktionssystemen",
+        "Entwicklung eines Zinsberechnungssystems für AIFUL",
+        "Erstellung des Rezeptverwaltungssystems DATAGUSTO mit KI-Integration",
+        "Implementierung des Event-Management-Systems Flippa mit QR-Code-Tickets"
+      ]
+    },
+    {
+      "company": "Freelance-Projekte",
+      "images": "#",
+      "position": "Full-Stack-Entwickler",
+      "period": "2019 - Heute",
+      "description": "Arbeit an verschiedenen Freelance-Projekten für internationale Kunden.",
+      "highlights": [
+        "Konvertierung der Unilever-UI von Next.js zu Nuxt 3",
+        "Aufbau der Fotoplattform PARI mit Nuxt 3",
+        "Entwicklung des Projektmanagementsystems SAT mit React",
+        "Erstellung des SIM-Verwaltungsdienstes RENTCODE.IO"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor in Software-Engineering",
+      "school": "FPT Universität",
+      "period": "2019 - 2023",
+      "description": "Schwerpunkt auf Softwareentwicklung, Webtechnologien und UI/UX-Design."
+    }
+  ],
+  "projects": [
+    {
+      "title": "KMI WEB UI",
+      "description": "Entwicklung einer ausgeklügelten webbasierten Benutzeroberfläche für Konicaminoltas fortschrittliches Drucksystem. Implementierung interaktiver UI-Komponenten zur Steuerung der Druckereinstellungen, einschließlich Papierformatauswahl, Auflösungsanpassung, Farbverwaltung und Veredelungsoptionen. Aufbau dynamischer Formularvalidierung und Echtzeit-Vorschaufunktionalität. Optimierung der Oberfläche für browserübergreifende Kompatibilität und Sicherstellung eines responsiven Designs für verschiedene Bildschirmgrößen. Erstellung wiederverwendbarer UI-Komponenten und Pflege konsistenter Designmuster in der gesamten Anwendung. Zusammenarbeit mit dem Backend-Team zur Integration von REST-APIs für Druckerkonfiguration und Statusüberwachung.",
+      "image": "/images/products/webUI.svg",
+      "tags": ["JavaScript ES5", "C++"],
+      "link": "https://www.konicaminolta.vn/vn-vi/business-solutions/printers-and-mfp",
+      "period": "Juni 2024 - Heute"
+    },
+    {
+      "title": "INZENT DB Management V2",
+      "description": "Aufbau einer umfassenden Datenbankverwaltungsoberfläche mit Vue 3 Composition API und Vuetify Material Design-Komponenten. Entwicklung komplexer Datentabellen mit Sortierung, Filterung und Paginierung für PostgreSQL-Datenbankverwaltung. Implementierung der Zustandsverwaltung mit Pinia zur Handhabung von Datenbankverbindungen, Abfrageergebnissen und Benutzersitzungen. Erstellung interaktiver Formulare für Datenverschlüsselungskonfiguration, automatische Backup-Planung und Wiederherstellungsoperationen. Aufbau eines Echtzeit-Überwachungs-Dashboards zur Anzeige von Datenbankleistungsmetriken und Verbindungsstatus. Entwurf und Implementierung einer rollenbasierten Zugriffskontroll-UI für Sicherheitsverwaltung. Optimierung der Anwendungsleistung durch Lazy Loading und Code-Splitting.",
+      "image": "/images/products/inzent.png",
+      "tags": ["Vue3", "Vuetify", "Pinia"],
+      "link": "https://www.inzent.com/en/",
+      "period": "Januar 2024 - Juni 2024"
+    },
+    {
+      "title": "HAL_Baralogix Testing Automation",
+      "description": "Entwicklung einer automatisierten Testsuite für Baroids Bohrflüssigkeitsmanagementsystem mit Ranorex Studio. Erstellung umfassender UI-Testskripte zur Abdeckung von Benutzer-Workflows, Dateneingabevalidierung und Systemintegrationspunkten. Implementierung automatisierter Regressionstests zur Sicherstellung der UI-Konsistenz über Anwendungsupdates hinweg. Aufbau eines Testberichts-Dashboards zur Visualisierung von Testergebnissen und Verfolgung von Fehlermustern. Entwurf wiederverwendbarer Testmodule und Pflege von Testdatensätzen. Zusammenarbeit mit dem QA-Team zur Identifizierung kritischer UI-Testfälle und Optimierung der Testausführungszeit. Integration automatisierter Tests in die CI/CD-Pipeline zur kontinuierlichen Qualitätssicherung.",
+      "image": "/images/products/haliburton.svg",
+      "tags": ["Ranorex", "C#"],
+      "link": "https://www.halliburton.com/",
+      "period": "Dezember 2023 - Februar 2024"
+    },
+    {
+      "title": "DELL CED 2023",
+      "description": "Wartung und Verbesserung mehrerer Produktionsunterstützungs-Dashboards für Dells Unternehmensanwendungen mit ASP.NET MVC und Bootstrap. Entwicklung von Echtzeit-Überwachungsschnittstellen zur Anzeige der Azure-Ressourcennutzung, Systemleistungsmetriken und Integrationsstatus. Aufbau responsiver Datentabellen und Diagramme zur Visualisierung von Anwendungszustand und Bereitstellungshistorie. Implementierung von Fehlerverfolgungs-Schnittstellen mit Filter-, Such- und Statusverwaltungsfunktionen. Erstellung von API-Integrationsüberwachungstools zur Anzeige von Request/Response-Logs und Fehleranalysen. Entwurf von Admin-Panels für Konfigurationsverwaltung und Benutzerzugriffskontrolle. Optimierung der Frontend-Leistung durch Implementierung von Caching-Strategien und Minimierung von API-Aufrufen. Sicherstellung browserübergreifender Kompatibilität und mobiler Reaktionsfähigkeit über alle Dashboards hinweg.",
+      "image": "/images/products/dell.svg",
+      "tags": ["C#", "ASP.NET", "Bootstrap", "SQL Server"],
+      "link": "https://www.dell.com/",
+      "period": "August 2023 - November 2023"
+    },
+    {
+      "title": "Unilever Russia - Production Support",
+      "description": "Migration und Neuaufbau von Produktionsüberwachungs-Dashboards von Next.js zum Nuxt 3 Framework für verbesserte Leistung und Entwicklererfahrung. Implementierung von Server-Side Rendering (SSR) für schnellere initiale Seitenladezeiten und besseres SEO. Entwicklung interaktiver Überwachungsschnittstellen mit Nuxt Composables und Pinia Store für Zustandsverwaltung. Aufbau eines Echtzeit-Benachrichtigungssystems für kritische Warnungen und Systemanomalien. Erstellung responsiver Layouts mit Bootstrap 5 unter Sicherstellung eines Mobile-First-Design-Ansatzes. Implementierung rollenbasierter Dashboard-Ansichten für verschiedene Benutzertypen. Optimierung der Bundle-Größe durch Tree-Shaking und dynamische Imports. Integration von Azure-Überwachungs-APIs für Ressourcenverfolgung und Leistungsanalysen.",
+      "image": "/images/products/uniliver.svg",
+      "tags": ["NuxtJs", "Pinia", "Bootstrap"],
+      "link": "https://www.unirusgroup.ru/",
+      "period": "August 2023 - November 2023"
+    },
+    {
+      "title": "PARI Photostock Platform",
+      "description": "Entwicklung eines voll funktionsfähigen Fotografie-Marktplatzes mit Nuxt 3 und Server-Side Rendering für optimale SEO-Leistung. Aufbau von Bildergalerie-Schnittstellen mit Lazy Loading, Infinite Scroll und Lightbox-Anzeigefunktionen. Implementierung eines erweiterten Such- und Filtersystems mit Kategorienavigation, tagbasierter Suche und Preisbereichsfiltern. Erstellung von Fotografenregistrierungs- und Profilverwaltungsschnittstellen mit Portfolio-Präsentation. Entwicklung eines sicheren Bild-Upload-Systems mit Drag-and-Drop-Funktionalität, Fortschrittsverfolgung und clientseitiger Bildoptimierung. Aufbau von Warenkorb und Checkout-Flow mit Zahlungsgateway-Integration. Implementierung responsiver Bildraster mit CSS Grid und Flexbox. Nutzung von Pinia zur Verwaltung des Anwendungszustands einschließlich Benutzerauthentifizierung, Warenkorb-Artikeln und Suchfiltern. Optimierung der Bildauslieferung durch Lazy Loading und progressive Bildeladetechniken.",
+      "image": "",
+      "tags": ["Nuxt 3", "Pinia"],
+      "link": "https://photostock.thisfil.ru/",
+      "period": "Mai 2023 - September 2023"
+    },
+    {
+      "title": "Chat Box Lương Sơn",
+      "description": "Aufbau einer plattformübergreifenden mobilen Messaging-Anwendung mit React Native und Echtzeit-Kommunikationsfunktionen. Implementierung einer Chat-Oberfläche mit Nachrichtenblasen, Tippindikatoren, Lesebestätigungen und Zeitstempelanzeige. Integration des LiveKit SDK für Videoanruf- und Sprachtelefonie-Funktionen mit Bildschirmfreigabefunktionen. Entwicklung eines Benutzerauthentifizierungs-Flows mit Firebase Authentication mit Telefonverifizierung. Aufbau von Kontaktlistenverwaltung, Gruppenchat-Erstellung und Benutzerprofil-Schnittstellen. Implementierung von Push-Benachrichtigungen für eingehende Nachrichten und Anrufe mit Firebase Cloud Messaging. Erstellung von Medienfreigabefunktionen mit Unterstützung für Bilder, Videos und Dokumente mit Vorschaufunktion. Gestaltung von UI-Komponenten mit Tailwind CSS für konsistentes Design auf iOS- und Android-Plattformen. Optimierung der App-Leistung durch effiziente Zustandsverwaltung und Bild-Caching-Strategien.",
+      "image": "",
+      "tags": ["React Native", "LiveKit", "Tailwind", "Firebase"],
+      "link": "https://github.com/HoangTrongHa/Chat-Box",
+      "period": "Juni 2023 - September 2023"
+    },
+    {
+      "title": "HOFURI M - Bond Investment Platform",
+      "description": "Entwicklung einer anspruchsvollen Finanzhandelsplattform mit Vue 3 Composition API für Anleiheninvestment-Management. Aufbau interaktiver Finanzcharts mit Chart.js und D3.js zur Anzeige von Echtzeit-Preisbewegungen, historischen Trends und Marktanalysen. Implementierung eines Investment-Portfolio-Dashboards zur Anzeige von Vermögensallokation, Renditen und Risikometriken. Erstellung einer Anleihenmarktplatz-Schnittstelle mit erweiterter Filterung nach Fälligkeitsdatum, Rendite und Kreditrating. Entwicklung von Benutzerauthentifizierungs- und KYC-Verifizierungs-Workflows. Aufbau von Transaktionshistorie-Schnittstellen mit Exportfunktionalität. Implementierung responsiver Layouts zur Sicherstellung optimaler Anzeige auf Desktop- und Mobilgeräten. Integration von WebSocket-Verbindungen für Echtzeit-Preisaktualisierungen und Marktbenachrichtigungen. Entwurf intuitiver Kauf-/Verkaufsauftragsformulare mit Validierungs- und Bestätigungsabläufen.",
+      "image": "",
+      "tags": ["Vue 3"],
+      "link": "#",
+      "period": "Februar 2022 - August 2023"
+    },
+    {
+      "title": "UP2PART CAM UI",
+      "description": "Aufbau einer hochmodernen 3D-Produktvisualisierungsplattform mit Vue 2 und Three.js für die Fertigungsindustrie. Implementierung eines interaktiven 3D-Modell-Viewers, der es Benutzern ermöglicht, Produkte aus allen Winkeln zu drehen, zu zoomen und zu inspizieren. Entwicklung einer Materialauswahl-Schnittstelle mit Echtzeit-Textur- und Farbvorschau auf 3D-Modellen. Erstellung von Werkzeugkonfigurationspanels zur Auswahl von Bearbeitungswerkzeugen und Verarbeitungsparametern. Integration einer GraphQL-API für effizientes Datenabrufen und Caching von Materialeigenschaften und Produktspezifikationen. Implementierung einer Micro-Frontend-Architektur mit Module Federation für unabhängige Bereitstellung von Feature-Modulen. Aufbau responsiver UI-Komponenten zur Sicherstellung reibungsloser 3D-Rendering-Leistung über Geräte hinweg. Optimierung des 3D-Modell-Ladevorgangs durch progressives Laden und Level-of-Detail (LOD)-Techniken. Entwicklung benutzerdefinierter Shader für realistische Materialdarstellung einschließlich Metall, Kunststoff und Verbundmaterialien.",
+      "image": "/images/products/u2p_logo_web_4c_neg.png",
+      "tags": ["Vue 2", "Three.js", "GraphQL", "Micro Frontend"],
+      "link": "https://up2parts.com/en/",
+      "period": "Mai 2021 - Januar 2022"
+    },
+    {
+      "title": "IHOUZZ - Đất Xanh Group",
+      "description": "Entwicklung einer umfassenden Immobilienmarktplatz-Plattform mit jQuery und PHP Laravel Backend. Integration der Google Maps API für Immobilienstandort-Visualisierung mit benutzerdefinierten Markern und Cluster-Management. Aufbau einer erweiterten Immobiliensuch-Schnittstelle mit Filtern für Standort, Preisspanne, Immobilientyp und Ausstattung. Implementierung von Makler-Profilseiten mit Bewertungen, Rezensionen und Kontaktformularen. Entwicklung von Livestream-Funktionen für virtuelle Immobilientouren und Immobilienveranstaltungen mit WebRTC-Technologie. Erstellung von Immobilienangebotsseiten mit Bildergalerien, virtuellen Touren und detaillierten Spezifikationen. Aufbau responsiver Layouts zur Sicherstellung mobilfreundlicher Erfahrung beim Durchsuchen von Immobilien. Implementierung eines Benutzerauthentifizierungssystems mit Social-Login-Integration. Entwicklung eines Benachrichtigungssystems für neue Angebote und Preisaktualisierungen. Optimierung der Seitenladezeiten durch Bild-Lazy-Loading und AJAX-basiertes Content-Loading.",
+      "image": "/images/products/ihouzz.png",
+      "tags": ["jQuery", "PHP", "MySQL"],
+      "link": "https://ihouzz.com/",
+      "period": "Mai 2021 - März 2022"
+    },
+    {
+      "title": "DATAGUSTO",
+      "description": "Aufbau einer Progressive Web Application (PWA) für Rezeptverwaltung und Essensplanung mit Vue.js. Implementierung einer Offline-First-Architektur, die es Benutzern ermöglicht, ohne Internetverbindung auf Rezepte zuzugreifen. Entwicklung eines KI-gestützten Rezeptempfehlungssystems basierend auf Benutzerpräferenzen, Ernährungseinschränkungen und verfügbaren Zutaten. Erstellung interaktiver Rezeptkarten mit Schritt-für-Schritt-Kochanleitungen, Zutatenlisten und Nährwertinformationen. Aufbau einer Rezeptsuch- und Filter-Schnittstelle mit Kategorienavigation, Küchentypen und Schwierigkeitsgraden. Implementierung einer Benutzer-Rezeptsammlungs-Funktion mit Favoriten und individuellen Essensplänen. Entwicklung eines Einkaufslisten-Generators, der automatisch Zutaten aus ausgewählten Rezepten zusammenstellt. Erstellung responsiver Layouts, optimiert für mobile Kocherfahrung. Implementierung von Bildoptimierung und Lazy Loading für schnelles Rezept-Browsing. Hinzufügen von Push-Benachrichtigungen für Essenserinnerungen und neue Rezeptvorschläge.",
+      "image": "",
+      "tags": ["Vue.js", "PWA"],
+      "link": "https://www.datagusto.jp/",
+      "period": "Januar 2021 - September 2021"
+    },
+    {
+      "title": "Flippa Event Management",
+      "description": "Entwicklung einer voll funktionsfähigen Veranstaltungsverwaltungs- und Ticketing-Plattform mit CodeIgniter Framework und jQuery Frontend. Aufbau einer Veranstaltungserstellungs-Schnittstelle, die es Organisatoren ermöglicht, bezahlte oder kostenlose Veranstaltungen mit anpassbaren Ticket-Stufen einzurichten. Implementierung eines QR-Code-Generierungssystems für Ticketvalidierung und Einlassmanagement. Erstellung von Veranstaltungsentdeckungs-Seiten mit Suche, Filterung nach Datum, Ort und Kategorie. Entwicklung eines Ticket-Kaufablaufs mit Sitzplatzauswahl, Warenkorb und sicherer Zahlungsgateway-Integration. Aufbau eines Veranstalter-Dashboards zur Verwaltung von Teilnehmern, Verfolgung von Verkäufen und Generierung von Berichten. Implementierung einer Ticket-Scanner-Schnittstelle für Mobilgeräte unter Verwendung der Gerätekamera für QR-Code-Validierung. Erstellung responsiver Veranstaltungsdetail-Seiten mit Bildergalerien, Zeitplänen und Rednerinformationen. Entwicklung eines E-Mail-Benachrichtigungssystems für Ticketbestätigungen und Veranstaltungserinnerungen. Optimierung von Datenbankabfragen zur Bewältigung hochfrequentierter Veranstaltungsstarts.",
+      "image": "/images/products/flippa.png",
+      "tags": ["CodeIgniter", "jQuery"],
+      "link": "https://flippa.jp/",
+      "period": "Januar 2018 - Dezember 2020"
+    },
+    {
+      "title": "Enzo Loan Management",
+      "description": "Aufbau eines umfassenden Kreditverwaltungssystems mit Laravel Framework und integriertem WordPress CMS für Content-Seiten. Entwicklung von Kreditantragsformularen mit mehrstufiger Validierung und Dokumenten-Upload-Funktionen. Implementierung einer komplexen Zinsberechnungs-Engine mit Echtzeit-Vorschau von Rückzahlungsplänen. Erstellung eines Kunden-Dashboards zur Anzeige von Kreditstatus, Zahlungshistorie und bevorstehenden Fälligkeitsterminen. Aufbau eines Admin-Panels für Kreditgenehmigungsworkflow, Risikobewertung und Kreditnehmerverwaltung. Entwicklung der Zahlungsgateway-Integration für Online-Kreditrückzahlungen mit automatischer Quittungsgenerierung. Implementierung eines Benachrichtigungssystems für Zahlungserinnerungen und Kreditstatus-Updates. Erstellung responsiver UI-Komponenten zur Sicherstellung mobiler Zugänglichkeit für Kreditanträge. Aufbau von Berichts-Schnittstellen mit Diagrammen zur Anzeige der Kreditportfolio-Leistung und Ausfallraten. Integration von WordPress zur Verwaltung informativer Inhalte über Kreditprodukte und Bedingungen.",
+      "image": "",
+      "tags": ["Laravel", "WordPress"],
+      "link": "#",
+      "period": "November 2019 - Mai 2020"
+    },
+    {
+      "title": "RENTCODE.IO - SIM Management",
+      "description": "Entwicklung einer SIM-Vermietungsplattform mit React.js Frontend und Laravel- sowie Node.js-Backend-Services. Aufbau einer Benutzerschnittstelle zum Durchsuchen verfügbarer SIM-Nummern mit Filterung nach Land und Anbieter. Implementierung eines Echtzeit-SMS-Empfangs-Dashboards zur Anzeige eingehender Verifizierungscodes. Erstellung eines automatisierten 2FA-Verifizierungs-Workflows für beliebte Dienste wie Facebook, Google und WhatsApp. Entwicklung eines kreditbasierten Zahlungssystems mit Momo-Wallet- und Banküberweisungs-Integration. Aufbau einer Benutzerkontenverwaltungs-Schnittstelle zur Verfolgung der Miethistorie und des Kreditguthabens. Implementierung von WebSocket-Verbindungen für Echtzeit-SMS-Benachrichtigungen und automatische Code-Weiterleitung. Erstellung eines Admin-Panels zur Verwaltung des SIM-Inventars, Überwachung der Nutzung und Bearbeitung des Kundensupports. Entwicklung responsiver Layouts, optimiert für schnellen Zugriff auf Mobilgeräten. Implementierung von Rate-Limiting und Sicherheitsmaßnahmen zur Missbrauchsverhinderung. Aufbau einer API-Dokumentations-Schnittstelle für Entwickler, die den Service integrieren möchten.",
+      "image": "",
+      "tags": ["Laravel", "ReactJS", "Node.js"],
+      "link": "#",
+      "period": "Mai 2019 - Juni 2020"
+    },
+    {
+      "title": "SAT Product & Lawsuit Management",
+      "description": "Aufbau eines Unternehmens-Management-Systems mit React.js für ein koreanisches Rechts- und Produktverwaltungsunternehmen. Entwicklung einer Produktkatalog-Schnittstelle mit erweiterter Suche, Kategorisierung und Massenbearbeitungsfunktionen. Implementierung eines Rechtsstreitverfolgungssystems mit Fallzeitlinien-Visualisierung, Dokumentenverwaltung und Fristbenachrichtigungen. Erstellung eines Dashboards zur Anzeige wichtiger Metriken einschließlich Fallstatus, Produktbestand und Finanzzusammenfassungen. Aufbau komplexer Formular-Schnittstellen für Fallanmeldungen mit mehrstufigen Assistenten und Dokumentenanhängen. Entwicklung einer rollenbasierten Zugriffskontrolle zur Sicherstellung angemessener Datensicherheit und Benutzerberechtigungen. Implementierung von Datentabellen mit Sortier-, Filter-, Paginierungs- und Excel-Exportfunktionen. Erstellung responsiver Layouts nach koreanischen UI/UX-Konventionen und Lokalisierungsanforderungen. Aufbau eines Benachrichtigungssystems für Fall-Updates, Gerichtstermine und wichtige Fristen. Integration von Kalenderansichten zur Planung von Anhörungen und Produkteinführungsveranstaltungen. Optimierung der Leistung für die Verarbeitung großer Datensätze durch Virtualisierung und effiziente Zustandsverwaltung.",
+      "image": "",
+      "tags": ["ReactJS"],
+      "link": "#",
+      "period": "März 2022 - November 2022"
+    },
+    {
+      "title": "CSI English Center Website",
+      "description": "Entwicklung einer modernen Unternehmenswebsite für das CSI English Center mit React.js und Headless WordPress CMS. Aufbau einer responsiven Homepage mit Hero-Bereichen, Kurs-Highlights und Testimonial-Karussells. Implementierung von Kurskatalog-Seiten mit detaillierten Programminformationen, Zeitplänen und Preisen. Erstellung interaktiver Kursanmeldeformulare mit Validierung und Bestätigungs-E-Mails. Entwicklung von Lehrer-Profilseiten mit Qualifikationen und Unterrichtsmethoden. Aufbau eines Blog-Bereichs für Bildungsinhalte und Englischlern-Tipps, verwaltet über WordPress. Implementierung von SEO-Optimierung zur Sicherstellung hoher Suchmaschinen-Rankings für Bildungsschlüsselwörter. Erstellung einer Studenten-Portal-Schnittstelle für den Zugriff auf Lernmaterialien und Fortschrittsverfolgung. Entwicklung eines Mobile-First-Responsive-Designs zur Sicherstellung optimaler Anzeige auf allen Geräten. Integration von Google Analytics zur Verfolgung von Benutzerengagement und Konversionsraten. Aufbau von Kontaktformularen und Standortkarten für mehrere Campus-Filialen. Optimierung der Seitenladegeschwindigkeit durch Code-Splitting und Bildoptimierung.",
+      "image": "",
+      "tags": ["ReactJS", "WordPress"],
+      "link": "https://csi.edu.vn/",
+      "period": "Mai 2022 - Dezember 2022"
+    }
+  ],
+  "languages": {
+    "english": {
+      "listening": "Eingeschränkt",
+      "speaking": "Eingeschränkt",
+      "reading": "Fortgeschritten",
+      "writing": "Fortgeschritten"
+    }
+  }
+}

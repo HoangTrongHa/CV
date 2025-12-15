@@ -1,0 +1,297 @@
+{
+  "personalInfo": {
+    "name": "Hà Hoàng Trọng",
+    "title": "Lập trình viên",
+    "email": "ha9a1ltt@gmail.com",
+    "phone": "0838584663",
+    "linkedin": "linkedin.com/in/ha-hoang-trong",
+    "github": "github.com/HoangTrongHa",
+    "facebook": "https://www.facebook.com/HoangTrongHa2001/",
+    "location": "Việt Nam",
+    "avatar": "/images/avatar.jpg"
+  },
+  "summary": "Hơn 5 năm kinh nghiệm phát triển full-stack chuyên nghiệp, chuyên về Vue.js, kiến trúc web hiện đại và tương tác 3D. Kỹ năng kỹ thuật phần mềm vững chắc với trọng tâm vào lĩnh vực UI, thành thạo phân tích và thiết kế các thành phần UI với sự nhấn mạnh vào các thành phần tái sử dụng và hệ thống con.",
+  "stats": [
+    { "value": "5+", "label": "Năm kinh nghiệm" },
+    { "value": "10+", "label": "Dự án hoàn thành" },
+    { "value": "15+", "label": "Công nghệ" },
+    { "value": "10+", "label": "Khách hàng hài lòng" }
+  ],
+  "skills": [
+    {
+      "category": "Ngôn ngữ lập trình",
+      "items": [
+        { "name": "JavaScript", "years": 5 },
+        { "name": "TypeScript", "years": 2 },
+        { "name": "PHP", "years": 2 },
+        { "name": "C#", "years": 1 }
+      ]
+    },
+    {
+      "category": "Framework & Thư viện Frontend",
+      "items": [
+        { "name": "Vue.js 2.0", "years": 3 },
+        { "name": "Vue.js 3.0", "years": 3 },
+        { "name": "Nuxt 2", "years": 1 },
+        { "name": "Nuxt 3", "years": 2 },
+        { "name": "React", "years": 2 },
+        { "name": "React Native", "years": 1 },
+        { "name": "HTML/CSS", "years": 5 },
+        { "name": "jQuery", "years": 3 },
+        { "name": "Bootstrap", "years": 4 },
+        { "name": "Tailwind CSS", "years": 4 }
+      ]
+    },
+    {
+      "category": "Backend & Cơ sở dữ liệu",
+      "items": [
+        { "name": "Laravel", "years": 2 },
+        { "name": "ASP.NET", "years": 1 },
+        { "name": "Node.js", "years": 1 },
+        { "name": "GraphQL", "years": 1 },
+        { "name": "MySQL", "years": 2 },
+        { "name": "PostgreSQL", "years": 2 },
+        { "name": "SQL Server", "years": 1 },
+        { "name": "MongoDB", "years": 2 }
+      ]
+    },
+    {
+      "category": "Công cụ & Công nghệ",
+      "items": [
+        { "name": "Git/GitHub", "years": 5 },
+        { "name": "Visual Studio Code", "years": 5 },
+        { "name": "Postman", "years": 5 },
+        { "name": "Figma", "years": 5 },
+        { "name": "npm/Webpack", "years": 5 },
+        { "name": "Axios/HTTP", "years": 5 },
+        { "name": "Storybook", "years": 3 },
+        { "name": "Jest", "years": 3 }
+      ]
+    },
+    {
+      "category": "Testing & DevOps",
+      "items": [
+        { "name": "Ranorex", "years": 1 },
+        { "name": "Test Cafe + Cucumber", "years": 3 },
+        { "name": "Docker", "years": 1 },
+        { "name": "Scrum/Agile", "years": 5 }
+      ]
+    },
+    {
+      "category": "Hệ điều hành",
+      "items": [
+        { "name": "Windows", "years": 5 },
+        { "name": "MacOS", "years": 3 }
+      ]
+    },
+    {
+      "category": "Kỹ năng bổ sung",
+      "items": [
+        { "name": "Three.js", "years": 1 },
+        { "name": "D3.js", "years": 1 },
+        { "name": "Phân tích & Thiết kế phần mềm", "years": 4 },
+        { "name": "Kiến trúc Micro Frontend", "years": 4 }
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "FPT Software",
+      "images": "https://fptsoftware.com/-/media/project/fpt-software/fso/uplift/home/logo_fpt_text_black.png",
+      "position": "Lập trình viên Frontend Senior",
+      "period": "Tháng 5/2022 - Hiện tại",
+      "description": "Dẫn dắt phát triển frontend cho nhiều dự án quốc tế, chuyên về hệ sinh thái Vue.js và React.",
+      "highlights": [
+        "Phát triển KMI WEB UI cho Konicaminolta với tính năng in ấn nâng cao",
+        "Xây dựng INZENT DB_MGMT_V2 sử dụng Vue3, Vuetify và Pinia",
+        "Triển khai tự động hóa kiểm thử với Ranorex cho HAL Baralogix",
+        "Bảo trì DELL CED 2023 với C#, ASP.NET và Bootstrap"
+      ]
+    },
+    {
+      "company": "Newwave Solutions",
+      "images": "https://newwave.vn/wp-content/themes/nwstheme/assets/images/logo-nws.png",
+      "position": "Lập trình viên Full Stack",
+      "period": "Tháng 4/2020 - Tháng 4/2022",
+      "description": "Phát triển ứng dụng web full-stack cho khách hàng Nhật Bản và quốc tế sử dụng Vue.js và Laravel.",
+      "highlights": [
+        "Xây dựng nền tảng bất động sản IHOUZZ với tích hợp livestream",
+        "Phát triển hệ thống khảo sát sức khỏe cho Kowa với phục hồi chức năng video",
+        "Tạo quản lý công thức nấu ăn DATAGUSTO với tích hợp AI",
+        "Triển khai quản lý sự kiện Flippa với vé QR code"
+      ]
+    },
+    {
+      "company": "GI Soft",
+      "images": "#",
+      "position": "Lập trình viên Full Stack",
+      "period": "Tháng 4/2019 - Tháng 4/2020",
+      "description": "Phát triển ứng dụng web full-stack cho khách hàng Nhật Bản và quốc tế sử dụng Vue.js và Laravel.",
+      "highlights": [
+        "Tạo đấu giá tiến, đấu giá ngược",
+        "Phát triển hệ thống tính lãi cho AIFUL",
+        "Tạo quản lý công thức nấu ăn DATAGUSTO với tích hợp AI",
+        "Triển khai quản lý sự kiện Flippa với vé QR code"
+      ]
+    },
+    {
+      "company": "Dự án Freelance",
+      "images": "#",
+      "position": "Lập trình viên Full Stack",
+      "period": "2019 - Hiện tại",
+      "description": "Làm việc trên nhiều dự án freelance cho khách hàng quốc tế.",
+      "highlights": [
+        "Chuyển đổi UI Unilever từ Next.js sang Nuxt 3",
+        "Xây dựng nền tảng ảnh PARI với Nuxt 3",
+        "Phát triển hệ thống quản lý dự án SAT với React",
+        "Tạo dịch vụ quản lý SIM RENTCODE.IO"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Cử nhân Kỹ thuật Phần mềm",
+      "school": "Đại học FPT",
+      "period": "2019 - 2023",
+      "description": "Tập trung vào phát triển phần mềm, công nghệ web và thiết kế UI/UX."
+    }
+  ],
+  "projects": [
+    {
+      "title": "KMI WEB UI",
+      "description": "Phát triển giao diện người dùng dựa trên web tinh vi cho hệ thống in ấn nâng cao của Konicaminolta. Triển khai các thành phần UI tương tác để điều khiển cài đặt máy in bao gồm chọn kích thước giấy, điều chỉnh độ phân giải, quản lý màu sắc và tùy chọn hoàn thiện. Xây dựng xác thực biểu mẫu động và chức năng xem trước theo thời gian thực. Tối ưu hóa giao diện cho khả năng tương thích đa trình duyệt và đảm bảo thiết kế responsive cho các kích thước màn hình khác nhau. Tạo các thành phần UI có thể tái sử dụng và duy trì các mẫu thiết kế nhất quán trong toàn bộ ứng dụng. Cộng tác với nhóm backend để tích hợp API REST cho cấu hình và giám sát trạng thái máy in.",
+      "image": "/images/products/webUI.svg",
+      "tags": ["JavaScript ES5", "C++"],
+      "link": "https://www.konicaminolta.vn/vn-vi/business-solutions/printers-and-mfp",
+      "period": "Tháng 6/2024 - Hiện tại"
+    },
+    {
+      "title": "INZENT DB Management V2",
+      "description": "Xây dựng giao diện quản lý cơ sở dữ liệu toàn diện sử dụng Vue 3 Composition API với các thành phần Vuetify Material Design. Phát triển các bảng dữ liệu phức tạp với sắp xếp, lọc và phân trang để quản lý cơ sở dữ liệu PostgreSQL. Triển khai quản lý trạng thái sử dụng Pinia để xử lý kết nối cơ sở dữ liệu, kết quả truy vấn và phiên người dùng. Tạo các biểu mẫu tương tác cho cấu hình mã hóa dữ liệu, lên lịch sao lưu tự động và hoạt động khôi phục. Xây dựng bảng điều khiển giám sát thời gian thực hiển thị các chỉ số hiệu suất cơ sở dữ liệu và trạng thái kết nối. Thiết kế và triển khai UI kiểm soát truy cập dựa trên vai trò cho quản lý bảo mật. Tối ưu hóa hiệu suất ứng dụng thông qua lazy loading và code splitting.",
+      "image": "/images/products/inzent.png",
+      "tags": ["Vue3", "Vuetify", "Pinia"],
+      "link": "https://www.inzent.com/en/",
+      "period": "Tháng 1/2024 - Tháng 6/2024"
+    },
+    {
+      "title": "HAL_Baralogix Testing Automation",
+      "description": "Phát triển bộ kiểm thử tự động cho hệ thống quản lý chất lỏng khoan Baroid sử dụng Ranorex Studio. Tạo các kịch bản kiểm thử UI toàn diện bao gồm quy trình làm việc của người dùng, xác thực nhập dữ liệu và điểm tích hợp hệ thống. Triển khai kiểm thử hồi quy tự động để đảm bảo tính nhất quán của UI trong các bản cập nhật ứng dụng. Xây dựng bảng điều khiển báo cáo kiểm thử để trực quan hóa kết quả kiểm thử và theo dõi các mẫu lỗi. Thiết kế các mô-đun kiểm thử có thể tái sử dụng và duy trì các bộ dữ liệu kiểm thử. Cộng tác với nhóm QA để xác định các trường hợp kiểm thử UI quan trọng và tối ưu hóa thời gian thực thi kiểm thử. Tích hợp các bài kiểm tra tự động vào đường ống CI/CD để đảm bảo chất lượng liên tục.",
+      "image": "/images/products/haliburton.svg",
+      "tags": ["Ranorex", "C#"],
+      "link": "https://www.halliburton.com/",
+      "period": "Tháng 12/2023 - Tháng 2/2024"
+    },
+    {
+      "title": "DELL CED 2023",
+      "description": "Bảo trì và nâng cao nhiều bảng điều khiển hỗ trợ sản xuất cho các ứng dụng doanh nghiệp của Dell sử dụng ASP.NET MVC và Bootstrap. Phát triển giao diện giám sát thời gian thực hiển thị việc sử dụng tài nguyên Azure, chỉ số hiệu suất hệ thống và trạng thái tích hợp. Xây dựng bảng dữ liệu và biểu đồ responsive để trực quan hóa tình trạng ứng dụng và lịch sử triển khai. Triển khai giao diện theo dõi lỗi với khả năng lọc, tìm kiếm và quản lý trạng thái. Tạo công cụ giám sát tích hợp API hiển thị nhật ký yêu cầu/phản hồi và phân tích lỗi. Thiết kế bảng điều khiển quản trị để quản lý cấu hình và kiểm soát quyền truy cập người dùng. Tối ưu hóa hiệu suất frontend bằng cách triển khai chiến lược bộ nhớ đệm và giảm thiểu lệnh gọi API. Đảm bảo khả năng tương thích đa trình duyệt và khả năng đáp ứng trên di động trên tất cả các bảng điều khiển.",
+      "image": "/images/products/dell.svg",
+      "tags": ["C#", "ASP.NET", "Bootstrap", "SQL Server"],
+      "link": "https://www.dell.com/",
+      "period": "Tháng 8/2023 - Tháng 11/2023"
+    },
+    {
+      "title": "Unilever Russia - Production Support",
+      "description": "Di chuyển và xây dựng lại bảng điều khiển giám sát sản xuất từ Next.js sang framework Nuxt 3 để cải thiện hiệu suất và trải nghiệm nhà phát triển. Triển khai server-side rendering (SSR) để tải trang ban đầu nhanh hơn và SEO tốt hơn. Phát triển giao diện giám sát tương tác sử dụng Nuxt composables và Pinia store để quản lý trạng thái. Xây dựng hệ thống thông báo thời gian thực cho các cảnh báo quan trọng và bất thường của hệ thống. Tạo bố cục responsive với Bootstrap 5 đảm bảo cách tiếp cận thiết kế mobile-first. Triển khai chế độ xem bảng điều khiển dựa trên vai trò cho các loại người dùng khác nhau. Tối ưu hóa kích thước gói thông qua tree-shaking và dynamic imports. Tích hợp API giám sát Azure để theo dõi tài nguyên và phân tích hiệu suất.",
+      "image": "/images/products/uniliver.svg",
+      "tags": ["NuxtJs", "Pinia", "Bootstrap"],
+      "link": "https://www.unirusgroup.ru/",
+      "period": "Tháng 8/2023 - Tháng 11/2023"
+    },
+    {
+      "title": "PARI Photostock Platform",
+      "description": "Phát triển nền tảng thị trường ảnh đầy đủ tính năng sử dụng Nuxt 3 với server-side rendering để tối ưu hóa hiệu suất SEO. Xây dựng giao diện thư viện ảnh với lazy loading, infinite scroll và khả năng xem lightbox. Triển khai hệ thống tìm kiếm và lọc nâng cao với điều hướng danh mục, tìm kiếm dựa trên thẻ và bộ lọc phạm vi giá. Tạo giao diện đăng ký nhiếp ảnh gia và quản lý hồ sơ với giới thiệu portfolio. Phát triển hệ thống tải ảnh lên an toàn với chức năng kéo và thả, theo dõi tiến trình và tối ưu hóa hình ảnh phía máy khách. Xây dựng giỏ hàng và quy trình thanh toán với tích hợp cổng thanh toán. Triển khai lưới hình ảnh responsive sử dụng CSS Grid và Flexbox. Sử dụng Pinia để quản lý trạng thái ứng dụng bao gồm xác thực người dùng, các mặt hàng trong giỏ hàng và bộ lọc tìm kiếm. Tối ưu hóa phân phối hình ảnh thông qua lazy loading và kỹ thuật tải hình ảnh tiến bộ.",
+      "image": "",
+      "tags": ["Nuxt 3", "Pinia"],
+      "link": "https://photostock.thisfil.ru/",
+      "period": "Tháng 5/2023 - Tháng 9/2023"
+    },
+    {
+      "title": "Chat Box Lương Sơn",
+      "description": "Xây dựng ứng dụng nhắn tin di động đa nền tảng sử dụng React Native với các tính năng giao tiếp thời gian thực. Triển khai giao diện trò chuyện với bong bóng tin nhắn, chỉ báo đang nhập, biên nhận đã đọc và hiển thị dấu thời gian. Tích hợp LiveKit SDK cho chức năng gọi video và trò chuyện thoại với khả năng chia sẻ màn hình. Phát triển luồng xác thực người dùng sử dụng Firebase Authentication với xác minh số điện thoại. Xây dựng quản lý danh sách liên hệ, tạo nhóm trò chuyện và giao diện hồ sơ người dùng. Triển khai thông báo đẩy cho tin nhắn và cuộc gọi đến sử dụng Firebase Cloud Messaging. Tạo các tính năng chia sẻ phương tiện hỗ trợ hình ảnh, video và tài liệu với chức năng xem trước. Tạo kiểu cho các thành phần UI sử dụng Tailwind CSS để thiết kế nhất quán trên các nền tảng iOS và Android. Tối ưu hóa hiệu suất ứng dụng thông qua quản lý trạng thái hiệu quả và chiến lược bộ nhớ đệm hình ảnh.",
+      "image": "",
+      "tags": ["React Native", "LiveKit", "Tailwind", "Firebase"],
+      "link": "https://github.com/HoangTrongHa/Chat-Box",
+      "period": "Tháng 6/2023 - Tháng 9/2023"
+    },
+    {
+      "title": "HOFURI M - Bond Investment Platform",
+      "description": "Phát triển nền tảng giao dịch tài chính tinh vi sử dụng Vue 3 Composition API để quản lý đầu tư trái phiếu. Xây dựng biểu đồ tài chính tương tác sử dụng Chart.js và D3.js hiển thị biến động giá theo thời gian thực, xu hướng lịch sử và phân tích thị trường. Triển khai bảng điều khiển danh mục đầu tư hiển thị phân bổ tài sản, lợi nhuận và chỉ số rủi ro. Tạo giao diện thị trường trái phiếu với bộ lọc nâng cao theo ngày đáo hạn, tỷ lệ lợi suất và xếp hạng tín dụng. Phát triển quy trình xác thực người dùng và xác minh KYC. Xây dựng giao diện lịch sử giao dịch với chức năng xuất. Triển khai bố cục responsive đảm bảo xem tối ưu trên máy tính để bàn và thiết bị di động. Tích hợp kết nối WebSocket cho cập nhật giá theo thời gian thực và thông báo thị trường. Thiết kế các biểu mẫu lệnh mua/bán trực quan với xác thực và luồng xác nhận.",
+      "image": "",
+      "tags": ["Vue 3"],
+      "link": "#",
+      "period": "Tháng 2/2022 - Tháng 8/2023"
+    },
+    {
+      "title": "UP2PART CAM UI",
+      "description": "Xây dựng nền tảng trực quan hóa sản phẩm 3D tiên tiến sử dụng Vue 2 và Three.js cho ngành sản xuất. Triển khai trình xem mô hình 3D tương tác cho phép người dùng xoay, phóng to và kiểm tra sản phẩm từ mọi góc độ. Phát triển giao diện lựa chọn vật liệu với xem trước kết cấu và màu sắc theo thời gian thực trên mô hình 3D. Tạo bảng cấu hình công cụ để chọn công cụ gia công và tham số xử lý. Tích hợp GraphQL API để truy xuất và lưu vào bộ nhớ đệm hiệu quả các thuộc tính vật liệu và thông số kỹ thuật sản phẩm. Triển khai kiến trúc micro-frontend sử dụng Module Federation để triển khai độc lập các mô-đun tính năng. Xây dựng các thành phần UI responsive đảm bảo hiệu suất kết xuất 3D mượt mà trên các thiết bị. Tối ưu hóa tải mô hình 3D thông qua tải tiến bộ và kỹ thuật level-of-detail (LOD). Phát triển các shader tùy chỉnh để kết xuất vật liệu thực tế bao gồm kim loại, nhựa và vật liệu composite.",
+      "image": "/images/products/u2p_logo_web_4c_neg.png",
+      "tags": ["Vue 2", "Three.js", "GraphQL", "Micro Frontend"],
+      "link": "https://up2parts.com/en/",
+      "period": "Tháng 5/2021 - Tháng 1/2022"
+    },
+    {
+      "title": "IHOUZZ - Đất Xanh Group",
+      "description": "Phát triển nền tảng thị trường bất động sản toàn diện sử dụng jQuery và backend PHP Laravel. Tích hợp Google Maps API để trực quan hóa vị trí tài sản với các marker tùy chỉnh và quản lý cụm. Xây dựng giao diện tìm kiếm tài sản nâng cao với bộ lọc cho vị trí, phạm vi giá, loại tài sản và tiện nghi. Triển khai trang hồ sơ môi giới với xếp hạng, đánh giá và biểu mẫu liên hệ. Phát triển chức năng livestream cho các tour tài sản ảo và sự kiện bất động sản sử dụng công nghệ WebRTC. Tạo trang danh sách tài sản với thư viện ảnh, tour ảo và thông số kỹ thuật chi tiết. Xây dựng bố cục responsive đảm bảo trải nghiệm thân thiện với thiết bị di động để duyệt tài sản. Triển khai hệ thống xác thực người dùng với tích hợp đăng nhập mạng xã hội. Phát triển hệ thống thông báo cho danh sách mới và cập nhật giá. Tối ưu hóa thời gian tải trang thông qua lazy loading hình ảnh và tải nội dung dựa trên AJAX.",
+      "image": "/images/products/ihouzz.png",
+      "tags": ["jQuery", "PHP", "MySQL"],
+      "link": "https://ihouzz.com/",
+      "period": "Tháng 5/2021 - Tháng 3/2022"
+    },
+    {
+      "title": "DATAGUSTO",
+      "description": "Xây dựng Progressive Web Application (PWA) để quản lý công thức nấu ăn và lên kế hoạch bữa ăn sử dụng Vue.js. Triển khai kiến trúc offline-first cho phép người dùng truy cập công thức nấu ăn mà không cần kết nối internet. Phát triển hệ thống đề xuất công thức nấu ăn được hỗ trợ bởi AI dựa trên sở thích của người dùng, hạn chế chế độ ăn uống và nguyên liệu có sẵn. Tạo thẻ công thức tương tác với hướng dẫn nấu ăn từng bước, danh sách nguyên liệu và thông tin dinh dưỡng. Xây dựng giao diện tìm kiếm và lọc công thức với điều hướng danh mục, loại ẩm thực và mức độ khó. Triển khai tính năng bộ sưu tập công thức của người dùng với các mục yêu thích và kế hoạch bữa ăn tùy chỉnh. Phát triển trình tạo danh sách mua sắm tự động biên dịch các nguyên liệu từ các công thức đã chọn. Tạo bố cục responsive được tối ưu hóa cho trải nghiệm nấu ăn trên thiết bị di động. Triển khai tối ưu hóa hình ảnh và lazy loading để duyệt công thức nhanh chóng. Thêm thông báo đẩy cho lời nhắc bữa ăn và đề xuất công thức mới.",
+      "image": "",
+      "tags": ["Vue.js", "PWA"],
+      "link": "https://www.datagusto.jp/",
+      "period": "Tháng 1/2021 - Tháng 9/2021"
+    },
+    {
+      "title": "Flippa Event Management",
+      "description": "Phát triển nền tảng quản lý sự kiện và bán vé đầy đủ tính năng sử dụng framework CodeIgniter với frontend jQuery. Xây dựng giao diện tạo sự kiện cho phép người tổ chức thiết lập các sự kiện có trả phí hoặc miễn phí với các tầng vé tùy chỉnh. Triển khai hệ thống tạo mã QR để xác thực vé và quản lý lối vào. Tạo trang khám phá sự kiện với tìm kiếm, lọc theo ngày, địa điểm và danh mục. Phát triển quy trình mua vé với lựa chọn chỗ ngồi, giỏ hàng và tích hợp cổng thanh toán an toàn. Xây dựng bảng điều khiển người tổ chức sự kiện để quản lý người tham dự, theo dõi doanh số và tạo báo cáo. Triển khai giao diện máy quét vé cho thiết bị di động sử dụng camera thiết bị để xác thực mã QR. Tạo trang chi tiết sự kiện responsive với thư viện ảnh, lịch trình và thông tin diễn giả. Phát triển hệ thống thông báo email để xác nhận vé và nhắc nhở sự kiện. Tối ưu hóa truy vấn cơ sở dữ liệu để xử lý các đợt khởi chạy sự kiện có lưu lượng truy cập cao.",
+      "image": "/images/products/flippa.png",
+      "tags": ["CodeIgniter", "jQuery"],
+      "link": "https://flippa.jp/",
+      "period": "Tháng 1/2018 - Tháng 12/2020"
+    },
+    {
+      "title": "Enzo Loan Management",
+      "description": "Xây dựng hệ thống quản lý khoản vay toàn diện sử dụng framework Laravel với CMS WordPress tích hợp cho các trang nội dung. Phát triển biểu mẫu đăng ký khoản vay với xác thực nhiều bước và khả năng tải tài liệu lên. Triển khai công cụ tính toán lãi suất phức tạp với xem trước lịch trình hoàn trả theo thời gian thực. Tạo bảng điều khiển khách hàng hiển thị trạng thái khoản vay, lịch sử thanh toán và ngày đến hạn sắp tới. Xây dựng bảng điều khiển quản trị cho quy trình phê duyệt khoản vay, đánh giá rủi ro và quản lý người vay. Phát triển tích hợp cổng thanh toán cho việc hoàn trả khoản vay trực tuyến với tạo biên lai tự động. Triển khai hệ thống thông báo cho lời nhắc thanh toán và cập nhật trạng thái khoản vay. Tạo các thành phần UI responsive đảm bảo khả năng truy cập trên thiết bị di động cho các đơn đăng ký khoản vay. Xây dựng giao diện báo cáo với biểu đồ hiển thị hiệu suất danh mục khoản vay và tỷ lệ vỡ nợ. Tích hợp WordPress để quản lý nội dung thông tin về sản phẩm khoản vay và điều khoản.",
+      "image": "",
+      "tags": ["Laravel", "WordPress"],
+      "link": "#",
+      "period": "Tháng 11/2019 - Tháng 5/2020"
+    },
+    {
+      "title": "RENTCODE.IO - SIM Management",
+      "description": "Phát triển nền tảng cho thuê SIM sử dụng frontend React.js với các dịch vụ backend Laravel và Node.js. Xây dựng giao diện người dùng để duyệt các số SIM có sẵn với bộ lọc theo quốc gia và nhà mạng. Triển khai bảng điều khiển nhận SMS theo thời gian thực hiển thị mã xác minh đến. Tạo quy trình xác minh 2FA tự động cho các dịch vụ phổ biến như Facebook, Google và WhatsApp. Phát triển hệ thống thanh toán dựa trên tín dụng với tích hợp ví Momo và chuyển khoản ngân hàng. Xây dựng giao diện quản lý tài khoản người dùng theo dõi lịch sử thuê và số dư tín dụng. Triển khai kết nối WebSocket cho thông báo SMS theo thời gian thực và chuyển tiếp mã tự động. Tạo bảng điều khiển quản trị để quản lý hàng tồn kho SIM, giám sát việc sử dụng và xử lý hỗ trợ khách hàng. Phát triển bố cục responsive được tối ưu hóa để truy cập nhanh trên thiết bị di động. Triển khai giới hạn tỷ lệ và các biện pháp bảo mật để ngăn chặn lạm dụng. Xây dựng giao diện tài liệu API cho các nhà phát triển muốn tích hợp dịch vụ.",
+      "image": "",
+      "tags": ["Laravel", "ReactJS", "Node.js"],
+      "link": "#",
+      "period": "Tháng 5/2019 - Tháng 6/2020"
+    },
+    {
+      "title": "SAT Product & Lawsuit Management",
+      "description": "Xây dựng hệ thống quản lý cấp doanh nghiệp sử dụng React.js cho một công ty quản lý pháp lý và sản phẩm của Hàn Quốc. Phát triển giao diện danh mục sản phẩm với tìm kiếm nâng cao, phân loại và khả năng chỉnh sửa hàng loạt. Triển khai hệ thống theo dõi vụ kiện với trực quan hóa dòng thời gian vụ án, quản lý tài liệu và thông báo thời hạn. Tạo bảng điều khiển hiển thị các chỉ số chính bao gồm trạng thái vụ án, hàng tồn kho sản phẩm và tóm tắt tài chính. Xây dựng giao diện biểu mẫu phức tạp để nộp đơn với các wizard nhiều bước và đính kèm tài liệu. Phát triển kiểm soát truy cập dựa trên vai trò đảm bảo bảo mật dữ liệu và quyền người dùng thích hợp. Triển khai bảng dữ liệu với sắp xếp, lọc, phân trang và xuất sang chức năng Excel. Tạo bố cục responsive tuân theo các quy ước UI/UX của Hàn Quốc và yêu cầu bản địa hóa. Xây dựng hệ thống thông báo cho cập nhật vụ án, ngày ra tòa và thời hạn quan trọng. Tích hợp chế độ xem lịch để lên lịch phiên tòa và sự kiện ra mắt sản phẩm. Tối ưu hóa hiệu suất để xử lý các tập dữ liệu lớn thông qua ảo hóa và quản lý trạng thái hiệu quả.",
+      "image": "",
+      "tags": ["ReactJS"],
+      "link": "#",
+      "period": "Tháng 3/2022 - Tháng 11/2022"
+    },
+    {
+      "title": "CSI English Center Website",
+      "description": "Phát triển trang web doanh nghiệp hiện đại cho Trung tâm Anh ngữ CSI sử dụng React.js với CMS WordPress headless. Xây dựng trang chủ responsive với các phần hero, điểm nổi bật khóa học và băng chuyền testimonial. Triển khai trang danh mục khóa học với thông tin chương trình chi tiết, lịch học và giá cả. Tạo biểu mẫu đăng ký khóa học tương tác với xác thực và email xác nhận. Phát triển trang hồ sơ giáo viên giới thiệu trình độ và phương pháp giảng dạy. Xây dựng phần blog cho nội dung giáo dục và mẹo học tiếng Anh được quản lý thông qua WordPress. Triển khai tối ưu hóa SEO đảm bảo thứ hạng công cụ tìm kiếm cao cho các từ khóa giáo dục. Tạo giao diện cổng thông tin học sinh để truy cập tài liệu học tập và theo dõi tiến độ. Phát triển thiết kế responsive mobile-first đảm bảo xem tối ưu trên tất cả các thiết bị. Tích hợp Google Analytics để theo dõi mức độ tương tác của người dùng và tỷ lệ chuyển đổi. Xây dựng biểu mẫu liên hệ và bản đồ vị trí cho nhiều chi nhánh cơ sở. Tối ưu hóa hiệu suất tải trang thông qua chia tách mã và tối ưu hóa hình ảnh.",
+      "image": "",
+      "tags": ["ReactJS", "WordPress"],
+      "link": "https://csi.edu.vn/",
+      "period": "Tháng 5/2022 - Tháng 12/2022"
+    }
+  ],
+  "languages": {
+    "english": {
+      "listening": "Hạn chế",
+      "speaking": "Hạn chế",
+      "reading": "Nâng cao",
+      "writing": "Nâng cao"
+    }
+  }
+}

@@ -2,14 +2,14 @@
   <footer class="mt-12 mb-12" id="contact">
     <div class="bg-gradient-to-br from-[#1e3a29] to-background-dark border border-[#254632] rounded-[2rem] p-10 md:p-16 text-center">
       <h2 class="text-3xl md:text-4xl font-black text-white mb-6">
-        Ready to work together?
+        {{ $t('footer.readyToWork') }}
       </h2>
       <p class="text-gray-300 text-lg mb-8 max-w-xl mx-auto">
-        I'm currently available for freelance projects and open to full-time opportunities. Let's create something amazing.
+        {{ $t('footer.description') }}
       </p>
       
       <AppButton variant="primary" size="lg" @click="showContactModal = true">
-        Contact Me
+        {{ $t('footer.contactMe') }}
       </AppButton>
 
       <!-- Contact Modal -->
@@ -29,7 +29,7 @@
               </button>
 
               <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">
-                Get In Touch
+                {{ $t('footer.getInTouch') }}
               </h3>
 
               <div class="space-y-4">
@@ -42,7 +42,7 @@
                     <AppIcon :name="copiedItem === 'phone' ? 'check' : 'phone'" size="24px" class="text-primary" />
                   </div>
                   <div class="flex-1 text-left">
-                    <p class="text-sm text-gray-500 dark:text-gray-400">Phone</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">{{ $t('footer.phone') }}</p>
                     <p class="font-semibold text-slate-900 dark:text-white">0838584663</p>
                   </div>
                   <Transition name="fade">
@@ -50,7 +50,7 @@
                       v-if="copiedItem === 'phone'"
                       class="absolute -top-10 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-sm px-3 py-1.5 rounded-lg shadow-lg whitespace-nowrap"
                     >
-                      Copied!
+                      {{ $t('footer.copied') }}
                     </div>
                   </Transition>
                 </button>
@@ -64,7 +64,7 @@
                     <AppIcon :name="copiedItem === 'email' ? 'check' : 'email'" size="24px" class="text-primary" />
                   </div>
                   <div class="flex-1 text-left">
-                    <p class="text-sm text-gray-500 dark:text-gray-400">Email</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">{{ $t('footer.email') }}</p>
                     <p class="font-semibold text-slate-900 dark:text-white">ha9a1ltt@gmail.com</p>
                   </div>
                   <Transition name="fade">
@@ -72,7 +72,7 @@
                       v-if="copiedItem === 'email'"
                       class="absolute -top-10 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-sm px-3 py-1.5 rounded-lg shadow-lg whitespace-nowrap"
                     >
-                      Copied!
+                      {{ $t('footer.copied') }}
                     </div>
                   </Transition>
                 </button>
@@ -88,7 +88,7 @@
                     <AppIcon name="facebook" size="24px" class="text-primary" />
                   </div>
                   <div class="flex-1">
-                    <p class="text-sm text-gray-500 dark:text-gray-400">Facebook</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">{{ $t('footer.facebook') }}</p>
                     <p class="font-semibold text-slate-900 dark:text-white">HoangTrongHa2001</p>
                   </div>
                 </a>
@@ -104,7 +104,7 @@
                     <AppIcon name="work" size="24px" class="text-primary" />
                   </div>
                   <div class="flex-1">
-                    <p class="text-sm text-gray-500 dark:text-gray-400">LinkedIn</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">{{ $t('footer.linkedin') }}</p>
                     <p class="font-semibold text-slate-900 dark:text-white">ha-hoang-trong</p>
                   </div>
                 </a>
@@ -115,7 +115,7 @@
       </Teleport>
       
       <div class="mt-12 pt-8 border-t border-[#254632] flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-        <p>© {{ currentYear }} Ha Hoang Trong. All rights reserved.</p>
+        <p>© {{ currentYear }} Ha Hoang Trong. {{ $t('footer.copyright') }}.</p>
         <div class="flex gap-4 mt-4 md:mt-0">
 
         </div>

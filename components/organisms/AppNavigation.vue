@@ -11,15 +11,16 @@
             <NavLink 
               v-for="link in navLinks" 
               :key="link.href"
-              :text="link.text"
+              :text="$t(link.textKey)"
               :href="link.href"
             />
           </div>
         </div>
         
-        <div>
+        <div class="flex items-center gap-3">
+          <LanguageSwitcher />
           <AppButton size="sm" @click="handleDownloadCV">
-            Get My CV File
+            {{ $t('nav.getCVFile') }}
           </AppButton>
         </div>
       </div>
@@ -29,11 +30,10 @@
 
 <script setup lang="ts">
 const navLinks = [
-  { text: 'About', href: '#about' },
-  { text: 'Skills', href: '#skills' },
-  { text: 'Experience', href: '#experience' },
-  { text: 'Education', href: '#education' },
-  { text: 'Portfolio', href: '#portfolio' }
+  { textKey: 'nav.skills', href: '#skills' },
+  { textKey: 'nav.experience', href: '#experience' },
+  { textKey: 'nav.education', href: '#education' },
+  { textKey: 'nav.portfolio', href: '#portfolio' }
 ]
 
 const { generateCV } = useGeneratePDF()

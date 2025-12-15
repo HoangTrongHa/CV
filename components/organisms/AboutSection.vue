@@ -3,7 +3,7 @@
     <div class="md:col-span-3">
       <h3 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
         <span class="w-8 h-1 bg-primary rounded-full"></span>
-        About Me
+        {{ $t('sections.about') }}
       </h3>
     </div>
     

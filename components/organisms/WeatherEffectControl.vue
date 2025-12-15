@@ -29,7 +29,7 @@
               : 'hover:bg-gray-100 dark:hover:bg-gray-800 text-slate-700 dark:text-gray-300'"
           >
             <AppIcon name="autorenew" size="20px" />
-            <span class="text-sm font-medium">Auto (Weather)</span>
+            <span class="text-sm font-medium">{{ $t('weatherControl.auto') }}</span>
             <AppIcon v-if="selectedEffect === 'auto'" name="check" size="16px" class="ml-auto" />
           </button>
 
@@ -42,7 +42,7 @@
               : 'hover:bg-gray-100 dark:hover:bg-gray-800 text-slate-700 dark:text-gray-300'"
           >
             <span class="text-lg">☀️</span>
-            <span class="text-sm font-medium">Sunny</span>
+            <span class="text-sm font-medium">{{ $t('weatherControl.sun') }}</span>
             <AppIcon v-if="selectedEffect === 'sun'" name="check" size="16px" class="ml-auto" />
           </button>
 
@@ -55,7 +55,7 @@
               : 'hover:bg-gray-100 dark:hover:bg-gray-800 text-slate-700 dark:text-gray-300'"
           >
             <span class="text-lg">🌧️</span>
-            <span class="text-sm font-medium">Rainy</span>
+            <span class="text-sm font-medium">{{ $t('weatherControl.rain') }}</span>
             <AppIcon v-if="selectedEffect === 'rain'" name="check" size="16px" class="ml-auto" />
           </button>
 
@@ -68,7 +68,7 @@
               : 'hover:bg-gray-100 dark:hover:bg-gray-800 text-slate-700 dark:text-gray-300'"
           >
             <span class="text-lg">❄️</span>
-            <span class="text-sm font-medium">Snowy</span>
+            <span class="text-sm font-medium">{{ $t('weatherControl.snow') }}</span>
             <AppIcon v-if="selectedEffect === 'snow'" name="check" size="16px" class="ml-auto" />
           </button>
 
@@ -81,7 +81,7 @@
               : 'hover:bg-gray-100 dark:hover:bg-gray-800 text-slate-700 dark:text-gray-300'"
           >
             <span class="text-lg">🌫️</span>
-            <span class="text-sm font-medium">Dusty</span>
+            <span class="text-sm font-medium">{{ $t('weatherControl.dust') }}</span>
             <AppIcon v-if="selectedEffect === 'dust'" name="check" size="16px" class="ml-auto" />
           </button>
 
@@ -94,7 +94,7 @@
               : 'hover:bg-gray-100 dark:hover:bg-gray-800 text-slate-700 dark:text-gray-300'"
           >
             <AppIcon name="block" size="20px" />
-            <span class="text-sm font-medium">None</span>
+            <span class="text-sm font-medium">{{ $t('weatherControl.none') }}</span>
             <AppIcon v-if="selectedEffect === 'none'" name="check" size="16px" class="ml-auto" />
           </button>
         </div>

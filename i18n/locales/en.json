@@ -1,0 +1,89 @@
+{
+  "nav": {
+    "skills": "Skills",
+    "experience": "Experience",
+    "education": "Education",
+    "portfolio": "Portfolio",
+    "getCVFile": "Get My CV File"
+  },
+  "hero": {
+    "availableForWork": "Available for work",
+    "passionate": "Passionate",
+    "frontEnd": "Front end",
+    "developer": "Developer"
+  },
+  "footer": {
+    "readyToWork": "Ready to work together?",
+    "description": "I'm currently available for freelance projects and open to full-time opportunities. Let's create something amazing.",
+    "contactMe": "Contact Me",
+    "getInTouch": "Get In Touch",
+    "phone": "Phone",
+    "email": "Email",
+    "facebook": "Facebook",
+    "linkedin": "LinkedIn",
+    "copied": "Copied!",
+    "copyright": "All rights reserved"
+  },
+  "sections": {
+    "about": "About Me",
+    "skills": "Skills & Technologies",
+    "experience": "Work Experience",
+    "education": "Education & Certifications",
+    "portfolio": "Portfolio Projects"
+  },
+  "stats": {
+    "yearsExperience": "Years Experience",
+    "projectsCompleted": "Projects Completed",
+    "technologies": "Technologies",
+    "happyClients": "Happy Clients"
+  },
+  "weather": {
+    "refresh": "Refresh",
+    "humidity": "Humidity",
+    "wind": "Wind",
+    "aqi": "AQI",
+    "good": "Good",
+    "fair": "Fair",
+    "moderate": "Moderate",
+    "poor": "Poor",
+    "veryPoor": "Very Poor"
+  },
+  "weatherControl": {
+    "auto": "Auto",
+    "sun": "Sun",
+    "rain": "Rain",
+    "snow": "Snow",
+    "dust": "Dust",
+    "none": "None"
+  },
+  "pdf": {
+    "aboutMe": "ABOUT ME",
+    "skills": "SKILLS",
+    "experience": "Experience",
+    "workExperience": "WORK EXPERIENCE",
+    "education": "EDUCATION",
+    "portfolioProjects": "PORTFOLIO PROJECTS",
+    "degree": "Degree",
+    "institution": "Institution",
+    "year": "Year",
+    "details": "Details",
+    "project": "Project",
+    "description": "Description",
+    "technologies": "Technologies",
+    "link": "Link",
+    "years": "years"
+  },
+  "project": {
+    "viewProject": "View Project",
+    "backToPortfolio": "Back to Portfolio",
+    "projectNotFound": "Project Not Found",
+    "projectNotFoundDesc": "The project you're looking for doesn't exist.",
+    "goHome": "Go Home",
+    "loadingProject": "Loading Project...",
+    "projectDescription": "Project Description",
+    "projectLink": "Project Link",
+    "visitWebsite": "Visit Project Website",
+    "technologiesUsed": "Technologies Used",
+    "relatedProjects": "Related Projects"
+  }
+}

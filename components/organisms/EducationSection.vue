@@ -2,7 +2,7 @@
   <section id="education" class="mx-10">
     <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-8 flex items-center gap-2">
       <AppIcon name="school" class="text-primary" />
-      Education
+      {{ $t('sections.education') }}
     </h3>
     
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
