@@ -18,7 +18,7 @@
         </div>
         
         <div>
-          <AppButton href="#contact" size="sm" @click.prevent="scrollToContact">
+          <AppButton size="sm" @click="handleDownloadCV">
             Get My CV File
           </AppButton>
         </div>
@@ -36,13 +36,9 @@ const navLinks = [
   { text: 'Portfolio', href: '#portfolio' }
 ]
 
-const scrollToContact = () => {
-  const contactElement = document.getElementById('contact')
-  if (contactElement) {
-    contactElement.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    })
-  }
+const { generateCV } = useGeneratePDF()
+
+const handleDownloadCV = () => {
+  generateCV()
 }
 </script>

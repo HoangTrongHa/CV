@@ -6,6 +6,7 @@
     "phone": "0838584663",
     "linkedin": "linkedin.com/in/ha-hoang-trong",
     "github": "github.com/HoangTrongHa",
+    "facebook": "https://www.facebook.com/HoangTrongHa2001/",
     "location": "Vietnam",
     "avatar": "/images/avatar.jpg"
   },
@@ -30,7 +31,7 @@
       "category": "Frontend Frameworks & Libraries",
       "items": [
         { "name": "Vue.js 2.0", "years": 3 },
-        { "name": "Vue.js 3.0", "years": 2 },
+        { "name": "Vue.js 3.0", "years": 3 },
         { "name": "Nuxt 2", "years": 1 },
         { "name": "Nuxt 3", "years": 2 },
         { "name": "React", "years": 2 },
@@ -87,8 +88,8 @@
     {
       "category": "Additional Skills",
       "items": [
-        { "name": "Three.js", "years": 4 },
-        { "name": "D3.js", "years": 6 },
+        { "name": "Three.js", "years": 1 },
+        { "name": "D3.js", "years": 1 },
         { "name": "Software Analysis & Design", "years": 4 },
         { "name": "Micro Frontend Architecture", "years": 4 }
       ]

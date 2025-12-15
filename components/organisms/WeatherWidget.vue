@@ -1,9 +1,11 @@
 <template>
-  <Transition name="slide-down">
-    <div
-      v-if="weatherData"
-      class="fixed top-20 right-4 z-40 bg-white/90 dark:bg-surface-dark/90 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 p-4 min-w-[200px]"
-    >
+  <div class="fixed top-20 right-4 z-40">
+    <!-- Weather Widget -->
+    <Transition name="slide-down">
+      <div
+        v-if="weatherData"
+        class="bg-white/90 dark:bg-surface-dark/90 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 p-4 min-w-[200px]"
+      >
       <div class="flex items-center gap-3">
         <!-- Weather Icon -->
         <div class="flex-shrink-0">
@@ -58,8 +60,9 @@
         <AppIcon name="refresh" size="16px" :class="{ 'animate-spin': loading }" />
         {{ loading ? 'Updating...' : 'Refresh' }}
       </button>
-    </div>
-  </Transition>
+      </div>
+    </Transition>
+  </div>
 
   <!-- Loading State -->
   <div

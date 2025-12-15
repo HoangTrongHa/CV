@@ -35,6 +35,12 @@
           :text="personalInfo.github"
           :href="`https://${personalInfo.github}`"
         />
+        <ContactChip 
+          v-if="personalInfo.facebook"
+          icon="facebook"
+          text="Facebook"
+          :href="personalInfo.facebook"
+        />
       </div>
     </div>
     
