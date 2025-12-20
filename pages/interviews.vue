@@ -107,55 +107,64 @@
       <div v-if="activeCategory === 'frontend'">
         <div v-for="subcategory in getCurrentCategory?.subcategories" :key="subcategory.id">
           <div v-show="activeSubcategory === subcategory.id" class="bg-gray-50 dark:bg-[#0d1f17] rounded-xl p-6 border border-gray-200 dark:border-[#254632]">
-            <!-- Subcategory Header -->
-            <div class="flex items-start gap-4 mb-6">
-              <div 
-                class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 bg-primary/10"
-              >
-                <span class="material-symbols-outlined text-2xl text-primary">code</span>
-              </div>
-              <div class="flex-1">
-                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                  {{ subcategory.name }}
-                </h2>
-                <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">
-                  {{ subcategory.description }}
-                </p>
-                <div class="flex items-center gap-4 text-xs text-gray-500 dark:text-gray-500">
-                  <span>{{ subcategory.questions.length }} câu hỏi</span>
-                  <span>•</span>
-                  <span>{{ getQuestionsByLevel(subcategory.questions, 'fresher') }} Fresher</span>
-                  <span>•</span>
-                  <span>{{ getQuestionsByLevel(subcategory.questions, 'middle') }} Middle</span>
-                  <span>•</span>
-                  <span>{{ getQuestionsByLevel(subcategory.questions, 'senior') }} Senior</span>
+            <!-- Loading state for subcategory -->
+            <div v-if="loadingSubcategory && !getLoadedSubcategoryData(subcategory.id)" class="text-center py-12">
+              <div class="inline-block animate-spin rounded-full h-8 w-8 border-4 border-primary border-t-transparent"></div>
+              <p class="mt-4 text-gray-600 dark:text-gray-400">Đang tải câu hỏi...</p>
+            </div>
+            
+            <!-- Subcategory Content -->
+            <div v-else-if="getLoadedSubcategoryData(subcategory.id)" class="w-full">
+              <!-- Subcategory Header -->
+              <div class="flex items-start gap-4 mb-6">
+                <div 
+                  class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 bg-primary/10"
+                >
+                  <span class="material-symbols-outlined text-2xl text-primary">code</span>
+                </div>
+                <div class="flex-1">
+                  <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                    {{ getLoadedSubcategoryData(subcategory.id).name }}
+                  </h2>
+                  <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                    {{ getLoadedSubcategoryData(subcategory.id).description }}
+                  </p>
+                  <div class="flex items-center gap-4 text-xs text-gray-500 dark:text-gray-500">
+                    <span>{{ getLoadedSubcategoryData(subcategory.id).questions.length }} câu hỏi</span>
+                    <span>•</span>
+                    <span>{{ getQuestionsByLevel(getLoadedSubcategoryData(subcategory.id).questions, 'fresher') }} Fresher</span>
+                    <span>•</span>
+                    <span>{{ getQuestionsByLevel(getLoadedSubcategoryData(subcategory.id).questions, 'middle') }} Middle</span>
+                    <span>•</span>
+                    <span>{{ getQuestionsByLevel(getLoadedSubcategoryData(subcategory.id).questions, 'senior') }} Senior</span>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Level Filter -->
-            <div class="flex gap-2 mb-4">
-              <button
-                v-for="level in ['all', 'fresher', 'middle', 'senior']"
-                :key="level"
-                @click="activeLevels[subcategory.id] = level"
-                class="px-3 py-1 rounded-lg text-sm font-medium transition-all"
-                :class="(activeLevels[subcategory.id] || 'all') === level
-                  ? 'bg-primary text-white'
-                  : 'bg-white dark:bg-background-dark text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-[#1a3426]'"
-              >
-                {{ level === 'all' ? 'Tất cả' : level.charAt(0).toUpperCase() + level.slice(1) }}
-              </button>
-            </div>
+              <!-- Level Filter -->
+              <div class="flex gap-2 mb-4">
+                <button
+                  v-for="level in ['all', 'fresher', 'middle', 'senior']"
+                  :key="level"
+                  @click="activeLevels[subcategory.id] = level"
+                  class="px-3 py-1 rounded-lg text-sm font-medium transition-all"
+                  :class="(activeLevels[subcategory.id] || 'all') === level
+                    ? 'bg-primary text-white'
+                    : 'bg-white dark:bg-background-dark text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-[#1a3426]'"
+                >
+                  {{ level === 'all' ? 'Tất cả' : level.charAt(0).toUpperCase() + level.slice(1) }}
+                </button>
+              </div>
 
-            <!-- Questions -->
-            <div class="space-y-3">
-              <QuestionItem
-                v-for="(question, index) in filterQuestionsByLevel(subcategory.questions, activeLevels[subcategory.id] || 'all')"
-                :key="index"
-                :question="question.question"
-                :answer="question.answer"
-              />
+              <!-- Questions -->
+              <div class="space-y-3">
+                <QuestionItem
+                  v-for="(question, index) in filterQuestionsByLevel(getLoadedSubcategoryData(subcategory.id).questions, activeLevels[subcategory.id] || 'all')"
+                  :key="index"
+                  :question="question.question"
+                  :answer="question.answer"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -247,20 +256,47 @@ definePageMeta({
 })
 
 const { user, logout } = useAuth()
-const { categories, totalQuestions, loading, error, filterQuestionsByLevel } = useInterviewData()
+const { categories, totalQuestions, loading, error, filterQuestionsByLevel, loadSubcategory } = useInterviewData()
 
 const activeCategory = ref('frontend')
 const activeSubcategory = ref('')
 const activeLevels = ref<Record<string, string>>({})
 
+// State để lưu dữ liệu subcategory đã load
+const loadedSubcategories = ref<Record<string, any>>({})
+const loadingSubcategory = ref(false)
+
 const handleLogout = () => {
   logout()
+}
+
+// Load subcategory data khi cần
+const loadSubcategoryData = async (categoryId: string, subcategoryId: string) => {
+  const cacheKey = `${categoryId}-${subcategoryId}`
+  
+  if (loadedSubcategories.value[cacheKey]) {
+    return loadedSubcategories.value[cacheKey]
+  }
+  
+  loadingSubcategory.value = true
+  const data = await loadSubcategory(categoryId, subcategoryId)
+  if (data) {
+    loadedSubcategories.value[cacheKey] = data
+  }
+  loadingSubcategory.value = false
+  return data
 }
 
 // Get current category
 const getCurrentCategory = computed(() => {
   return categories.value.find(cat => cat.id === activeCategory.value)
 })
+
+// Get loaded subcategory data
+const getLoadedSubcategoryData = (subcategoryId: string) => {
+  const cacheKey = `${activeCategory.value}-${subcategoryId}`
+  return loadedSubcategories.value[cacheKey]
+}
 
 // Set default active category and subcategory when data loads
 watch(categories, (newCategories) => {
@@ -271,6 +307,8 @@ watch(categories, (newCategories) => {
     const currentCat = newCategories.find(cat => cat.id === activeCategory.value)
     if (currentCat && currentCat.subcategories.length > 0 && !activeSubcategory.value) {
       activeSubcategory.value = currentCat.subcategories[0].id
+      // Load data cho subcategory đầu tiên
+      loadSubcategoryData(activeCategory.value, activeSubcategory.value)
     }
   }
 })
@@ -280,6 +318,15 @@ watch(activeCategory, (newCategory) => {
   const category = categories.value.find(cat => cat.id === newCategory)
   if (category?.id === 'frontend' && category.subcategories.length > 0) {
     activeSubcategory.value = category.subcategories[0].id
+    // Load data cho subcategory mới
+    loadSubcategoryData(newCategory, activeSubcategory.value)
+  }
+})
+
+// Load data khi chuyển subcategory
+watch(activeSubcategory, (newSubcategory) => {
+  if (newSubcategory && activeCategory.value === 'frontend') {
+    loadSubcategoryData(activeCategory.value, newSubcategory)
   }
 })
 

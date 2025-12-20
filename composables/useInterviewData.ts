@@ -29,6 +29,9 @@ export const useInterviewData = () => {
   const data = ref<InterviewData | null>(null)
   const loading = ref(true)
   const error = ref<string | null>(null)
+  
+  // Cache cho subcategories đã load
+  const subcategoryCache = ref<Record<string, Subcategory>>({})
 
   const fetchData = async () => {
     try {
@@ -41,6 +44,41 @@ export const useInterviewData = () => {
       console.error('Error loading interview data:', e)
     } finally {
       loading.value = false
+    }
+  }
+  
+  // Load subcategory từ file riêng (cho Frontend)
+  const loadSubcategory = async (categoryId: string, subcategoryId: string): Promise<Subcategory | null> => {
+    const cacheKey = `${categoryId}-${subcategoryId}`
+    
+    // Kiểm tra cache
+    if (subcategoryCache.value[cacheKey]) {
+      return subcategoryCache.value[cacheKey]
+    }
+
+    try {
+      // Chỉ Frontend mới có file riêng
+      if (categoryId === 'frontend') {
+        const response = await fetch(`/data/interview-${subcategoryId}.json`)
+        if (response.ok) {
+          const subcategoryData = await response.json()
+          subcategoryCache.value[cacheKey] = subcategoryData
+          return subcategoryData
+        }
+      }
+      
+      // Các category khác vẫn lấy từ file chính
+      const category = categories.value.find(cat => cat.id === categoryId)
+      const subcategory = category?.subcategories.find(sub => sub.id === subcategoryId)
+      if (subcategory) {
+        subcategoryCache.value[cacheKey] = subcategory
+        return subcategory
+      }
+      
+      return null
+    } catch (err) {
+      console.error(`Error loading subcategory ${subcategoryId}:`, err)
+      return null
     }
   }
 
@@ -82,6 +120,7 @@ export const useInterviewData = () => {
     totalQuestions,
     getCategory,
     getSubcategory,
+    loadSubcategory,
     filterQuestionsByLevel,
     fetchData
   }

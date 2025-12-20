@@ -1,0 +1,72 @@
+{
+  "id": "web-api",
+  "name": "Câu hỏi phỏng vấn Web API",
+  "description": "",
+  "questions": [
+    {
+      "question": "Tại sao Web API quan trọng?",
+      "answer": "<p>Web API được xem như một dịch vụ cơ bản cung cấp thông tin hoặc dữ liệu từ server. Nó quan trọng vì những lý do sau:\r<ul><li>Nó được dùng để cung cấp interface cho web hay ứng dụng để có thể truy cập dữ liệu.</li></ul>\r<ul><li>Nó còn được dùng cho truy cập hay lưu trữ dữ liệu vào cơ sở dữ liệu.</li></ul>\r<ul><li>Nó hỗ trợ nhiều định dạng dữ liệu khác nhau như XML, JSON,...</li></ul>\r<ul><li>Nó phù hợp với nhiều kiểu trình duyệt và thiết bị</li></ul>\r<ul><li>Nó sử dụng băng thông thấp do đó phù hợp với các thiết bị giới hạn băng thông như smartphone,...</li></ul>\r<ul><li>Từ góc nhìn doanh nghiệp, Web API ứng dụng tốt hơn cho UX/UI, tăng lưu lượng truy cập và tạo sự thu hút cho sản phẩm hay dịch vụ công ty.</li></ul>\r\n\r\n<img src=\"/interview-assets/API_Application.png\" alt=\"\" /></p>",
+      "level": "middle"
+    },
+    {
+      "question": "Chính xác thì Web API là gì?",
+      "answer": "<p>Web API (Application Programming Interfce), là một API dùng cho truy cập xuyên qua web với giao thức HTTP. Nó được xem là nền tảng tốt nhất để cho phép các dịch vụ khác truy cập dữ liệu hay dịch vụ của server. Nó có thể được xây dựng bằng các công nghệ khác nhau như Nodejs, Java, ASP.NET,...\r\n\r\n<img src=\"/interview-assets/WEB_API.png\" alt=\"\" />\r\n\r\nWeb API được dùng:\r<ul><li>Nó chứa các lớp bổ sung giúp chuẩn hóa thông tin liên lạc một cách đơn giản và cung cấp các tùy chọn khác nhau về cách định dạng đầu vào và đầu ra.</li></ul>\r<ul><li>Nếu muốn tạo các dịch vụ hướng tài nguyên, thì các dịch vụ Web API được coi là tốt nhất.</li></ul>\r<ul><li>Hỗ trợ phát triển cả RESTful và SOAP.</li></ul></p>",
+      "level": "middle"
+    },
+    {
+      "question": "Kiểu trả về được hỗ trợ trong Web API?",
+      "answer": "<p>Nó không có bất kỳ kiểu dữ liệu cụ thể nào. Nó có thể trả về bất kỳ loại dữ liệu nào tùy thuộc vào yêu cầu nghiệp vụ. Có nhiều phương thức HTTP như GET, POST, PUT, v.v., có thể trả về dữ liệu ở các định dạng khác nhau tùy thuộc vào trường hợp sử dụng.</p>",
+      "level": "middle"
+    },
+    {
+      "question": "Sự khác biệt giữa WCF và Web API?",
+      "answer": "<p><strong>WCF (Windows Communication Foundation):</strong> là một framework dùng cho phát triển SOAP (Service-oriented applications). Framework này dùng cho phát triển, cấu hình và triển khai dịch vụ mạng phân phối.\r\n\r\n<strong>Web API:</strong> là API cho cả trình duyệt web và web server. \r\n\r\n| Web API | WCF |\r\n|-|-|\r\n| Dùng cho phát triển cả SOAP và RESTful | Chỉ dùng cho phát triển SOAP |\r\n| Hỗ trợ các tính năng MVC như routing, binding,.. | Không hỗ trợ MVC |\r\n| Chỉ dùng giao thức HTTP | Dùng nhiều giao thức HTTP, UDP,.. |\r\n| Là tốt nhất cho phát triển dịch vụ RESTful | Hỗ trợ giới hạn các dịch vụ RESTful |\r\n| Hỗ trợ định dạng UTF-8 | Hỗ trợ văn bản, mã hoá nhị phân, MTOM (Message Transmission Optimization Mechanism) |\r\n| Dùng cho tiết lộ thông tin, dữ liệu với trình duyệt hay thiết bị di động | Dùng cho tạo các dịch vụ sử dụng kênh truyền tải nhanh như TCP, UDP,... |</p>",
+      "level": "middle"
+    },
+    {
+      "question": "Web API tốt hơn WCF ở điểm nào?",
+      "answer": "<p><ul><li>Web API cung cấp đầy đủ các tính năng của HTTP như URI, header, caching, versioning,...</li></ul>\r<ul><li>Web API dùng các định dạng văn bản khác nhau như XML vì nó nhanh hơn các dịch vụ.</li></ul>\r<ul><li>Web API hỗ trợ tính năng MVC.</li></ul>\r<ul><li>Web API cung cấp khả năng mở rộng tốt hơn.</li></ul>\r<ul><li>Web API sử dụng chuẩn bảo mật như xác thực token để cung cấp khả năng bảo mật dịch vụ.</li></ul>\r<ul><li>Người ta không phải xác định hoặc giải thích bất kỳ cài đặt cấu hình bổ sung nào cho các thiết bị khác nhau trong API Web.</li></ul></p>",
+      "level": "middle"
+    },
+    {
+      "question": "Sự khác biệt giữa REST API và RESTful API?",
+      "answer": "<p>| REST API | RESTful API |\r\n|-|-|\r\n| Là mẫu kiến trúc sử dụng trong dịch vụ web | Được dùng cho triển khai REST |\r\n| Định dạng dữ liệu dựa vào HTTP | Định dạng dữ liệu JSON, HTTP và văn bản |\r\n| LÀm việc của URL dựa vào request/respone | Làm việc của RESTful dựa vào ứng dụng REST |\r\n| Nó thân thiện hơn với người dùng và có khả năng thích ứng cao với tất cả các doanh nghiệp kinh doanh và CNTT | Nó quá linh hoạt |\r\n| Nó yêu cầu phát triển API cho phép tương tác giữa client và server | Nó chỉ đơn giản tuân theo cơ sở hạ tầng REST cung cấp khả năng tương tác giữa các hệ thống khác nhau trên toàn mạng |</p>",
+      "level": "middle"
+    },
+    {
+      "question": "Ưu điểm của sử dụng REST trong Web API?",
+      "answer": "<p><ul><li>Nó cho phép truyền ít dữ liệu hơn giữa máy khách và máy chủ.</li></ul>\r<ul><li>Nó rất dễ sử dụng và nhẹ.</li></ul>\r<ul><li>Nó cung cấp tính linh hoạt hơn.</li></ul>\r<ul><li>Nó cũng xử lý và kiểm soát nhiều loại cuộc gọi khác nhau, trả về nhiều định dạng dữ liệu khác nhau.</li></ul>\r<ul><li>Nó được coi là tốt nhất để sử dụng nó trong các ứng dụng dành cho thiết bị di động vì nó truyền ít dữ liệu giữa máy khách và máy chủ hơn.</li></ul>\r<ul><li>Nó sử dụng các lệnh gọi HTTP đơn giản để giao tiếp giữa các máy thay vì sử dụng các tùy chọn phức tạp hơn như CORBA, COM +, SOAP hoặc RPC.</li></ul></p>",
+      "level": "middle"
+    },
+    {
+      "question": "Sự khác biệt giữa REST và SOAP?",
+      "answer": "<p><strong>REST (Representational State Transfer):</strong> mô tả một phong cách cấu trúc hệ thống mạng. Nó không yêu cầu băng thông rộng khi bạn gửi yêu cầu đến server. Nó chứa các thông điệp định dạng JSON. Ví dụ\r\n\r\n``<code>js\r\n{&quot;city&quot;:&quot;Mumbai&quot;,&quot;state&quot;:&quot;Maharashtra&quot;}\r\n</code>`<code>\r\n\r\n<strong>SOAP (Simple Object Access Protocol):</strong> Nó là một giao thức đơn giản và nhẹ thường được sử dụng để trao đổi thông tin có cấu trúc và được đánh máy trên Web. Nó hoạt động chủ yếu với HTTP và RPC. Giao thức này chủ yếu được sử dụng cho các ứng dụng B2B mà người ta có thể xác định hợp đồng dữ liệu với nó. Thông điệp SOAP có nội dung nặng hơn và do đó sử dụng băng thông lớn hơn.\r\n\r\n</code>`<code>xml\r\n&lt;?xml version=&quot;1.0&quot;?&gt;\r\n&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV=&quot;http://www.w3.org/2001/12/soap-envelope&quot; SOAP-ENV:encodingStyle=&quot; http://www.w3.org/2001/12/soap-encoding&quot;&gt;\r\n    &lt;soap:Body&gt;\r\n        &lt;Demo.guru99WebService xmlns=&quot;http://tempuri.org/&quot;&gt;   \r\n            &lt;EmployeeID&gt;int&lt;/EmployeeID&gt;   \r\n        &lt;/Demo.guru99WebService&gt; \r\n    &lt;/soap:Body&gt;\r\n&lt;/SOAP-ENV:Envelope&gt;\r\n</code>``\r\n\r\n| SOAP | REST |\r\n|-|-|\r\n| Một giao thức gửi nhận thông điệp có định dạng XML | Một loại kiến trúc bao gồm các quy tắc để thao tác với server |\r\n| Sử dụng WSDL để giao tiếp giữa máy chủ và máy khách | Sử dụng XML hoặc JSON để gửi nhận dữ liệu |\r\n| Gọi các dịch vụ thông qua phương thức RPC | Gọi các dịch vụ qua đường dẫn URL |\r\n| Kết quả trả về không dễ đọc | Kết quả trả về dễ đọc vì đơn giản chỉ là text XML hoặc JSON |\r\n| Có thể truyền qua nhiều giao thức khác nhau như HTTP, SMTP, FTP,…\t| Chỉ có thể truyền qua HTTP |\r\n| JS có thể dùng để gọi SOAP, nhưng rất khó để làm | Quá đơn giản nếu dùng JS |\r\n| Hiệu suất không tốt bằng REST | Hiệu suất tốt hơn SOAP, tốn ít tài nguyên CPU hơn, code ngắn gọn hơn |</p>",
+      "level": "middle"
+    },
+    {
+      "question": "Giao thức hỗ trợ Web API?",
+      "answer": "<p>Web API chỉ hỗ trợ giao thức HTTP</p>",
+      "level": "middle"
+    },
+    {
+      "question": "XML và JSON là gì?",
+      "answer": "<p><strong>XML (Extensible Markup Language):</strong>\r<ul><li>Được thiết kế đặc biệt để lưu trữ và truyền tải dữ liệu.</li></ul>\r<ul><li>Giống như HTML nhưng linh hoạt hơn cho phép người dùng tự tạo thẻ.</li></ul>\r<ul><li>Dùng cho biểu diễn thông tin có cấu trúc như dữ liệu, tài liệu, cấu hình,...</li></ul>\r\n\r\n<strong>JSON (JavaScript Object Notation):</strong>\r<ul><li>Là định dạng nhẹ được thiết kế để lưu trữ và truyền tải dữ liệu.</li></ul>\r<ul><li>Là chuẩn định dạng văn bản dùng cho biểu diễn cấu trúc dữ liệu dựa trên đối tượng JavaScript.</li></ul>\r<ul><li>Nó nhanh và dễ sử dụng.</li></ul></p>",
+      "level": "middle"
+    },
+    {
+      "question": "Đối tượng sử dụng Web API?",
+      "answer": "<p>Một loạt các ứng dụng client như trình duyệt, thiết bị di động, iPhone, ..., sử dụng web API. Nó cũng dùng cùng với các ứng dụng native yêu cầu dịch vụ web nhưng không hỗ trợ SOAP. Nó cũng có thể được sử dụng bởi bất kỳ ứng dụng client nào hỗ trợ các hành động HTTP như GET, DELETE, POST, PUT.</p>",
+      "level": "middle"
+    },
+    {
+      "question": "Web API và MVC có gì khác?",
+      "answer": "<p>MVC (Model-View-Controller) là mô hình thiết kế ứng dụng bao gồm 3 phần chính là model, view và controller. Nó cho phép người viết code xác định các thành phần khác nhau của ứng dụng và cập nhật chúng dễ dàng hơn. Nó chủ yếu được sử dụng để phát triển mô hình giao diện người dùng. Mục đích chính của nó là hiển thị các mẫu trong cấu trúc để giữ cho màn hình và dữ liệu được tách biệt cho phép cả hai thay đổi mà không ảnh hưởng đến những người khác.\r\n\r\n| MVC | Web API |\r\n|-|-|\r\n| Dùng cho xây dựng ứng dụng web dựa trên dữ liệu và view | Dùng cho xây dựng dịch vụ HTTP chỉ dựa trên dịch vụ |\r\n| Trả về dữ liệu dạng JSON |Trả về các định dạng dữ liệu khác nhau XML, JSON |\r\n| Hỗ trợ tự lưu trữ | Không hỗ trợ tự lưu trữ |\r\n| Không hỗ trợ dịch vụ RESTful | Hỗ trợ dịch vụ RESTful |\r\n| Trả về view (HTML) | Trả về phản hồi HTTP |\r\n\r\n<img src=\"/interview-assets/MVC_vs_Web_API.png\" alt=\"\" /></p>",
+      "level": "middle"
+    },
+    {
+      "question": "CORS là gì?",
+      "answer": "<p>CORS (Cross-Origin Resource Sharing) là một kĩ thuật được sinh ra để làm cho việc tương tác giữa client và server được dễ dàng hơn, nó cho phép JavaScript ở một trang web có thể tạo yêu cầu HTTP lên một REST API được host ở một domain khác.\r\n\r\nTrong trường hợp đơn giản nhất, phía client (ứng dụng web đạng chạy ở trình duyệt đó) sẽ tạo yêu cầu GET, POST, PUT, HEAD,... để yêu cầu server làm một việc gì đó. Những yêu cầu này sẽ được đính kèm một header tên là <code>Origin</code> để chỉ định origin của client code (giá trị của header này chính là domain của trang web).\r\n\r\nServer sẽ xem xét <code>Origin</code> để biết được nguồn này có phải là nguồn hợp lệ hay không. Nếu hợp lệ, server sẽ trả về response kèm với header <code>Access-Control-Allow-Origin</code>. Header này sẽ cho biết xem client có phải là nguồn hợp lệ để trình duyệt tiếp tục thực hiện quá trình yêu cầu.\r\n\r\nTrong trường hợp thông thường, <code>Access-Control-Allow-Origin</code> sẽ có giá trị giống như <code>Origin</code>, một số trường hợp giá trị của <code>Access-Control-Allow-Origin</code> sẽ nhìn giống giống như Regex hay chỉ đơn giản là <code><em></code>, tuy nhiên thì cách dùng <code></em></code> thường được coi là không an toàn, ngoại trừ trường hợp API của bạn được public hoàn toàn và ai cũng có thể truy cập được.\r\n\r\nVà như thế, nếu không có header <code>Access-Control-Allow-Origin</code> hoặc giá trị của nó không hợp lệ thì trình duyệt sẽ từ chối chúng ta.\r\n\r\n<img src=\"/interview-assets/cors.png\" alt=\"\" /></p>",
+      "level": "middle"
+    }
+  ]
+}

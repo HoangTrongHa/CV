@@ -4,6 +4,7 @@
     "experience": "Experience",
     "education": "Education",
     "portfolio": "Portfolio",
+    "interviews": "Interviews",
     "getCVFile": "Get My CV File"
   },
   "hero": {
@@ -22,7 +23,21 @@
     "facebook": "Facebook",
     "linkedin": "LinkedIn",
     "copied": "Copied!",
+    "close": "Close",
     "copyright": "All rights reserved"
+  },
+  "login": {
+    "title": "Login",
+    "subtitle": "Access interview experiences",
+    "username": "Username",
+    "usernamePlaceholder": "Enter username",
+    "password": "Password",
+    "passwordPlaceholder": "Enter password",
+    "loginButton": "Login",
+    "processing": "Processing...",
+    "error": "Incorrect username or password!",
+    "contactWith": "Contact with",
+    "backToHome": "Back to home"
   },
   "sections": {
     "about": "About Me",

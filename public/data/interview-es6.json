@@ -1,0 +1,202 @@
+{
+  "id": "es6",
+  "name": "Câu hỏi phỏng vấn ES6",
+  "description": "",
+  "questions": [
+    {
+      "question": "Các tính năng nổi bật của ES6",
+      "answer": "<p><em> Hỗ trợ các biến hằng\r\n</em> Block scope hỗ trợ cho tất cả biến, hằng, và hàm\r\n<em> Giới thiệu hàm arrow\r\n</em> Xử lý tham số mở rộng\r\n<em> Tham số mặc định\r\n</em> Các ký tự mở rộng và mẫu\r\n<em> Promise\r\n</em> Class\r\n<em> Module\r\n</em> Tập hợp\r<ul><li>Hỗ trợ map/set</li></ul></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Hỗ trợ hướng đối tượng trong ES6 như thế nào?",
+      "answer": "<p><ul><li><strong>Classes</strong> có thể tạo lớp trong ES6. Về cơ bản, hàm lớp xây dựng một khuôn mẫu mà từ đó ta có thể tạo các đối tượng. Khi tạo một thực thế mới của lớp, phương thức constructor sẽ được gọi.</li></ul>\r<ul><li><strong>Methods</strong> phương thức tĩnh có thể được tìm thấy trong các lớp. Một phương thức tĩnh không giống như một đối tượng mà nó là một hàm được liên kết với lớp. Một phương thức tĩnh không thể được gọi từ một thực thể của lớp.</li></ul>\r\n\r\nTa hãy xem qua getter và setter nhé.\r\nĐóng gói là một khái niệm căn bản trong OOP. Dữ liệu (thuộc tính) sẽ không được truy cập trực tiếp từ bên ngoài, đây là một khía cạnh quan trọng của đóng gói. Một getter (truy cập) hay setter (chỉnh sửa) là những phương thức của thực thể đã xác định để truy cập hay chỉnh sửa một thuộc tính.\r<ul><li><strong>Tính kế thừa</strong>, các lớp cũng có thể kế thừa từ nhau. Lớp cha là lớp kế thừa và con là lớp được kế thừa từ lớp cha.</li></ul></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Sự khác biệt giữa ES5 và ES6",
+      "answer": "<p>| ES5 | ES6 |\r\n|-----|-----|\r\n| Là chuẩn thứ 5 của ECMAScript được giới thiệu năm 2009 | Là chuẩn thứ 6 của ECMAScript được giới thiệu năm 2015 |\r\n| Kiểu dữ liệu nguyên thuỷ là string, boolean, number, null và undefined | Giới thiệu thêm kiểu symbol |\r\n| Chỉ có thể khai báo biến với var | Có thể dùng var, và hai cách khai báo biến mới là let và const |\r\n| Sử dụng function để khai báo hàm | Giới thiệu thêm hàm arrow |\r\n| for cho vòng lặp | Giới thiệu thêm for...of |</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Sự khác biệt giữa let và const?",
+      "answer": "<p>Cả let và const đều có block scope. Nếu bạn sử dụng các từ khóa này để khai báo một biến, biến đó sẽ chỉ tồn tại trong block trong cùng bao quanh chúng. Nếu bạn khai báo một biến với let bên trong một block (ví dụ: nếu một điều kiện hoặc một vòng lặp for), thì nó chỉ có thể được truy cập trong block đó.\r\n\r\nCác biến được khai báo với từ khóa let có thể thay đổi, có nghĩa là giá trị của chúng có thể được thay đổi. Nó tương tự như từ khóa var, nhưng với lợi ích bổ sung là block scope. Các biến được khai báo với từ khóa const là block scope và bất biến. Khi các biến được khai báo với từ khóa const, giá trị của chúng không thể được sửa đổi hoặc gán lại.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Thảo luận về hàm arrow",
+      "answer": "<p>Trong ES6, hàm arrow là một cú pháp mới cho khai báo hàm. hàm arrow bao gồm tham số theo sau mũi tên (=>) và thân hàm.\r\n\r\n``<code>js\r\nconst function<em>name = (arg</em>1, arg<em>2, arg</em>3, ...) =&gt; {  \r\n    //body of the function  \r\n}\r\n</code>`<code>\r\n\r\nCác điều cần nhớ:\r<ul><li>Nó tiết kiệm kích cỡ code.</li></ul>\r<ul><li>Với hàm một dòng, lênh return là không bắt buộc.</li></ul>\r<ul><li>Ràng buộc ngữ cảnh.</li></ul>\r<ul><li>Với hàm một tham số, dấu ngoặc đơn là không bắt buộc.</li></ul>\r<ul><li>Không hoạt động với </code>new`.</li></ul></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Khi nào không nên dùng hàm arrow?",
+      "answer": "<p>Không nên sử dụng hàm arrow cho các trường hợp dưới đây:\r\n\r\n#</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Hàm generator là gì?",
+      "answer": "<p>Là tính năng mới được giới thiệu trong ES6. Hàm Generator trả về một đối tượng sau khi tạo nhiều giá trị theo thời gian. Ta có thể lặp qua đối tượng và trích xuất từng giá trị từ hàm một. Một hàm trả về một đối tượng được lặp đi lặp lại gọi là hàm generator. Trong ES6, cú pháp cho nó là <code>fuction<em></code> cùng từ khoá <code>yield</code> bên trong nó.\r\n\r\n``<code>js\r\nfunction </em>Numbers() {\r\n    let num = 1;\r\n    while(true) {\r\n        yield num++;\r\n    }\r\n}\r\n  \r\nvar gen = Numbers();\r\n \r\n// Loop to print the first\r\n// 5 Generated numbers\r\nfor (var i = 0; i &lt; 5; i++) {\r\n \r\n    // Generate the next number\r\n    document.write(gen.next().value);\r\n \r\n    // New Line\r\n    document.write(&quot;&lt;br&gt;&quot;);\r\n}\r\n</code>`<code>\r\n\r\nKết quả:\r\n\r\n</code>`<code>\r\n1\r\n2\r\n3\r\n4\r\n5\r\n</code>``\r\n\r\nGiá trị yield trở thành giá trị kế tiếp trong chuỗi tuần tự mỗi lần yield được gọi. Ngoài ra, hàm generator tính toán kết quả output của chúng theo yêu cầu, cho phép chúng biểu diễn một cách hiệu quả các chuỗi tuần tự dài hơn thậm chí là vô hạn.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Toán tử spread trong ES6?",
+      "answer": "<p>Toán tử spread có cú pháp giống với rest parameters tuy nhiên cả hai có ý nghĩa khác nhau. Rest parameters được sử dụng khi khai báo hàm, ngược lại toán tử spread được sử dụng trong các câu lệnh, biểu thức hoặc khi gọi hàm.\r\n\r\nES6 cung cấp một toán tử mới gọi là toán tử spread bao gồm ba dấu chấm (...). Spread cho phép bạn trải ra các phần tử của một đối tượng có thể lặp lại chẳng hạn như một array, map hoặc set.\r\n\r\n``<code>js\r\nlet arr1 = [4, 5, 6];  \r\n    \r\nlet arr2 = [1, 2, 3, ...arr1, 7, 8, 9, 10];  \r\n    \r\nconsole.log(arr2);\r\n</code>`<code>\r\n\r\nKết quả:\r\n\r\n</code>`<code>\r\n[ 1 2 3 4 5 6 7 8 9 10 ]\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Giải thích về destructuring trong ES6?",
+      "answer": "<p>Destructuring được giới thiệu trong ES6 là một cách để trích xuất dữ liệu từ mảng hay đối tượng thành các biến duy nhất. Ta có thể tạo các đoạn nhỏ hơn từ đối tượng hay mảng bằng phương thức này. Ví dụ:\r\n\r\n``<code>js\r\nlet greeting = [&quot;Good&quot;, &quot;Morning&quot;];\r\nlet [g1, g2] = greeting;\r\nconsole.log(g1, g2);\r\n</code>`<code>\r\n\r\nKết quả:\r\n\r\n</code>`<code>\r\nGood Morning\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Promise trong ES6 là gì?",
+      "answer": "<p>Lập trình bất đồng bộ là khái niệm quan trọng trong JavaScript. Các tiến trình chạy độc lập với luồng chính trong lập trình bất đồng bộ. Promise là cách tiếp cận tiện lợi để xử lý lập trình bất đồng bộ trong ES6. Callback được dùng để chủ yếu trong bất đồng bộ trước khi ES6 giới thiệu về Promise.\r\n\r\nTuy nhiên, vì callback dễ gây ra callback hell, nên hướng giải quyết cho nó là dùng promise thay thế.\r\n\r\n<strong>Callback hell</strong>\r\n\r\n``<code>js\r\nf1(function(x){\r\n    f2(x, function(y){\r\n        f3(y, function(z){ \r\n            ...\r\n        });\r\n    });\r\n}); \r\n</code>`<code>\r\n\r\n<strong>Cú pháp Promise</strong>\r\n\r\n</code>`<code>js\r\nconst promise = new Promise((resolve,reject) =&gt; {....}); \r\n</code>`<code>\r\n\r\nVí dụ:\r\n\r\n</code>`<code>js\r\nconst myPromise = new Promise((resolve, reject) =&gt; {\r\n    if (Math.random() &gt; 0) {\r\n        resolve(&#39;Hello, I am positive number!&#39;);\r\n    }\r\n    reject(new Error(&#39;I failed some times&#39;));\r\n})\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Giải thích về Rest parameter trong ES6?",
+      "answer": "<p>Rest Parameters dịch theo tiếng Anh chuyên ngành công nghệ thông tin có nghĩa là tham số còn lại, điều này có nghĩa là bạn có thể khai báo một hàm với số lượng tham số không xác định, đây là một tính năng mới trong ES6 khiến Javascript ngày càng trở nên mạnh mẽ hơn.\r\n\r\n``<code>js\r\nfunction display(...args) {  \r\n    let ans = 0;  \r\n    for (let i of args) {  \r\n        ans *= i;  \r\n    }  \r\n    console.log(&quot;Product = &quot;+ans);  \r\n}  \r\n    \r\ndisplay(4, 2, 3);\r\n</code>`<code>\r\n\r\nKết quả:\r\n\r\n</code>`<code>\r\nProduct = 24\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Thảo luận về template literal trong ES6?",
+      "answer": "<p>Temaplate Literals là một cú pháp mới dùng để khai báo biến, được thêm vào trong phiên bản ES6. Khi sử dụng cú pháp này các bạn có thể:\r<ul><li>Khai báo biến nhiều dòng một cách hết sức đơn giản. (Nếu bạn sử dụng cách truyền thống thì sẽ không thể nào khai báo được một biến mà có sử dụng ký tự xuống dòng, nhưng với template thì có thể).</li></ul>\r<ul><li>Binding biến vào trong template một cách dễ dàng.</li></ul>\r\n\r\nKý tự `<code> dùng để mở và đóng template literal. Ký hiệu dollar và dấu ngoặc nhọn &quot;${}&quot; được dùng để đặt một biến vào template literal.\r\n\r\n</code>`<code>js\r\nlet s1 = &quot;Good&quot;;  \r\n  \r\nlet s2 = &quot;Day&quot;;  \r\n   \r\nlet s = </code>${s1} ${s2}<code>;  \r\nconsole.log(s);\r\n</code>`<code>\r\n\r\nKết quả:\r\n\r\n</code>`<code>\r\nGood Day\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Ưu điểm của class trong ES6?",
+      "answer": "<p>Các ưu điểm của class ở ES6:\r<ul><li>Cú pháp đơn giản và ít lỗi hơn.</li></ul>\r<ul><li>Khi xây dựng một hệ phân cấp kế thừa, ES6 kết hợp cú pháp cũ và mới, làm giảm lỗi và đơn giản hoá các quy trình.</li></ul>\r<ul><li>Class trong ES6 ngăn chặn lỗi do toán tử <code>new</code>. Nếu một đối tượng không hợp lệ khởi tạo, class sẽ loại trừ vấn đề này bằng cách để constructor trả về lỗi.</li></ul>\r<ul><li>Class còn gọi một phương thức từ prototype. Với cú pháp ES6, nó dễ dùng hơn các phiên bản trước.</li></ul></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Cách tạo class trong ES6?",
+      "answer": "<p>Từ khoá <code>class</code> dùng cho tạo lớp trong ES6. Ta có thể dùng biểu thức lớp hoặc khai báo lớp để tạo. Chỉ có hàm và contrustor là được cho phép trong lớp. Các thành phần này gọi chung là thuộc tính dữ liệu của lớp.\r\n\r\nConstructor trong lớp có trách nhiệm cấp phát bộ nhớ cho đối tượng của lớp. Hàm của lớp chịu trách nhiệm thực hiện các hành động trên đối tượng.\r\n\r\nCú pháp ở ES5\r\n\r\n``<code>js\r\nvar varName = new className {\r\n    // something\r\n}\r\n</code>`<code>\r\n\r\nCú pháp ở ES6\r\n\r\n</code>`<code>js\r\nclass className {\r\n    // Something\r\n}\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Biểu thức lớp là gì?",
+      "answer": "<p>Trong ES6, một cách khác để khai báo lớp là dùng biểu thức lớp. Giống như một biểu thức hàm, có thể có tên hoặc không. Nếu có tên, tên đó là duy nhất trong thân lớp. \r\n\r\n``<code>js\r\nvar Product = class {\r\n    constructor (num1, num2) {\r\n    this.num1 = num1;\r\n    this.num2 = num2;\r\n    }\r\n    multiplication() {\r\n    return this.num1 * this.num2;\r\n    }\r\n}\r\nconsole.log(new Product(5,8).multiplication());\r\n// expected output: 40\r\n</code>``\r\n\r\nCú pháp của một biểu thức lớp tương tự như cú pháp của một câu lệnh lớp (khai báo). Mặt khác, các biểu thức lớp cho phép bạn bỏ qua tên lớp (\"định danh ràng buộc\"), điều này không thể thực hiện được với các câu lệnh lớp. Ngoài ra, không giống như khai báo lớp, biểu thức lớp cho phép bạn khai báo lại các lớp mà không gây ra bất kỳ lỗi kiểu nào. Nó không bắt buộc phải sử dụng thuộc tính constructor. Loại lớp được tạo bằng từ khóa này sẽ luôn là \"function\".</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Tham số mặc định là gì?",
+      "answer": "<p>Nếu không có giá trị nào được truyền cho tham số, ta có thể dùng tham số mặc định để thiết lập giá trị mặc định cho tham số.\r\n\r\n``<code>js\r\nvar display = (x , y = 2) =&gt; {  \r\n    console.log(x + &quot; &quot; + y);  \r\n}  \r\ndisplay(1);\r\n</code>`<code>\r\n\r\nKết quả:\r\n\r\n</code>`<code>\r\n1 2\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Bạn hiểu gì về IIFE?",
+      "answer": "<p>IIFE là hàm JavaScript chạy ngay khi được khai báo. Nó được chia thành hai phần chính là:\r<ul><li>Phần đầu tiên là một hàm ẩn danh lexical scope, được bao bọc bởi <code>()</code>.</li></ul>\r<ul><li>Phần thứ hai là dấu ngoặc <code>()</code> dùng để chạy hàm ngay sau khi khai báo.</li></ul>\r\n\r\n``<code>js\r\n(function () {    \r\n   console.log(&quot;Good Day&quot;);     \r\n})();\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Các trạng thái của Promise trong ES6?",
+      "answer": "<p>Khi được khởi tạo thì Promise có một trong ba trạng thái sau:\r<ul><li><strong>Fulfilled</strong>: hành động xử lý xong và thành công</li></ul>\r<ul><li><strong>Rejected</strong>: hành động xử lý xong và thất bại</li></ul>\r<ul><li><strong>Pending</strong>: hành động đang chờ xử lý hoặc bị từ chối</li></ul>\r\n\r\nTrong đó hai trạng thái <strong>Reject</strong> và <strong>Fulfilled</strong> ta gọi là <strong>Settled</strong>, tức là đã xử lý xong.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Export Default và Name Export trong ES6?",
+      "answer": "<p>Với sự hỗ trợ của lệnh import, export bây giờ khi ta cần xuất các hàm, đối tượng, và biến đến module JavaScript khác ta có hai cách sau:\r<ul><li><strong>Named Export</strong> dùng khi export nhiều giá trị cùng lúc. Tên của module được import phải trùng với tên module export.</li></ul>\r\n\r\n``<code>js\r\n //file rectangle.js\r\nfunction perimeter(x, y) {\r\n    return 2 <em> (x + y);\r\n}\r\nfunction area(x, y) {\r\n    return x </em> y;\r\n}\r\nexport { perimeter, area };\r\n  \r\n   \r\n//while importing the functions in test.js\r\nimport { perimeter, area } from &#39;./rectangle;\r\nconsole.log(perimeter(4, 6)) //20\r\nconsole.log(area(4, 6)) //24\r\n</code>`<code>\r<ul><li><strong>Default Export</strong> dùng khi export một module thành export mặc định. Một hàm, lớp, đối tượng hay bất cứ thứ gì cũng có thể dùng cho default export. Trong default export, tên có thể tuỳ ý miễn sao đúng file.</li></ul>\r\n\r\n</code>`<code>js\r\n// file module.js\r\nvar a = 6; \r\nexport default a;\r\n  \r\n// test.js\r\n// while importing a in test.js\r\nimport b from &#39;./module&#39;; \r\nconsole.log(b);        \r\n// output will be 6\r\n</code>`<code>\r<ul><li><strong>Dùng cả hai</strong>, trong cùng một file ta có thể dùng cả hai cách.</li></ul>\r\n\r\n</code>`<code>js\r\n //index.js\r\nvar a = 3;\r\nconst b = 8;\r\nfunction show() {\r\n    return &quot;This is a default export.&quot;\r\n}\r\nfunction product(a , b) {\r\n    return a * b;\r\n}\r\nexport { show as default, a, b, product };\r\n</code>`<code>\r\n\r\n</code>`<code>js\r\n//test.js file\r\nimport any<em>other</em>name, { a, b, product} from &#39;./index.js&#39;;\r\nconsole.log(any<em>other</em>name()); //This is a default export.\r\nconsole.log(a); //3\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Từ khoá nào dùng cho kế thừa trong ES6?",
+      "answer": "<p>Từ khoá <code>extends</code> dùng cho triển khai kế thừa trong ES6.\r\n\r\n``<code>js\r\nclass Classroom {\r\n    constructor(students) {\r\n        this.students = students;\r\n    }\r\n    room() {\r\n        console.log(&#39;This class has  &#39; + this.students + &#39; students&#39;);\r\n    }\r\n}\r\n \r\nclass sectionA extends Classroom {\r\n    constructor(students) {\r\n        super(students);\r\n    }\r\n    sec() {\r\n        console.log(&#39;section A&#39;);\r\n    }\r\n}\r\n  \r\nlet secA = new sectionA(40);\r\n \r\nsecA.room();\r\nsecA.sec();\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Bubbling và Capturing là gì?",
+      "answer": "<p>Khi một sự kiện xảy ra trong DOM, nó sẽ diễn ra hoàn toàn trên một phần tử. Sự kiện nổi lên (bubble) phần tử cha, hay tổ tiên của nó cho đến khi nó tới giai đoạn Bubbling. Trong khi đó, sự kiện bắt đầu từ ngoài window đến khi phần tử nhận sự kiện thì là giai đoạn Capturing.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Sự khác biệt giữa for...of và for..in?",
+      "answer": "<p><ul><li><strong>for in</strong> chạy trên các tên thuộc tính có thể liệt kê của một đối tượng.</li></ul>\r<ul><li><strong>for of</strong> lấy một đối tượng cụ thể và lặp qua dữ liệu mà nó tạo ra.</li></ul>\r\n\r\nCả lệnh <code>for..of</code> và <code>for..in</code> đều lặp lại qua các danh sách, nhưng kết quả chúng trả về là khác nhau: <code>for..in</code> trả về danh sách các khóa trên đối tượng đang được lặp lại, trong khi <code>for..of</code> trả về danh sách các giá trị của thuộc tính của đối tượng.\r\n\r\n``<code>js\r\nlet arr = [3, 4, 5];\r\n\r\nfor (let i in arr) {\r\n   console.log(i); // &quot;0&quot;, &quot;1&quot;, &quot;2&quot;,\r\n}\r\n\r\nfor (let i of arr) {\r\n   console.log(i); // &quot;3&quot;, &quot;4&quot;, &quot;5&quot;\r\n}\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Symbol trong ES6 là gì?",
+      "answer": "<p>Trong ES6 xuất hiện thêm một kiểu dữ liệu đó là Symbol, đây là kiểu dữ liệu nguyên thuỷ, nó sẽ tạo ra các ký tự duy nhất (unique) và không trả về một chuỗi mà nó chỉ là một dạng đối tượng, vì vậy bạn sẽ không thể thấy được giá trị thực của nó.\r\n\r\nSymbol được sinh ra dùng để xử lý cho bài toán mang tính duy nhất (unique), mỗi khi bạn tạo một đối tượng Symboy thì đối tượng đó sẽ không bao giờ trùng lặp với một đối tượng khác. Cú pháp khởi tạo của Symbol.\r\n\r\n``<code>js\r\nlet symbol = Symbol();\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Babel là gì?",
+      "answer": "<p>Babel là một công cụ chuyển đổi mã lệnh JavaScript hay JavaScript transpiler, được dùng với mục đích chuyển đổi mã lệnh JavaScript được viết dựa trên tiêu chuẩn ECMAScript phiên bản mới về phiên bản cũ hơn trước đó.\r\n\r\nBabel đảm bảo code của các lập trình viên luôn được biên dịch thành phiên bản tương thích các trình duyệt khác nhau mà không lo bị lỗi.\r\n\r\n\"Chuẩn ECMAScript được ra đời để hạn chế sự khác biệt giữa các \"ngôn ngữ\" JavaScript khác nhau được định nghĩa bởi các trình duyệt khác nhau\".\r\n\r\nVí dụ, arrow function được giới thiệu ở ES6 sẽ được chuyển đổi về các function truyền thống. Nó cũng có thể chuyển đổi các cú pháp JS không chuẩn như JSX. Babel có thể tự động chèn các core-js cho các môi trường javascript không khả dụng. Ví dụ như phương thức <code>Array.from</code> hay Promise chỉ khả dụng trong ES6+, nhưng nó vẫn có thể sử dụng ở các phiên bản trước nhờ core-js.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Tên các phương thức mảng có trong ES6?",
+      "answer": "<p>| Phương thức | Mô tả |\r\n|-------------|-------|\r\n| Array.from() | Tạo một đối tượng <code>Array</code> mới, được sao chép từ một đối tượng giống mảng hoặc có thể lặp lại |\r\n| Array.of() | Tạo một đối tượng <code>Array</code> mới từ một lượng biến đối số, bất kể số lượng hoặc kiểu của đối số |\r\n| Array.prototype.copyWithin() | Sao chép một chuỗi tuần tự phần tử mảng bên trong mảng |\r\n| Array.prototype.find() | Trả về phần tử trong mảng, nếu một phần tử trong mảng hàm kiểm trả hoặc trả về <code>undefined</code> nếu ngược lại |\r\n| Array.prototype.findIndex() | Trả về chỉ mục trong mảng, nếu một phần tử trong mảng thoả mãn hàm kiểm tra hoặc <code>-1</code> nếu ngược lại |\r\n| Array.prototype.entries() | Trả về một lần lặp mảng bao gồm cặp key/value cho từng chỉ mục trong mảng |\r\n| Array.prototype.keys() | Trả về lần lặp mảng mới bao gồm khoá cho từng chỉ mục trong mảng |\r\n| Array.prototype.values() | Trả về đối tượng lặp bao gồm giá trị cho từng chỉ mục trong mảng |\r\n| Array.prototype.fill() | Thay đổi tất cả phần tử với giá trị tĩnh, mặc định bắt đầu từ <code>0</code> và kết thúc ở cuối mảng.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Tên các hàm chuỗi có trong ES6?",
+      "answer": "<p>| Phương thức | Mô tả |\r\n|-------------|-------|\r\n| startsWith | Nó xác định xem một chuỗi có bắt đầu bằng các ký tự của một chuỗi đã cho hay không |\r\n| endsWith | Nó xác định xem một chuỗi có kết thúc bằng các ký tự của một chuỗi đã cho hay không |\r\n| includes | Nó sẽ trả về true nếu đối số có trong chuỗi |\r\n| repeat | Nó tạo và trả về một chuỗi mới chứa số lượng bản sao nhất định của chuỗi mà phương thức này được gọi, được nối với nhau |</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "So sánh code ES5 và ES6 cho tạo và tách đối tượng?",
+      "answer": "<p><strong>Tạo đối tượng</strong> \r<ul><li>ES5</li></ul>\r\n\r\n``<code>js\r\n// ES5 code\r\nvar\r\n    x = 1, y = 2, z = 3;\r\n    ob = {\r\n        x : a,\r\n        y : b,\r\n        z : z\r\n    };\r\n\r\n// ob.x = 1, ob.y = 2, ob.z = 3\r\n</code>`<code>\r<ul><li>ES6</li></ul>\r\n\r\n</code>`<code>js\r\n// ES6 code\r\nconst\r\n    x = 1, y = 2, z = 3;\r\n    ob = {\r\n        x\r\n        y\r\n        z\r\n    };\r\n\r\n// ob.x = 1, ob.y = 2, ob.z = 3\r\n</code>`<code>\r\n\r\n<strong>Phân tích đối tượng</strong>\r<ul><li>ES5</li></ul>\r\n\r\n</code>`<code>js\r\n// ES5 code\r\nvar\r\n    ob = getObject(),\r\n    a = ob.a,\r\n    b = ob.b,\r\n    c = ob.c;\r\n</code>`<code>\r<ul><li>ES6</li></ul>\r\n\r\n</code>`<code>js\r\n// ES6 code\r\nconst { a , b , c } = getObject();\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Hoán vị với Destrucuring Assignment?",
+      "answer": "<p>``<code>js\r\nvar a = 1, b = 2;\r\n\r\n[a, b] = [b, a];\r\nconsole.log(a); // 2\r\nconsole.log(b); // 1\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Kết quả của toán tử spread ở code bên dưới?",
+      "answer": "<p>``<code>js\r\n[...&#39;apple&#39;]\r\n</code>`<code>\r\n\r\nKết quả: [</code>a<code>, </code>p<code>, </code>p<code>, </code>l<code>, </code>e`]\r\n\r\nGiải thích: Một chuỗi là một kiểu có thể lặp, và như mảng toán tử spread chuyển đổi từng ký tự thành một phần tử. Kết quả mỗi ký tự của chuỗi trở thành một phần tử mảng.\r\n\r\n## Câu hỏi phỏng vấn ES6 dành cho Experienced</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Prototype Design Pattern với ES6?",
+      "answer": "<p>Prototype Pattern tạo ra các đối tượng mới, nhưng thay vì trả về các đối tượng chưa được khởi tạo, nó trả về các đối tượng có giá trị được sao chép từ một đối tượng prototype - hoặc sample. Nó còn được gọi là Properties Pattern.\r\n\r\nViệc khởi tạo các đối tượng nghiệp vụ với các giá trị phù hợp với cài đặt mặc định của cơ sở dữ liệu là một ví dụ về công dụng của Prototype Pattern. Các giá trị mặc định từ đối tượng prototype được sao chép thành một đối tượng nghiệp vụ mới được tạo.\r\n\r\nMẫu Prototype hiếm khi được sử dụng trong các ngôn ngữ truyền thống, nhưng JavaScript, sử dụng nó trong việc tạo ra các đối tượng và prototype mới.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "WeakMap trong ES6 là gì? Nó khác Map như thế nào?",
+      "answer": "<p>WeakMap là một tập hợp các key/value, gần giống như Map. Key của WeakMap phải là đối tượng, trong khi value có thể là bất kỳ thứ gì. Các tham chiếu đối tượng đến key được tổ chức rất yếu, có nghĩa là nếu không có tham chiếu nào khác đến đối tượng, nó sẽ bị bộ dọn rác dọn dẹp. WeakMap, không giống như Map, cho phép bộ gọn rác hoàn thành nhiệm vụ của nó. Mảng key sẽ bảo toàn các tham chiếu đến đối tượng key trong map được xây dựng thủ công, cấm chúng bị dọn dẹp. Các tham chiếu đến đối tượng key trong WeakMap được tổ chức \"yếu\", có nghĩa là chúng không cản trở việc dọn rác nếu không có tham chiếu nào khác đến đối tượng. API Map và API WeakMap là giống nhau.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Lợi thế của hàm khởi tạo với cú pháp arrow?",
+      "answer": "<p>Lợi ích của việc dùng hàm arrow như phương thức trong constructor là giá trị của <strong>this</strong> là tập hợp ở thời điểm hàm tạo và không thể thay đổi trong tương lai. Kết quả, bất cứ khi nào constructor dùng cho tạo đối tượng mới, <strong>this</strong> đề cập đến đối tượng này.\r\n\r\n``<code>js\r\nconst Shape = function(shapeName) {\r\n    this.shapeName = shapeName;\r\n    this.showName1 = function() { console.log(this.shapeName); };\r\n    this.showName2 = () =&gt; { console.log(this.shapeName); };\r\n};\r\n\r\nconst circle = new Shape(&#39;Circle&#39;);\r\nconst square = new Shape(&#39;Square&#39;);\r\n\r\ncircle.showName1(); // Circle\r\ncircle.showName2(); // Square\r\n\r\n// The regular function can have its &#39;this&#39; value changed, but the arrow function cannot\r\ncircle.showName1.call(square); // Square (because &quot;this&quot; is now the square object)\r\ncircle.showName2.call(square); // Circle\r\n\r\ncircle.showName1.apply(square); // Square (because &#39;this&#39; is now the square object)\r\ncircle.showName2.apply(square); // Circle\r\n\r\ncircle.showName1.bind(square)(); // Square (because &#39;this&#39; is now the square object)\r\ncircle.showName2.bind(square)(); // Circle\r\n\r\nvar showNameFromPic1 = circle.showName1;\r\nsayNameFromPic1(); // undefined (because &#39;this&#39; is now the pic object)\r\n\r\nvar showNameFromPic2 = circle.showName2;\r\nshowNameFromPic2(); // Circle\r\n</code>``\r\n\r\nĐiểm chính ở đây là đối với một hàm bình thường, <strong>this</strong> có thể được sửa đổi, nhưng đối với một hàm arrow, ngữ cảnh luôn giống nhau. Bạn sẽ không phải lo lắng về việc thay đổi ngữ cảnh nếu bạn chuyển hàm arrow sang các khu vực khác trong ứng dụng của mình.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Temporal Dead Zone là gì?",
+      "answer": "<p>Variable Hoisting không áp dụng cho phép ràng buộc trong ES6, do đó, cho phép các khai báo không đưa lên đầu ngữ cảnh thực thi hiện tại. Một ReferenceError được ném ra nếu biến trong block được tham chiếu trước khi nó được khởi tạo (không giống như một biến được khai báo bằng var, sẽ chỉ sở hữu giá trị không xác định). Từ đầu block cho đến khi quá trình khởi tạo được thực hiện, biến nằm trong \"Temporal Dead Zone\".\r\n\r\n``<code>js\r\nconsole.log(a); // undefined\r\nconsole.log(b); // causes ReferenceError: aLet is not defined\r\nvar a = 1;\r\nlet b = 2;\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Sự khác biệt giữa Set và WeakSet trong ES6?",
+      "answer": "<p><strong>Set:</strong> bằng cách dùng lớp <code>Set()</code>, người dùng có thể định nghĩa một đối tượng có thể lặp lai không đồng nhất giống như mảng. Đối tượng này sẽ bao gồm các giá trị riêng biệt, các phần tử không nên chỉ khác biệt theo giá trị mà còn theo kiểu. tức là \"2\" và 2 sẽ được coi là khác nhau.\r\n\r\n``<code>js\r\nvar set1= new Set([0, 1, 2]);\r\n\r\nset1.add(3); // 0, 1, 2, 3\r\nset1.add(2); // 0, 1, 2, 3\r\nset1.add({x:1, y:2}); // 0, 1, 2, {x:1, y:2}\r\nset1.add(&quot;Good&quot;); // 0, 1, 2, {x:1, y:2}, &#39;Good&#39;\r\n \r\nset1.has(&quot;Hello&quot;); // false\r\nset1.has(&quot;Good&quot;);  // true\r\nset1.delete(&quot;Good&quot;); // &#39;Good&#39; deleted\r\nset1.has(&quot;Good&quot;); // false\r\n \r\nset1.size; // 4\r\nset1.clear(); // Set Cleared\r\n</code>`<code>\r\n\r\n<strong>WeakSet():</strong> là một tập hợp tương tự Set vì nó giữ lại các giá trị duy nhất, nhưng nó chỉ có thể chứa các đối tượng. Nếu một đối tượng trong WeakSet của bạn không còn biến tham chiếu nào khác, nó sẽ tự động bị xóa\r\n\r\n</code>`<code>js\r\nvar weakSet1 = new WeakSet([{x:1}]);\r\nvar ob1 = {o:1};\r\nvar ob2 = {o:2};\r\n\r\nweakSet1.has(ob1); //false\r\nweakSet1.add(ob1); \r\nweakSet1.add(ob2); \r\nweakSet1.has(ob2); // true\r\ndelete ob1; // you can&#39;t delete objects in this way. Use scope to execute this.\r\nmyWeakSet.has(ob1); // false, because you deleted ob1, so WeakSet releases it automatically\r\nmyWeakSet.delete(ob2); // ob2 deleted from the set\r\nmyWeakSet.add(1); // ERROR, no primitive value\r\n</code>`<code>\r\n\r\n| Set | WeakSet |\r\n|-----|---------|\r\n| Bao gồm nhiều kiểu giá trị | Chỉ chứa kiểu đối tượng |\r\n| Dùng </code>.size<code> để tìm số lượng phần tử | Dùng </code>.length<code> để tìm số lượng phần tử |\r\n| </code>.forEach()<code> khả dụng cho vòng lặp | </code>.forEach` không khả dụng cho vòng lặp |\r\n| Không tự huỷ | Một đối tượng phần tử sẽ được bị bộ thu gom rác dọn dẹp nếu nó không còn tham chiếu nào khác |</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Proxy trong ES6 là gì?",
+      "answer": "<p>Các đối tượng proxy được sử dụng để tùy chỉnh hành vi cho các hoạt động cơ bản như tra cứu thuộc tính, gán, liệt kê, gọi hàm, ...\r\n\r\nChúng ta cần xác định ba thuật ngữ quan trọng:\r<ul><li><strong>handler</strong> - đối tượng giữ cho cho trap</li></ul>\r<ul><li><strong>trap</strong> - phương thức cho phép bạn truy cập một thuộc tính</li></ul>\r<ul><li><strong>target</strong> - đối tượng được ảo hoá bởi proxy</li></ul>\r\n\r\n``<code>js\r\nconst handle = {\r\n    get: function(ob, prp) {\r\n        return prp in ob ?\r\n        ob[prp] :\r\n        37;\r\n    }\r\n};\r\n\r\nconst x = new Proxy({}, handle);\r\nx.a = 2;\r\nx.b = undefined;\r\n\r\nconsole.log(x.a, x.b); \r\n//  2, undefined\r\n\r\nconsole.log(&#39;c&#39; in x, x.c); \r\n//  false, 37\r\n</code>``\r\n\r\nProxy có rất nhiều ứng dụng trong thế giới thực.\r<ul><li>Xác thực.</li></ul>\r<ul><li>Sửa chữa giá trị.</li></ul>\r<ul><li>Tiện ích mở rộng cho tra cứu thuộc tính.</li></ul>\r<ul><li>Truy cập thuộc tính đang được theo dõi.</li></ul>\r<ul><li>Tham chiếu có thể được gọi.</li></ul>\r<ul><li>Triển khai DOM trong javascript.</li></ul></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Sự khác biệt giữa const và Object.freeze()?",
+      "answer": "<p>Const là một thuộc tính áp dụng cho các ràng buộc (\"biến\"). Nó tạo ra một ràng buộc bất biến, có nghĩa là bạn không thể thay đổi giá trị của nó.\r\n\r\n``<code>js\r\nconst a = {\r\n    b: &quot;apple&quot;\r\n};\r\n\r\nlet c = {\r\n    d: &quot;mango&quot;\r\n};\r\n\r\na = c; // ERROR &quot;a&quot; is read-only\r\n</code>`<code>\r\n\r\n<strong>Object.freeze()</strong> là một hàm hoạt động với các giá trị, chủ yếu là các giá trị đối tượng. Nó làm cho một đối tượng trở nên bất biến, nghĩa là không thể thay đổi các thuộc tính của nó.\r\n\r\n<strong>freeze()</strong> trả về cùng một đối tượng đã được cung cấp cho nó dưới dạng một tham số. Nó không tạo ra một bản sao freeze. Nếu tham số của phương thức này không phải là một đối tượng (một nguyên thủy) trong ES5, một TypeError sẽ xảy ra. Một đối số không phải đối tượng trong ES6 sẽ được xử lý như thể nó là một đối tượng thông thường được đóng băng và sẽ được trả về.\r\n\r\n</code>`<code>js\r\nlet a = {\r\n    b: &quot;apple&quot;\r\n};\r\nlet c = {\r\n    d: &quot;mango&quot;\r\n};\r\nObject.freeze(a);\r\na.b = &quot;kiwi&quot;; //TypeError: Cannot assign to read only property &#39;name&#39; of object\r\nconsole.log(a);\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Tại sao đoạn code này không hoạt động như một IIFE? Điều gì cần được sửa đổi để nó được phân loại là IIFE?",
+      "answer": "<p>``<code>js\r\nfunction f(){ }();\r\n</code>`<code>\r\n\r\nTrình phân tích cú pháp JavaScript thông dịch hàm </code>f(){}();<code> như hàm </code>f(){}<code> và </code>();<code> trong đó cái trước là khai báo hàm trong khi cái sau (một cặp dấu ngoặc đơn) là nỗ lực thực thi một hàm mà không chỉ định tên, dẫn đến <strong>Uncaught SyntaxError: Unexpected token</strong>\r\n\r\n</code>(function f(){})()<code> và </code>(function f(){}())<code> là hai cách để sửa lỗi liên quan đến việc thêm nhiều dấu ngoặc hơn. Các hàm này không khả dụng trong phạm vi toàn cục và bạn thậm chí có thể bỏ qua tên của chúng nếu bạn không cần tham chiếu đến chúng trong nội dung.\r\n\r\nBạn cũng có thể sử dụng toán tử void: </code>void function f(){}();<code> Tuy nhiên, có một điểm hạn chế trong chiến lược này. Bởi vì đánh giá của một biểu thức nhất định luôn không được xác định, bạn không thể sử dụng hàm IIFE nếu nó trả về bất kỳ thứ gì. Hãy xem xét tình huống sau:\r\n\r\n</code>`<code>js\r\n // Don&#39;t add JS syntax to this code block to prevent Prettier from formatting it.\r\nconst f = void\r\nfunction b() {\r\n    return &#39;f&#39;;\r\n}();\r\n\r\nconsole.log(f); // undefined\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Giải thích về Internationalization và Localization?",
+      "answer": "<p>Đây là các API chuẩn JavaScript hỗ trợ các hoạt động như đối chiếu, định dạng số, định dạng tiền tệ và định dạng ngày và giờ.\r\n\r\n<em> <strong>Đối chiếu:</strong> Đây là một phương pháp để tìm kiếm và sắp xếp các chuỗi trong một tập hợp. Nó có một đối số ngôn ngữ và nhận biết được Unicode.\r\n</em> <strong>Định dạng số:</strong> Các dấu phân cách được bản địa hóa và nhóm chữ số có thể được sử dụng để định dạng số. Định dạng kiểu, hệ thống số, phần trăm và độ chính xác nằm trong số các mục khác.\r\n<em> <strong>Định dạng tiền tệ:</strong> Các ký hiệu tiền tệ, dấu phân tách bản địa hóa và nhóm chữ số là những cách phổ biến nhất để định dạng số.\r\n</em> <strong>Định dạng ngày và giờ:</strong> Các dấu phân cách và thứ tự được bản địa hóa được sử dụng để định dạng. Định dạng có thể ngắn hoặc dài và có thể bao gồm các đặc điểm khác như vị trí và múi giờ.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Webpack là gì?",
+      "answer": "<p>Webpack là một công cụ để gói các file javascript để sử dụng trong các trình duyệt. Webpack phân tích ứng dụng và tạo các gói bằng cách tạo một biểu đồ phụ thuộc ánh xạ từng module của dự án được yêu cầu. Nó cho phép bạn thực thi môi trường được host bởi Babel. Webpack có lợi thế là kết hợp nhiều module và gói vào một file JavaScript duy nhất. Nó bao gồm một máy chủ nhà dev, hỗ trợ cập nhật code và quản lý assets.\r\n\r\nVí dụ\r\n\r\nfolder<em>name/index.js\r\n\r\n``<code>js\r\nimport bar from &#39;./func.js&quot;;\r\nfunc();\r\n</code>`<code>\r\n\r\nfolder</em>name/func.js\r\n</code>`<code>js\r\nexport default function func() {\r\n    // body of the function\r\n}\r\n</code>`<code>\r\n\r\nwebpack.config.js\r\n\r\n</code>`<code>js\r\nconst path = require(&#39;path&#39;);\r\n\r\nmodule.exports = {\r\n    entry: &#39;./folder<em>name/index.js&#39;,\r\n    output: {\r\n        path: path.resolve(</em>_dirname, &#39;dict&#39;),\r\n        filename: &#39;bundle.js&#39;,\r\n    },\r\n};\r\n</code>`<code>\r\n\r\npage.html\r\n\r\n</code>`<code>html\r\n&lt;!DOCTYPE html&gt;\r\n&lt;html&gt;\r\n    &lt;head&gt;\r\n        &lt;meta charset=&quot;utf-8&quot; /&gt;\r\n        ...\r\n    &lt;/head&gt;\r\n    &lt;body&gt;\r\n        ...\r\n        &lt;script src=&quot;dict/bundle.js&quot;&gt;&lt;/script&gt;\r\n    &lt;/body&gt;\r\n&lt;/html&gt;\r\n</code>``</p>",
+      "level": "fresher"
+    }
+  ]
+}

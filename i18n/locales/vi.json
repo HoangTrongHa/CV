@@ -4,6 +4,7 @@
     "experience": "Kinh nghiệm",
     "education": "Học vấn",
     "portfolio": "Dự án",
+    "interviews": "Phỏng vấn",
     "getCVFile": "Tải CV"
   },
   "hero": {
@@ -22,7 +23,21 @@
     "facebook": "Facebook",
     "linkedin": "LinkedIn",
     "copied": "Đã sao chép!",
+    "close": "Đóng",
     "copyright": "Bản quyền thuộc về"
+  },
+  "login": {
+    "title": "Đăng nhập",
+    "subtitle": "Truy cập trang kinh nghiệm phỏng vấn",
+    "username": "Tên đăng nhập",
+    "usernamePlaceholder": "Nhập tên đăng nhập",
+    "password": "Mật khẩu",
+    "passwordPlaceholder": "Nhập mật khẩu",
+    "loginButton": "Đăng nhập",
+    "processing": "Đang xử lý...",
+    "error": "Tên đăng nhập hoặc mật khẩu không đúng!",
+    "contactWith": "Liên hệ với",
+    "backToHome": "Về trang chủ"
   },
   "sections": {
     "about": "Giới thiệu",

@@ -4,6 +4,7 @@
     "experience": "経験",
     "education": "学歴",
     "portfolio": "ポートフォリオ",
+    "interviews": "インタビュー",
     "getCVFile": "履歴書をダウンロード"
   },
   "hero": {
@@ -14,7 +15,7 @@
   },
   "footer": {
     "readyToWork": "一緒に働く準備はできていますか？",
-    "description": "現在、フリーランスプロジェクトおよびフルタイムの機会を受け付けています。素晴らしいものを一緒に作りましょう。",
+    "description": "現在、フリーランスプロジェクトに対応可能で、フルタイムの機会も受け入れています。素晴らしいものを作りましょう。",
     "contactMe": "お問い合わせ",
     "getInTouch": "連絡先",
     "phone": "電話",
@@ -22,7 +23,21 @@
     "facebook": "Facebook",
     "linkedin": "LinkedIn",
     "copied": "コピーしました！",
-    "copyright": "著作権所有"
+    "close": "閉じる",
+    "copyright": "全著作権所有"
+  },
+  "login": {
+    "title": "ログイン",
+    "subtitle": "面接経験にアクセス",
+    "username": "ユーザー名",
+    "usernamePlaceholder": "ユーザー名を入力",
+    "password": "パスワード",
+    "passwordPlaceholder": "パスワードを入力",
+    "loginButton": "ログイン",
+    "processing": "処理中...",
+    "error": "ユーザー名またはパスワードが正しくありません！",
+    "contactWith": "連絡先",
+    "backToHome": "ホームに戻る"
   },
   "sections": {
     "about": "自己紹介",

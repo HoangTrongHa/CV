@@ -60,8 +60,8 @@ function parseMarkdownToQuestions(content, subcategoryName) {
     const lines = section.split('\n');
     const firstLine = lines[0].trim();
     
-    // Loại bỏ số thứ tự ở đầu
-    const questionMatch = firstLine.match(/^\d+\.\s*(.+)$/);
+    // Loại bỏ số thứ tự ở đầu (chấp nhận cả có và không có dấu chấm sau số)
+    const questionMatch = firstLine.match(/^\d+\.?\s*(.+)$/);
     if (!questionMatch) continue;
     
     const question = questionMatch[1];
@@ -103,11 +103,27 @@ function convertMarkdownToHtml(markdown) {
   });
   
   // Step 2: Process other markdown (now safe from interfering with image paths)
-  // Code blocks
-  html = html.replace(/```(\w+)?\n([\s\S]*?)```/g, '<pre><code class="language-$1">$2</code></pre>');
+  // Code blocks - escape HTML entities inside code
+  html = html.replace(/```(\w+)?\n([\s\S]*?)```/g, (match, lang, code) => {
+    const escapedCode = code
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+    return `<pre><code class="language-${lang || ''}">${escapedCode}</code></pre>`;
+  });
   
-  // Inline code
-  html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+  // Inline code - escape HTML entities
+  html = html.replace(/`([^`]+)`/g, (match, code) => {
+    const escapedCode = code
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+    return `<code>${escapedCode}</code>`;
+  });
   
   // Links
   html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
@@ -175,7 +191,7 @@ async function parseInterviewData() {
               id: sub,
               name: name,
               description: getDescription(content),
-              questions: questions.slice(0, 15) // Giới hạn 15 câu đầu tiên
+              questions: questions // Lấy tất cả câu hỏi
             });
             
             console.log(`✓ Parsed ${questions.length} questions from ${catKey}/${sub}`);

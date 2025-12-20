@@ -1,0 +1,257 @@
+{
+  "id": "typescript",
+  "name": "Câu hỏi phỏng vấn TypeScript",
+  "description": "",
+  "questions": [
+    {
+      "question": "Các kiểu nguyên thuỷ trong TypeScript?",
+      "answer": "<p>Trong TypeScript có loại kiểu dữ liệu là kiểu có sẵn (built-in) và kiểu người dùng định nghĩa (user-defined).\r\n\r\n<em> Built-in:\r<ul><li>string</li></ul>\r<ul><li>number</li></ul>\r<ul><li>boolean</li></ul>\r<ul><li>void</li></ul>\r<ul><li>symbol</li></ul>\r<ul><li>null & undefined</li></ul>\r\n</em> User-defined:\r<ul><li>arrays</li></ul>\r<ul><li>enums</li></ul>\r<ul><li>classes</li></ul>\r<ul><li>interfaces</li></ul>\r\n\r\n<img src=\"/interview-assets/Typescript_Types.png\" alt=\"\" /></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Giải thích cách mảng làm việc trong TypeScript?",
+      "answer": "<p>Ta sử dụng mảng cho lưu trữ các giá trị cùng kiểu. Mảng là tập hợp giá trị có thứ tự và được đánh chỉ mục. Phần tử đầu tiên có chỉ mục là 0, kế tiếp là 1, ....\r\n\r\nCú pháp khai báo và khởi tạo mảng trong TypeScript:\r\n\r\n``<code>ts\r\nlet values: number[] = [];\r\nvalues[0] = 10;\r\nvalues[1] = 20;\r\nvalues[2] = 30;\r\n</code>`<code>\r\n\r\nTa có thể tạo mảng với cú pháp đơn giản hơn:\r\n\r\n</code>`<code>ts\r\nlet values: number[] = [15, 20, 25, 30];\r\n</code>`<code>\r\n\r\nHoặc là dùng từ khoá Array:\r\n\r\n</code>`<code>ts\r\nlet values: Array&lt;number&gt; = [15, 20, 25, 30];\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Kiểu any là gì?",
+      "answer": "<p>Khi bạn muốn lưu một biến mà không biết trước kiểu của biến đó. Ví dụ, giá trị từ lệnh gọi API hoặc đầu vào người dùng. Kiểu <code>any</code> cho phép gán bất kỳ giá trị nào cho biến.\r\n\r\n``<code>ts\r\nlet person: any = &quot;Foo&quot;;\r\n</code>`<code>\r\n\r\nVí dụ:\r\n\r\n</code>`<code>ts\r\n// json may come from a third-party API\r\nconst employeeData: string = </code>{\"name\": \"John Doe\", \"salary\": 60000}<code>;\r\n\r\n// parse JSON to build employee object\r\nconst employee: any = JSON.parse(employeeData);\r\n\r\nconsole.log(employee.name);\r\nconsole.log(employee.salary);\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Kiểu void là gì?",
+      "answer": "<p>Void cho biết sự vắng mặt của kiểu với biến. Nó hoạt động như đối lập với bất kỳ kiểu nào. Nó hữu ích cho các hàm không trả về giá trị.\r\n\r\n``<code>ts\r\nfunction notify(): void {\r\n    alert(&quot;The user has been notified.&quot;);\r\n}\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Kiểu unknown là gì?",
+      "answer": "<p>Kiểu unknown là kiểu đối chứng với kiểu any. Bạn có thể gán cho kiểu unknown với bất cứ thứ gì , nhưng không thể gán bất kỳ thứ gì bằng kiểu unknown (có thể khi ta thu hẹp kiểu dựa trên luồng điều khiển). Bạn không thể thực hiện bất kỳ thao tác nào trên một biến thuộc kiểu unknown mà không xác định trước loại cụ thể của biến đó.\r\n\r\nHãy xem xét ví dụ sau. Chúng ta tạo biến unknown <code>foo</code> và gán giá trị chuỗi cho nó. Nếu chúng ta cố gắng gán biến unknown vào một biến chuỗi <code>bar</code>, trình biên dịch sẽ báo lỗi.\r\n\r\n``<code>ts\r\nlet foo: unknown = &quot;Akshay&quot;;\r\nlet bar: string = foo; // Type &#39;unknown&#39; is not assignable to type &#39;string&#39;.(2322)\r\n</code>`<code>\r\n\r\nBạn có thể thu hẹp một biến của một kiểu unknown thành một kiểu gì đó cụ thể bằng cách thực hiện kiểm tra kiểu hoặc kiểm tra so sánh hoặc sử dụng bảo vệ kiểu. Ví dụ: chúng ta có thể loại bỏ lỗi trên bằng cách\r\n\r\n</code>`<code>ts\r\nlet foo: unknown = &quot;Akshay&quot;;\r\nlet bar: string = foo as string;\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Các cách khai báo biến trong TypeScript?",
+      "answer": "<p><strong>var</strong> khai báo một biến cục bộ hoặc toàn cục. Bạn có thể thiết lập giá trị khi khai báo. Các hành vi và phạm vi của nó tương tự với ở JavaScript. Ví dụ:\r\n\r\n``<code>ts\r\nvar foo = &quot;bar&quot;;\r\n</code>`<code>\r\n\r\n<strong>let</strong> khai báo biến cục bộ. Tương tự var, bạn có thể thiết lập giá trị biến khi khai báo. Ví dụ:\r\n\r\n</code>`<code>ts\r\nlet a = 5;\r\n\r\nif (true) {\r\n    let a = 10;\r\n    console.log(a);  // 10\r\n}\r\nconsole.log(a);  // 5\r\n</code>`<code>\r\n\r\n<strong>const</strong> khai báo hằng cục bộ không thể thay đổi sau khi khởi tạo.\r\n\r\n</code>`<code>ts\r\nconst a = 5;\r\n\r\nif (true) {\r\n    a = 10; // Error: Cannot assign to &#39;a&#39; because it is a constant.(2588)\r\n} \r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Cung cấp cú pháp cho hàm với chú thích kiểu?",
+      "answer": "<p>Hàm là các khối code để thực hiện một code cụ thể. Các hàm có thể tùy ý nhận một hoặc nhiều tham số, xử lý chúng và tùy chọn trả về một giá trị. Trong TypeScript hàm cần có chú thích kiểu là kiểu giá trị trả về của hàm.\r\n\r\n``<code>ts\r\nfunction greet(name: string): string {\r\n  return </code>Hello, ${name}<code>;\r\n}\r\n\r\nlet greeting = greet(&quot;Anders&quot;);\r\nconsole.log(greeting);  // &quot;Hello, Anders&quot;\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Cách tạo đối tượng trong TypeScript?",
+      "answer": "<p>Đối tượng là một tập hợp key/value. Key là duy nhất. Nó gần tương đồng với mảng nên còn gọi là mảng liên kết. Tuy nhiên, mảng sử dụng key/chỉ mục là giá trị số, trong khi đối tượng cho phép bất kỳ kiểu dữ liệu nào là key.\r\n\r\nTrong TypeScript, kiểu đối tượng đề cập đến bất kỳ thuộc tính nào. Nó có thể định nghĩa danh sách thuộc tính và kiểu của nó. Ví dụ:\r\n\r\n``<code>ts\r\nlet pt: { x: number; y: number } = {\r\n  x: 10,\r\n  y: 20\r\n};\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Tuỳ chọn thuộc tính trong TypeScript?",
+      "answer": "<p>Một đối tượng có thể có thuộc tính tuỳ chọn (có hoặc không có) bằng cách thêm <code>?</code> sau tên thuộc tính.\r\n\r\n``<code>ts\r\nlet pt: { x: number; y: number; z?: number } = {\r\n  x: 10,\r\n  y: 20\r\n};\r\nconsole.log(pt);\r\n</code>`<code>\r\n\r\nTrong ví dụ trên, thuộc tính </code>z` là tuỳ chọn, trình biên dịch không bắt buộc ta cung cấp khi khởi tạo đối tượng.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Giải thích khái niệm null trong TypeScript?",
+      "answer": "<p>Trong lập trình, giá trị null cho biết không có giá trị. Một biến null không trỏ đến bất kỳ đối tượng nào. Do đó, bạn không thể truy cập bất kỳ thuộc tính nào trên biến hoặc gọi một phương thức trên đó.\r\n\r\nTrong TypeScript, giá trị null được chỉ định bằng từ khoá <code>null</code>. Ví dụ\r\n\r\n``<code>ts\r\nfunction greet(name: string | null) {\r\n    if (name === null) {\r\n        console.log(&quot;Name is not provided&quot;);\r\n    } else {\r\n        console.log(&quot;Good morning, &quot; + name.toUpperCase());\r\n    }\r\n}\r\n\r\nvar foo = null;\r\ngreet(foo); // &quot;Name is not provided&quot;\r\n\r\nfoo = &quot;Anders&quot;;\r\ngreet(foo);  // &quot;Good morning, ANDERS&quot;\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "undefined trong TypeScript là gì?",
+      "answer": "<p>Khi một biến được khai báo mà không tạo giá trị, nó sẽ được gán giá trị undefined. \r\n\r\n``<code>ts\r\nconsole.log(null == null); // true\r\nconsole.log(undefined == undefined); // true\r\nconsole.log(null == undefined); // true, with type-conversion\r\nconsole.log(null === undefined); // false, without type-conversion\r\nconsole.log(0 == undefined); // false\r\nconsole.log(&#39;&#39; == undefined); // false\r\nconsole.log(false == undefined); // false\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Giải thích kiểu never trong TypeScript?",
+      "answer": "<p>Kiểu never trong TypeScript là một kiểu không chứa giá trị. Do đó, bạn không thể gán bất kỳ giá trị nào cho biến có kiểu never.\r\n\r\n``<code>ts\r\nfunction error(message: string): never {\r\n    throw new Error(message);\r\n}\r\n</code>`<code>\r\n\r\nCâu hỏi đặt ra là tại sao cần kiểu </code>never<code> khi ta đã có </code>void<code>. Vì cả hai khá giống nhau, nhưng thực sự chúng lại là đại diện cho hai khái niệm khác nhau.\r\n\r\nMột hàm không trả về một giá trị nào ngầm hiểu là giá trị undefined trong JavaScript. Do đó, khi ta dùng </code>void<code> với một hàm thực tế nó vẫn nhận về kiểu undefined. Để đảm bảo hàm không nhận bất cứ giá trị nào, kiểu </code>never<code> được dùng cho những trường hợp như vậy.\r\n\r\n</code>`<code>ts\r\nconst test = (arg): void =&gt; {\r\n    console.log(arg)\r\n}\r\n\r\nconsole.log(test(&#39;test&#39;))\r\n\r\n// &quot;test&quot;\r\n// undefined\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Cách enum hoạt động trong TypeScript?",
+      "answer": "<p>Enums cho phép chúng ta tạo các hằng số được đặt tên. Đây là một cách đơn giản để đặt tên thân thiện hơn cho các giá trị hằng số. Một enum được định nghĩa bởi từ khóa enum, theo sau là tên và các thành viên của nó.\r\n\r\nVí dụ:\r\n\r\n``<code>ts\r\nenum Team {\r\n    Alpha,\r\n    Beta,\r\n    Gamma,\r\n    Delta\r\n}\r\n\r\nlet t: Team = Team.Delta;\r\n</code>`<code>\r\n\r\nMặc định, enum bắt đầu đánh số từ 0. Bạn có thể ghi đè lên giá trị mặc định bằng cách gán giá trị cho các thành viên của nó. Ví dụ:\r\n\r\n</code>`<code>ts\r\nenum Author {\r\n  Anders = &quot;Anders&quot;,\r\n  Hejlsberg = &quot;Hejlsberg&quot;\r\n};\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Toán tử typeof trong TypeScript là gì?",
+      "answer": "<p>Tương tự JavaScript, đây là toán tử trả về kiểu dữ liệu của toán hạng.\r\n\r\n``<code>ts\r\nconsole.log(typeof 10);  // &quot;number&quot;\r\n\r\nconsole.log(typeof &#39;foo&#39;);  // &quot;string&quot;\r\n\r\nconsole.log(typeof false);  // &quot;boolean&quot;\r\n\r\nconsole.log(typeof bar);  // &quot;undefined&quot;\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Tham số còn lại trong TypeScript?",
+      "answer": "<p>Tham số còn lại (<code>...</code>) cho phép một hàm nhận một lượng không giới hạn tham số như là một mảng. \r\n\r\n``<code>ts\r\nfunction add(...values: number[]) {\r\n    let sum = 0;\r\n    values.forEach(val =&gt; sum += val);\r\n    \r\n    return sum;\r\n}\r\n\r\nconst sum = add(5, 10, 15, 20);\r\nconsole.log(sum);  // 50\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Tham số destructuring là gì?",
+      "answer": "<p>Tham số destructuring cho phép một hàm tách một đối tượng được cung cấp dưới dạng đối số thành một hoặc nhiều biến cục bộ.\r\n\r\n``<code>ts\r\nfunction multiply({ a, b, c }: { a: number; b: number; c: number }) {\r\n    console.log(a <em> b </em> c);\r\n}\r\n\r\nmultiply({ a: 1, b: 2, c: 3 });\r\n</code>`<code>\r\n\r\nBạn có thể tối ưu code trên bằng cách dùng interface hoặc type:\r\n\r\n</code>`<code>ts\r\ntype ABC = { a: number; b: number; c: number };\r\n\r\nfunction multiply({ a, b, c }: ABC) {\r\n    console.log(a <em> b </em> c);\r\n}\r\n\r\nmultiply({ a: 1, b: 2, c: 3 });\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Giải thích về cú pháp class trong TypeScript?",
+      "answer": "<p>TypeScript hỗ trợ lớp đầy đủ. Cú pháp TypeScript cho khai báo lớp tương tự JavaScript, với hỗ trợ khai báo kiểu cho các thuộc tính của nó.\r\n\r\nVí dụ lớp Employee:\r\n\r\n``<code>ts\r\nclass Employee {\r\n    name: string;\r\n    salary: number;\r\n\r\n    constructor(name: string, salary: number) {\r\n        this.name = name;\r\n        this.salary = salary;\r\n    }\r\n    promote() : void {\r\n        this.salary += 10000;\r\n    }\r\n}\r\n</code>`<code>\r\n\r\nTa có thể tạo đối tượng cho lớp bằng cách dùng từ khoá </code>new<code>\r\n\r\n</code>`<code>ts\r\n// Create a new employee\r\nlet john = new Employee(&quot;John&quot;, 60000);\r\n\r\nconsole.log(john.salary);  // 60000\r\njohn.promote();\r\nconsole.log(john.salary);  // 70000\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Giải thích cú pháp arrow function trong TypeScript?",
+      "answer": "<p>Arrow function cung cấp cú pháp ngắn và thuận tiện hơn cho khai báo hàm. Nó còn được gọi là lambdas ở một số ngôn ngữ lập trình khác.\r\n\r\nCú pháp khai báo hàm thông thường:\r\n\r\n``<code>ts\r\nfunction add(x: number, y: number): number {\r\n    let sum = x + y;\r\n    return sum;\r\n}\r\n</code>`<code>\r\n\r\nSử dụng arrow function:\r\n\r\n</code>`<code>ts\r\nlet add = (x: number, y: number): number =&gt; {\r\n    let sum = x + y;\r\n    return sum;\r\n}\r\n</code>`<code>\r\n\r\nBạn có thể đơn giản cú pháp hơn nữa bằng cách lược bỏ câu lệnh </code>return<code>. Nó được cho phép khi thân hàm chỉ có duy nhất một câu lệnh, ví dụ:\r\n\r\n</code>`<code>ts\r\nlet add = (x: number, y: number): number =&gt; x + y; \r\n</code>`<code>\r\n\r\nArrow function thường được dùng cho các hàm callback trong TypeScript. Xem đoạn code bên dưới một vòng lặp qua một mảng số để lọc và trả về các bội của 5.\r\n\r\n</code>`<code>ts\r\nlet numbers = [3, 5, 9, 15, 34, 35];\r\n\r\nlet fiveMultiples = numbers.filter(num =&gt; (num % 5) == 0);\r\n\r\nconsole.log(fiveMultiples);  // [5, 15, 35]\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Tham số tuỳ chọn trong TypeScript?",
+      "answer": "<p>Một hàm có thể có một hay nhiều tham số tuỳ chọn bằng cách thêm dấu <code>?</code> sau nó. Ví dụ:\r\n\r\n``<code>ts\r\nfunction greet(name: string, greeting?: string) {\r\n    if (!greeting)\r\n        greeting = &quot;Hello&quot;;\r\n\r\n    console.log(</code>${greeting}, ${name}<code>);\r\n}\r\n\r\ngreet(&quot;John&quot;, &quot;Hi&quot;);  // Hi, John\r\ngreet(&quot;Mary&quot;, &quot;Hola&quot;);  // Hola, Mary\r\ngreet(&quot;Jane&quot;);  // Hello, Jane\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Mục đích của file tsconfig.json?",
+      "answer": "<p>Một file tsconfig.json trong một thư mục đánh dấu thư mục đó là thư mục gốc của một dự án TypeScript. Nó cung cấp các tùy chọn trình biên dịch để biên dịch dự án.\r\n\r\n``<code>ts\r\n{\r\n    &quot;compilerOptions&quot;: {\r\n        &quot;module&quot;: &quot;system&quot;,\r\n        &quot;noImplicitAny&quot;: true,\r\n        &quot;removeComments&quot;: true,\r\n        &quot;outFile&quot;: &quot;../../built/local/tsc.js&quot;,\r\n        &quot;sourceMap&quot;: true\r\n    },\r\n    &quot;include&quot;: [&quot;src/*<em>/</em>&quot;],\r\n    &quot;exclude&quot;: [&quot;node_modules&quot;, &quot;*<em>/</em>.spec.ts&quot;]\r\n}\r\n</code>``\r\n\r\n## Câu hỏi phỏng vấn TypeScript cho Experienced</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Liệt kê các kiểu vòng lặp trong TypeScript?",
+      "answer": "<p>TypeScript cung cấp 3 cách lặp qua tập hợp như sau:\r<ul><li>Vòng lặp <strong>for</strong></li></ul>\r\n\r\n``<code>ts\r\nlet values = [10, &quot;foo&quot;, true];\r\n\r\nfor(let i=0; i&lt;values.length; i++) {\r\n    console.log(values[i]);  // 10, &quot;foo&quot;, true\r\n}\r\n</code>`<code>\r<ul><li>Hàm <strong>forEach</strong></li></ul>\r\n\r\n</code>`<code>ts\r\nlet values = [10, &quot;foo&quot;, true];\r\nvalues.forEach(val =&gt; {\r\n    console.log(val);  // 10, &quot;foo&quot;, true\r\n})\r\n</code>`<code>\r<ul><li>Câu lệnh <strong>for..of</strong></li></ul>\r\n\r\n</code>`<code>ts\r\nlet values = [10, &quot;foo&quot;, true];\r\nfor (let val of values) {\r\n    console.log(val); // 10, &quot;foo&quot;, true\r\n}\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Giải thích về kiểu symbol trong TypeScript?",
+      "answer": "<p>Symbol được giới thiệu ở ES6 và được hỗ trợ trong TypeScript. Tương tự như <code>number</code> hay <code>string</code>, <code>symbol</code> là một kiểu nguyên thuỷ. Được sử dụng để tạo thuộc tính duy nhất cho đối tượng.\r\n\r\nBạn có thể tạo giá trị symbol bằng hàm khởi tạo <code>Symbol()</code>, thường dùng một khoá chuỗi:\r\n\r\n``<code>ts\r\nlet foo = Symbol();\r\nlet bar = Symbol(&quot;bar&quot;);\r\n</code>`<code>\r\n\r\nMột khoá ký tự của symbol là duy nhất và bất biến.\r\n\r\n</code>`<code>ts\r\nlet foo = Symbol(&quot;foo&quot;);\r\nlet newFoo = Symbol(&quot;foo&quot;);\r\n\r\nlet areEqual = foo === newFoo;\r\nconsole.log(areEqual);  // false, symbols are unique\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Chuỗi tuỳ chọn trong TypeScript hoạt động thế nào?",
+      "answer": "<p>Chuỗi tuỳ chọn cho phép bạn truy cập thuộc tính và gọi phương thức trên một đối tượng dạng chuỗi. \r\n\r\nTypeScript dừng ngay lập tức các biểu thức nếu nó trả về giá trị <code>null</code> hay <code>undefined</code>.\r\n\r\nVí dụ, một biểu thức dài như sau:\r\n\r\n``<code>ts\r\nlet x = foo === null || foo === undefined ? undefined : foo.bar.baz();\r\n</code>`<code>\r\n\r\ncó thể đơn giản thành:\r\n\r\n</code>`<code>ts\r\nlet x = foo?.bar.baz();\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Nạp chồng hàm trong TypeScript?",
+      "answer": "<p>Nạp chồng hàm cho phép ta khai báo nhiều hàm cùng tên, nhưng số lượng tham số cho từng hàm phải khác nhau.\r\n\r\nVí dụ bên dưới khai báo hai hàm nạp chồng cho <code>builđate</code>. Hàm nạp chồng đầu tiên nhận về tham số kiểu <em>number</em>, trong khi tham số thứ hai nhận về 3 tham số kiểu <em>number</em>. \r\n\r\n``<code>ts\r\nfunction buildDate(timestamp: number): Date;\r\nfunction buildDate(m: number, d: number, y: number): Date;\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Tự suy kiểu là gì?",
+      "answer": "<p>TypeScript có thể tự suy kiểu của biến nếu bạn không cung cấp kiểu cụ thể. Điều này gọi là tự suy kiểu. Nó thường dùng khi các biến hoặc tham số được khởi tạo khi khai báo.\r\n\r\nVí dụ, đoạn code dưới đây TypeScript sẽ mặc định biến <code>foo</code> là kiểu string\r\n\r\n``<code>ts\r\nlet foo = &quot;this is a string&quot;;\r\nconsole.log(typeof foo);  // &quot;string&quot;\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Contextual Typing là gì?",
+      "answer": "<p>Khi trình biên dịch TypeScript sử dụng vị trí (hoặc ngữ cảnh) của một biến để suy ra kiểu của nó, nó được gọi là nhập theo ngữ cảnh (Contextual Typing).\r\n\r\nTrong ví dụ sau, TypeScript sử dụng thông tin kiểu hàm <code>window.onmousedown</code> để suy ra kiểu của biểu thức hàm ở phía bên phải của phép gán. Điều này cho phép nó suy ra kiểu của tham số <code>e</code>, tham số này có thuộc tính button nhưng không có thuộc tính có tên <code>foo</code>.\r\n\r\n``<code>ts\r\nwindow.onmousedown = function (e) {\r\n    console.log(e.button); //&lt;- OK\r\n    console.log(e.foo); //&lt;- Error!\r\n};\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "noImplicitAny là gì?",
+      "answer": "<p>Thông thường, nếu ta không cung cấp kiểu cho biến, TypeScript sẽ giả sử rằng đó là kiểu any. Ví dụ, đoạn code sau, tham số <code>s</code> sẽ được xem như là kiểu any. Nó hoạt động cùng với chuỗi được truyền:\r\n\r\n``<code>ts\r\nfunction parse(s) {\r\n    console.log(s.split(&#39; &#39;));\r\n}\r\nparse(&quot;Hello world&quot;);  // [&quot;Hello&quot;, &quot;world&quot;]\r\n</code>`<code>\r\n\r\nTuy nhiên, code sẽ sinh lỗi ngay khi ta truyền một số hoặc kiểu khác chuỗi vào phương thức </code>split()<code>. Ví dụ:\r\n\r\n</code>`<code>ts\r\nfunction parse(s) {\r\n    console.log(s.split(&#39; &#39;));  // [ERR]: s.split is not a function\r\n}\r\nparse(10); \r\n</code>`<code>\r\n\r\n<strong>noImplicitAny</strong> là một trình biên dịch tuỳ chọn mà bạn thiết lập trong file tsconfig.json. Nó ép trình biên dịch TypeScript báo lỗi bất cứ khi nào nó đưa ra một biến kiểu any. Điều này ngăn việc vô tình tạo các lỗi tương tự:\r\n\r\n</code>`<code>ts\r\n// Parameter &#39;s&#39; implicitly has an &#39;any&#39; type.(7006)\r\nfunction parse(s) {\r\n    console.log(s.split(&#39; &#39;));  // [ERR]: s.split is not a function\r\n}\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Interface là gì?",
+      "answer": "<p>Interface trong typescript cho phép bạn định nghĩ thuộc tính và phương thức là gì mà đối tượng cần để được triển khai (implement). Nếu đối tượng tuân thủ đúng khuôn mẫu interface thì đối tượng đã triển khai interface ấy sẽ được thi hành đúng. Nếu interface không được thi hành đúng thì typescript sẽ phát sinh lỗi ngay lập tức.\r\n\r\n``<code>ts\r\ninterface Employee {\r\n    name: string;\r\n    salary: number;\r\n}\r\n\r\nfunction process(employee: Employee) {\r\n    console.log(</code>${employee.name}'s salary = ${employee.salary}<code>);\r\n}\r\n\r\nlet john: Employee = {\r\n    name: &quot;John Doe&quot;,\r\n    salary: 150000\r\n}\r\n\r\nprocess(john);  // &quot;John Doe&#39;s salary = 150000&quot;\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Các quyền truy cập trong TypeScript?",
+      "answer": "<p>TypeScript cung cấp ba từ khoá cho điều khiển truy cập thành viên của lớp, như thuộc tính hay phương thức:\r<ul><li><strong>public</strong>: có thể truy cập ở bất cứ đâu kể cả bên ngoài lớp. Tất cả lớp thành viên mặc định là public.</li></ul>\r<ul><li><strong>protected</strong>: là thành viên chỉ có thể truy cập bởi lớp con của lớp chứa thành viện đó. Bên ngoài không thể truy cập vào các thành viên protected.</li></ul>\r<ul><li><strong>private</strong>: chỉ có thể truy cập bên trong lớp đó.</li></ul></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "TypeScript có hỗ trợ static class không?",
+      "answer": "<p>TypeScript không có hỗ trợ static class, không giống như các ngôn ngữ lập trình hướng đối tượng như C# hay Java.\r\n\r\nCác ngôn ngữ này cần các static class vì tất cả code, tức là dữ liệu và các hàm, cần phải nằm trong một lớp và không thể tồn tại độc lập. Các static class cung cấp một cách để cho phép các hàm này mà không cần liên kết chúng với bất kỳ đối tượng nào.\r\n\r\nTrong TypeScript, bạn có thể tạo bất kỳ dữ liệu và nào nào dưới dạng các đối tượng đơn giản mà không cần tạo một lớp chứa. Do đó, TypeScript không cần các static class. Một lớp singleton chỉ là một đối tượng đơn giản trong TypeScript</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Lớp trừu tượng là gì?",
+      "answer": "<p>Các lớp trừu tượng tương tự như các interface ở chỗ chúng chỉ định một hợp đồng cho các đối tượng và bạn không thể khởi tạo chúng trực tiếp. Tuy nhiên, không giống như các interface, một lớp trừu tượng có thể cung cấp các chi tiết triển khai cho một hoặc nhiều thành viên của nó.\r\n\r\nMột lớp trừu tượng đánh dấu một hoặc nhiều thành viên của nó là trừu tượng. Bất kỳ lớp nào kế thừa một lớp trừu tượng phải cung cấp một triển khai cho các thành viên trừu tượng của lớp cha.\r\n\r\nĐây là một ví dụ về một lớp trừu tượng <code>Writer</code> với hai hàm thành viên. Phương thức <code>write()</code> được đánh dấu là trừu tượng, trong khi phương thức <code>welcome()</code> là triển khai. Cả hai lớp <code>FictionWriter</code> và <code>RomanceWriter</code> kế thừa từ <code>Writer</code> phải cung cấp triển khai cụ thể của chúng cho phương thức <code>write</code>.\r\n\r\n``<code>ts\r\nabstract class Writer {\r\n    abstract write(): void;\r\n\r\n    greet(): void {\r\n        console.log(&quot;Hello, there. I am a writer.&quot;);\r\n    }\r\n}\r\n\r\nclass FictionWriter extends Writer {\r\n    write(): void {\r\n        console.log(&quot;Writing a fiction.&quot;);\r\n    }\r\n}\r\n\r\nclass RomanceWriter extends Writer {\r\n    write(): void {\r\n        console.log(&quot;Writing a romance novel.&quot;);\r\n    }\r\n}\r\n\r\nconst john = new FictionWriter();\r\njohn.greet();  // &quot;Hello, there. I am a writer.&quot;\r\njohn.write();  // &quot;Writing a fiction.&quot;\r\n\r\nconst mary = new RomanceWriter();\r\nmary.greet();  // &quot;Hello, there. I am a writer.&quot;\r\nmary.write();  // &quot;Writing a romance novel.&quot;\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Hàm ẩn danh là gì?",
+      "answer": "<p>Một hàm ẩn danh là một hàm không có tên. Các hàm ẩn danh thường được sử dụng như các hàm callback, tức là chúng được chuyển cho các hàm khác, chỉ được gọi bởi hàm khác vào thời điểm sau đó. Ví dụ,\r\n\r\n``<code>ts\r\nsetTimeout(function () {\r\n  console.log(&#39;Run after 2 seconds&#39;)\r\n}, 2000);\r\n</code>`<code>\r\n\r\nBạn có thể gọi một hàm ẩn danh ngay sau khi nó được tạo. Nó được gọi là IIFE, ví dụ:\r\n\r\n</code>`<code>ts\r\n(function() {\r\n  console.log(&#39;Invoked immediately after creation&#39;);\r\n})();\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Kiểu union trong TypeScript?",
+      "answer": "<p>Kiểu union là một kiểu cấu trúc đặc biệt trong TypeScript biểu thị một giá trị có thể có nhiều kiểu. Phân tách bằng ký hiệu <code>|</code>.\r\n\r\nHãy xem xét ví dụ sau đây trong đó biến <code>value</code> thuộc kiểu union bao gồm chuỗi và số. Value được khởi tạo thành chuỗi \"Foo\". Bởi vì nó chỉ có thể là một chuỗi hoặc một số, ta có thể thay đổi nó thành một số sau đó và trình biên dịch TypeScript không phàn nàn.\r\n\r\n``<code>ts\r\nlet value: string | number = &quot;Foo&quot;;\r\nvalue = 10;  // Okay\r\n</code>`<code>\r\n\r\nTuy nhiên, nếu ta gán cho nó một giá trị thuộc kiểu không được bao gồm trong kiểu union, nó sẽ báo lỗi:\r\n\r\n</code>`<code>ts\r\nvalue = true;  // Type &#39;boolean&#39; is not assignable to type &#39;string | number&#39;.(2322)\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Kiểu intersection là gì?",
+      "answer": "<p>Kiểu intersection cho phép bạn kết hợp các thành viên của hai hoặc nhiều kiểu bằng cách sử dụng toán tử <code>&amp;</code>. Điều này cho phép bạn kết hợp các kiểu hiện có để có được một kiểu duy nhất với tất cả các tính năng bạn cần.\r\n\r\nVí dụ: Ta tạo kiểu <code>Supervisor</code> mới từ thành viên của kiểu <code>Employee</code> và <code>Manager</code>:\r\n\r\n``<code>ts\r\ninterface Employee {\r\n    work: () =&gt; string;\r\n}\r\n\r\ninterface Manager {\r\n    manage: () =&gt; string;\r\n}\r\n\r\ntype Supervisor = Employee &amp; Manager;\r\n\r\n// john can both work and manage\r\nlet john: Supervisor;\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Alias là gì?",
+      "answer": "<p>Alias (tên bí danh) cung cấp một tên mới cho kiểu hiện có. Nó không cung cấp kiểu mới mà cung cấp tên mới đề cập đến kiểu đó.\r\n\r\nVí dụ: bạn có đặt bí danh cho kiểu union đế tránh nhập tất cả kiểu ở mọi nơi mà giá trị đó đang sử dụng.\r\n\r\n``<code>ts\r\ntype alphanumeric = string | number;\r\nlet value: alphanumeric = &quot;&quot;;\r\nvalue = 10;\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Kiểu tuple trong TypeScript?",
+      "answer": "<p>Tuple là kiểu đặc biệt trong TypeScript. Chúng tương tự như mảng có một số phần tử cố định với một kiểu đã biết. Tuy nhiên, các kiểu không cần phải giống nhau.\r\n\r\n``<code>ts\r\n// Declare a tuple type and initialize it\r\nlet values: [string, number] = [&quot;Foo&quot;, 15];\r\n\r\n// Type &#39;boolean&#39; is not assignable to type &#39;string&#39;.(2322)\r\n// Type &#39;string&#39; is not assignable to type &#39;number&#39;.(2322)\r\nlet wrongValues: [string, number] = [true, &quot;hello&quot;]; // Error\r\n</code>`<code>\r\n\r\nỞ TypeScript 3.0, một tuple có thể chỉ định một hoặc nhiều kiểu tuỳ chọn sử dụng ? như bên dưới:\r\n\r\n</code>`<code>ts\r\nlet values: [string, number, boolean?] = [&quot;Foo&quot;, 15];\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Giải thích cách hoạt động tuple destructuring trong TypeScript?",
+      "answer": "<p>Bạn có thể destructuring phần tử tuple bằng cách dùng toán tử (=). Các biến destructuring nhận kiểu của phần tử tuple tương ứng.\r\n\r\n``<code>ts\r\nlet employeeRecord: [string, number] = [&quot;John Doe&quot;, 50000];\r\nlet [emp<em>name, emp</em>salary] = employeeRecord;\r\nconsole.log(</code>Name: ${emp<em>name}<code>);  // &quot;Name: John Doe&quot;\r\nconsole.log(</code>Salary: ${emp</em>salary}<code>);  // &quot;Salary: 50000&quot;\r\n</code>`<code>\r\n\r\nSau destructuring, bạn không thể gán giá trị kiểu khác cho biến bị destructuring. Ví dụ:\r\n\r\n</code>`<code>ts\r\nemp_name = true;  // Type &#39;boolean&#39; is not assignable to type &#39;string&#39;.(2322)\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Xác nhận kiểu trong TypeScript là gì?",
+      "answer": "<p>Đôi khi, bạn với tư cách là một lập trình viên có thể biết nhiều hơn về kiểu của một biến mà TypeScript có thể suy luận. Thông thường, điều này xảy ra khi bạn biết kiểu đối tượng cụ thể hơn kiểu hiện tại của nó. Trong những trường hợp như vậy, bạn có thể yêu cầu trình biên dịch TypeScript không suy ra kiểu của biến bằng cách sử dụng xác nhận kiểu.\r\n\r\nTypeScript cung cấp hai cú pháp cho xác nhận kiểu:\r<ul><li>Dùng <code>as</code></li></ul>\r\n\r\n``<code>ts\r\nlet value: unknown = &quot;Foo&quot;;\r\nlet len: number = (value as string).length;\r\n</code>`<code>\r<ul><li>Dùng </code><><code></li></ul>\r\n\r\n</code>`<code>ts\r\nlet value: unknown = &quot;Foo&quot;;\r\nlet len: number = (&lt;string&gt;value).length;\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Cách để ép kiểm tra null trong TypeScript?",
+      "answer": "<p>Con trỏ null là một trong những nguyên nhân phổ biến dẫn đến lỗi \"Error runtime unexpected\" trong lập trình. TypeScript giúp bạn tránh chúng ở một mức độ cao bằng cách thực thị kiểm tra null nghiêm ngặt (strict null checks).\r\n\r\nTa có thể thực hiện theo hai cách:\r<ul><li>cung cấp cờ --strictNullChecks trong trình biên dịch TypeScript.</li></ul>\r<ul><li>thiết lập thuộc tính strictNullChecks là true trong cấu hình tsconfig.json. </li></ul>\r\n\r\nKhi cờ là false, TypeScript bỏ qua các giá trị null và undefined trong code. Khi nó là true, null và undefined có các kiểu riêng biệt. Trình biên dịch throw một lỗi nếu bạn cố gắng sử dụng chúng ở những nơi mà một giá trị cụ thể được mong đợi.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Cách làm cho thuộc tính đối tượng bất biến trong TypeScript?",
+      "answer": "<p>Bạn có thể làm cho thuộc tính đối tượng là bất biến bằng cách dùng từ khoá <code>readonly</code>.\r\n\r\n``<code>ts\r\ninterface Coordinate {\r\n    readonly x: number;\r\n    readonly y: number;\r\n}\r\n</code>`<code>\r\n\r\nKhi bạn đánh dấu một thuộc tính là readonly, nó chỉ có thể được đặt khi bạn khởi tạo đối tượng. Khi đối tượng được tạo, bạn không thể thay đổi nó.\r\n\r\n</code>`<code>ts\r\nlet c: Coordinate = { x: 5, y: 15 };\r\nc.x = 20; // Cannot assign to &#39;x&#39; because it is a read-only property.(2540)\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "File khai báo kiểu là gì?",
+      "answer": "<p>Một dự án TypeScript điển hình tham chiếu đến các thư viện TypeScript của bên thứ ba khác như jQuery để thực hiện các tác vụ thông thường. Có thông tin kiểu cho file thư viện giúp bạn mã hóa bằng cách cung cấp thông tin chi tiết về kiểu, đặc trưng phương thức, ... và cung cấp IntelliSense.\r\n\r\nFile khai báo kiểu là file văn bản kết thúc bằng phần mở rộng <code>.d.ts</code> cung cấp cách khai báo sự tồn tại của một số kiểu hoặc giá trị mà không thực sự cung cấp triển khai cho các giá trị đó. Nó chứa các khai báo kiểu nhưng không có bất kỳ code nguồn nào. Nó không tạo ra file <code>.js</code> sau khi biên dịch.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Các chỉ thị ba dấu gạch chéo là gì?",
+      "answer": "<p>Chỉ thị ba dấu gạch chéo là các chú thích một dòng chứa một thẻ XML. TypeScript sử dụng thẻ XML này làm chỉ thị trình biên dịch.\r\n\r\nBạn chỉ có thể đặt ba dấu gạch chéo ở đầu file. Chỉ các comment đơn hoặc nhiều dòng mới có thể xuất hiện trước ba dấu gạch chéo. TypeScript coi chúng như những comment thông thường nếu nó xuất hiện ở giữa một khối code, sau một câu lệnh.\r\n\r\nCông dụng chính của chỉ thị ba dấu gạch chéo là bao gồm các file khác trong quá trình biên dịch. Ví dụ: lệnh sau đây hướng dẫn trình biên dịch bao gồm một file được chỉ định bởi đường dẫn trong file TypeScript có chứa.\r\n\r\n``<code>ts\r\n/// &lt;đường dẫn tham chiếu = &quot;...&quot; /&gt;\r\n</code>``\r\n\r\nLệnh ba dấu gạch chéo cũng sắp xếp đầu ra khi sử dụng --out hoặc --outFile. Các file đầu ra được tạo ra vị trí file đầu ra theo thứ tự giống như các file đầu vào.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Giải thích toán tử in?",
+      "answer": "<p>Toán tử in được sử dụng để tìm xem một thuộc tính có nằm trong đối tượng được chỉ định hay không. Nó trả về true nếu thuộc tính thuộc về đối tượng. Nếu không, nó trả về false.\r\n\r\n``<code>ts\r\nconst car = { make: &#39;Hyundai&#39;, model: &#39;Elantra&#39;, year: 2017 };\r\nconsole.log(&#39;model&#39; in car);  // true\r\nconsole.log(&#39;test&#39; in car);  // false\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Giải thích từ khoá implement trong TypeScript?",
+      "answer": "<p>Một implement được dùng để kiểm tra một lớp có thoả mãn hợp đồng được chỉ định bởi một interface hay không. \r\n\r\n``<code>ts\r\ninterface Runnable {\r\n    run(): void;\r\n}\r\n\r\nclass Job implements Runnable {\r\n    run() {\r\n        console.log(&quot;running the scheduled job!&quot;);\r\n    }\r\n}\r\n\r\n// Class &#39;Task&#39; incorrectly implements interface &#39;Runnable&#39;.\r\n// Property &#39;run&#39; is missing in type &#39;Task&#39; but required in type &#39;Runnable&#39;.(2420)\r\nclass Task implements Runnable {\r\n    perform() {\r\n        console.log(&quot;pong!&quot;);\r\n    }\r\n}\r\n</code>``\r\n\r\nMột lớp có thể triển khai nhiều hơn một interface. Trong trường hợp này, lớp phải chỉ định tất cả các hợp đồng của các giao diện đó.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Các kiểu chuỗi ký tự là gì?",
+      "answer": "<p>Trong TypeScript, bạn có thể chỉ định một chuỗi hay số cụ thể như một kiểu. \r\n\r\n``<code>ts\r\nlet foo: &quot;bar&quot; = &quot;bar&quot;;\r\n\r\n// OK\r\nfoo = &quot;bar&quot;;\r\n\r\n// Error: Type &#39;&quot;baz&quot;&#39; is not assignable to type &#39;&quot;bar&quot;&#39;.(2322)\r\nfoo = &quot;baz&quot;;\r\n</code>`<code>\r\n\r\nNhưng với kiểu chuỗi ký tự thì không hữu ích lắm. Tuy nhiên bạn có thể kết hợp chúng thành union. Điều này cho phép bạn chỉ định tất cả các giá trị chuỗi mà một biến có thể nhận, lần lượt hoạt động giống như enums. Điều này có thể hữu ích cho các tham số hàm.\r\n\r\n</code>`<code>ts\r\nfunction greet(name: string, greeting: &quot;hi&quot; | &quot;hello&quot; | &quot;hola&quot;) {\r\n// ...\r\n}\r\n\r\ngreet(&quot;John&quot;, &quot;hello&quot;);\r\n\r\n// Error: Argument of type &#39;&quot;Howdy?&quot;&#39; is not assignable to parameter of type &#39;&quot;hi&quot; | &quot;hello&quot; | &quot;hola&quot;&#39;.(2345)\r\ngreet(&quot;Mary&quot;, &quot;Howdy?&quot;);\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Các template literal là gì?",
+      "answer": "<p>Tính năng được lấy từ ES6, trong TypeScript bạn có thể chèn giá trị của một biến vào chuỗi bằng cách sử dụng cú pháp <code>${}</code>, và chuỗi được bọc trong dấu \"`<code>&quot;.\r\n\r\n</code>`<code>ts\r\ntype Point = &quot;GraphPoint&quot;;\r\n\r\n// type Shape = &quot;Grid GraphPoint&quot;\r\ntype Shape = </code>Grid ${Point}<code>;\r\n</code>`<code>\r\n\r\nTa có thể mở rộng chúng union. Nó giúp tạo một tập tất cả các chuỗi có thể mà một thành viên union có thể thể biểu diễn.\r\n\r\n</code>`<code>ts\r\ntype Color = &quot;green&quot; | &quot;yellow&quot;;\r\ntype Quantity = &quot;five&quot; | &quot;six&quot;;\r\n\r\n// type ItemTwo = &quot;five item&quot; | &quot;six item&quot; | &quot;green item&quot; | &quot;yellow item&quot;\r\ntype ItemOne = </code>${Quantity | Color} item<code>; \r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Kế thừa trong TypeScript?",
+      "answer": "<p>Tính kế thừa cho phép một lớp kế thừa một lớp khác, sử dụng lại và sửa đổi hành vi được định nghĩa trong lớp đó. Lớp kế thừa một lớp khác được gọi là lớp dẫn xuất và lớp nhận được kế thừa được gọi là lớp cơ sở.\r\n\r\nTrong TypeScript, một lớp chỉ có thể kế thừa từ một lớp. TypeScript sử dụng từ khóa <code>extend</code> để xác định mối quan hệ giữa lớp cơ sở và các lớp dẫn xuất.\r\n\r\n``<code>ts\r\nclass Rectangle {\r\n    length: number;\r\n    breadth: number\r\n\r\n    constructor(length: number, breadth: number) {\r\n        this.length = length;\r\n        this.breadth = breadth\r\n    }\r\n\r\n    area(): number {\r\n        return this.length * this.breadth;\r\n    }\r\n}\r\n\r\nclass Square extends Rectangle {\r\n    constructor(side: number) {\r\n        super(side, side);\r\n    }\r\n\r\n    volume() {\r\n        return &quot;Square doesn&#39;t have a volume!&quot;\r\n    }\r\n}\r\n\r\nconst sq = new Square(10);\r\n\r\nconsole.log(sq.area());  // 100\r\nconsole.log(sq.volume());  // &quot;Square doesn&#39;t have a volume!&quot;\r\n</code>`<code>\r\n\r\nTrong ví dụ trên, vì lớp </code>Square<code> kế thừa chức năng từ </code>Rectangle<code>, chúng ta có thể tạo một biểu diễn của hình vuông và gọi cả hai phương thức </code>area()<code> và </code>volume()`.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Kiểu điều kiện là gì?",
+      "answer": "<p>Kiểu có điều kiện cho phép bạn chọn một trong hai kiểu có thể dựa trên một điều kiện. Điều kiện được thể hiện dưới dạng một bài kiểm tra mối quan hệ kiểu.\r\n\r\n``<code>ts\r\nC extends B ? TypeX : TypeY\r\n</code>``\r\n\r\nỞ đâu, nếu kiểu C kế thừa từ B, giá trị của kiểu trên là TypeX, ngược lại thì là TypeY.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Kiểu hàm trong TypeScript?",
+      "answer": "<p>Hàm là một kiểu toàn cục trong TypeScript. Nó có các thuộc tính như bind, call và apply, cùng với các thuộc tính khác có trên tất cả các giá trị hàm.\r\n\r\n``<code>ts\r\nfunction perform(fn: Function) {\r\n    fn(10);\r\n}\r\n</code>``\r\n\r\nBạn có thể gọi một giá trị của kiểu hàm, và trả về một giá trị any.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Liệt kê một số kiểu tiện ích được cung cấp bởi TypeScript và giải thích cách sử dụng của chúng?",
+      "answer": "<p>TypeScript cung cấp nhiều kiểu tiện ích khác nhau giúp cho việc chuyển đổi kiểu thông thường trở nên dễ dàng. Các loại tiện ích này có sẵn trên toàn cục. Dưới đây là một số kiểu tiện ích thiết yếu có trong TypeScript.\r\n\r\n| Kiểu tiện ích | Mô tả |\r\n|-|-|\r\n| Partial<Type> | Tạo một kiểu với tất cả các thuộc tính của Type được đặt thành tùy chọn |\r\n| Required<Type> | Tạo một kiểu bao gồm tất cả các thuộc tính của Type được đặt thành bắt buộc |\r\n| Readonly<Type> | Tạo một kiểu với tất cả các thuộc tính của Type được đặt thành readonly |\r\n| Record<Keys, Type> | Tạo một kiểu đối tượng với các khóa thuộc tính là kiểu Keys và giá trị là Type |</p>",
+      "level": "fresher"
+    }
+  ]
+}

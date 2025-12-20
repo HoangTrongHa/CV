@@ -1,0 +1,317 @@
+{
+  "id": "html",
+  "name": "Câu hỏi phỏng vấn HTML",
+  "description": "",
+  "questions": [
+    {
+      "question": "Thẻ HTML và phần tử là một?",
+      "answer": "<p>Không. Phần tử (element) HTML được xác định bằng cách bắt đầu thẻ, bao gồm tất cả nội dung cho đến khi đóng thẻ. Ví dụ, <code>&lt;h1&gt;Heading&lt;/h1&gt;</code> là một phần tử HTML, còn tag chỉ là <code>&lt;h1&gt;</code> và <code>&lt;/h1&gt;</code>.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Thẻ và thuộc tính trong HTML là gì?",
+      "answer": "<p>Thẻ là thành phần quan trọng trong HTML xác định cách nội dung sẽ được định dạng, trong khi thuộc tính đi cùng với thẻ HTML để xác định đặc trưng của phần tử HTML. Ví dụ: <code>&lt;p align=&quot;center&quot;&gt;HTML Question&lt;/p&gt;</code>, thì <code>algin</code> là thuộc tính để xác định đoạn văn bản sẽ hiển thị ở giữa.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Phần tử void trong HTML là gì?",
+      "answer": "<p>Trong HTML sẽ có các phần tử không cần thẻ đóng. Ví dụ: <code>&lt;br /&gt;</code>, <code>&lt;img /&gt;</code>, <code>&lt;hr /&gt;</code>,...</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Ưu điểm của khoảng trắng?",
+      "answer": "<p>Trong HTML, một chuỗi ký tự khoảng trắng được coi là một ký tự khoảng trắng. Vì trình duyệt thu gọn nhiều khoảng trắng thành một ký tự khoảng trắng duy nhất và điều này giúp dev thụt lề các dòng văn bản mà không phải lo lắng về nhiều khoảng trắng và duy trì tính dễ đọc và dễ hiểu của code HTML.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "HTML Entities là gì?",
+      "answer": "<p>Trong HTML một vài ký tự dành riêng như <code>&lt;</code>, <code>&gt;</code>, <code>/</code>,... Để sử dụng các ký tự trong trang web, ta cần dùng các ký tự đặc biệt gọi là HTML entities. Dưới đây là một số ánh xạ giữa ký tự dành riêng và ký tự entities tương ứng sẽ được sử dụng. \r\n\r\n| Character | Entity Name | Entity Number |\r\n|-----------|-------------|---------------|\r\n| <         | <code>&amp;lt;</code>        | <code>&amp;#60;</code>         |\r\n| >         | <code>&amp;gt;</code>        | <code>&amp;#62;</code>         |\r\n| &         | <code>&amp;amp;</code>        | <code>&amp;#38;</code>         |</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Các kiểu danh sách trong HTML?",
+      "answer": "<p><img src=\"/interview-assets/Image_List.png\" alt=\"\" /></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Thuộc tính `class` trong HTML là gì?",
+      "answer": "<p>Thuộc tính class được sử dụng để chỉ định tên lớp cho một phần tử HTML. Nhiều phần tử trong HTML có thể có cùng giá trị lớp. Ngoài ra, nó chủ yếu được sử dụng để liên kết các style được viết trong CSS.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Sự khác nhau của thuộc tính `id` và `class` trong phần tử HTML?",
+      "answer": "<p>Nhiều phần tử trong HTML có thể có cùng giá trị lớp, trong khi giá trị thuộc tính id của một phần tử này không thể được liên kết với phần tử HTML khác.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "multipart/form-data là gì?",
+      "answer": "<p><code>multipart/form-data</code> là một trong những giá trị của thuộc tính <code>enctype</code>. Nó được sử dụng để gửi dữ liệu file cho phía server xử lý. Các giá trị hợp lệ khác của thuộc tính <code>enctype</code> là <code>text/plain</code> and <code>application/x-www-form-urlencoded</code>.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Mô tả cấu trúc của HTML",
+      "answer": "<p>Mỗi trang web đều có các thành phần khác nhau để hiển thị nội dung dự định và một giao diện người dùng cụ thể. Tuy nhiên, có một số kiểu mẫu được chấp nhận trên toàn cầu để cấu trúc trang web, chẳng hạn như:\r<ul><li><strong><code>&lt;header&gt;</code></strong>: Lưu trữ thông tin bắt đầu về trang web.</li></ul>\r<ul><li><strong><code>&lt;footer&gt;</code></strong>: Biểu diễn phần cuối cùng của trang.</li></ul>\r<ul><li><strong><code>&lt;nav&gt;</code></strong>: Menu điều hướng của trang HTML.</li></ul>\r<ul><li><strong><code>&lt;article&gt;</code></strong>: Nó là một tập hợp thông tin.</li></ul>\r<ul><li><strong><code>&lt;section&gt;</code></strong>: Nó được sử dụng bên trong <code>article</code> để xác định cấu trúc cơ bản của một trang.</li></ul>\r<ul><li><strong><code>&lt;aside&gt;</code></strong>: Nội dung menu dọc của trang.</li></ul></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Cách để tối ưu tải tài nguyên website?",
+      "answer": "<p>Để tối ưu thời gian tải web ta cần tối ưu việc tải các tài nguyên:\r<ul><li><strong>CDN hosting</strong> - CDN hoặc mạng phân phối nội dung là các server được phân phối theo địa lý để giúp giảm độ trễ.</li></ul>\r<ul><li><strong>File compression</strong> - Đây là một phương pháp giúp giảm kích thước của nội dung để giảm việc truyền dữ liệu.</li></ul>\r<ul><li><strong>File concatenation</strong> - làm giảm số lượng cuộc gọi HTTP.</li></ul>\r<ul><li><strong>Minify scripts</strong> - làm giảm kích thước tổng thể của file js và CSS</li></ul>\r<ul><li><strong>Parallel downloads</strong> - Lưu trữ nội dung trong nhiều miền phụ để vượt qua giới hạn tải xuống là 6 nội dung trên mỗi miền của tất cả các trình duyệt hiện nay. Điều này có thể được cấu hình nhưng hầu hết người dùng thông thường không bao giờ sửa đổi các cài đặt này.</li></ul>\r<ul><li><strong>Lazy Loading</strong> - Thay vì tải tất cả các nội dung cùng một lúc, các nội dung không quan trọng chỉ được tải trên khi cần thiết.</li></ul></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Thẻ định dạng khác nhau trong HTML",
+      "answer": "<p>HTML có các thẻ định dạng khác nhau:\r\n\r\n<em> <code>&lt;b&gt;</code> - in đậm văn bản\r\n</em> <code>&lt;i&gt;</code> - in nghiêng văn bản\r\n<em> <code>&lt;em&gt;</code> - làm cho văn bản nghiêng nhưng có thêm tầm quan trọng về ngữ nghĩa\r\n</em> <code>&lt;big&gt;</code> - tăng kích cỡ chữ lên một đơn vị \r\n<em> <code>&lt;small&gt;</code>- giảm kích cỡ chữ lên một đơn vị \r\n</em> <code>&lt;sub&gt;</code> - biến văn bản thành chỉ số dưới\r\n<em> <code>&lt;sup&gt;</code> - biến văn bản thành chỉ số trên\r\n</em> <code>&lt;del&gt;</code> - hiển thị dưới dạng văn bản gạch bỏ\r\n<em> <code>&lt;strong&gt;</code> - đánh dấu văn bản là quan trọng\r\n</em> <code>&lt;mark&gt;</code> - highlights văn bản\r<ul><li><code>&lt;ins&gt;</code> - hiển thị dưới dạng văn bản đã thêm</li></ul></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Các thể loại Doctypes khả dụng",
+      "answer": "<p>Có ba thể loại Doctypes khả dung:\r<ul><li>Strict Doctype </li></ul>\r<ul><li>Transitional Doctype</li></ul>\r<ul><li>Frameset Doctype</li></ul></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Hãy giải thích cách hiển thị tập ký tự đang được sử dụng trong HTML?",
+      "answer": "<p>Tập ký tự được xác định bởi thẻ <code>&lt;meta&gt;</code> trong phần tử <code>&lt;head&gt;</code>\r\n\r\n``<code>html\r\n&lt;!DOCTYPE html&gt;\r\n&lt;html&gt;\r\n    &lt;head&gt;\r\n        &lt;meta charset=&quot;UTF-8&quot;&gt;\r\n        ...\r\n        ...\r\n    &lt;/head&gt;\r\n    ...\r\n&lt;/html&gt;\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Sự khác nhau giữa thẻ `<strong>` và `<b>`, thẻ `<em>` và `<i>`?",
+      "answer": "<p>Hiệu ứng trên trang web bình thường của các thẻ <code>&lt;strong&gt;</code>, <code>&lt;b&gt;</code> và <code>&lt;em&gt;</code>, <code>&lt;i&gt;</code> là như nhau. Thẻ <code>&lt;b&gt;</code> và <code>&lt;i&gt;</code> là viết tắt của chữ in đậm và chữ nghiêng. Hai thẻ này chỉ áp dụng font chữ và thẻ in đậm <code>&lt;b&gt;</code>, chỉ thêm mực vào chữ, các thẻ này không nói lên điều gì về văn bản.\r\n\r\nTrong khi đó, các thẻ <code>&lt;strong&gt;</code> và <code>&lt;em&gt;</code> thể hiện rằng đoạn văn bản có tầm quan trọng cao và nhấn mạnh hơn so với phần còn lại của văn bản. Các thẻ này có ý nghĩa ngữ nghĩa.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Đặc trưng của thẻ `<head>` và `<body>` trong HTML?",
+      "answer": "<p>Thẻ <code>&lt;head&gt;</code> cung cấp thông tin về tài liệu. Nó phải luôn được đặt trong thẻ <code>&lt;html&gt;</code>. Thẻ này chứa siêu dữ liệu (metadata) về trang web và các thẻ nằm trong thẻ head như<code> &lt;link&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;style&gt;</code>, <code>&lt;script&gt;</code> v.v. không được hiển thị trên trang web. Ngoài ra, chỉ có thể có 1 thẻ <code>&lt;head&gt;</code> trong toàn bộ tài liệu html và sẽ luôn ở trước thẻ <code>&lt;body&gt;</code>.\r\n\r\nThẻ <code>&lt;body&gt;</code> xác định phần nội dung của tài liệu HTML. Nó phải luôn được đặt trong thẻ <code>&lt;html&gt;</code>. Tất cả nội dung cần được hiển thị trên trang web như hình ảnh, văn bản, âm thanh, video, nội dung, sử dụng các phần tử như <code>&lt;p&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;audio&gt;</code>, <code>&lt;heading&gt;</code>, <code>&lt;video&gt;</code>, <code>&lt;div&gt;</code>, v.v ... sẽ luôn nằm trong thẻ <code>&lt;body&gt;</code>. Ngoài ra, chỉ có 1 phần tử body trong tài liệu HTML và sẽ luôn ở sau thẻ <code>&lt;head&gt;</code>.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Chúng ta có thể hiển thị một trang bên trong một trang web hoặc lồng các trang web vào nhau có được không?",
+      "answer": "<p>Có, chúng tôi có thể hiển thị một trang web bên trong một trang web HTML khác. HTML cung cấp thẻ <code>&lt;iframe&gt;</code> để có thể thực hiện chức năng này.\r\n\r\n``<code>html\r\n&lt;iframe src=&quot;url of the web page to embed&quot; /&gt;\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Cell Padding khác với Cell Spacing như thế nào?",
+      "answer": "<p>Cell Spacing là khoảng trống giữa hai ô liên tiếp. Trong khi, Cell Padding là khoảng trống giữa văn bản/nội dung của ô và cạnh/đường viền của ô. Xem hình bên dưới.\r\n\r\n<img src=\"/interview-assets/cell-padding-vs-cell-spacing.png\" alt=\"\" /></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Làm thế nào chúng ta có thể ghép hai hoặc nhiều hàng hoặc nhiều cột thành một hàng hoặc cột duy nhất trong một bảng HTML?",
+      "answer": "<p>HTML cung cấp hai thuộc tính cho bảng là <code>rowspan</code> và <code>colspan</code> để tạo một ô kéo dài tới nhiều hàng và cột tương ứng.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Có thể thay đổi một phần tử inline thành một phần tử block không?",
+      "answer": "<p>Có, có thể sử dụng thuộc tính <code>display</code> với giá trị của nó là <code>block</code>, để thay đổi phần tử inline thành phần tử block.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Chúng ta có thể định vị một phần tử HTML bằng bao nhiêu cách?",
+      "answer": "<p>Có 6 giá trị thuộc tính có thể dùng cho định vị phần tử HTML\r<ul><li><strong>static</strong>: phần tử sẽ xuất hiện ở vị trí mặc định dựa theo thứ tự khai báo, ta không thể sử dụng các thuộc tính <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> để thiết lập lại vị trí cho phần tử.</li></ul>\r<ul><li><strong>absolute</strong>: dùng để thiết lập vị trí cho một phần tử dựa theo vị trí của phần tử cha nằm gần với nó nhất, nếu không có phần tử cha nào được thiết lập thuộc tính <code>position</code> với một trong ba giá trị (relative, fixed, absolute) thì vị trí của phần tử sẽ được xác định dựa theo khung trang web.</li></ul>\r<ul><li><strong>fixed</strong>: dùng để thiết lập phần tử nằm tại một vị trí cố định trên màn hình trình duyệt mặc cho người dùng có scroll trang lên xuống hay trái phải.</li></ul>\r<ul><li><strong>relative</strong>: cũng gần giống với phương thức định vị static, đó chính là phần tử sẽ xuất hiện ở vị trí mặc định dựa theo thứ tự khai báo. Tuy nhiên, đối với phương thức định vị relative thì chúng ta có thể sử dụng các thuộc tính top, right, bottom, left để thiết lập lại vị trí cho phần tử.</li></ul>\r<ul><li><strong>initial</strong>: Reset giá trị thuộc tính về giá trị mặc định.</li></ul>\r<ul><li><strong>inherit</strong>: Kế thừa giá trị từ phần tử cha.</li></ul></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Có bao nhiêu cách để hiển thị phần tử HTML?",
+      "answer": "<p>1. <strong>inline</strong>: ta có thể hiển thị bất kỳ phần tử dạng block nào thành dạng inline. Giá trị thuộc tính <code>height</code> và <code>width</code> sẽ không ảnh hưởng.\r\n2. <strong>block</strong>: ta có thể hiển thị bất kỳ phần tử dạng inline nào thành dạng block.\r\n3. <strong>inline-block</strong>: Thuộc tính này tương tự như inline, ngoại trừ việc hiển thị dưới dạng inline-block, chúng ta có thể định dạng phần tử bằng cách sử dụng các giá trị <code>height</code> và <code>width</code>.\r\n4. <strong>flex</strong>: hiển thị phần tử container một cách linh hoạt. Nó theo sau thuộc tính <code>flexbox</code>.\r\n5. <strong>inline-flex</strong>: hiển thị container như một phần tử inline trong khi nội dung của nó vẫn tuân theo thuộc tính <code>flexbox</code>.\r\n6. <strong>grid</strong>: hiển thị nội dung phần tử như một grid container.\r\n7. <strong>none</strong>: Using this property we can hide the HTML element.\r\n\r\nMột vài kiểu hiển thị khác nhưng ít khi dùng là:\r\n\r\n<em> table\r\n</em> inline-table\r\n<em> table-cell\r\n</em> table-column\r\n<em> table-row\r\n</em> inline-grid\r\n<em> list-item\r\n</em> inherit\r\n<em> initial\r\n</em> table-caption</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Sự khác biệt giữa `dislay: none` và `visibility: hidden`?",
+      "answer": "<p>Khi sử dụng thuộc tính <code>visibility: hidden</code> cho một phần tử HTML thì phần tử đó sẽ bị ẩn khỏi trang web nhưng vẫn chiếm không gian. Trong khi đó, nếu sử dụng thuộc tính <code>display: none</code> cho một phần tử HTML thì phần tử đó sẽ bị ẩn và không chiếm bất kỳ không gian nào trên trang web.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Làm sao để chỉ định liên kết trong HTML và giải thích thuộc tính `target`?",
+      "answer": "<p>HTML cung cấp thẻ <code>&lt;a&gt;</code> để chỉ định liên kết trên web. Thuộc tính <code>href</code> được dùng để chỉ định liên kết và thuộc tính <code>target</code> được dùng để chỉ định cách mở liên kết. Thuộc tính <code>target</code> có các giá trị sau:\r\n\r\n<em> <strong><em>self</strong>: là giá trị mặc định. Mở liên kết cùng tab hay cửa sổ với trang web.\r\n</em> <strong></em>blank</strong>: mở ở tab mới.\r\n<em> <strong><em>parent</strong>: mở ở frame cha.\r\n</em> <strong></em>top</strong>: mở ở toàn cửa sổ.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Có bao nhiêu cách để dùng CSS cùng với HTML?",
+      "answer": "<p>Có 3 cách là:\r<ul><li><strong>Inline:</strong> sử dụng thuộc tính <code>style</code> trong phần tử HTML.</li></ul>\r<ul><li><strong>Internal:</strong> sử dụng thẻ <code>&lt;style&gt;</code> trong thẻ <code>&lt;head&gt;</code>. </li></ul>\r<ul><li><strong>External:</strong> sử dụng thẻ <code>&lt;link&gt;</code> trong thẻ <code>&lt;head&gt;</code> để liên kết đến file CSS vào code HTML. </li></ul>\r\n\r\n<img src=\"/interview-assets/css-styles-for-html5-element.png\" alt=\"\" /></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Sự khác biệt giữa thẻ `<link>` và thẻ `<a>`?",
+      "answer": "<p>Thẻ <code>&lt;a&gt;</code> được dùng để mở liên kết đến trang web khác hay một phần nào đó ở web hiện tại nên nó có thể click vào. Trong khi thẻ <code>&lt;link&gt;</code> xác định một liên kết đến một nguồn tài nguyên bên ngoài, nó không thể click.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Cách để thêm code javascript vào HTML?",
+      "answer": "<p>HTML cung cấp thẻ <code>&lt;script&gt;</code> để chạy code javascript cho trang web thêm sinh động.\r\n\r\n``<code>html\r\n&lt;!DOCTYPE html&gt;\r\n&lt;html&gt;\r\n    &lt;body&gt;\r\n        &lt;h1&gt;\r\n            &lt;span&gt;This is a demo for &lt;/span&gt;\r\n            &lt;u&gt;&lt;span id=&quot;demo&quot;&gt;&lt;/span&gt;&lt;/u&gt;\r\n        &lt;/h1&gt;\r\n    &lt;script&gt;\r\n        document.getElementById(&quot;demo&quot;).innerHTML = &quot;script Tag&quot;\r\n    &lt;/script&gt;\r\n    &lt;/body&gt;\r\n&lt;/html&gt;\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Thẻ script dùng ở head hay body?",
+      "answer": "<p>Nếu các script chứa các hàm event-trigger hoặc thư viện jquery thì nên đặt ở head. Nếu script viết nội dung hoặc không nằm trong hàm thì nên đặt ở cuối body. Nói tóm lại có 3 điểm cần nhớ sau:\r<ul><li>Đặt thư viện hoặc sự kiện script ở head.</li></ul>\r<ul><li>Đặt script thông thường ở head cho đến khi có vấn đề gì đó về hiệu suất.</li></ul>\r<ul><li>Đặt script hiển thị nội dung ở cuối body.</li></ul></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Form là gì và cách tạo form trong HTML?",
+      "answer": "<p>Form được dùng cho người dùng nhập thông tin. HTML cung cấp thẻ <code>&lt;form&gt;</code> cho tạo form. Để lấy thông tin từ người dùng ta có thể dùng thẻ <code>&lt;input&gt;</code> trong form để lưu lại dữ liệu người dùng và gửi về server xử lý. Thẻ input hỗ trợ các kiểu khác nhau như button, checkbox, number, text, password,...\r\n\r\n``<code>html\r\n&lt;form action=&quot;/submit<em>data.php&quot;&gt;\r\n   &lt;label&gt;Enter your name: &lt;/label&gt;\r\n   &lt;input type=&quot;text&quot; name=&quot;name&quot; /&gt; \r\n   &lt;label&gt;Enter Mobile number &lt;/label&gt;\r\n   &lt;input type=&quot;number&quot; name=&quot;mobile</em>no&quot;/&gt;\r\n   &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;\r\n&lt;/form&gt;\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Xử lý sự kiện trong HTML?",
+      "answer": "<p>HTML cho phép thực hiện kích hoạt sự kiện trong trình duyệt sử dụng javascript hoặc JQuery. Có rất nhiều sự kiện như <code>onClick</code>, <code>onDrag</code>, <code>onChange</code>, v.v. \r\n\r\n``<code>html\r\n&lt;!DOCTYPE html&gt;\r\n&lt;html&gt;\r\n    &lt;body style=&quot;padding-top:50px&quot;&gt;\r\n        &lt;h3 id=&quot;event<em>demo&quot;&gt;0&lt;/h3&gt;\r\n        &lt;input type=&quot;button&quot; onclick=&quot;myFunction()&quot; value=&quot;Click Me&quot; /&gt;\r\n        &lt;input type=&quot;reset&quot; onclick=&quot;reset()&quot; value=&quot;Reset&quot; /&gt;\r\n    &lt;/body&gt;\r\n    \r\n    &lt;script&gt;\r\n        function myFunction() {\r\n            var value = document.getElementById(&quot;event</em>demo&quot;).innerHTML\r\n            value = parseInt(value) + 1;\r\n            document.getElementById(&quot;event<em>demo&quot;).innerHTML = value;\r\n        }\r\n        function reset() {\r\n            document.getElementById(&quot;event</em>demo&quot;).innerHTML = 0;\r\n        }\r\n    &lt;/script&gt;\r\n&lt;/html&gt;\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Các ưu điểm của HTML5 so với các phiên bản trước?",
+      "answer": "<p><ul><li>Hỗ trợ đa phương tiện.</li></ul>\r<ul><li>Nó có khả năng lưu trữ dữ liệu ngoại tuyến bằng cách sử dụng cơ sở dữ liệu SQL và bộ đệm ứng dụng.</li></ul>\r<ul><li>Javascript có thể được chạy ở chế độ nền.</li></ul>\r<ul><li>HTML5 cũng cho phép người dùng vẽ nhiều hình dạng khác nhau như hình chữ nhật, hình tròn, hình tam giác, v.v.</li></ul>\r<ul><li>Bao gồm các thẻ Sematic mới và các thẻ điều khiển biểu form.</li></ul></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Cách để thêm nhạc và video vào web?",
+      "answer": "<p>HTML5 cung cấp hai thẻ là <code>&lt;audio&gt;</code> và <code>&lt;video&gt;</code> để ta thêm nhạc và video trực tiếp vào web.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Phần tử inline và block trong HTML5?",
+      "answer": "<p>| Inline | Block |\r\n|--------|-------|\r\n| Các phần tử inline chỉ chiếm không gian cần thiết cho nội dung và không bắt đầu một dòng mới | Các phần tử block bắt đầu trên một dòng mới và chiếm toàn bộ chiều rộng của trang có sẵn |\r\n| <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;abbr&gt;</code>, <code>&lt;label&gt;</code>, <code>&lt;sub&gt;</code>, <code>&lt;cite&gt;</code>, <code>&lt;abbr&gt;</code>, <code>&lt;script&gt;</code>, <code>&lt;label&gt;</code>, <code>&lt;i&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;output&gt;</code>, <code>&lt;q&gt;,</code> ... | <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;h1&gt;</code>...<code>&lt;h6&gt;</code>, <code>&lt;form&gt;</code>, <code>&lt;table&gt;</code>, <code>&lt;canvas&gt;</code>, <code>&lt;video&gt;</code>, <code>&lt;blockquote&gt;</code>, <code>&lt;pre&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;figcaption&gt;</code>, <code>&lt;figure&gt;</code>, <code>&lt;hr&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code> ... |\r\n\r\n<img src=\"/interview-assets/Inline_and_block_elements_in_HTML5.png\" alt=\"\" /></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Sự khác biệt giữa thẻ img và thẻ figure?",
+      "answer": "<p>Thẻ <code>&lt;figure&gt;</code> chỉ định nội dung như ảnh, sơ đồ, code snippets,... Thẻ <code>&lt;figure&gt;</code> được dùng để tổ chức các nội dung như ảnh, tiêu đề ảnh trong khi thẻ <code>&lt;img&gt;</code> dùng để nhúng một ảnh vào tài liệu HTML5.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Làm thế nào để chỉ định metadata trong HTML5?",
+      "answer": "<p>Để chỉ định, ta có thể sử dụng thẻ <code>&lt;meta&gt;</code> (là một thẻ void, tức là nó không có thẻ đóng). Một số thuộc tính được sử dụng với thẻ meta là name, content, http-equiv, v.v. Hình ảnh dưới đây cho biết cách chỉ định metadata.\r\n\r\n<img src=\"/interview-assets/How_to_specify_the_metadata_in_HTML5.png\" alt=\"\" /></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Thẻ `<datalist>` và thẻ `<select>` là giống nhau?",
+      "answer": "<p>Không. Thẻ <code>&lt;datalist&gt;</code> và thẻ <code>&lt;select&gt;</code> là khác nhau. Trong thẻ <code>&lt;select&gt;</code>, người dùng sẽ chọn từ một danh sách tuỳ chọn (options), trong khi <code>&lt;datalist&gt;</code> được sử dụng để cung cấp chức năng \"autocomplete\" cho các phần tử <code>&lt;input&gt;</code>, người dùng sẽ thấy một danh sách thả xuống các tùy chọn trước khi họ nhập dữ liệu.\r\n\r\n<img src=\"/interview-assets/is-datalist-and-select-tag-same.png\" alt=\"\" /></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Image Map là gì?",
+      "answer": "<p>Bản đồ ảnh (image map) có thể tạm hiểu là một loại hình ảnh đặc biệt, trên tấm hình sẽ có các vùng được xác định, mỗi vùng đó được gán với một cái liên kết.\r\n\r\n``<code>html\r\n&lt;img  src=”image_url” ,  usemap=”#workspace” /&gt;\r\n&lt;map  name=”workspace”&gt;\r\n    &lt;area shape=”rect”  coords=”34, 44, 270, 350” ,  href=”xyz.html” /&gt;\r\n    &lt;area shape=”rect”  coords=”10, 120, 250, 360” ,  href=”xyz.html” /&gt;\r\n&lt;/map&gt;\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Phần tử Sematic là gì?",
+      "answer": "<p>Phần tử semantic mô tả ý nghĩa cụ thể đối với trình duyệt và nhà phát triển. Các phần tử như <code>&lt;form&gt;</code>, <code>&lt;table&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;figure&gt;</code>, ... là phần tử semantic.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Sự khác biệt giữa thẻ `<meter>` và thẻ `<process>`?",
+      "answer": "<p>Thẻ <code>&lt;progress&gt;</code> được sử dụng khi ta muốn hiển thị tiến độ hoàn thành của một nhiệm vụ, trong khi thẻ <code>&lt;meter&gt;</code> xác định một phép đo vô hướng trong một phạm vi biết trước hoặc một giá trị phân số.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Có thể kéo và thả trong HTML5 không?",
+      "answer": "<p>Có, trong HTML5, chúng ta có thể kéo và thả một phần tử. Điều này có thể thực hiện bằng cách sử dụng các sự kiện liên quan đến kéo và thả được sử dụng với phần tử mà chúng ta muốn kéo và thả.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Sự khác biệt giữa phần tử SVG và Canvas trong HTML5?",
+      "answer": "<p>| SVG | Canvas |\r\n|-----|--------|\r\n| SVG là dựa trên vector, để tạo hình dạng | Dựa trên Raster, tức là bao gồm pixel |\r\n| Hoạt động tốt hơn với surface lớn | Hoạt động tốt hơn với surface nhỏ |\r\n| Có thể chỉnh sửa với script và css | Chỉ có thể chỉnh sửa với script |\r\n| Khả năng mở rộng cao. Có thể in ở độ phân giải cao. | Khả năng mở rộng thấp |</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Các kiểu file audio có thể dùng trong HTML5?",
+      "answer": "<p>HTML5 hỗ trợ các định dạng audio như sau:\r\n1. Mp3\r\n2. Wav\r\n3. Ogg</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Thông số kỹ thuật trong HTML5 là gì?",
+      "answer": "<p>Thông số kỹ thuật trong HTML5 nhằm mục đích là:\r<ul><li>Giới thiệu thẻ phần tử mới để cấu trúc trang tốt hơn.</li></ul>\r<ul><li>Hình thành một tiêu chuẩn hành vi trên nhiều trình duyệt và hỗ trợ cho các thiết bị và nền tảng khác nhau.</li></ul>\r<ul><li>Tương thích ngược với các trang web HTML phiên bản cũ hơn.</li></ul>\r<ul><li>Giới thiệu các phần tử tương tác cơ bản mà không phụ thuộc vào các plugin, chẳng hạn như thẻ <code>&lt;video&gt;</code> thay vì plugin flash.</li></ul></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Các khái niệm về web storage trong HTML5?",
+      "answer": "<p>Web storage này giúp lưu trữ một số dữ liệu tĩnh trong bộ local storage của trình duyệt để hạn chế việc tìm nạp dữ liệu từ máy chủ quá thường xuyên. Có giới hạn kích thước dựa trên các trình duyệt khác nhau. Điều này giúp giảm thời gian tải và trải nghiệm người dùng mượt mà. Có hai loại web storage được sử dụng để lưu trữ dữ liệu cục bộ trong HTML5:\r\n<em> <strong>Local Storage</strong> - giúp dữ liệu được lưu trữ ngay cả khi người dùng đóng trình duyệt. Nó được lưu trữ cho từng ứng dựng web trên các trình duyệt khác nhau.\r\n</em> <strong>Session Storage</strong> - chỉ lưu trữ trong phiên làm việc. Nếu người dùng đóng trình duyệt nó sẽ bị xoá.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Microdata là gì?",
+      "answer": "<p>Microdata là một phương thức đơn giản để phân loại các nội dung trong website. Microdata hiểu một cách đơn giản là để thêm dữ liệu có cấu trúc vào website. Microdata nó định nghĩa thuộc tính, có thể đặt vào trong HTML để cho biết trang web đó viết về mục đích gì.\r\n\r\n``<code>html\r\n&lt;div itemscope itemtype=&quot;http://schema.org/SoftwareApplication&quot;&gt;\r\n    &lt;span itemprop=&quot;name&quot;&gt;Interviewbit Games&lt;/span&gt; -\r\n    REQUIRES &lt;span itemprop=&quot;operatingSystem&quot;&gt;ANDROID&lt;/span&gt;&lt;br&gt;\r\n    &lt;link itemprop=&quot;applicationCategory&quot; href=&quot;http://schema.org/GameApplication&quot;/&gt;\r\n    &lt;div itemprop=&quot;aggregateRating&quot; itemscope itemtype=&quot;http://schema.org/AggregateRating&quot;&gt;\r\n        RATING:\r\n        &lt;span itemprop=&quot;ratingValue&quot;&gt;4.6&lt;/span&gt; (\r\n        &lt;span itemprop=&quot;ratingCount&quot;&gt;8864&lt;/span&gt; ratings )\r\n    &lt;/div&gt;\r\n    &lt;div itemprop=&quot;offers&quot; itemscope itemtype=&quot;http://schema.org/Offer&quot;&gt;\r\n    Price: Rs.&lt;span itemprop=&quot;price&quot;&gt;1.00&lt;/span&gt;\r\n        &lt;meta itemprop=&quot;priceCurrency&quot; content=&quot;INR&quot; /&gt;\r\n    &lt;/div&gt;\r\n&lt;/div&gt;\r\n</code>``\r\n\r\n<em> <strong>itemid</strong> – Thuộc tính này là bộ nhận diện global cho item\r\n</em> <strong>itemprop</strong> – Thuộc tính này định nghĩa một thuộc tính của item\r\n<em> <strong>itemref</strong> – Thuộc tính này cung cấp một danh sách các phần tử bổ sung để tìm các cặp tên-giá trị của item.\r\n</em> <strong>itemscope</strong> – Được sử dụng để tạo một item. Thuộc tính này là một thuộc tính logic mà nói rằng có Microdata trên trang này, và đây là nơi nó bắt đầu.\r<ul><li><strong>itemtype</strong> – Thuộc tính này là một URL hợp lệ mà định nghĩa item và cung cấp ngữ cảnh cho các thuộc tính.</li></ul>\r\n\r\nVí dụ về microdata bởi Google:\r\n\r\n<img src=\"/interview-assets/Microdata_in_HTML5.png\" alt=\"\" /></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Thẻ nào được dùng để biểu diễn kết quả tính toán?",
+      "answer": "<p>Thẻ <code>&lt;output&gt;</code> được dùng để biểu diễn kết quả tính toán. Nó có các thuộc tính sau:\r<ul><li><strong>for</strong> - Nó xác định mối quan hệ giữa các phần tử được sử dụng trong tính toán và kết quả.</li></ul>\r<ul><li><strong>form</strong> - được sử dụng để xác định hình thức mà phần tử đầu ra thuộc về.</li></ul>\r<ul><li><strong>name</strong> - Tên của phần tử output</li></ul>\r\n\r\n``<code>html\r\n&lt;form oninput = &quot;result.value=parseInt(n1.value)+parseInt(n2.value)&quot;&gt;\r\n    &lt;input type = &quot;number&quot; name = &quot;n1&quot; value = &quot;1&quot; /&gt; +\r\n    &lt;input type = &quot;number&quot; name = &quot;n2&quot; value = &quot;2&quot; /&gt;&lt;br /&gt;\r\n    The output is: &lt;output name = &quot;result&quot;&gt;&lt;/output&gt;\r\n&lt;/form&gt;\r\n</code>``\r\n\r\nKết quả trông như:\r\n\r\n<img src=\"/interview-assets/html-output-tag.png\" alt=\"\" /></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Mối quan hệ giữa thẻ `<h1>` và `<header>` trong HTML5?",
+      "answer": "<p>Trong HTML5 thẻ <code>&lt;header&gt;</code> chỉ định phần tiêu đề của trang web. Không giống như các phiên bản trước có một phần tử <code>&lt;h1&gt;</code> cho toàn bộ trang web, bây giờ đây chỉ có header cho một phần như <code>&lt;article&gt;</code> hoặc <code>&lt;section&gt;</code>. Theo đặc tả HTML5, mỗi phần tử <code>&lt;header&gt;</code> phải có ít nhất một thẻ <code>&lt;h1&gt;</code>.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Giải thích về đồ hoạ trong HTML5?",
+      "answer": "<p>HTML 5 hỗ trợ hai loại đồ hoạ:\r<ul><li><strong>Canvas:</strong> Nó giống như vẽ trên một tờ giấy trắng hoặc một trang web trống. Ta có thể thêm các thiết kế đồ họa khác nhau trên các trang web với các phương pháp có sẵn để vẽ các hình dạng hình học khác nhau.</li></ul>\r\n\r\n``<code>html\r\n&lt;!DOCTYPE HTML&gt;\r\n&lt;html&gt;\r\n    &lt;head&gt;\r\n    &lt;/head&gt;\r\n    &lt;body&gt;\r\n        &lt;canvas width=&quot;300&quot; height=&quot;100&quot; style=&quot;border:2px solid;&quot;&gt;&lt;/canvas&gt;  \r\n    &lt;/body&gt;\r\n&lt;/html&gt;\r\n</code>`<code>\r<ul><li><strong>SVG:</strong> Scalable Vector Graphics được sử dụng hầu hết cho các sơ đồ hoặc biểu tượng. Nó tuân theo định dạng XML.</li></ul>\r\n\r\n</code>`<code>html\r\n&lt;!DOCTYPE html&gt;\r\n&lt;html&gt;\r\n    &lt;body&gt;\r\n    &lt;svg width=&quot;400&quot; height=&quot;110&quot;&gt;\r\n        &lt;rect width=&quot;300&quot; height=&quot;100&quot; style=&quot;fill:#FFF;stroke-width:2;stroke:#000&quot; /&gt;\r\n    &lt;/svg&gt;\r\n    &lt;/body&gt;\r\n&lt;/html&gt;\r\n</code>``\r\n\r\nCả hai ví dụ trên đều tạo output này, chúng là hai cách tiếp cận khác nhau do HTML5 cung cấp để triển khai đồ hoạ trên trang web.\r\n\r\n<img src=\"/interview-assets/Explain_HTML5_Graphics.png\" alt=\"\" /></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Các kiểu input mới trong HTML5 trong form?",
+      "answer": "<p><ul><li>Date - Chọn ngày bằng cách dùng <code>type=&quot;date&quot;</code></li></ul>\r<ul><li>Week - Chọn tuần bằng cách dùng <code>type=&quot;week&quot;</code></li></ul>\r<ul><li>Time - Chọn thời gian bằng cách dùng <code>type=&quot;time&quot;</code></li></ul>\r<ul><li>Month - Chọn tháng bằng cách dùng <code>type=&quot;month&quot;</code></li></ul>\r<ul><li>Datetime - Kết hợp ngày và thời gian dùng <code>type=&quot;datetime&quot;</code></li></ul>\r<ul><li>Datetime-local - Kết hợp ngày và thời gian và chặn timezone,dùng <code>type=&quot;datetime&quot;</code></li></ul>\r<ul><li>Color - Chấp nhận nhiều màu dùng <code>type=&quot;color&quot;</code></li></ul>\r<ul><li>Email - Chấp nhận một hay nhiều email dùng <code>type=&quot;email&quot;</code> </li></ul>\r<ul><li>Number - Chấp nhận một giá trị số với các kiểm tra bổ sung như min và max, sử dụng <code>type=&quot;number&quot;</code></li></ul>\r<ul><li>Search - Cho phép truy vấn tìm kiếm văn bản dùng <code>type=&quot;search&quot;</code></li></ul>\r<ul><li>Tel - Cho phép các số điện thoại khác nhau dùng <code>type=&quot;tel&quot;</code></li></ul>\r<ul><li>Placeholder - Để hiển thị một gợi ý ngắn trước khi nhập giá trị bằng cách sử dụng <code>type=&quot;placeholder&quot;</code></li></ul>\r<ul><li>Range - Chấp nhận giá trị số trong một phạm vi cụ thể dùng <code>type=&quot;range&quot;</code></li></ul>\r<ul><li>Url - Chập nhận địa chỉ trang web dùng <code>type=&quot;url&quot;</code></li></ul>\r\n\r\n``<code>html\r\n&lt;form&gt;  \r\n    &lt;div&gt;\r\n        &lt;label&gt;Date:&lt;/label&gt;\r\n        &lt;input type=&quot;date&quot; id=&quot;date&quot; /&gt;\r\n        &lt;br&gt;\r\n        &lt;label&gt;Week:&lt;/label&gt;\r\n        &lt;input type=&quot;week&quot; id=&quot;week&quot; /&gt;\r\n        &lt;br&gt;\r\n        &lt;label&gt;Month:&lt;/label&gt;\r\n        &lt;input type=&quot;month&quot; id=&quot;month&quot; /&gt;\r\n        &lt;br&gt;\r\n        &lt;label&gt;Time:&lt;/label&gt;\r\n        &lt;input type=&quot;time&quot; id=&quot;time&quot; /&gt;\r\n        &lt;br&gt;\r\n        &lt;label&gt;Datetime:&lt;/label&gt;\r\n        &lt;input type=&quot;datetime&quot; id=&quot;datetime&quot; /&gt;\r\n        &lt;br&gt;\r\n        &lt;label&gt;Datetime Local:&lt;/label&gt;\r\n        &lt;input type=&quot;datetime-local&quot; id=&quot;datetime-local&quot; /&gt;\r\n        &lt;br&gt;\r\n        &lt;label&gt;Color:&lt;/label&gt;\r\n        &lt;input type=&quot;color&quot; id=&quot;color&quot;/&gt;\r\n        &lt;br&gt;\r\n        &lt;label&gt;Email:&lt;/label&gt;\r\n        &lt;input type=&quot;email&quot; id=&quot;email&quot; placeholder=&quot;email address&quot; /&gt;\r\n        &lt;br&gt;\r\n        &lt;label&gt;Number:&lt;/label&gt;\r\n        &lt;input type=&quot;number&quot; id=&quot;number&quot; /&gt;\r\n        &lt;br&gt;\r\n        &lt;label&gt;Search:&lt;/label&gt;\r\n        &lt;input type=&quot;search&quot; id=&quot;search&quot; /&gt;\r\n        &lt;br&gt;\r\n        &lt;label&gt;Phone:&lt;/label&gt;\r\n        &lt;input type=&quot;tel&quot; id=&quot;phone&quot; placeholder=&quot;Phone Number&quot; pattern=&quot;\\d{10}$&quot; /&gt;\r\n        &lt;br&gt;\r\n        &lt;label&gt;Range:&lt;/label&gt;\r\n        &lt;input type=&quot;range&quot; id=&quot;range&quot; /&gt;\r\n        &lt;br&gt;\r\n        &lt;label&gt;URL:&lt;/label&gt;\r\n        &lt;input type=&quot;url&quot; id=&quot;url&quot;/&gt;\r\n    &lt;/div&gt;  \r\n&lt;/form&gt;\r\n</code>``\r\n\r\n<img src=\"/interview-assets/Artboard_1_2x.png\" alt=\"\" /></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Các thẻ mới cho phần tử media trong HTML5?",
+      "answer": "<p><em> <code>&lt;audio&gt;</code>: dùng cho các file âm thanh, nhạc, nhúng nội dung audio mà không cần plugin.\r\n</em> <code>&lt;video&gt;</code>: dùng cho nhúng nội dung video.\r\n<em> <code>&lt;source&gt;</code>: dùng cho nhiều tài nguyên media như video, audio,...\r\n</em> <code>&lt;embed&gt;</code>: dùng cho nội dung nhúng hay ứng dụng mở rộng.\r<ul><li><code>track</code>: tiêu đề con cho video hay audio</li></ul>\r\n\r\n``<code>html\r\n&lt;label&gt;\r\n       Video:\r\n&lt;/label&gt;\r\n&lt;video width=&quot;320&quot; height=&quot;240&quot; controls&gt;\r\n    &lt;source src=&quot;video.mp4&quot; type=&quot;video/mp4&quot;&gt;\r\n    &lt;track src=&quot;subtitles.vtt&quot; kind=&quot;subtitles&quot; srclang=&quot;en&quot; label=&quot;English&quot;&gt;\r\n&lt;/video&gt;\r\n&lt;br&gt;\r\n&lt;label&gt;\r\n    Embed:\r\n&lt;/label&gt;\r\n&lt;embed type=&quot;video/webm&quot; src=&quot;https://www.youtube.com/embed/MpoE6s2psCw&quot; width=&quot;400&quot; height=&quot;300&quot;&gt;\r\n&lt;br&gt;\r\n&lt;label&gt;\r\n    Audio:\r\n&lt;/label&gt;\r\n&lt;audio controls&gt;\r\n    &lt;source src=&quot;audio.mp3&quot; type=&quot;audio/mpeg&quot;&gt;\r\n&lt;/audio&gt;\r\n</code>``\r\n\r\n<img src=\"/interview-assets/html5-new-tags-in-media-elements.png\" alt=\"\" /></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Tại sao bạn nghĩ rằng việc bổ sung chức năng kéo và thả trong HTML5 là quan trọng? Bạn sẽ làm thế nào để tạo một hình ảnh có thể kéo được trong HTML5?",
+      "answer": "<p>Chức năng kéo và thả là một cách rất trực quan để chọn các file cục bộ. Điều này tương tự như việc hầu hết các hệ điều hành có chức năng sao chép, nó giúp cho người dùng làm việc dễ dàng. Trước khi có API kéo và thả, điều này chỉ có thể thực được bằng cách viết lập trình Javascript phức tạp hoặc các thư viện bên ngoài như jQuery.\r\n\r\nĐể bật chức năng này, có một thuộc tính có thể kéo trong thẻ <code>&lt;img&gt;</code> và cần đặt thuộc tính <strong>ondrop</strong> và <strong>ondragover</strong> thành một event-handler có sẵn trong script.\r\n\r\n``<code>html\r\n&lt;!DOCTYPE HTML&gt;\r\n&lt;html&gt;\r\n    &lt;head&gt;\r\n    &lt;script&gt;\r\n        function allowDrop(ev) {\r\n            ev.preventDefault();\r\n        }\r\n        function drop(ev) {\r\n            ...\r\n        }\r\n    &lt;/script&gt;\r\n    &lt;/head&gt;\r\n    &lt;body&gt;\r\n        ...\r\n        &lt;div id=&quot;div1&quot; ondrop=&quot;drop(event)&quot; ondragover=&quot;allowDrop(event)&quot; style=&quot;border: 1px solid #aaaaaa; width:350px; height: 70px;&quot;&gt;&lt;/div&gt;\r\n        &lt;br&gt;\r\n        &lt;img id=&quot;drag1&quot; src=&quot;img_logo.gif&quot; draggable=&quot;true&quot; width=&quot;336&quot; height=&quot;69&quot;&gt;\r\n            ...\r\n    &lt;/body&gt;\r\n&lt;/html&gt;\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Tại sao ta cần phần tử MathML trong HTML5?",
+      "answer": "<p>MathML là viết tắt của Mathematical Markup Language. Nó dùng cho hiển thị các biểu thức hàm số toán học trên web. Với thẻ <code>&lt;math&gt;</code>:\r\n\r\n``<code>html\r\n&lt;!DOCTYPE HTML&gt;\r\n&lt;html&gt;\r\n    &lt;head&gt;\r\n    &lt;/head&gt;\r\n    &lt;body&gt;\r\n        &lt;math&gt;\r\n            &lt;mrow&gt;\r\n                &lt;mrow&gt;\r\n                &lt;msup&gt;\r\n                    &lt;mi&gt; a &lt;/mi&gt;\r\n                    &lt;mn&gt; 2 &lt;/mn&gt;\r\n                &lt;/msup&gt;\r\n                &lt;mo&gt; + &lt;/mo&gt;\r\n                &lt;msup&gt;\r\n                    &lt;mi&gt; b &lt;/mi&gt;\r\n                    &lt;mn&gt; 2 &lt;/mn&gt;\r\n                &lt;/msup&gt;\r\n                &lt;mo&gt; + &lt;/mo&gt;\r\n                &lt;mn&gt; 2 &lt;/mn&gt;\r\n                &lt;mn&gt; a &lt;/mn&gt;\r\n                &lt;mn&gt; b &lt;/mn&gt;\r\n                &lt;/mrow&gt;\r\n                &lt;mo&gt; = &lt;/mo&gt;\r\n                &lt;mn&gt; 0 &lt;/mn&gt;\r\n            &lt;/mrow&gt;\r\n        &lt;/math&gt;\r\n    &lt;/body&gt;\r\n&lt;/html&gt;\r\n</code>``\r\n\r\nKết quả là phương trình a2 + b2 +2ab = 0</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Server-sent events trong HTML5 là gì?",
+      "answer": "<p>Server-Sent Events (SSE) hay còn được biết đến với tên gọi Event Source là một Web Api cho phép kết nối thời gian thực giữa server và client (browser). SSE tạo ra kết nối một chiều từ server đến client sử dụng giao thức HTTP truyền thống với định nghĩa dữ liệu đơn giản cho phía server (event stream format) và API gọn nhẹ phía client.\r\n\r\nSo với phương pháp polling từ client lên server để kiểm tra dữ liệu thì SSE hiệu quả hơn rất nhiều do client chỉ cần tạo kết nối HTTP lên server một lần, và server giữ kết nối đó để liên tục gửi data cho client.\r\n\r\nWebSockets thì phức tạp và hoành tráng hơn hẳn SSE. Tuy nhiên WebSockets là kết nối hai chiều mà đôi khi ta lại không cần chiều từ client lên server. Ngoài ra WebSockets là một giao thức hoàn toàn khác và đòi hỏi server phải hỗ trợ.\r\n\r\nĐể dùng SSE, phần tử <code>&lt;eventsource&gt;</code> được dùng. Thuộc tính <code>src</code> dùng để chỉ định URL của server gửi luồng dữ liệu cho các sự kiện.\r\n\r\n``<code>html\r\n&lt;eventsource src = &quot;/cgi-bin/myfile.cgi&quot; /&gt;\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Web workers là gì?",
+      "answer": "<p>Được thêm vào để mang lại khả năng thực thi song song và bất đồng bộ. Nó chạy nền để thực hiện các tác vụ tính toán tốn kém mà trang web không có khả năng đáp ứng. Nó thực hiện bằng cách tạo một luồng riêng cho các tác vụ như vậy. \r\nCó 3 loại worker chính:\r<ul><li><strong>Dedicated Workers</strong>: là worker được dùng bởi một script duy nhất</li></ul>\r<ul><li><strong>Shared Workers</strong> là những worker được dùng bởi nhiều script chạy trong các cửa sổ, iframe khác nhau,...</li></ul>\r<ul><li><strong>Service workers</strong> những worker này hoạt động như một proxy server giữa ứng dụng web, trình duyệt và mạng. Chủ yếu được dùng để thông báo và đồng bộ hoá API.</li></ul>\r\n\r\n``<code>html\r\n&lt;p&gt;Count numbers: &lt;output id=&quot;result&quot;&gt;&lt;/output&gt;&lt;/p&gt;\r\n&lt;button onclick=&quot;startWorker()&quot;&gt;Start Worker&lt;/button&gt;\r\n&lt;button onclick=&quot;stopWorker()&quot;&gt;Stop Worker&lt;/button&gt;\r\n&lt;script&gt;\r\nvar w;\r\nfunction startWorker() {\r\n    if(typeof(Worker) !== &quot;undefined&quot;) {\r\n        if(typeof(w) == &quot;undefined&quot;) {\r\n            w = new Worker(&quot;demo_workers.js&quot;);\r\n        }\r\n        w.onmessage = function(event) {\r\n            document.getElementById(&quot;result&quot;).innerHTML = event.data;\r\n        };\r\n    }\r\n}\r\nfunction stopWorker() {\r\n    w.terminate();\r\n    w = undefined;\r\n}\r\n&lt;/script&gt;\r\n</code>``\r\n\r\n<img src=\"/interview-assets/Artboard_2_2x.png\" alt=\"\" /></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Việc sử dụng thuộc tính novalidate cho thẻ form trong HTML5 để làm gì?",
+      "answer": "<p>Giá trị của nó là kiểu boolean cho biết liệu dữ liệu đang được form gửi có được xác thực trước hay không. Nếu nó là false, các form có thể được gửi mà không cần xác thực.\r\n\r\n``<code>html\r\n&lt;form action = &quot;&quot; method = &quot;get&quot; novalidate&gt;\r\n        Name:&lt;br&gt;&lt;input type=&quot;name&quot; name=&quot;sname&quot;&gt;&lt;br&gt;\r\n       Doubt:&lt;br&gt;&lt;input type=&quot;number&quot; name=&quot;doubt&quot;&gt;&lt;br&gt;\r\n        &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;\r\n&lt;/form&gt;\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Vector và Raster trong ảnh là gì?",
+      "answer": "<p><strong>Rasters</strong>: xác định thứ tự của pixel trong grid với màu sắc chính xác của pixel đó. File định dạng raster như png, jpg, ...\r\n\r\n<strong>Vector</strong>: xác định thuật toán với hình dạng và đường đi xác định để kết xuất ảnh trên màn hình. Vd như svg</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Làm thế nào để hỗ trợ SVG trên trình duyệt cũ?",
+      "answer": "<p>Để hỗ trợ các trình duyệt cũ thay vì xác định tài nguyên của svg trong thuộc tính <em>src</em> của thẻ <code>&lt;img&gt;</code>, thì nên xác định nó trong thuộc tính <em>srcset</em> và trong <em>src</em>, file png dự phòng phải được xác định.\r\n\r\n``<code>html\r\n&lt;img src=&quot;circle.png&quot; alt=&quot;circle&quot; srcset=&quot;circle.svg&quot;&gt;\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Progressive rendering là gì?",
+      "answer": "<p>Progressive Rendering là một kỹ thuật render tuần tự các phần của trang web trong server và streaming đến client từng phần thay vì đợi render toàn bộ trang.\r\n\r\nNó ngụ ý rằng một tài quan trọng được tạo trên server, bạn có thể stream đến client mà không cần đợi những thứ không quan trọng hiển thị. Nó kết hợp cả SSR và CSR.\r\n\r\n#</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "File manifest trong HTML5 là gì?",
+      "answer": "<p>File manifest được sử dụng để liệt kê các tài nguyên có thể được lưu vào bộ nhớ đệm. Trình duyệt sử dụng thông tin này để làm cho trang web tải nhanh hơn lần đầu tiên. Có 3 phần trong mainfest:\r\n\r\n<em> CACHE Manifest - File cần lưu vào bộ đệm\r\n</em> Network - File không bao giờ lưu vào bộ đệm, cần kết nối mạng.\r<ul><li>Fallback - File dự phòng trong trường hợp trang không tiếp cận được.</li></ul>\r\n\r\n``<code>text\r\nCACHE MANIFEST\r\n# 2012-06-16 v1.0.0\r\n/style.css\r\n/logo.gif\r\n/main.js\r\nNETWORK:\r\nlogin.php\r\nFALLBACK:\r\n/html/ /offline.html\r\n</code>`<code>\r\n\r\n</code>`<code>html\r\n&lt;!DOCTYPE HTML&gt;\r\n&lt;html manifest=&quot;tutorial.appcache&quot;&gt;\r\n...\r\n...\r\n&lt;/html&gt;\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "API định vị địa lý trong HTML5?",
+      "answer": "<p>API định vị địa lý được sử dụng để chia sẻ vị trí thực của máy khách với các trang web. Điều này giúp cung cấp nội dung dựa trên ngôn ngữ và trải nghiệm độc đáo cho người dùng, dựa trên vị trí của họ. Nó hoạt động với một thuộc tính mới của đối tượng điều hướng toàn cầu và hầu hết các trình duyệt hiện đại đều hỗ trợ điều này.\r\n\r\n``<code>js\r\nvar geolocation = navigator.geolocation;\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Viết code minh hoạ API định vị địa lý?",
+      "answer": "<p>``<code>html\r\n&lt;!DOCTYPE html&gt;\r\n&lt;html&gt;\r\n    &lt;body&gt;\r\n        &lt;p&gt;Click &quot;try it&quot; button to get your coordinates.&lt;/p&gt;\r\n        &lt;button onclick=&quot;getLocation()&quot;&gt;Try It&lt;/button&gt;\r\n        &lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;\r\n        &lt;script&gt;\r\n            var x = document.getElementById(&quot;demo&quot;);\r\n            \r\n            function getLocation() {\r\n                if (navigator.geolocation) {\r\n                    navigator.geolocation.getCurrentPosition(showPosition);\r\n                } else { \r\n                    x.innerHTML = &quot;Geolocation functionality is not supported by this browser.&quot;;\r\n                }\r\n            }\r\n                \r\n            function showPosition(position) {\r\n                x.innerHTML = &quot;Latitude: &quot; + position.coords.latitude + \r\n                &quot;&lt;br&gt;Longitude: &quot; + position.coords.longitude;\r\n            }\r\n        &lt;/script&gt;\r\n    &lt;/body&gt;\r\n&lt;/html&gt;\r\n</code>``\r\n\r\nVí dụ trên yêu cầu người dùng cho phép truy cập dữ liệu vị trí thông qua API định vị địa lý và sau khi nhấp vào nút, tọa độ của vị trí thực của client sẽ được hiển thị.\r\n\r\n<img src=\"/interview-assets/Geolocation_API.png\" alt=\"\" /></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Giải thích về Web Component?",
+      "answer": "<p>Chúng được sử dụng để tạo các phần tử tùy chỉnh có thể sử dụng lại, nó rất khó thực hiện trong HTML truyền thống. Nó bao gồm ba công nghệ:\r\n\r\n<strong>Custom elements</strong> - Đây là các API JavaScript giúp xác định các phần tử tùy chỉnh và hành vi của chúng.\r\nShadow DOM -Đây là các API JavaScript gắn cây shadow DOM được đóng gói vào một phần tử để giữ các tính năng của phần tử đó riêng tư và không bị ảnh hưởng bởi các phần khác.\r\n\r\n``<code>html\r\n&lt;!DOCTYPE html&gt;\r\n&lt;html&gt;\r\n    &lt;head&gt;\r\n        &lt;meta charset=&quot;utf-8&quot;&gt;\r\n        &lt;title&gt;composed and composedPath demo&lt;/title&gt;\r\n        &lt;script src=&quot;main.js&quot; defer&gt;&lt;/script&gt;\r\n    &lt;/head&gt;\r\n    &lt;body&gt;\r\n        &lt;h1&gt;&lt;code&gt;composed&lt;/code&gt; and &lt;code&gt;composedPath&lt;/code&gt; demo&lt;/h1&gt;\r\n        &lt;open-shadow text=&quot;I have an open shadow root&quot;&gt;&lt;/open-shadow&gt;\r\n        &lt;closed-shadow text=&quot;I have a closed shadow root&quot;&gt;&lt;/closed-shadow&gt;\r\n    &lt;/body&gt;\r\n&lt;/html&gt;\r\n</code>`<code>\r\n\r\n</code>`<code>js\r\ncustomElements.define(&#39;open-shadow&#39;,\r\n    class extends HTMLElement {\r\n        constructor() {\r\n            super();\r\n            const pElem = document.createElement(&#39;p&#39;);\r\n            pElem.textContent = this.getAttribute(&#39;text&#39;);\r\n            const shadowRoot = this.attachShadow({mode: &#39;open&#39;});\r\n            shadowRoot.appendChild(pElem);\r\n        }\r\n    }\r\n);\r\ncustomElements.define(&#39;closed-shadow&#39;,\r\n    class extends HTMLElement {\r\n        constructor() {\r\n            super();\r\n            const pElem = document.createElement(&#39;p&#39;);\r\n            pElem.textContent = this.getAttribute(&#39;text&#39;);\r\n            const shadowRoot = this.attachShadow({mode: &#39;closed&#39;});\r\n            shadowRoot.appendChild(pElem);\r\n        }\r\n    }\r\n);\r\ndocument.querySelector(&#39;html&#39;).addEventListener(&#39;click&#39;, e =&gt; {\r\n    console.log(e.composed);\r\n    console.log(e.composedPath());\r\n});\r\n</code>`<code>\r\n\r\n<img src=\"/interview-assets/Explain_Web_Components_and_it’s_usage..png\" alt=\"\" />\r\n\r\nỞ đây 2 phần tử tùy chỉnh được xác định là </code><open-shadow><code> và </code><closed-shadow><code> lấy nội dung văn bản của chúng và chèn chúng vào DOM bóng như nội dung của phần tử </code><p><code>.\r<ul><li><strong>HTML Template</strong> Các template đánh dấu được viết bằng các phần tử </code><template><code> và </code><slot><code> có thể được sử dụng lại nhiều lần làm cơ sở cho cấu trúc của phần tử tùy chỉnh. </li></ul>\r\n\r\n</code>`<code>html\r\n&lt;!DOCTYPE html&gt;\r\n&lt;html&gt;\r\n    &lt;head&gt;\r\n        &lt;meta charset=&quot;utf-8&quot;&gt;\r\n        &lt;title&gt;Simple template&lt;/title&gt;\r\n        &lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;\r\n    &lt;/head&gt;\r\n    &lt;body&gt;\r\n        &lt;h1&gt;Simple template&lt;/h1&gt;\r\n        &lt;template id=&quot;my-paragraph&quot;&gt;\r\n            &lt;style&gt;\r\n            p {\r\n                color: white;\r\n                background-color: #666;\r\n                padding: 5px;\r\n            }\r\n            &lt;/style&gt;\r\n            &lt;p&gt;&lt;slot name=&quot;my-text&quot;&gt;My default text&lt;/slot&gt;&lt;/p&gt;\r\n        &lt;/template&gt;\r\n        &lt;my-paragraph&gt;\r\n            &lt;span slot=&quot;my-text&quot;&gt;Let&#39;s have some different text!&lt;/span&gt;\r\n        &lt;/my-paragraph&gt;\r\n        &lt;my-paragraph&gt;\r\n            &lt;ul slot=&quot;my-text&quot;&gt;\r\n                &lt;li&gt;Let&#39;s have some different text!&lt;/li&gt;\r\n                &lt;li&gt;In a list!&lt;/li&gt;\r\n            &lt;/ul&gt;\r\n        &lt;/my-paragraph&gt;\r\n    &lt;/body&gt;\r\n&lt;/html&gt;\r\n</code>`<code>\r\n\r\n</code>`<code>js\r\ncustomElements.define(&#39;my-paragraph&#39;,\r\n    class extends HTMLElement {\r\n        constructor() {\r\n            super();\r\n            const template = document.getElementById(&#39;my-paragraph&#39;);\r\n            const templateContent = template.content;\r\n            this.attachShadow({mode: &#39;open&#39;}).appendChild(\r\n                templateContent.cloneNode(true)\r\n            );\r\n        }\r\n    }\r\n);\r\nconst slottedSpan = document.querySelector(&#39;my-paragraph span&#39;);\r\nconsole.log(slottedSpan.assignedSlot);\r\nconsole.log(slottedSpan.slot);\r\n</code>``\r\n\r\n<img src=\"/interview-assets/explain-web-components-and-its-usage.png\" alt=\"\" /></p>",
+      "level": "fresher"
+    }
+  ]
+}
