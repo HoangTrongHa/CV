@@ -4,10 +4,25 @@
     <section class="relative py-20 bg-gradient-to-br from-primary/10 to-primary/5 dark:from-primary/20 dark:to-primary/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
-          <NuxtLink to="/" class="inline-flex items-center gap-2 text-primary hover:text-primary/80 mb-6 transition-colors">
-            <span class="material-symbols-outlined">arrow_back</span>
-            <span>Về trang chủ</span>
-          </NuxtLink>
+          <div class="flex items-center justify-center gap-4 mb-6">
+            <NuxtLink to="/" class="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors">
+              <span class="material-symbols-outlined">arrow_back</span>
+              <span>Về trang chủ</span>
+            </NuxtLink>
+            <button
+              @click="handleLogout"
+              class="inline-flex items-center gap-2 text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 transition-colors"
+            >
+              <span class="material-symbols-outlined">logout</span>
+              <span>Đăng xuất</span>
+            </button>
+          </div>
+          <div class="flex items-center justify-center gap-2 mb-4">
+            <span class="material-symbols-outlined text-primary">person</span>
+            <p class="text-sm text-gray-600 dark:text-gray-400">
+              Xin chào, <span class="font-semibold text-primary">{{ user?.username }}</span>
+            </p>
+          </div>
           <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Kinh nghiệm phỏng vấn
           </h1>
@@ -226,11 +241,21 @@
 import { ref, computed } from 'vue'
 import type { Question } from '~/composables/useInterviewData'
 
+// Auth middleware
+definePageMeta({
+  middleware: 'auth'
+})
+
+const { user, logout } = useAuth()
 const { categories, totalQuestions, loading, error, filterQuestionsByLevel } = useInterviewData()
 
 const activeCategory = ref('frontend')
 const activeSubcategory = ref('')
 const activeLevels = ref<Record<string, string>>({})
+
+const handleLogout = () => {
+  logout()
+}
 
 // Get current category
 const getCurrentCategory = computed(() => {

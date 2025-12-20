@@ -15,15 +15,29 @@
   },
   "footer": {
     "readyToWork": "Bereit zusammenzuarbeiten?",
-    "description": "Ich bin derzeit für Freelance-Projekte und Vollzeitstellen verfügbar. Lassen Sie uns etwas Großartiges schaffen.",
+    "description": "Ich bin derzeit für Freelance-Projekte verfügbar und offen für Vollzeitstellen. Lassen Sie uns etwas Großartiges schaffen.",
     "contactMe": "Kontaktieren Sie mich",
-    "getInTouch": "Kontakt aufnehmen",
+    "getInTouch": "In Kontakt treten",
     "phone": "Telefon",
     "email": "E-Mail",
     "facebook": "Facebook",
     "linkedin": "LinkedIn",
     "copied": "Kopiert!",
+    "close": "Schließen",
     "copyright": "Alle Rechte vorbehalten"
+  },
+  "login": {
+    "title": "Anmelden",
+    "subtitle": "Zugriff auf Interviewerfahrungen",
+    "username": "Benutzername",
+    "usernamePlaceholder": "Benutzernamen eingeben",
+    "password": "Passwort",
+    "passwordPlaceholder": "Passwort eingeben",
+    "loginButton": "Anmelden",
+    "processing": "Verarbeitung...",
+    "error": "Falscher Benutzername oder Passwort!",
+    "contactWith": "Kontakt mit",
+    "backToHome": "Zurück zur Startseite"
   },
   "sections": {
     "about": "Über mich",
