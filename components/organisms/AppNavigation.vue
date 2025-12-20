@@ -13,6 +13,7 @@
               :key="link.href"
               :text="$t(link.textKey)"
               :href="link.href"
+              :is-page="link.isPage"
             />
           </div>
         </div>
@@ -33,7 +34,8 @@ const navLinks = [
   { textKey: 'nav.skills', href: '#skills' },
   { textKey: 'nav.experience', href: '#experience' },
   { textKey: 'nav.education', href: '#education' },
-  { textKey: 'nav.portfolio', href: '#portfolio' }
+  { textKey: 'nav.portfolio', href: '#portfolio' },
+  { textKey: 'nav.interviews', href: '/interviews', isPage: true }
 ]
 
 const { generateCV } = useGeneratePDF()
