@@ -1,0 +1,207 @@
+{
+  "id": "nuxtjs",
+  "name": "Câu hỏi phỏng vấn Nuxt.js 3",
+  "description": "40 câu hỏi phỏng vấn Nuxt.js 3 cấp độ Senior",
+  "questions": [
+    {
+      "question": "Trình bày request → response trong Nuxt 3",
+      "answer": "<p>Khi request vào Nuxt 3 SSR, <strong>Nitro server</strong> tiếp nhận request, khởi tạo app context, chạy route middleware, sau đó render Vue component trên server, trả HTML + payload JSON cho client. Client sẽ <strong>hydrate</strong> lại DOM bằng payload này để tránh fetch lại data.</p><p><strong>Điểm ăn tiền:</strong> nhắc được Nitro + payload + hydration</p>",
+      "level": "senior"
+    },
+    {
+      "question": "useFetch vs useAsyncData vs useLazyFetch",
+      "answer": "<p><ul><li><strong>useAsyncData:</strong> linh hoạt nhất, custom logic, nhiều nguồn data</li><li><strong>useFetch:</strong> wrapper của useAsyncData, tiện REST API</li><li><strong>useLazyFetch:</strong> không block SSR, fetch sau hydration</li></ul></p><p><strong>Senior thường nói:</strong></p><p>SEO critical dùng <code>useAsyncData</code>, below-the-fold dùng <code>useLazyFetch</code>.</p>",
+      "level": "senior"
+    },
+    {
+      "question": "Component render mấy lần trong SSR?",
+      "answer": "<p><ul><li>1 lần trên server</li><li>1 lần hydrate trên client</li><li>Re-render khi reactive state thay đổi</li></ul></p><p><strong>Lỗi thường gặp:</strong> side-effect chạy 2 lần</p>",
+      "level": "senior"
+    },
+    {
+      "question": "Vì sao useState không thay thế Pinia?",
+      "answer": "<p><ul><li><strong>useState:</strong> scope theo request, simple shared state</li><li><strong>Pinia:</strong> business logic lớn, action, plugin, devtool</li></ul></p><p><strong>Rule thực tế:</strong></p><ul><li>App nhỏ: useState</li><li>App lớn / domain logic: Pinia</li></ul>",
+      "level": "senior"
+    },
+    {
+      "question": "Cache trong Nuxt 3",
+      "answer": "<p><ul><li>Dedup request theo key</li><li>Cache SSR payload</li><li>Nitro cache / CDN cache</li></ul></p><p><strong>Có thể cache ở:</strong></p><ul><li>component</li><li>server route</li><li>edge</li></ul>",
+      "level": "senior"
+    },
+    {
+      "question": "Hydration mismatch là gì?",
+      "answer": "<p><strong>HTML server ≠ render client</strong></p><p>Nguyên nhân phổ biến:</p><ul><li>window, document</li><li>Math.random, Date.now</li><li>conditional render theo client</li></ul><p><strong>Fix:</strong></p><ul><li>process.client</li><li>&lt;ClientOnly&gt;</li></ul>",
+      "level": "senior"
+    },
+    {
+      "question": "Giảm TTFB thế nào?",
+      "answer": "<p><ul><li>useLazyFetch</li><li>tránh fetch đồng loạt</li><li>cache Nitro</li><li>edge rendering</li></ul></p><p><strong>Senior nói trade-off SEO vs TTFB</strong></p>",
+      "level": "senior"
+    },
+    {
+      "question": "Khi nào không dùng SSR?",
+      "answer": "<p><ul><li>Dashboard nội bộ</li><li>App auth-only</li><li>Heavy client logic</li></ul></p><p><strong>SSR không phải lúc nào cũng tốt</strong></p>",
+      "level": "senior"
+    },
+    {
+      "question": "SSR vs SSG vs ISR",
+      "answer": "<p><ul><li><strong>SSR:</strong> data realtime</li><li><strong>SSG:</strong> content tĩnh</li><li><strong>ISR:</strong> rebuild theo interval</li></ul></p><p>Nuxt 3 hỗ trợ <strong>hybrid</strong></p>",
+      "level": "senior"
+    },
+    {
+      "question": "Edge vs Node",
+      "answer": "<p><ul><li><strong>Edge:</strong> nhanh, gần user, hạn chế API</li><li><strong>Node:</strong> full API, chậm hơn</li></ul></p>",
+      "level": "senior"
+    },
+    {
+      "question": "Share state server/client",
+      "answer": "<p><ul><li>useState</li><li>Pinia SSR</li><li>payload hydration</li></ul></p>",
+      "level": "senior"
+    },
+    {
+      "question": "Race condition khi fetch",
+      "answer": "<p><ul><li>cancel request cũ</li><li>key khác nhau</li><li>watch + debounce</li></ul></p>",
+      "level": "senior"
+    },
+    {
+      "question": "Global loading/error",
+      "answer": "<p><ul><li>app.config.errorHandler</li><li>layout error</li><li>useError</li></ul></p>",
+      "level": "senior"
+    },
+    {
+      "question": "Auth flow chuẩn Nuxt 3",
+      "answer": "<p><ol><li>Login</li><li>Server set HttpOnly cookie</li><li>Middleware check</li><li>Refresh token</li></ol></p><p><strong>Senior KHÔNG dùng localStorage</strong></p>",
+      "level": "senior"
+    },
+    {
+      "question": "Cookie vs localStorage",
+      "answer": "<p><ul><li><strong>Cookie:</strong> SSR, chống XSS</li><li><strong>localStorage:</strong> dễ leak</li></ul></p>",
+      "level": "senior"
+    },
+    {
+      "question": "Protect /server/api",
+      "answer": "<p><ul><li>server middleware</li><li>verify token</li><li>runtime config</li></ul></p>",
+      "level": "senior"
+    },
+    {
+      "question": "XSS / CSRF",
+      "answer": "<p><ul><li>SameSite cookie</li><li>HttpOnly</li><li>sanitize input</li></ul></p>",
+      "level": "senior"
+    },
+    {
+      "question": "Middleware chạy khi nào?",
+      "answer": "<p><ul><li><strong>SSR:</strong> server</li><li><strong>CSR:</strong> navigation</li></ul></p>",
+      "level": "senior"
+    },
+    {
+      "question": "Route vs server middleware",
+      "answer": "<p><ul><li><strong>Route:</strong> bảo vệ page</li><li><strong>Server:</strong> bảo vệ API</li></ul></p>",
+      "level": "senior"
+    },
+    {
+      "question": "Nested layout scale",
+      "answer": "<p><ul><li>layout theo domain</li><li>tránh layout quá sâu</li></ul></p>",
+      "level": "senior"
+    },
+    {
+      "question": "Plugin vs composable",
+      "answer": "<p><ul><li><strong>Plugin:</strong> inject global</li><li><strong>Composable:</strong> logic tái sử dụng</li></ul></p>",
+      "level": "senior"
+    },
+    {
+      "question": "Plugin chạy ở đâu?",
+      "answer": "<p><ul><li>client</li><li>server</li><li>both (.client.ts, .server.ts)</li></ul></p>",
+      "level": "senior"
+    },
+    {
+      "question": "Folder enterprise",
+      "answer": "<p><ul><li>modules/</li><li>domains/</li><li>composables theo feature</li></ul></p>",
+      "level": "senior"
+    },
+    {
+      "question": "Khi nào viết Nuxt module?",
+      "answer": "<p><ul><li>reuse nhiều project</li><li>can thiệp build/runtime</li></ul></p>",
+      "level": "senior"
+    },
+    {
+      "question": "Type useFetch",
+      "answer": "<p><code>useFetch&lt;User[]&gt;('/api/users')</code></p>",
+      "level": "senior"
+    },
+    {
+      "question": "defineProps vs interface",
+      "answer": "<p><ul><li><strong>interface:</strong> type</li><li><strong>defineProps:</strong> runtime + TS</li></ul></p>",
+      "level": "senior"
+    },
+    {
+      "question": "Runtime config type-safe",
+      "answer": "<p><ul><li>define trong nuxt.config</li><li>access qua useRuntimeConfig</li></ul></p>",
+      "level": "senior"
+    },
+    {
+      "question": "Rủi ro migrate Nuxt 2",
+      "answer": "<p><ul><li>module cũ</li><li>Vuex</li><li>asyncData</li></ul></p>",
+      "level": "senior"
+    },
+    {
+      "question": "asyncData → useAsyncData",
+      "answer": "<p><ul><li>logic giữ nguyên</li><li>chú ý key & SSR</li></ul></p>",
+      "level": "senior"
+    },
+    {
+      "question": "Module không support",
+      "answer": "<p><ul><li>replace</li><li>viết lại</li><li>tách service</li></ul></p>",
+      "level": "senior"
+    },
+    {
+      "question": "Debug lỗi SSR",
+      "answer": "<p><ul><li>server log</li><li>isolate client-only code</li></ul></p>",
+      "level": "senior"
+    },
+    {
+      "question": "Memory leak",
+      "answer": "<p><ul><li>global state</li><li>event listener không cleanup</li></ul></p>",
+      "level": "senior"
+    },
+    {
+      "question": "Monitoring",
+      "answer": "<p><ul><li>log Nitro</li><li>APM</li><li>error tracking</li></ul></p>",
+      "level": "senior"
+    },
+    {
+      "question": "Nuxt 3 cho 10M traffic",
+      "answer": "<p><ul><li>CDN</li><li>cache</li><li>edge SSR</li></ul></p>",
+      "level": "senior"
+    },
+    {
+      "question": "Frontend + microservice",
+      "answer": "<p><ul><li>Nuxt làm BFF</li><li>backend riêng</li></ul></p>",
+      "level": "senior"
+    },
+    {
+      "question": "Khi không dùng Nuxt?",
+      "answer": "<p><ul><li>App nhỏ</li><li>Không cần SEO</li></ul></p>",
+      "level": "senior"
+    },
+    {
+      "question": "Quyết định sai",
+      "answer": "<p><strong>Trả lời thật + bài học</strong></p>",
+      "level": "senior"
+    },
+    {
+      "question": "Debug app chậm",
+      "answer": "<p><ul><li>Network</li><li>SSR</li><li>Hydration</li><li>Bundle</li></ul></p>",
+      "level": "senior"
+    },
+    {
+      "question": "DX vs Performance",
+      "answer": "<p>Production ưu tiên performance, dev ưu tiên DX</p>",
+      "level": "senior"
+    },
+    {
+      "question": "Điều không thích Nuxt 3",
+      "answer": "<p><ul><li>magic nhiều</li><li>khó debug SSR</li></ul></p><p><strong>Nói thẳng nhưng có lý do</strong></p>",
+      "level": "senior"
+    }
+  ]
+}

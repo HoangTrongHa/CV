@@ -47,7 +47,7 @@ export const useInterviewData = () => {
     }
   }
   
-  // Load subcategory từ file riêng (cho Frontend)
+  // Load subcategory từ file riêng (cho Frontend và Cloud)
   const loadSubcategory = async (categoryId: string, subcategoryId: string): Promise<Subcategory | null> => {
     const cacheKey = `${categoryId}-${subcategoryId}`
     
@@ -57,8 +57,8 @@ export const useInterviewData = () => {
     }
 
     try {
-      // Chỉ Frontend mới có file riêng
-      if (categoryId === 'frontend') {
+      // Frontend và Cloud có file riêng
+      if (categoryId === 'frontend' || categoryId === 'cloud') {
         const response = await fetch(`/data/interview-${subcategoryId}.json`)
         if (response.ok) {
           const subcategoryData = await response.json()
@@ -107,6 +107,66 @@ export const useInterviewData = () => {
     return questions.filter(q => q.level === level)
   }
 
+  // Inject Cloud & Architecture category vào data
+  const categoriesWithCloud = computed(() => {
+    if (!data.value) return []
+    
+    const cats = [...data.value.categories]
+    
+    // Tạo Cloud & Architecture category
+    const cloudCategory: Category = {
+      id: 'cloud',
+      name: 'Cloud & Architecture',
+      icon: 'cloud',
+      color: '#673ab7',
+      subcategories: [
+        {
+          id: 'microservice',
+          name: 'Microservice',
+          description: 'Microservice Architecture patterns and best practices',
+          questions: []
+        },
+        {
+          id: 'docker',
+          name: 'Docker',
+          description: 'Container technology and Docker ecosystem',
+          questions: []
+        }
+      ]
+    }
+    
+    // Xóa microservice khỏi backend
+    const backendIndex = cats.findIndex(c => c.id === 'backend')
+    if (backendIndex !== -1 && cats[backendIndex]) {
+      const backend = cats[backendIndex]
+      cats[backendIndex] = {
+        id: backend.id,
+        name: backend.name,
+        icon: backend.icon,
+        color: backend.color,
+        subcategories: backend.subcategories.filter(s => s.id !== 'microservice')
+      }
+    }
+    
+    // Xóa docker khỏi devops
+    const devopsIndex = cats.findIndex(c => c.id === 'devops')
+    if (devopsIndex !== -1 && cats[devopsIndex]) {
+      const devops = cats[devopsIndex]
+      cats[devopsIndex] = {
+        id: devops.id,
+        name: devops.name,
+        icon: devops.icon,
+        color: devops.color,
+        subcategories: devops.subcategories.filter(s => s.id !== 'docker')
+      }
+    }
+    
+    // Thêm Cloud category sau Frontend (index 1)
+    cats.splice(1, 0, cloudCategory)
+    
+    return cats
+  })
+
   // Auto fetch on mount
   if (typeof window !== 'undefined') {
     fetchData()
@@ -116,7 +176,7 @@ export const useInterviewData = () => {
     data,
     loading,
     error,
-    categories,
+    categories: categoriesWithCloud,
     totalQuestions,
     getCategory,
     getSubcategory,

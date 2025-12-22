@@ -1,0 +1,187 @@
+{
+  "id": "docker",
+  "name": "Câu hỏi phỏng vấn Docker",
+  "description": "",
+  "questions": [
+    {
+      "question": "Giải thích vòng đời Docker từ lúc tạo file docker-compose tới khi build image và chạy container?",
+      "answer": "<p>Vòng đời Docker từ việc tạo file cấu hình đến khi có container đang chạy bao gồm các giai đoạn chính sau:\r\n\r\n<img src=\"/interview-assets/Docker_Lifecycle_Workflow.png\" alt=\"Docker Lifecycle Workflow\" />\r\n\r\n<strong>1. Giai đoạn Tạo file docker-compose.yml</strong>\r\n\r\nĐây là bước đầu tiên trong quy trình, nơi bạn định nghĩa kiến trúc ứng dụng của mình:\r\n\r\n``<code>yaml\r\nversion: '3.8'\r\nservices:\r\n  web:\r\n    build: ./frontend\r\n    ports:\r\n      - \"3000:3000\"\r\n    depends_on:\r\n      - api\r\n  api:\r\n    build: ./backend\r\n    ports:\r\n      - \"8080:8080\"\r\n    environment:\r\n      - DB_HOST=database\r\n    depends_on:\r\n      - database\r\n  database:\r\n    image: postgres:14\r\n    environment:\r\n      - POSTGRES_PASSWORD=secret\r\n    volumes:\r\n      - db_data:/var/lib/postgresql/data\r\nvolumes:\r\n  db_data:\r\n</code>``\r\n\r\nFile này định nghĩa:\r\n<ul><li><strong>Services</strong>: Các container sẽ chạy (web, api, database)</li></ul>\r\n<ul><li><strong>Build context</strong>: Đường dẫn đến Dockerfile cho mỗi service</li></ul>\r\n<ul><li><strong>Port mapping</strong>: Ánh xạ cổng từ host vào container</li></ul>\r\n<ul><li><strong>Dependencies</strong>: Thứ tự khởi động các service</li></ul>\r\n<ul><li><strong>Environment variables</strong>: Biến môi trường cho container</li></ul>\r\n<ul><li><strong>Volumes</strong>: Lưu trữ dữ liệu persistent</li></ul>\r\n\r\n<strong>2. Giai đoạn Tạo Dockerfile cho từng service</strong>\r\n\r\nMỗi service cần có Dockerfile riêng để định nghĩa cách build image:\r\n\r\n``<code>dockerfile\r\n# Dockerfile cho frontend\r\nFROM node:18-alpine\r\nWORKDIR /app\r\nCOPY package*.json ./\r\nRUN npm install\r\nCOPY . .\r\nEXPOSE 3000\r\nCMD [\"npm\", \"start\"]\r\n</code>``\r\n\r\n``<code>dockerfile\r\n# Dockerfile cho backend\r\nFROM python:3.9-slim\r\nWORKDIR /app\r\nCOPY requirements.txt .\r\nRUN pip install -r requirements.txt\r\nCOPY . .\r\nEXPOSE 8080\r\nCMD [\"python\", \"app.py\"]\r\n</code>``\r\n\r\n<strong>3. Giai đoạn Build Image với docker-compose build</strong>\r\n\r\nKhi chạy lệnh <code>docker-compose build</code>, quá trình sau sẽ diễn ra:\r\n\r\n``<code>bash\r\ndocker-compose build\r\n</code>``\r\n\r\n<strong>Quy trình build từng layer:</strong>\r\n\r\n<ul><li><strong>Layer 1 - Base Image</strong>: Docker tải base image (node:18-alpine, python:3.9-slim)</li></ul>\r\n<ul><li><strong>Layer 2 - Working Directory</strong>: Tạo thư mục làm việc trong container</li></ul>\r\n<ul><li><strong>Layer 3 - Dependencies</strong>: Copy file package.json/requirements.txt và cài đặt dependencies</li></ul>\r\n<ul><li><strong>Layer 4 - Application Code</strong>: Copy toàn bộ source code vào container</li></ul>\r\n<ul><li><strong>Layer 5 - Configuration</strong>: Cấu hình port, environment, và command để chạy</li></ul>\r\n\r\n<img src=\"/interview-assets/Docker_Image_Layers.png\" alt=\"Docker Image Layers\" />\r\n\r\n<strong>Docker Layer Caching:</strong> Docker sử dụng cơ chế cache thông minh:\r\n<ul><li>Nếu một layer không thay đổi (ví dụ: base image hoặc dependencies), Docker sẽ sử dụng lại layer đã cache</li></ul>\r\n<ul><li>Chỉ build lại các layer bị thay đổi và các layer phía sau nó</li></ul>\r\n<ul><li>Điều này giúp tăng tốc đáng kể quá trình build</li></ul>\r\n\r\n<strong>4. Giai đoạn Tạo Container từ Image</strong>\r\n\r\nSau khi build xong image, sử dụng lệnh <code>docker-compose up</code> để tạo và chạy container:\r\n\r\n``<code>bash\r\ndocker-compose up -d\r\n</code>``\r\n\r\nQuá trình tạo container:\r\n\r\n<ul><li><strong>Create Container</strong>: Docker tạo container từ image đã build</li></ul>\r\n<ul><li><strong>Network Setup</strong>: Tạo network riêng cho các container có thể giao tiếp với nhau</li></ul>\r\n<ul><li><strong>Volume Mount</strong>: Gắn volumes để lưu trữ dữ liệu persistent</li></ul>\r\n<ul><li><strong>Port Binding</strong>: Ánh xạ cổng từ container ra host</li></ul>\r\n<ul><li><strong>Environment Variables</strong>: Inject biến môi trường vào container</li></ul>\r\n\r\n<strong>5. Giai đoạn Chạy Container</strong>\r\n\r\nContainer lifecycle khi chạy:\r\n\r\n<ul><li><strong>Starting</strong>: Container khởi động theo thứ tự dependencies (database → api → web)</li></ul>\r\n<ul><li><strong>Running</strong>: Container chạy CMD đã định nghĩa trong Dockerfile</li></ul>\r\n<ul><li><strong>Health Check</strong>: Docker kiểm tra health status của container</li></ul>\r\n<ul><li><strong>Logging</strong>: Logs được thu thập và có thể xem qua <code>docker-compose logs</code></li></ul>\r\n\r\n<strong>Các lệnh quản lý container:</strong>\r\n\r\n``<code>bash\r\n# Xem trạng thái container\r\ndocker-compose ps\r\n\r\n# Xem logs\r\ndocker-compose logs -f service_name\r\n\r\n# Dừng container\r\ndocker-compose stop\r\n\r\n# Khởi động lại\r\ndocker-compose restart\r\n\r\n# Dừng và xóa container\r\ndocker-compose down\r\n\r\n# Xóa cả volumes\r\ndocker-compose down -v\r\n</code>``\r\n\r\n<strong>6. Quá trình Communication giữa các Container</strong>\r\n\r\nDocker Compose tự động tạo một network bridge cho phép:\r\n<ul><li>Container có thể gọi nhau qua service name (ví dụ: api có thể kết nối database qua hostname \"database\")</li></ul>\r\n<ul><li>DNS resolution tự động cho các service</li></ul>\r\n<ul><li>Isolation giữa các ứng dụng khác nhau</li></ul>\r\n\r\n<strong>Tóm tắt toàn bộ workflow:</strong>\r\n\r\n<ol>\r\n<li><strong>Định nghĩa</strong>: Tạo docker-compose.yml và Dockerfile</li>\r\n<li><strong>Build</strong>: <code>docker-compose build</code> → Tạo images từ Dockerfile theo layers</li>\r\n<li><strong>Create</strong>: <code>docker-compose up</code> → Tạo containers, networks, volumes</li>\r\n<li><strong>Run</strong>: Containers khởi động và chạy ứng dụng</li>\r\n<li><strong>Manage</strong>: Quản lý lifecycle với các lệnh docker-compose</li>\r\n</ol>\r\n\r\n<strong>Best Practices:</strong>\r\n<ul><li>Sử dụng <code>.dockerignore</code> để loại trừ file không cần thiết</li></ul>\r\n<ul><li>Sắp xếp Dockerfile theo thứ tự: dependencies trước, code sau (để tối ưu cache)</li></ul>\r\n<ul><li>Sử dụng multi-stage builds để giảm kích thước image</li></ul>\r\n<ul><li>Định nghĩa health checks trong docker-compose.yml</li></ul>\r\n<ul><li>Sử dụng volumes cho dữ liệu persistent</li></ul>\r\n<ul><li>Set resource limits (CPU, memory) để tránh container chiếm hết tài nguyên</li></ul>\r\n\r\n``<code>yaml\r\nservices:\r\n  api:\r\n    build: ./backend\r\n    deploy:\r\n      resources:\r\n        limits:\r\n          cpus: '0.5'\r\n          memory: 512M\r\n    healthcheck:\r\n      test: [\"CMD\", \"curl\", \"-f\", \"http://localhost:8080/health\"]\r\n      interval: 30s\r\n      timeout: 10s\r\n      retries: 3\r\n</code>``\r\n\r\nHiểu rõ vòng đời này giúp developer debug hiệu quả hơn và tối ưu hóa quá trình development và deployment.</p>",
+      "level": "senior"
+    },
+    {
+      "question": "Giải thích về container trong Docker?",
+      "answer": "<p><ul><li>Nói một cách đơn giản nhất, container bao gồm các ứng dụng và tất cả các phụ thuộc của chúng.</li></ul>\r<ul><li>Chúng chia sẻ nhân và tài nguyên hệ thống với các container khác và chạy như các hệ thống biệt lập trong hệ điều hành chủ.</li></ul>\r<ul><li>Mục đích chính của container là loại bỏ sự phụ thuộc vào cơ sở hạ tầng trong khi triển khai và chạy các ứng dụng. Điều này có nghĩa là bất kỳ ứng dụng được chứa trong container nào cũng có thể chạy trên bất kỳ nền tảng nào bất kể cơ sở hạ tầng đang được sử dụng bên dưới.</li></ul>\r<ul><li>Về mặt kỹ thuật, chúng chỉ là các phiên bản runtime của docker image.</li></ul></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Docker image là gì?",
+      "answer": "<p>Chúng là các gói thực thi (được đóng gói với code ứng dụng và phần phụ thuộc, gói phần mềm, v.v.) nhằm mục đích tạo container. Docker image có thể được triển khai cho bất kỳ môi trường docker nào và các container có thể được xoay ở đó để chạy ứng dụng.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "DockerFile là gì?",
+      "answer": "<p>Nó là một file văn bản có tất cả các lệnh cần được chạy để xây dựng một image nhất định.\r\n\r\n<img src=\"/interview-assets/Docker_File.png\" alt=\"\" /></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Chức năng của hypervisor là gì?",
+      "answer": "<p>Hypervisor là một phần mềm giúp cho quá trình ảo hóa diễn ra vì nó đôi khi được gọi là Virtual Machine Monitor. Điều này phân chia tài nguyên của hệ thống máy chủ và phân bổ chúng cho từng môi trường khách được cài đặt.\r\n\r\n<img src=\"/interview-assets/Hypervisor.png\" alt=\"\" />\r\n\r\nĐiều này có nghĩa là nhiều hệ điều hành có thể được cài đặt trên một hệ thống máy chủ duy nhất. Hypervisor có 2 loại:\r\n\r\n1. Native Hypervisor: Loại này còn được gọi là Bare-metal Hypervisor và chạy trực tiếp trên hệ thống máy chủ bên dưới, điều này cũng đảm bảo quyền truy cập trực tiếp vào phần cứng máy chủ, đó là lý do tại sao nó không yêu cầu hệ điều hành cơ bản.\r\n2. Hosted Hypervisor: Loại này sử dụng hệ điều hành máy chủ cơ bản đã được cài đặt hệ điều hành hiện có.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Docker compose là gì?",
+      "answer": "<p>Nó là một file YAML bao gồm tất cả các chi tiết liên quan đến các dịch vụ, mạng và khối lượng khác nhau cần thiết để thiết lập ứng dụng dựa trên Docker. Vì vậy, docker-compose được sử dụng để tạo nhiều container, lưu trữ chúng và thiết lập giao tiếp giữa chúng. Với mục đích giao tiếp giữa các container, các cổng được tiếp xúc bởi từng container.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Docker namespace là gì?",
+      "answer": "<p>Namespace về cơ bản là một tính năng của Linux đảm bảo phân vùng tài nguyên hệ điều hành theo cách loại trừ lẫn nhau. Điều này hình thành khái niệm cốt lõi đằng sau quá trình container hóa khi namespace giới thiệu một lớp cách ly giữa các container. Trong docker, namespace đảm bảo rằng các container có thể di động và chúng không ảnh hưởng đến máy chủ bên dưới. Ví dụ về các loại namespace hiện đang được Docker hỗ trợ - PID, Mount, User, Network, IPC.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Cách hiển thị trạng thái của tất cả docker container bằng dòng lệnh?",
+      "answer": "<p>``<code>\r\ndocker ps -a\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Dữ liệu được lưu trữ trong container sẽ bị mất trong những trường hợp nào?",
+      "answer": "<p>Dữ liệu của container vẫn ở trong đó cho đế khi bạn xóa container.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Docker image registry?",
+      "answer": "<p>Theo thuật ngữ đơn giản, Docker image registry là một khu vực lưu trữ các docker image. Thay vì chuyển đổi các ứng dụng thành container mỗi lần, một nhà phát triển có thể sử dụng trực tiếp các iamge được lưu trữ trong registry.\r\nDocker image registry có thể là công khai hoặc riêng tư và DockerHub là tổ chức đăng ký công khai phổ biến và nổi tiếng nhất hiện có.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Các thành phần trong Docker?",
+      "answer": "<p>Có 3 thành phần Docker là:\r\n\r\n<em> <strong>Docker Client:</strong> Thành phần này sẽ thực hiện hành động \"build\" và \"run\" nhằm mục đích mở ra giao tiếp với docket host.\r\n</em> <strong>Docker Host:</strong> Thành phần này gồm daemon chính của docker, các host container và image của chúng. Daemon thiết lập một kết nối đến docker registry.\r<ul><li><strong>Docker Registry:</strong> Thành phần này lưu trữ docker image. Nó có thể là công khai hoặc riêng tư. Các registry công khai nổi tiếng là Docker Hub và Docker Cloud.</li></ul>\r\n\r\n<img src=\"/interview-assets/docker_components.png\" alt=\"\" /></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Docker Hub là gì?",
+      "answer": "<p><ul><li>Là một nền tảng đám mây được cung cấp bởi Docker cho phép lưu trữ công khai image của Docker đồng thời cho phép tìm kiếm và chia sẻ với người khác.</li></ul>\r<ul><li>Image có thể được đẩy lên Docker Hub bằng câu lệnh <code>docker push</code>.</li></ul></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Lệnh để export một docket image như một archive?",
+      "answer": "<p>Cú pháp đó là:\r\n\r\n``<code>\r\ndocker save -o &lt;exported_name&gt;.tar &lt;container-name&gt;\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Lệnh để import một Docker image đến một Docker host khác?",
+      "answer": "<p>``<code>\r\ndocker load -i &lt;export<em>image</em>name&gt;.tar\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Có thể xoá container bị tạm dừng khỏi Docker không?",
+      "answer": "<p>Không thể! Container phải bị dừng trạng thái trước khi ta có thể xoá chúng.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Lệnh kiểm tra phiên bản Docker client và server?",
+      "answer": "<p>Để kiểm tra tất cả không tin phiên bản client và server là:\r\n\r\n``<code>\r\ndocker version\r\n</code>`<code>\r\n\r\nĐể lấy chỉ phiên bản server, ta có thể chạy:\r\n\r\n</code>`<code>\r\ndocker version --format &#39;{{.Server.Version}}&#39;\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Sự khác biệt giữa ảo hoá (virtualization) và containerization?",
+      "answer": "<p>| virtualization | containerization |\r\n|-|-|\r\n| Nó giúp chạy nhiều hệ điều hành trên phần cứng của một server vật lý | Nó giúp triển khai nhiều ứng dụng trên cùng hệ điều hành trên một máy ảo hoặc server |\r\n| Hypervisors cung cấp các máy ảo tổng thể cho hệ điều hành khách | Container đảm bảo cung cấp môi trường/không gian người dùng biệt lập để chạy các ứng dụng. Mọi thay đổi được thực hiện trong container không phản ánh trên server hoặc các container khác của cùng server |\r\n| Các máy ảo này tạo thành một phần trừu tượng của lớp phần cứng hệ thống, điều này có nghĩa là mỗi máy ảo trên host hoạt động giống như một máy vật lý | Container tạo thành sự trừu tượng của lớp ứng dụng có nghĩa là mỗi container tạo thành một ứng dụng khác nhau |</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Sự khác biệt giữa lớp COPY và ADD trong Dockerfile?",
+      "answer": "<p>Cả hai có chức năng giống nhau, nhưng <code>COPY</code> được ưa thích hơn vì mức độ minh bạch cao hơn <code>ADD</code>.\r\n\r\n<code>COPY</code> cung cấp các hỗ trợ cơ bản cho sao chép file cục bộ trong khi <code>ADD</code> cung cấp tính năng bổ sung như URL từ xa và hỗ trợ xuất <code>tar</code>.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Container có thể tự khởi động lại?",
+      "answer": "<p>Có, chỉ có thể thực hiện được khi đang sử dụng một số chính sách do docker xác định trong khi sử dụng lệnh <code>run</code> của docker. Sau đây là các chính sách hiện có:\r\n1. <strong>Off</strong>: container sẽ không được khởi động lại trong trường hợp nó bị dừng hoặc bị lỗi.\r\n2. <strong>Un-failure</strong>: Ở đây, container chỉ khởi động lại khi nó gặp lỗi không liên quan đến người dùng.\r\n3. <strong>Unless-stop</strong>: Sử dụng chính sách này, đảm bảo rằng container chỉ có thể khởi động lại khi người dùng thực hiện lệnh để dừng nó.\r\n4. <strong>Always</strong>: Bất kể lỗi hay dừng, container luôn được khởi động lại trong loại chính sách này.\r\n\r\nCác chính sách này có thể dùng như sau:\r\n\r\n``<code>\r\ndocker run -dit — restart [restart-policy-value] [container_name]\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Sự khác biệt giữa Docker Image và Layer?",
+      "answer": "<p>Image: được xây dựng từ một loạt các lớp instruction. Một image tương ứng với container và được sử dụng để vận hành nhanh chóng do cơ chế lưu vào bộ nhớ đệm của mỗi bước.\r\n\r\nLayer: Mỗi layer tương ứng với một instruction của image của Dockerfile. Nói đơn giản hơn layer còn là image nhưng nó là image của instruction.\r\n\r\nVí dụ:\r\n\r\n``<code>\r\nFROM ubuntu:18.04 \r\nCOPY . /myapp \r\nRUN make /myapp \r\nCMD python /myapp/app.py \r\n</code>``\r\n\r\nQuan trọng hơn, mỗi layer là một tập khác cảu layer trước đó.\r\n\r\nKết quả xây dựng file docker này là một image. Trong khi instruction hiện tại trong file thêm layer vào image.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Mục đích của tham số volume trong lệnh chạy docker là gì?",
+      "answer": "<p>Cú pháp của lệnh chạy docker sử dụng volumn là: <code>docker run -v host<em>path:docker</em>path &lt;container_name&gt;</code>.\r\n\r\nTham số volume được dùng cho đồng bộ hoá một thư mục trong container với bất kỳ thư mục host nào. Ví dụ: <code>docker run -v /data/app:usr/src/app myapp</code>. Lệnh trên gắn thứ mục <code>/data/app</code> trong host vào thư mục <code>usr/src/app</code>. Ta có thể đồng bộ container với file dữ liệu từ host mà không cần khởi động lại.\r\n\r\nĐiều này đảm bảo rằng ngay cả khi container bị xóa, dữ liệu của container vẫn tồn tại trong vị trí host lưu trữ được ánh xạ theo volume, làm cho nó trở thành cách dễ dàng nhất để lưu trữ dữ liệu container.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Docker volume được lưu ở đâu trong docker?",
+      "answer": "<p>Volume được tạo và quản lý bởi Docker và không thể truy cập bằng thực thể khác docker. Nó được lưu trữ trong hệ thống file host Docker ở <code>/var/lib/docker/volumes/</code>.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Lệnh docker info là gì?",
+      "answer": "<p>Lệnh lấy thông tin chi tiết về Docker được cài đặt trên hệ thống host. Thông tin có thể giống như số lượng container hoặc image và chúng đang chạy ở trạng thái nào và các thông số kỹ thuật phần cứng như tổng bộ nhớ được cấp phát, tốc độ của bộ xử lý, phiên bản kernel,...</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Ý nghĩa của các lệnh up, run và start của docker compose?",
+      "answer": "<p><ul><li>Sử dụng lệnh <code>up</code> để duy trì docker-compose (lý tưởng là mọi lúc), chúng ta có thể khởi động hoặc khởi động lại tất cả các mạng, dịch vụ và driver được liên kết với ứng dụng được chỉ định trong file docker-compos.yml. Bây giờ, nếu chúng ta đang chạy docker-compose ở chế độ \"attached\" thì tất cả log từ các container sẽ có thể truy cập được đối với chúng ta. Trong trường hợp docker-compose được chạy ở chế độ \"detached\", thì khi các container được khởi động, nó sẽ thoát ra và không hiển thị log nào.</li></ul>\r<ul><li>Sử dụng lệnh <code>run</code>, docker-compose có thể chạy các tác vụ một lần hoặc đột xuất dựa trên các yêu cầu nghiệp vụ. Ở đây, tên dịch vụ phải được cung cấp và docker chỉ bắt đầu dịch vụ cụ thể đó và cả các dịch vụ khác mà dịch vụ đích phụ thuộc (nếu có).</li></ul>\r<ul><li>Lệnh này hữu ích để kiểm tra container và cũng thực hiện các tác vụ như thêm hoặc xóa dữ liệu vào container,...</li></ul>\r<ul><li>Sử dụng lệnh <code>start</code>, chỉ những container đó mới có thể được khởi động lại đã được tạo và sau đó dừng lại. Điều này không hữu ích cho việc tạo các container mới của riêng nó.</li></ul></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Các yêu cầu cơ bản để Docker chạy trên mọi hệ thống?",
+      "answer": "<p>Docker có thể chạy trên cả nền tảng Linux và Windows.\r<ul><li>Đối với nền tảng Windows, ít nhất docker cần có Windows 10 64bit với bộ nhớ RAM 2GB. Đối với các phiên bản thấp hơn, có thể cài đặt docker bằng cách sử dụng toolbox trợ giúp. Docker có thể được tải xuống từ trang web https://docs.docker.com/docker-for-windows/.</li></ul>\r<ul><li>Đối với nền tảng Linux, Docker có thể chạy trên nhiều phiên bản Linux khác nhau như Ubuntu> = 12.04, Fedora> = 19, RHEL> = 6.5, CentOS> = 6, v.v.</li></ul></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Cách đăng nhập vào docker registry?",
+      "answer": "<p>Sử dụng lệnh <code>docker login</code>  để đăng nhập vào kho lưu trữ đám mây của riêng họ có thể được nhập và truy cập.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Các instructions phổ biến trong Dockerfile?",
+      "answer": "<p><ul><li><strong>FROM:</strong> dùng cho thiết lập image cơ sở cho instruction sắp tới. File docker được xem là hợp lệ nếu nó bắt đầu bằng FROM.</li></ul>\r<ul><li><strong>LABEL:</strong> dùng cho tổ chức image dựa trên dự án, module hoặc license. Nó còn giúp tự động hoá như một cặp key-value cụ thể trong khi xác định label mà sau này có thể được truy cập và xử lý theo chương trình.</li></ul>\r<ul><li><strong>RUN:</strong> dùng cho thực thi instruction theo sau nó trên top image hiện tại trong lớp mới. Lưu ý: mỗi lần thực thi lệnh RUN, chúng ta thêm các lớp trên image và sử dụng lớp đó cho các bước tiếp theo.</li></ul>\r<ul><li><strong>CMD:</strong> dùng cho cung cấp giá trị mặc định của container thực thi. Trong trường hợp nhiều lệnh CMD, lệnh cuối cùng sẽ được xem xét.</li></ul></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Sự khác biệt giữa Daemon Logging và Container Logging?",
+      "answer": "<p>Trong Docker, logging được hỗ trợ ở hai level là level Daemon và level Container.\r<ul><li><strong>Daemon</strong>: gồm 4 kiểu level:</li></ul>\r<ul><li>Debug có tất cả dữ liệu xuất hiện trong quá trình thực thi của tiến trình daemon.</li></ul>\r<ul><li>Info quan tâm tất cả thông tin cùng với lỗi trong suốt quá trị thực thi tiến trình daemon.</li></ul>\r<ul><li>Error gồm các lỗi xảy ra trong quá trình thực thi tiến trình daemon.</li></ul>\r<ul><li>Fatal chức lỗi fatal trong quá trình thực thi tiến trình daemon.</li></ul>\r<ul><li><strong>Container:</strong></li></ul>\r<ul><li>Level container có thể thực hiện logging bằng lệnh: <code>sudo docker run –it &lt;container<em>name&gt; /bin/bash</code>.</li></ul>\r<ul><li>Để kiểm tra log của level container ta có thể thực hiện: <code>sudo docker logs &lt;container</em>id&gt;</code>.</li></ul></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Cách thiết lập giao tiếp giữa docker host và linux host?",
+      "answer": "<p>Điều này có thể được thực hiện bởi mạng bằng cách xác định \"ipconfig\" trên docker host. Lệnh này đảm bảo rằng một adapter ethernet được tạo miễn là docker có mặt trong host.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Cách xoá một container?",
+      "answer": "<p>Ta có hai bước xoá container:\r\n1. <code>docker stop &lt;container<em>id&gt;</code>\r\n2. <code>docker rm &lt;container</em>id&gt;</code></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Sự khác biệt giữa CMD và ENTRYPOINT?",
+      "answer": "<p><ul><li>Lệnh CMD cung cấp các giá trị mặc định có thể thực thi cho một container đang thực thi. Trong trường hợp file thực thi phải được bỏ qua thì việc sử dụng lệnh ENTRYPOINT cùng với định dạng mảng JSON phải được kết hợp.</li></ul>\r<ul><li>ENTRYPOINT chỉ định rằng lệnh bên trong nó sẽ luôn được chạy khi container khởi động. Lệnh này cung cấp một tùy chọn để cấu hình các tham số và các file thực thi. Nếu DockerFile không có lệnh này, thì nó sẽ vẫn được kế thừa từ image cơ sở được đề cập trong lệnh FROM.</li></ul>\r<ul><li>ENTRYPOINT được sử dụng phổ biến nhất là <code>/bin/sh</code> hoặc <code>/bin/bash</code> cho hầu hết các image cơ sở.</li></ul>\r\n\r\nThực tế, tất cả Dockerfile nên có ít nhất một trong hai lệnh.\r\n\r\n## Câu hỏi phỏng vấn Docker cho Experienced</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Có thể dùng JSON thay cho YAML khi phát triển docker-compose trong Docker không?",
+      "answer": "<p>Có thể. Ta có thể chạy docker-compose trong json, như\r\n\r\n``<code>shell\r\ndocker-compose -f docker-compose.json up\r\n</code>``</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Bạn có thể chạy bao nhiêu container trong docker và các yếu tố ảnh hưởng đến giới hạn này là gì?",
+      "answer": "<p>Không có giới hạn xác định rõ ràng về số lượng container có thể chạy trong docker. Nhưng tất cả phụ thuộc vào những hạn chế - cụ thể hơn là những hạn chế về phần cứng. Kích thước của ứng dụng và tài nguyên CPU có sẵn là 2 yếu tố quan trọng ảnh hưởng đến giới hạn này. Trong trường hợp ứng dụng của bạn không quá lớn và bạn có tài nguyên CPU dồi dào, thì chúng ta có thể chạy một số lượng lớn các container.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Vòng đời của container trong Docker?",
+      "answer": "<p>Các giai đoạn khác nhau của docker container từ khi bắt đầu tạo cho đến khi kết thúc được gọi là vòng đời của docker container.\r\n\r\nCác giai đoạn quan trọng nhất là:\r<ul><li><strong>Created:</strong> Đây là trạng thái mà container vừa được tạo mới nhưng chưa bắt đầu.</li></ul>\r<ul><li><strong>Running:</strong> Trong trạng thái này, container sẽ chạy với tất cả các quy trình liên quan của nó.</li></ul>\r<ul><li><strong>Paused:</strong>  Trạng thái này xảy ra khi container đang chạy bị tạm dừng.</li></ul>\r<ul><li><strong>Stopped:</strong> Trạng thái này xảy ra khi container đang chạy đã bị dừng.</li></ul>\r<ul><li><strong>Deleted:</strong> Trong trường hợp này, container ở trạng thái chết.</li></ul>\r\n\r\n<img src=\"/interview-assets/docker-container-lifecycle.png\" alt=\"\" /></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Làm thế nào để sử dụng docker cho nhiều môi trường ứng dụng?",
+      "answer": "<p><ul><li>Tính năng docker-compose của docker sẽ hỗ trợ bạn tại đây. Trong file docker-compose, chúng ta có thể xác định nhiều dịch vụ, mạng và container cùng với ánh xạ volume một cách rõ ràng và sau đó chúng ta chỉ cần gọi lệnh <code>docker-compose up</code>.</li></ul>\r<ul><li>Khi có nhiều môi trường tham gia - đó có thể là máy chủ dev, staging, uat hoặc production, chúng ta muốn xác định các quy trình và phụ thuộc dành riêng cho server chủ để chạy ứng dụng. Trong trường hợp này, chúng ta có thể tiếp tục tạo file docker-compose theo môi trường cụ thể có tên là <code>docker-compos. {environment}.yml</code> và sau đó dựa trên môi trường, chúng ta có thể thiết lập và chạy ứng dụng.</li></ul></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Làm sao đảm bảo container1 chạy trước container2 trong khi dùng docker compose?",
+      "answer": "<p>Docker-compose không đợi bất kỳ container nào \"sẵn sảng\" trước khi đến container kế tiếp. Để thực thi như vậy, ta có thể sử dụng:\r<ul><li>Bạn có thể sử dụng “depend<em>on” đã được thêm vào phiên bản 2 của docker-compose khi được hiển thị trong file docker-compose.yml mẫu bên dưới:</li></ul>\r\n\r\n``<code>\r\nversion: &quot;2.4&quot;\r\nservices:\r\n backend:\r\n   build: .\r\n   depends</em>on:\r<ul><li>db</li></ul>\r\n db:\r\n   image: postgres\r\n</code>``</p>",
+      "level": "fresher"
+    }
+  ]
+}

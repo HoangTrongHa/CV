@@ -1,41 +1,41 @@
 <template>
   <div class="min-h-screen bg-white dark:bg-background-dark">
     <!-- Hero Section -->
-    <section class="relative py-20 bg-gradient-to-br from-primary/10 to-primary/5 dark:from-primary/20 dark:to-primary/10">
+    <section class="relative py-12 sm:py-16 md:py-20 bg-gradient-to-br from-primary/10 to-primary/5 dark:from-primary/20 dark:to-primary/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
-          <div class="flex items-center justify-center gap-4 mb-6">
-            <NuxtLink to="/" class="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors">
-              <span class="material-symbols-outlined">arrow_back</span>
+          <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+            <NuxtLink to="/" class="inline-flex items-center gap-1.5 sm:gap-2 text-sm sm:text-base text-primary hover:text-primary/80 transition-colors">
+              <span class="material-symbols-outlined text-xl sm:text-2xl">arrow_back</span>
               <span>Về trang chủ</span>
             </NuxtLink>
             <button
               @click="handleLogout"
-              class="inline-flex items-center gap-2 text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 transition-colors"
+              class="inline-flex items-center gap-1.5 sm:gap-2 text-sm sm:text-base text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 transition-colors"
             >
-              <span class="material-symbols-outlined">logout</span>
+              <span class="material-symbols-outlined text-xl sm:text-2xl">logout</span>
               <span>Đăng xuất</span>
             </button>
           </div>
-          <div class="flex items-center justify-center gap-2 mb-4">
-            <span class="material-symbols-outlined text-primary">person</span>
-            <p class="text-sm text-gray-600 dark:text-gray-400">
+          <div class="flex items-center justify-center gap-2 mb-3 sm:mb-4">
+            <span class="material-symbols-outlined text-primary text-xl sm:text-2xl">person</span>
+            <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
               Xin chào, <span class="font-semibold text-primary">{{ user?.username }}</span>
             </p>
           </div>
-          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 px-4">
             Kinh nghiệm phỏng vấn
           </h1>
-          <p class="text-xl text-gray-600 dark:text-gray-400 mb-6">
+          <p class="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-4 sm:mb-6 px-4">
             Tổng hợp câu hỏi phỏng vấn từ Frontend đến Backend, Database, DevOps và nhiều hơn nữa
           </p>
-          <div v-if="!loading" class="flex items-center justify-center gap-6 text-sm text-gray-600 dark:text-gray-400">
-            <div class="flex items-center gap-2">
-              <span class="material-symbols-outlined text-primary">category</span>
+          <div v-if="!loading" class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm text-gray-600 dark:text-gray-400">
+            <div class="flex items-center gap-1.5 sm:gap-2">
+              <span class="material-symbols-outlined text-primary text-lg sm:text-xl">category</span>
               <span>{{ categories.length }} danh mục</span>
             </div>
-            <div class="flex items-center gap-2">
-              <span class="material-symbols-outlined text-primary">quiz</span>
+            <div class="flex items-center gap-1.5 sm:gap-2">
+              <span class="material-symbols-outlined text-primary text-lg sm:text-xl">quiz</span>
               <span>{{ totalQuestions }}+ câu hỏi</span>
             </div>
           </div>
@@ -61,52 +61,53 @@
     </div>
 
     <!-- Categories Tabs -->
-    <div v-else class="sticky top-16 z-40 bg-white/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-gray-200 dark:border-[#254632]">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex gap-2 overflow-x-auto py-4 scrollbar-hide">
+    <div v-else class="sticky top-0 sm:top-16 z-40 bg-white/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-gray-200 dark:border-[#254632]">
+      <div class="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
+        <div class="flex gap-1.5 sm:gap-2 overflow-x-auto py-2 sm:py-3 md:py-4 scrollbar-hide">
           <button
             v-for="category in categories"
             :key="category.id"
             @click="activeCategory = category.id"
-            class="flex items-center gap-2 px-4 py-2 rounded-lg whitespace-nowrap transition-all"
+            class="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg whitespace-nowrap transition-all text-sm sm:text-base flex-shrink-0"
             :class="activeCategory === category.id 
               ? 'bg-primary text-white shadow-md' 
               : 'bg-gray-100 dark:bg-[#1a3426] text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-[#254632]'"
           >
-            <span class="material-symbols-outlined text-lg">{{ category.icon }}</span>
-            <span class="font-medium">{{ category.name }}</span>
+            <span class="material-symbols-outlined text-base sm:text-lg">{{ category.icon }}</span>
+            <span class="font-medium hidden xs:inline">{{ category.name }}</span>
+            <span class="font-medium xs:hidden">{{ category.name.split(' ')[0] }}</span>
             <span class="text-xs opacity-75">({{ category.subcategories.length }})</span>
           </button>
         </div>
       </div>
     </div>
 
-    <!-- Subcategories Tabs (for Frontend only) -->
-    <div v-if="!loading && !error && activeCategory === 'frontend'" class="bg-white/95 dark:bg-background-dark/95 border-b border-gray-200 dark:border-[#254632]">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex gap-2 overflow-x-auto py-3 scrollbar-hide">
+    <!-- Subcategories Tabs (for Frontend and Cloud) -->
+    <div v-if="!loading && !error && (activeCategory === 'frontend' || activeCategory === 'cloud')" class="bg-white/95 dark:bg-background-dark/95 border-b border-gray-200 dark:border-[#254632]">
+      <div class="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
+        <div class="flex gap-1.5 sm:gap-2 overflow-x-auto py-2 sm:py-3 scrollbar-hide">
           <button
             v-for="subcategory in getCurrentCategory?.subcategories"
             :key="subcategory.id"
             @click="activeSubcategory = subcategory.id"
-            class="px-4 py-2 rounded-lg whitespace-nowrap text-sm font-medium transition-all"
+            class="px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg whitespace-nowrap text-xs sm:text-sm font-medium transition-all flex-shrink-0"
             :class="activeSubcategory === subcategory.id
               ? 'bg-primary/10 text-primary border-2 border-primary'
               : 'bg-gray-100 dark:bg-[#1a3426] text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-[#254632]'"
           >
             {{ subcategory.name.replace('Câu hỏi phỏng vấn ', '') }}
-            <span class="ml-1 text-xs opacity-75">({{ subcategory.questions.length }})</span>
+            <span v-if="getLoadedSubcategoryData(subcategory.id)" class="ml-1 text-xs opacity-75">({{ getLoadedSubcategoryData(subcategory.id).questions.length }})</span>
           </button>
         </div>
       </div>
     </div>
 
     <!-- Content -->
-    <div v-if="!loading && !error" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <!-- Frontend with Subcategory Tabs -->
-      <div v-if="activeCategory === 'frontend'">
+    <div v-if="!loading && !error" class="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-6 sm:py-8 md:py-12">
+      <!-- Frontend and Cloud with Subcategory Tabs -->
+      <div v-if="activeCategory === 'frontend' || activeCategory === 'cloud'">
         <div v-for="subcategory in getCurrentCategory?.subcategories" :key="subcategory.id">
-          <div v-show="activeSubcategory === subcategory.id" class="bg-gray-50 dark:bg-[#0d1f17] rounded-xl p-6 border border-gray-200 dark:border-[#254632]">
+          <div v-show="activeSubcategory === subcategory.id" class="bg-gray-50 dark:bg-[#0d1f17] rounded-lg sm:rounded-xl p-4 sm:p-6 border border-gray-200 dark:border-[#254632]">
             <!-- Loading state for subcategory -->
             <div v-if="loadingSubcategory && !getLoadedSubcategoryData(subcategory.id)" class="text-center py-12">
               <div class="inline-block animate-spin rounded-full h-8 w-8 border-4 border-primary border-t-transparent"></div>
@@ -116,38 +117,38 @@
             <!-- Subcategory Content -->
             <div v-else-if="getLoadedSubcategoryData(subcategory.id)" class="w-full">
               <!-- Subcategory Header -->
-              <div class="flex items-start gap-4 mb-6">
+              <div class="flex flex-col sm:flex-row items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
                 <div 
-                  class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 bg-primary/10"
+                  class="w-12 h-12 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0 bg-primary/10"
                 >
-                  <span class="material-symbols-outlined text-2xl text-primary">code</span>
+                  <span class="material-symbols-outlined text-xl sm:text-2xl text-primary">code</span>
                 </div>
-                <div class="flex-1">
-                  <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                <div class="flex-1 w-full">
+                  <h2 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-1.5 sm:mb-2">
                     {{ getLoadedSubcategoryData(subcategory.id).name }}
                   </h2>
-                  <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                  <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-2 sm:mb-3">
                     {{ getLoadedSubcategoryData(subcategory.id).description }}
                   </p>
-                  <div class="flex items-center gap-4 text-xs text-gray-500 dark:text-gray-500">
+                  <div class="flex flex-wrap items-center gap-2 sm:gap-4 text-xs text-gray-500 dark:text-gray-500">
                     <span>{{ getLoadedSubcategoryData(subcategory.id).questions.length }} câu hỏi</span>
-                    <span>•</span>
+                    <span class="hidden xs:inline">•</span>
                     <span>{{ getQuestionsByLevel(getLoadedSubcategoryData(subcategory.id).questions, 'fresher') }} Fresher</span>
-                    <span>•</span>
+                    <span class="hidden xs:inline">•</span>
                     <span>{{ getQuestionsByLevel(getLoadedSubcategoryData(subcategory.id).questions, 'middle') }} Middle</span>
-                    <span>•</span>
+                    <span class="hidden xs:inline">•</span>
                     <span>{{ getQuestionsByLevel(getLoadedSubcategoryData(subcategory.id).questions, 'senior') }} Senior</span>
                   </div>
                 </div>
               </div>
 
               <!-- Level Filter -->
-              <div class="flex gap-2 mb-4">
+              <div class="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
                 <button
                   v-for="level in ['all', 'fresher', 'middle', 'senior']"
                   :key="level"
                   @click="activeLevels[subcategory.id] = level"
-                  class="px-3 py-1 rounded-lg text-sm font-medium transition-all"
+                  class="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-md sm:rounded-lg text-xs sm:text-sm font-medium transition-all flex-shrink-0"
                   :class="(activeLevels[subcategory.id] || 'all') === level
                     ? 'bg-primary text-white'
                     : 'bg-white dark:bg-background-dark text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-[#1a3426]'"
@@ -175,51 +176,51 @@
         <div v-for="category in categories" :key="category.id">
           <div v-show="activeCategory === category.id">
             <!-- Subcategories Grid -->
-            <div class="grid gap-8">
+            <div class="grid gap-4 sm:gap-6 md:gap-8">
               <div 
                 v-for="subcategory in category.subcategories" 
                 :key="subcategory.id"
-                class="bg-gray-50 dark:bg-[#0d1f17] rounded-xl p-6 border border-gray-200 dark:border-[#254632]"
+                class="bg-gray-50 dark:bg-[#0d1f17] rounded-lg sm:rounded-xl p-4 sm:p-6 border border-gray-200 dark:border-[#254632]"
               >
                 <!-- Subcategory Header -->
-                <div class="flex items-start gap-4 mb-6">
+                <div class="flex flex-col sm:flex-row items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
                   <div 
-                    class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0"
+                    class="w-12 h-12 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0"
                     :style="{ backgroundColor: category.color + '20' }"
                   >
                     <span 
-                      class="material-symbols-outlined text-2xl"
+                      class="material-symbols-outlined text-xl sm:text-2xl"
                       :style="{ color: category.color }"
                     >
                       {{ category.icon }}
                     </span>
                   </div>
-                  <div class="flex-1">
-                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                  <div class="flex-1 w-full">
+                    <h2 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-1.5 sm:mb-2">
                       {{ subcategory.name }}
                     </h2>
-                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                    <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-2 sm:mb-3">
                       {{ subcategory.description }}
                     </p>
-                    <div class="flex items-center gap-4 text-xs text-gray-500 dark:text-gray-500">
+                    <div class="flex flex-wrap items-center gap-2 sm:gap-4 text-xs text-gray-500 dark:text-gray-500">
                       <span>{{ subcategory.questions.length }} câu hỏi</span>
-                      <span>•</span>
+                      <span class="hidden xs:inline">•</span>
                       <span>{{ getQuestionsByLevel(subcategory.questions, 'fresher') }} Fresher</span>
-                      <span>•</span>
+                      <span class="hidden xs:inline">•</span>
                       <span>{{ getQuestionsByLevel(subcategory.questions, 'middle') }} Middle</span>
-                      <span>•</span>
+                      <span class="hidden xs:inline">•</span>
                       <span>{{ getQuestionsByLevel(subcategory.questions, 'senior') }} Senior</span>
                     </div>
                   </div>
                 </div>
 
                 <!-- Level Filter -->
-                <div class="flex gap-2 mb-4">
+                <div class="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
                   <button
                     v-for="level in ['all', 'fresher', 'middle', 'senior']"
                     :key="level"
                     @click="activeLevels[subcategory.id] = level"
-                    class="px-3 py-1 rounded-lg text-sm font-medium transition-all"
+                    class="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-md sm:rounded-lg text-xs sm:text-sm font-medium transition-all flex-shrink-0"
                     :class="(activeLevels[subcategory.id] || 'all') === level
                       ? 'bg-primary text-white'
                       : 'bg-white dark:bg-background-dark text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-[#1a3426]'"
@@ -301,11 +302,11 @@ const getLoadedSubcategoryData = (subcategoryId: string) => {
 // Set default active category and subcategory when data loads
 watch(categories, (newCategories) => {
   if (newCategories.length > 0) {
-    if (!activeCategory.value) {
+    if (!activeCategory.value && newCategories[0]) {
       activeCategory.value = newCategories[0].id
     }
     const currentCat = newCategories.find(cat => cat.id === activeCategory.value)
-    if (currentCat && currentCat.subcategories.length > 0 && !activeSubcategory.value) {
+    if (currentCat && currentCat.subcategories.length > 0 && currentCat.subcategories[0] && !activeSubcategory.value) {
       activeSubcategory.value = currentCat.subcategories[0].id
       // Load data cho subcategory đầu tiên
       loadSubcategoryData(activeCategory.value, activeSubcategory.value)
@@ -316,7 +317,7 @@ watch(categories, (newCategories) => {
 // Reset subcategory when changing category
 watch(activeCategory, (newCategory) => {
   const category = categories.value.find(cat => cat.id === newCategory)
-  if (category?.id === 'frontend' && category.subcategories.length > 0) {
+  if ((category?.id === 'frontend' || category?.id === 'cloud') && category.subcategories.length > 0 && category.subcategories[0]) {
     activeSubcategory.value = category.subcategories[0].id
     // Load data cho subcategory mới
     loadSubcategoryData(newCategory, activeSubcategory.value)
@@ -325,7 +326,7 @@ watch(activeCategory, (newCategory) => {
 
 // Load data khi chuyển subcategory
 watch(activeSubcategory, (newSubcategory) => {
-  if (newSubcategory && activeCategory.value === 'frontend') {
+  if (newSubcategory && (activeCategory.value === 'frontend' || activeCategory.value === 'cloud')) {
     loadSubcategoryData(activeCategory.value, newSubcategory)
   }
 })

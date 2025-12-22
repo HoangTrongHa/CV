@@ -1,0 +1,157 @@
+{
+  "id": "microservice",
+  "name": "Câu hỏi phỏng vấn Microservice",
+  "description": "",
+  "questions": [
+    {
+      "question": "Các tính năng chính của Microservices?",
+      "answer": "<p><img src=\"/interview-assets/features_of_Microservices.jpg\" alt=\"\" />\r<ul><li><strong>Phân Tách:</strong> Trong một hệ thống, các dịch vụ chủ yếu được phân tách. Do đó, toàn bộ ứng dụng có thể dễ dàng được xây dựng, thay đổi và có thể mở rộng.</li></ul>\r<ul><li><strong>Thành phần hóa:</strong> Microservice được xem như các thành phần độc lập có thể dễ dàng được trao đổi hoặc nâng cấp.</li></ul>\r<ul><li><strong>Kích cỡ nghiệp vụ:</strong> Microservice tương đối đơn giản và chỉ tập trung vào một dịch vụ.</li></ul>\r<ul><li><strong>Quyền tự chủ của nhóm:</strong> Các nhà phát triển làm việc độc lập với nhau, cho phép tiến trình dự án nhanh hơn.</li></ul>\r<ul><li><strong>Phân phối liên tục:</strong> Cho phép phát hành phần mềm thường xuyên thông qua hệ thống tự động hóa phát triển, kiểm tra và phê duyệt phần mềm.</li></ul>\r<ul><li><strong>Trách nhiệm:</strong> Microservices không tập trung vào các ứng dụng như các dự án. Thay vào đó, họ coi các ứng dụng là sản phẩm mà họ chịu trách nhiệm.</li></ul>\r<ul><li><strong>Quản trị phi tập trung:</strong> Lựa chọn công cụ phù hợp theo công việc là mục tiêu. Các nhà phát triển có thể chọn các công cụ tốt nhất để giải quyết vấn đề của họ</li></ul>\r<ul><li><strong>Kết hợp Agile:</strong> Microservices tạo điều kiện cho kết hợp với phương pháp Agile. Có thể tạo các tính năng mới một cách nhanh chóng và loại bỏ chúng bất cứ lúc nào</li></ul></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Các thành phần chính trong Microservices?",
+      "answer": "<p><em> Containers, Clustering, và Orchestration.\r\n</em> IaC [Infrastructure as Code Conception] \r\n<em> Cloud Infrastructure \r\n</em> API Gateway \r\n<em> Enterprise Service Bus \r\n</em> Service Delivery</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Ưu nhược điểm của Microservices?",
+      "answer": "<p><strong>Ưu điểm</strong>\r<ul><li>Module triển khai khép kín và độc lập.</li></ul>\r<ul><li>Các dịch vụ được quản lý độc lập.</li></ul>\r<ul><li>Để cải thiện hiệu suất, dịch vụ yêu cầu có thể được triển khai trên nhiều server.</li></ul>\r<ul><li>Nó dễ kiểm tra hơn và có ít phụ thuộc hơn.</li></ul>\r<ul><li>Khả năng mở rộng lớn hơn.</li></ul>\r<ul><li>Đơn giản trong việc debug và bảo trì.</li></ul>\r<ul><li>Giao tiếp tốt hơn giữa nhà phát triển và người dùng doanh nghiệp.</li></ul>\r<ul><li>Các nhóm phát triển có quy mô nhỏ hơn.</li></ul>\r\n\r\n<strong>Nhược điểm</strong>\r<ul><li>Do sự phức tạp của kiến trúc, việc kiểm tra và giám sát khó khăn hơn.</li></ul>\r<ul><li>Thiếu văn hóa doanh nghiệp phù hợp để nó hoạt động.</li></ul>\r<ul><li>Lập kế hoạch trước là điều cần thiết.</li></ul>\r<ul><li>Phát triển phức tạp.</li></ul>\r<ul><li>Yêu cầu một sự chuyển dịch văn hóa.</li></ul>\r<ul><li>Đắt so với monoliths.</li></ul>\r<ul><li>Nguy cơ về bảo mật.</li></ul>\r<ul><li>Việc duy trì mạng khó khăn hơn.</li></ul></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Các công cụ thường dùng cho Microservices?",
+      "answer": "<p><ul><li>Wiremock</li></ul>\r<ul><li>Docker</li></ul>\r<ul><li>Hstrix</li></ul></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Giải thích kiến trúc Microservice?",
+      "answer": "<p><img src=\"/interview-assets/Microservice_Architecture.jpg\" alt=\"\" />\r<ul><li><strong>Clients</strong>: Người dùng khác nhau gửi yêu cầu đến thiết bị khác nhau.</li></ul>\r<ul><li><strong>Identity Provider</strong>: Xác thực định danh người dùng hoặc client và cấp token bảo mật.</li></ul>\r<ul><li><strong>API Gateway</strong>: xử lý yêu cầu từ client.</li></ul>\r<ul><li><strong>Static Content</strong>: Bao gồm tất cả nội dung của hệ thống.</li></ul>\r<ul><li><strong>Management</strong>: Dịch vụ được cản bằng trên các node và lỗi được xác định.</li></ul>\r<ul><li><strong>Service Discovery</strong>: Hướng dẫn khám phá các định tuyến để giao tiếp trong microservices.</li></ul>\r<ul><li><strong>CDN</strong>: bao gồm mạng phân phối của proxy server và trung tâm dữ liệu của họ.</li></ul>\r<ul><li><strong>Remote Service</strong>: Cung cấp khả năng truy cập từ xa vào dữ liệu hoặc thông tin trên các máy tính và thiết bị được nối mạng.</li></ul></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Sự khác biệt giữa Monolithic, SOA và Microservices?",
+      "answer": "<p><img src=\"/interview-assets/difference_between_Monolithic__SOA_and_Microservices_Architecture.jpg\" alt=\"\" />\r\n\r\n<strong>Monolithic</strong>: Giống như một container lớn, trong đó là tất cả thành phần của ứng dụng được gói cùng với nhau. Nó được xây dựng như một hệ thống lớn với một code-base.\r\n\r\n<strong>SOA (Serivce-Oriented Architecture)</strong>: Nó là một nhóm các dịch vụ tương tác hoặc giao tiếp với nhau. Tùy thuộc vào bản chất của giao tiếp, nó có thể là trao đổi dữ liệu đơn giản hoặc nó có thể liên quan đến một số dịch vụ phối hợp một số hoạt động. \r\n\r\n<strong>Microservice</strong>: Nó liên quan đến việc cấu trúc một ứng dụng dưới dạng một cluster (cụm) các dịch vụ nhỏ, tự trị được mô hình hóa xung quanh một miền doanh nghiệp. Các module chức năng có thể được triển khai độc lập, có thể mở rộng, nhằm đạt được các mục tiêu kinh doanh cụ thể và giao tiếp với nhau qua các giao thức tiêu chuẩn.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Cohesion và Coupling là gì?",
+      "answer": "<p><strong>Khớp nối (Cohesion):</strong> Nó được định nghĩa là mối quan hệ giữa các module phần mềm A và B, và mức độ một module phụ thuộc hoặc tương tác với một module khác. Các cohesion nối được chia thành ba loại chính:\r<ul><li>Các module phụ thuộc nhiều vào nhau.</li></ul>\r<ul><li>Các module ít phụ thuộc (lỏng lẻo).</li></ul>\r<ul><li>Các module tách rời hoàn toàn.</li></ul>\r\n\r\nLoại cohesion tốt nhất là loại ít phụ thuộc, được thực hiện thông qua các interface.\r\n\r\n<strong>Liên kết (Coupling):</strong> Nó được định nghĩa là mối quan hệ giữa hai hoặc nhiều phần tử của một module phục vụ cùng một mục đích. Nói chung, một module có tính liên kết cao có thể thực hiện một chức năng cụ thể một cách hiệu quả mà không cần giao tiếp với bất kỳ module nào khác. Tính liên kết cao nâng cao chức năng của module.\r\n\r\n<img src=\"/interview-assets/Cohesion_and_Coupling.jpg\" alt=\"\" /></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Bounded Context là gì?",
+      "answer": "<p>Một bounded context là một mẫu trung tâm trong DDD (Domain-Driven Design), đề cập đến sự cộng tác giữa các mô hình và nhóm lớn. DDD chia nhỏ các mô hình lớn thành nhiều ngữ cảnh để giúp chúng dễ quản lý hơn. Ngoài ra, nó giải thích mối quan hệ của chúng một cách rõ ràng. Khái niệm này thúc đẩy phương pháp tiếp cận hướng đối tượng để phát triển các dịch vụ gắn với mô hình dữ liệu và cũng chịu trách nhiệm đảm bảo tính toàn vẹn và khả năng thay đổi của mô hình dữ liệu nói trên.\r\n\r\n<img src=\"/interview-assets/Bounded_Context.jpg\" alt=\"\" /></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Viết các đặc điểm cơ bản của Thiết kế Microservice?",
+      "answer": "<p><ul><li>Dựa trên khả năng kinh doanh: Các dịch vụ được phân chia và tổ chức xoay quanh khả năng kinh doanh.</li></ul>\r<ul><li>Sản phẩm không phải dự án: Một sản phẩm nên thuộc về team có trách nhiệm xử lý nó.</li></ul>\r<ul><li>Dựa vào các framework message: Loại bỏ các bus dịch vụ tập trung bằng cách nắm lấy khái niệm phân quyền.</li></ul></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Các thách thức khi sử dụng Microservices?",
+      "answer": "<p>Những thách thức mà ta phải đối mặt khi sử dụng microservices có thể là cả chức năng và kỹ thuật như dưới đây:\r\n\r\n#</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Giải thích PACT trong Microservices?",
+      "answer": "<p>PACT được định nghĩa là một công cụ mã nguồn mở cho phép các nhà cung cấp dịch vụ và người tiêu dùng kiểm tra các tương tác một cách tách biệt với các hợp đồng đã được thực hiện để tăng độ tin cậy của tích hợp microservice. Nó cũng cung cấp hỗ trợ cho nhiều ngôn ngữ, chẳng hạn như Ruby, Java, Scala, .NET, JavaScript, Swift/Objective-C.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Giải thích cách microservice giao tiếp với các phần khác?",
+      "answer": "<p>Giao tiếp giữa các microservice có thể thực hiện:\r<ul><li>HTTP/REST với JSON hoặc giao thức nhị phân cho request/response.</li></ul>\r<ul><li>Websocket cho streaming</li></ul>\r<ul><li>Một broker hoặc server dùng cho các thuật toán routing.</li></ul>\r\n\r\nRabbitMQ, Kafka,... có thể dùng như một message broker, mỗi cái được xây dựng để xử lý message cụ thể.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Client certificates là gì?",
+      "answer": "<p>Client certificates là một loại chứng chỉ kỹ thuật số thường cho phép các hệ thống client xác thực các yêu cầu của họ tới các server từ xa. Trong nhiều thiết kế xác thực lẫn nhau, nó đóng một vai trò quan trọng trong việc cung cấp sự đảm bảo mạnh mẽ về danh tính của người yêu cầu.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Giải thích về CDC?",
+      "answer": "<p>Như tên của nó, CDC (Consumer-Driven Contract) về cơ bản đảm bảo khả năng tương thích giao tiếp dịch vụ bằng cách thiết lập một thỏa thuận giữa người tiêu dùng và nhà cung cấp dịch vụ về định dạng dữ liệu được trao đổi giữa họ. Một thỏa thuận như thế này được gọi là hợp đồng (contract). Nó là một mẫu được sử dụng để phát triển các Microservices để chúng có thể được các hệ thống bên ngoài sử dụng một cách hiệu quả.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Các công ty nổi tiếng sử dụng kiến trúc Microservices?",
+      "answer": "<p><ul><li>Twitter</li></ul>\r<ul><li>Netflix</li></ul>\r<ul><li>Amazon</li></ul>\r\n\r\n## Câu hỏi phỏng vấn cho Experienced</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Semantic Monitoring là gì?",
+      "answer": "<p>Semantic monitoring, còn được gọi là giám sát tổng hợp, sử dụng các bài kiểm tra tự động và giám sát ứng dụng để xác định lỗi trong quy trình kinh doanh. Công nghệ này cung cấp cái nhìn sâu hơn về hiệu suất giao dịch, tính khả dụng của dịch vụ và hiệu suất ứng dụng tổng thể để xác định các vấn đề về hiệu suất của microservices, phát hiện lỗi trong giao dịch và cung cấp mức hiệu suất tổng thể cao hơn.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Continuos monitoring là gì?",
+      "answer": "<p>Giám sát liên tục (continuos monitoring) liên quan đến việc xác định các vấn đề tuân thủ và rủi ro trong môi trường tài chính và hoạt động của công ty. Nó bao gồm con người, quy trình và hệ thống làm việc hỗ trợ hoạt động hiệu quả.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Domain Driven Design là gì?",
+      "answer": "<p>DDD (Domain Driven Design) là một phương pháp tiếp cận trong việc phân tích và phát triển phần mềm khi giải quyết những vấn đề nghiệp vụ phức tạp. Ý tưởng cơ bản của phương pháp này là việc xây dựng kết nối chặt chẽ giữa thiết kế phần mềm và mô hình nghiệp vụ trong suốt vòng đời phát triển sản phẩm. Để tạo nên sự kết nối này, DDD đưa ra 3 yêu cầu cơ bản:\r<ul><li>Trọng tâm của dự án là những nguyên tắc và logic nghiệp vụ</li></ul>\r<ul><li>Thiết kế phần mềm cần phải phản ánh chính xác mô hình nghiệp vụ</li></ul>\r<ul><li>Sự cộng tác liên tục giữa kĩ sư và chuyên gia nghiệp vụ</li></ul>\r\n\r\nKết quả của việc phân tích hệ thống dựa trên phương pháp DDD, kết hợp cùng mô hình kiến trúc Microservices giúp chúng ta tổ chức và phát triển những microservices giải quyết các vấn đề nghiệp vụ một cách tương ứng. Hoạt động kết hợp này được phản ánh qua một qui trình bao gồm các bước:\r<ul><li>Phân tích nghiệp vụ - domain model</li></ul>\r<ul><li>Định nghĩa ngữ cảnh - bounded context</li></ul>\r<ul><li>Định nghĩa đối tượng (entities), tập hợp (aggregate) và dịch vụ (service)</li></ul>\r<ul><li>Xác định microservices cần xây dựng</li></ul>\r\n\r\n<img src=\"/interview-assets/ddd.png\" alt=\"\" /></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Giải thích về OAuth và OAuth2?",
+      "answer": "<p><strong>OAuth</strong> là một phương thức xác thực giúp một ứng dụng bên thứ 3 có thể được ủy quyền bởi người dùng để truy cập đến tài nguyên người dùng nằm trên một dịch vụ khác. OAuth là từ ghép của O(Open) và Auth tượng trưng cho:\r<ul><li><em>Authentication</em>: xác thực người dùng.</li></ul>\r<ul><li><em>Authorization</em>: cấp quyền truy cập đến tài nguyên mà người dùng hiện đang nắm giữ.</li></ul>\r\n\r\nOAuth2 là bản nâng cấp của OAuth1.0, là một giao thức chứng thực cho phép các ứng dụng chia sẻ một phần tài nguyên với nhau mà không cần xác thực qua username và password như cách truyền thống từ đó giúp hạn chế được những phiền toái khi phải nhập username, password ở quá nhiều nơi hoặc đăng ký quá nhiều tài khoản mật khẩu mà chúng ta chẳng thể nào nhớ hết.\r\n\r\nTrong OAuth2 định nghĩa 4 vai trò:\r<ul><li><strong>Resource owner:</strong> là những người dùng có khả năng cấp quyền truy cập, chủ sở hữu của tài nguyên mà ứng dụng muốn lấy.</li></ul>\r<ul><li><strong>Resource server:</strong> nơi lưu trữ các tài nguyên, có khả năng xử lý yêu cầu truy cập đến các tài nguyên được bảo vệ.</li></ul>\r<ul><li><strong>Client</strong>: là những ứng dụng bên thứ 3 muốn truy cập vào phần tài nguyên được chia sẻ với tư cách của người sở hữu (resource owner) và tất nhiên trước khi truy cập ứng dụng cần được sự ủy quyền của người dùng.</li></ul>\r<ul><li><strong>Authorization server:</strong> làm nhiệm vụ xác thực, kiểm tra thông tin mà người dùng gửi đến từ đó cấp quyền truy cập cho ứng dụng bằng việc sinh ra các đoạn access token. Đôi khi authorization server cũng chính là resource server.</li></ul>\r\n\r\n<img src=\"/interview-assets/oauth.jpg\" alt=\"\" /></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Distributed Transactions là gì?",
+      "answer": "<p>Giao dịch phân tán (distributed transactions) là một cách tiếp cận lỗi thời trong kiến trúc microservice ngày nay khiến nhà phát triển gặp phải các vấn đề nghiêm trọng về khả năng mở rộng. Các giao dịch được phân phối cho một số dịch vụ được gọi để hoàn thành giao dịch theo trình tự. Với rất nhiều bộ phận chuyển động, nó rất phức tạp và dễ bị hỏng hóc.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Idempotence là gì?",
+      "answer": "<p>Thuật ngữ \"Idempotence\" đề cập đến việc thực hiện lặp đi lặp lại một nhiệm vụ mặc dù cùng một kết quả. Nói cách khác, nó là một tình huống trong đó một nhiệm vụ được thực hiện lặp đi lặp lại với kết quả cuối cùng được giữ nguyên.\r\n \r\nCách sử dụng: Khi dịch vụ từ xa hoặc nguồn dữ liệu nhận được hướng dẫn nhiều lần, Idempotence đảm bảo rằng nó sẽ xử lý từng yêu cầu một lần.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Ent-to-end microservices testing là gì?",
+      "answer": "<p>Thông thường, end-to-end (E2E) microservice testing là một kỹ thuật không phối hợp, chi phí cao được sử dụng để đảm bảo rằng tất cả các thành phần hoạt động cùng nhau cho một hành trình hoàn chỉnh của người dùng. Thông thường, nó được thực hiện thông qua giao diện người dùng, bắt chước cách nó xuất hiện với người dùng. Nó cũng đảm bảo tất cả các quy trình trong quy trình làm việc hoạt động bình thường.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Thuật ngữ Euruka trong Microservices?",
+      "answer": "<p>Eureka Server, còn được gọi là Netflix Service Discovery Server, là một ứng dụng theo dõi tất cả các ứng dụng dịch vụ client. Vì mọi Microservice đăng ký với Server Eureka, Eureka biết tất cả các ứng dụng client đang chạy trên các cổng và địa chỉ IP khác nhau. Nó thường sử dụng Spring Cloud và không nặng về quá trình phát triển ứng dụng.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Giải thích sự quan trọng của reports và dashboard trong microservices?",
+      "answer": "<p>Giám sát một hệ thống thường liên quan đến việc sử dụng các report (báo cáo) và dashboard (trang tổng quan). Sử dụng report và dashboard cho các microservices có thể giúp bạn:\r<ul><li>Xác định microservices hỗ trợ tài nguyên nào.</li></ul>\r<ul><li>Xác định dịch vụ nào bị ảnh hưởng bất cứ khi nào thay đổi được thực hiện hoặc xảy ra đối với các thành phần.</li></ul>\r<ul><li>Làm cho tài liệu dễ dàng truy cập bất cứ khi nào cần thiết.</li></ul>\r<ul><li>Xem lại các phiên bản thành phần đã triển khai.</li></ul>\r<ul><li>Xác định mức độ phát triển và tuân thủ từ các thành phần.</li></ul></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Reactive Extension là?",
+      "answer": "<p>Reactive Programming như một khái niệm đã tồn tại trong hơn 20 năm nhưng đã không phát triển cho đến Reactive Extensions ra đời. Reactive Extension (còn được gọi là ReactiveX hay Rx) là giao diện lập trình ứng dụng (Application Programming Interface-API) hoặc lập trình bất đồng bộ với các luồng có thể quan sát được.\r\n\r\nReactiveX có hai lớp: lớp có thể quan sát (Observable) và lớp quan sát (Observer). Observable là nguồn dữ liệu của các luồng hoặc các sự kiện và Observer là lớp sử dụng (hoặc phản ứng lại) các phần tử được tạo ra.\r\n\r\nMột Observable có thể có nhiều Observer để mỗi mục dữ liệu được tạo ra sẽ được nhận bởi một Observer. Trong ReactiveX, một Observer theo dõi một Observable. Sau đó, Observable tạo ra các luồng dữ liệu, Observer sẽ lắng nghe và phản ứng lại. Điều này tạo ra một loạt các hoạt động trên luồng dữ liệu. Một chủ thể vừa có thể hoạt động như Observer vừa có thể đóng vai trò là Observable.\r\n\r\nChúng ta cũng có thể áp dụng toán tử cho các luồng. Các toán tử xác định cách thức và thời điểm Observable sẽ tạo luồng. Hầu hết các toán tử thực thi các hàm trên Observable và trả về một Observable.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Giải thích các kiểu test thường dùng trong Microservices?",
+      "answer": "<p>Vì có nhiều microservice hoạt động cùng nhau, việc test microservice trở nên khá phức tạp khi làm việc với microservices. Do đó, các bài test được phân loại theo cấp độ của chúng:\r\n\r\n<img src=\"/interview-assets/explain-type-of-tests-mostly-used-in-microservices.jpg\" alt=\"\" />\r<ul><li><strong>Test cấp thấp:</strong> các test này xử lý với công nghệ, như unit test và performance test. Đây là quá trình tự động hoàn thành</li></ul>\r<ul><li><strong>Test cấp trung bình:</strong> chúng ta có các bài test như stress test và usability test.</li></ul>\r<ul><li><strong>Test cấp cao:</strong> chúng ta có một số test chấp nhận hạn chế. Các bài test chấp nhận giúp các bên liên quan hiểu và xác minh các tính năng của phần mềm.</li></ul></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Kiểm tra kim tự tháp Mike Cohn's là gì?",
+      "answer": "<p>Kiểm tra kim tự tháp Mike Cohn's giải thích các kiểu khác nhau của test tự động cần cho phát triển phần mềm. Kiểm tra kim tự tháp về cơ bản là được sử dụng để tối đa hoá tự động hoá tất cả các cấp độ test, bao gồm unit testing, service testing, UI testing,...Kim tự tháp cũng cho biết rằng các unit test nhanh hơn và cô lập hơn, trong khi các ui test, tốn nhiều thời gian hơn và tập trung vào tích hợp.\r\n\r\n<img src=\"/interview-assets/Mike_Cohn’s_Test_Pyramid.jpg\" alt=\"\" />\r\n\r\nTheo kim tự tháp, số lượng bài test phải cao nhất ở lớp đầu tiên. Ở lớp service, ít test được thực hiện hơn ở mức unit test, nhưng lớn hơn ở mức end-to-end.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Giải thích Container trong Microservices?",
+      "answer": "<p>Container là công nghệ hữu ích để phân bổ và chia sẻ tài nguyên. Nó được coi là phương pháp hiệu quả nhất và dễ dàng nhất để quản lý các ứng dụng dựa trên microservice để phát triển và triển khai chúng riêng lẻ. Sử dụng Docker, bạn cũng có thể đóng gói một microservice cùng với các phần phụ thuộc của nó trong một container image, sau đó có thể được sử dụng để cuộn các phiên bản theo yêu cầu của microservice mà không cần thực hiện thêm bất kỳ công việc nào.\r\n\r\n<img src=\"/interview-assets/Explain_Container_in_Microservices.jpg\" alt=\"\" /></p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Vai trò của Docker trong Microservices?",
+      "answer": "<p>Docker thường cung cấp một môi trường container, trong đó bất kỳ ứng dụng nào cũng có thể được host. Điều này được thực hiện bằng cách đóng gói chặt chẽ cả ứng dụng và các phụ thuộc cần thiết để hỗ trợ nó. Các sản phẩm đóng gói này được gọi là Container và vì Docker đã quen với việc đó nên chúng được gọi là Docker container. Về bản chất, Docker cho phép bạn chứa các microservice của mình và quản lý các microservices này dễ dàng hơn.</p>",
+      "level": "fresher"
+    },
+    {
+      "question": "Giải thích cách thực hiện khám phá dịch vụ trong kiến trúc microservices?",
+      "answer": "<p>Có nhiều cách để thiết lập tính năng khám phá dịch vụ, nhưng Eureka của Netflix là cách hiệu quả nhất. Đây là một thủ tục đơn giản, không phức tạp và không tạo thêm nhiều dung lượng cho ứng dụng. Nó cũng hỗ trợ một loạt các ứng dụng web. Một số chú thích được cung cấp bởi Spring Cloud để làm cho việc sử dụng nó trở nên đơn giản nhất có thể và để ẩn đi các khái niệm phức tạp.</p>",
+      "level": "fresher"
+    }
+  ]
+}
