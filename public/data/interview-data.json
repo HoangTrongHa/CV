@@ -1173,12 +1173,6 @@
           ]
         },
         {
-          "id": "vuejs",
-          "name": "Câu hỏi phỏng vấn Vue.js 3",
-          "description": "Tổng hợp câu hỏi phỏng vấn Vue.js 3 từ Fresher đến Senior",
-          "questions": []
-        },
-        {
           "id": "nuxtjs",
           "name": "Câu hỏi phỏng vấn Nuxt.js 3",
           "description": "40 câu hỏi phỏng vấn Nuxt.js 3 cấp độ Senior",

@@ -38,9 +38,13 @@ const navLinks = [
   { textKey: 'nav.interviews', href: '/interviews', isPage: true }
 ]
 
-const { generateCV } = useGeneratePDF()
-
 const handleDownloadCV = () => {
-  generateCV()
+  // Download the static CV file instead of generating
+  const link = document.createElement('a')
+  link.href = '/data/Hoang_Trong_Ha_CV.docx'
+  link.download = 'Hoang_Trong_Ha_CV.docx'
+  document.body.appendChild(link)
+  link.click()
+  document.body.removeChild(link)
 }
 </script>
