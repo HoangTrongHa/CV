@@ -57,8 +57,8 @@ export const useInterviewData = () => {
     }
 
     try {
-      // Frontend và Cloud có file riêng
-      if (categoryId === 'frontend' || categoryId === 'cloud') {
+      // Frontend, Cloud và SOLID có file riêng
+      if (categoryId === 'frontend' || categoryId === 'cloud' || categoryId === 'solid') {
         const response = await fetch(`/data/interview-${subcategoryId}.json`)
         if (response.ok) {
           const subcategoryData = await response.json()
@@ -135,6 +135,28 @@ export const useInterviewData = () => {
       ]
     }
     
+    // Tạo SOLID & Design Patterns category
+    const solidCategory: Category = {
+      id: 'solid',
+      name: 'OOP & Design Patterns',
+      icon: 'architecture',
+      color: '#ff5722',
+      subcategories: [
+        {
+          id: 'oop',
+          name: 'OOP (Lập trình hướng đối tượng)',
+          description: 'Các câu hỏi về Lập trình hướng đối tượng và 4 tính chất: Trừu tượng, Đóng gói, Kế thừa, Đa hình',
+          questions: []
+        },
+        {
+          id: 'solid_design_patterns',
+          name: 'SOLID & Design Patterns',
+          description: 'Các câu hỏi chuyên sâu về nguyên lý SOLID và các mẫu thiết kế phổ biến',
+          questions: []
+        }
+      ]
+    }
+    
     // Xóa microservice khỏi backend
     const backendIndex = cats.findIndex(c => c.id === 'backend')
     if (backendIndex !== -1 && cats[backendIndex]) {
@@ -163,6 +185,12 @@ export const useInterviewData = () => {
     
     // Thêm Cloud category sau Frontend (index 1)
     cats.splice(1, 0, cloudCategory)
+    
+    // Thêm SOLID category sau Backend
+    const backendIdx = cats.findIndex(c => c.id === 'backend')
+    if (backendIdx !== -1) {
+      cats.splice(backendIdx + 1, 0, solidCategory)
+    }
     
     return cats
   })

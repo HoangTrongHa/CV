@@ -1,0 +1,57 @@
+{
+  "id": "solid_design_patterns",
+  "name": "Câu hỏi phỏng vấn SOLID & Design Patterns",
+  "description": "Các câu hỏi chuyên sâu về nguyên lý SOLID và các mẫu thiết kế phổ biến trong lập trình.",
+  "questions": [
+    {
+      "question": "Giải thích ngắn gọn 5 nguyên lý SOLID?",
+      "answer": "**S - Single Responsibility:** Một class chỉ nên đảm nhận một nhiệm vụ duy nhất.\n\n**O - Open/Closed:** Mở rộng chức năng bằng cách thêm mới, tuyệt đối không sửa code cũ.\n\n**L - Liskov Substitution:** Class con phải có thể thay thế hoàn toàn class cha mà không gây lỗi.\n\n**I - Interface Segregation:** Chia nhỏ interface, không ép đối tượng phải dùng những hàm nó không cần.\n\n**D - Dependency Inversion:** Code nên phụ thuộc vào trừu tượng (interface), không phụ thuộc vào chi tiết cụ thể.",
+      "level": "senior"
+    },
+    {
+      "question": "Sự khác biệt giữa Dependency Inversion (DIP) và Dependency Injection (DI)?",
+      "answer": "- Dependency Inversion (DIP) là Nguyên lý: Nó quy định cách thiết kế mối quan hệ giữa các module (phụ thuộc vào abstraction).\n- Dependency Injection (DI) là Design Pattern (Cách thực hiện): Là kỹ thuật cụ thể để đạt được DIP bằng cách 'tiêm' các dependencies (phụ thuộc) từ bên ngoài vào trong object (thông qua constructor, setter...) thay vì để object tự khởi tạo chúng.",
+      "level": "senior"
+    },
+    {
+      "question": "Singleton Pattern là gì? Khi nào nên dùng và khi nào là 'Anti-pattern'?",
+      "answer": "Singleton đảm bảo một class chỉ có duy nhất một instance (thể hiện) và cung cấp điểm truy cập toàn cục tới nó.\n- Nên dùng: Quản lý kết nối Database, Logging, Configuration settings.\n- Là Anti-pattern khi: Dùng quá đà tạo ra trạng thái toàn cục (Global State) ẩn, gây khó khăn cho việc Unit Test (do các test case bị phụ thuộc lẫn nhau) và vi phạm nguyên lý Single Responsibility.",
+      "level": "senior"
+    },
+    {
+      "question": "Giải thích về Factory Method Pattern và lợi ích của nó?",
+      "answer": "Factory Method là mẫu thiết kế thuộc nhóm Creational, cung cấp một giao diện để tạo object nhưng để cho các class con quyết định class nào sẽ được khởi tạo.\nLợi ích: Giảm sự phụ thuộc chặt (loose coupling) giữa code gọi (client) và code khởi tạo object. Khi cần thêm loại object mới, chỉ cần thêm class mới mà không cần sửa code cũ (Tuân thủ Open/Closed Principle).",
+      "level": "senior"
+    },
+    {
+      "question": "Observer Pattern hoạt động như thế nào? Ví dụ trong JavaScript?",
+      "answer": "Observer Pattern định nghĩa mối quan hệ một-nhiều: Khi một đối tượng (Subject) thay đổi trạng thái, tất cả các đối tượng phụ thuộc nó (Observers) sẽ được thông báo và cập nhật tự động.\nVí dụ trong JS: Cơ chế Event Listener của DOM (click, hover...), thư viện Redux (store subscribe), hoặc RxJS.",
+      "level": "senior"
+    },
+    {
+      "question": "Strategy Pattern là gì? Nó giúp thay thế cấu trúc điều khiển nào?",
+      "answer": "Strategy Pattern cho phép định nghĩa một tập hợp các thuật toán, đóng gói từng cái lại và làm chúng có thể thay thế lẫn nhau ngay tại thời điểm chạy (runtime).\nNó giúp thay thế các câu lệnh điều kiện rườm rà (như Switch-Case hoặc nhiều if-else) bằng cách tách logic xử lý ra các class/hàm riêng biệt.",
+      "level": "senior"
+    },
+    {
+      "question": "Decorator Pattern khác gì với việc kế thừa (Inheritance)?",
+      "answer": "Decorator cho phép thêm hành vi hoặc trách nhiệm mới cho một đối tượng cụ thể một cách động (dynamic) mà không ảnh hưởng đến các đối tượng khác cùng class.\nKhác biệt: Kế thừa là tĩnh (static) và áp dụng cho toàn bộ class. Decorator linh hoạt hơn, ưu tiên 'Composition over Inheritance' (Kết hợp hơn kế thừa) để tránh bùng nổ số lượng class con.",
+      "level": "senior"
+    },
+    {
+      "question": "Module Pattern trong JavaScript giải quyết vấn đề gì?",
+      "answer": "Module Pattern (thường dùng IIFE hoặc ES6 Modules) giúp đóng gói code, tạo ra phạm vi riêng (private scope) cho các biến và hàm.\nNó giải quyết vấn đề: Ô nhiễm không gian tên toàn cục (Global Namespace Pollution) và bảo vệ dữ liệu nội bộ không cho bên ngoài truy cập trực tiếp.",
+      "level": "senior"
+    },
+    {
+      "question": "Proxy Pattern được ứng dụng thực tế như thế nào?",
+      "answer": "Proxy Pattern cung cấp một đối tượng đại diện để kiểm soát quyền truy cập vào đối tượng gốc.\nỨng dụng:\n1. Lazy Loading: Chỉ tải đối tượng nặng (như ảnh, dữ liệu lớn) khi thực sự cần.\n2. Validation: Kiểm tra dữ liệu đầu vào trước khi chuyển đến đối tượng xử lý.\n3. Caching: Lưu trữ kết quả tạm thời để giảm tải tính toán.",
+      "level": "senior"
+    },
+    {
+      "question": "Adapter Pattern là gì?",
+      "answer": "Adapter Pattern (Mẫu thiết kế Thích nghi) hoạt động như một cầu nối giữa hai interface không tương thích. Nó giúp các class có thể làm việc cùng nhau dù interface khác nhau.\nVí dụ: Bạn có một API trả về dữ liệu XML, nhưng ứng dụng cần JSON. Adapter sẽ đứng giữa nhận XML và chuyển đổi thành JSON cho ứng dụng dùng.",
+      "level": "senior"
+    }
+  ]
+}

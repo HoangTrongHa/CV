@@ -63,7 +63,7 @@
     <!-- Categories Tabs -->
     <div v-else class="sticky top-0 sm:top-16 z-40 bg-white/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-gray-200 dark:border-[#254632]">
       <div class="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
-        <div class="flex gap-1.5 sm:gap-2 overflow-x-auto py-2 sm:py-3 md:py-4 scrollbar-hide">
+        <div class="flex gap-1.5 sm:gap-2 overflow-x-auto py-2 sm:py-3 md:py-4 scrollbar-visible">
           <button
             v-for="category in categories"
             :key="category.id"
@@ -83,9 +83,9 @@
     </div>
 
     <!-- Subcategories Tabs (for Frontend and Cloud) -->
-    <div v-if="!loading && !error && (activeCategory === 'frontend' || activeCategory === 'cloud')" class="bg-white/95 dark:bg-background-dark/95 border-b border-gray-200 dark:border-[#254632]">
+    <div v-if="!loading && !error && (activeCategory === 'frontend' || activeCategory === 'cloud' || activeCategory === 'solid')" class="bg-white/95 dark:bg-background-dark/95 border-b border-gray-200 dark:border-[#254632]">
       <div class="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
-        <div class="flex gap-1.5 sm:gap-2 overflow-x-auto py-2 sm:py-3 scrollbar-hide">
+        <div class="flex gap-1.5 sm:gap-2 overflow-x-auto py-2 sm:py-3 scrollbar-visible">
           <button
             v-for="subcategory in getCurrentCategory?.subcategories"
             :key="subcategory.id"
@@ -105,7 +105,7 @@
     <!-- Content -->
     <div v-if="!loading && !error" class="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-6 sm:py-8 md:py-12">
       <!-- Frontend and Cloud with Subcategory Tabs -->
-      <div v-if="activeCategory === 'frontend' || activeCategory === 'cloud'">
+      <div v-if="activeCategory === 'frontend' || activeCategory === 'cloud' || activeCategory === 'solid'">
         <div v-for="subcategory in getCurrentCategory?.subcategories" :key="subcategory.id">
           <div v-show="activeSubcategory === subcategory.id" class="bg-gray-50 dark:bg-[#0d1f17] rounded-lg sm:rounded-xl p-4 sm:p-6 border border-gray-200 dark:border-[#254632]">
             <!-- Loading state for subcategory -->
@@ -317,7 +317,7 @@ watch(categories, (newCategories) => {
 // Reset subcategory when changing category
 watch(activeCategory, (newCategory) => {
   const category = categories.value.find(cat => cat.id === newCategory)
-  if ((category?.id === 'frontend' || category?.id === 'cloud') && category.subcategories.length > 0 && category.subcategories[0]) {
+  if ((category?.id === 'frontend' || category?.id === 'cloud' || category?.id === 'solid') && category.subcategories.length > 0 && category.subcategories[0]) {
     activeSubcategory.value = category.subcategories[0].id
     // Load data cho subcategory mới
     loadSubcategoryData(newCategory, activeSubcategory.value)
@@ -326,7 +326,7 @@ watch(activeCategory, (newCategory) => {
 
 // Load data khi chuyển subcategory
 watch(activeSubcategory, (newSubcategory) => {
-  if (newSubcategory && (activeCategory.value === 'frontend' || activeCategory.value === 'cloud')) {
+  if (newSubcategory && (activeCategory.value === 'frontend' || activeCategory.value === 'cloud' || activeCategory.value === 'solid')) {
     loadSubcategoryData(activeCategory.value, newSubcategory)
   }
 })
@@ -344,6 +344,40 @@ const getQuestionsByLevel = (questions: Question[], level: string) => {
 
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
+}
+
+/* Custom scrollbar for tabs */
+.scrollbar-visible {
+  -ms-overflow-style: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #10b981 transparent;
+}
+
+.scrollbar-visible::-webkit-scrollbar {
+  height: 6px;
+}
+
+.scrollbar-visible::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.scrollbar-visible::-webkit-scrollbar-thumb {
+  background: #10b981;
+  border-radius: 10px;
+}
+
+.scrollbar-visible::-webkit-scrollbar-thumb:hover {
+  background: #059669;
+}
+
+/* Dark mode scrollbar */
+.dark .scrollbar-visible {
+  scrollbar-color: #10b981 rgba(255, 255, 255, 0.1);
+}
+
+.dark .scrollbar-visible::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
 }
 
 /* Prose styles for answer content */
